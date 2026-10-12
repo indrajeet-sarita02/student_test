@@ -3,7 +3,7 @@
 from functools import lru_cache
 from typing import List
 
-from pydantic import field_validator
+from pydantic import AliasChoices, Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -13,13 +13,26 @@ class Settings(BaseSettings):
         env_file_encoding="utf-8",
         case_sensitive=False,
         extra="ignore",
+        populate_by_name=True,
     )
 
     app_name: str = "Student Test API"
     app_env: str = "development"
     debug: bool = True
 
-    database_url: str = ""
+    # ``DATABASE_URL`` is the canonical name. The extra aliases let deployments
+    # that only expose Vercel Postgres integration variables (``POSTGRES_URL``
+    # and friends) boot without duplicating the connection string.
+    database_url: str = Field(
+        default="",
+        validation_alias=AliasChoices(
+            "DATABASE_URL",
+            "POSTGRES_URL",
+            "POSTGRES_PRISMA_URL",
+            "POSTGRES_URL_NON_POOLING",
+            "POSTGRES_URL_NO_SSL",
+        ),
+    )
 
     jwt_secret_key: str = "CHANGE_ME"
     jwt_algorithm: str = "HS256"
@@ -38,6 +51,12 @@ class Settings(BaseSettings):
             value = "postgresql+psycopg://" + value[len("postgres://") :]
         elif value.startswith("postgresql://"):
             value = "postgresql+psycopg://" + value[len("postgresql://") :]
+        if not value:
+            raise ValueError(
+                "Database URL is not configured. Set the DATABASE_URL environment "
+                "variable to your PostgreSQL connection string (on Vercel: Project "
+                "Settings -> Environment Variables), then redeploy."
+            )
         return value
 
     @property
