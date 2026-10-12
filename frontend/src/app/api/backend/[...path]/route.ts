@@ -1,7 +1,13 @@
 import { NextRequest } from "next/server";
 
 // Server-side backend origin. Overridable via env; the browser never sees it.
-const BACKEND_URL = (process.env.BACKEND_URL || "http://127.0.0.1:8000").replace(/\/$/, "");
+// On Vercel, fall back to the deployed FastAPI backend so the proxy works with
+// no extra project configuration; set BACKEND_URL to point elsewhere.
+const DEFAULT_BACKEND_URL = "https://student-testapi.vercel.app";
+const BACKEND_URL = (
+  process.env.BACKEND_URL ||
+  (process.env.VERCEL ? DEFAULT_BACKEND_URL : "http://127.0.0.1:8000")
+).replace(/\/$/, "");
 
 // This proxy exists so the browser talks ONLY to the same origin (no CORS) and
 // so trailing slashes survive. A plain Next `rewrite` drops the trailing slash

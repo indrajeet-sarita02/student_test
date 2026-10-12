@@ -3,7 +3,12 @@
 // The backend base URL (server-side only). The browser never talks to FastAPI
 // directly; `/api/backend/*` is proxied by the route handler at
 // `src/app/api/backend/[...path]/route.ts`, so CORS never applies.
-const BACKEND_URL = process.env.BACKEND_URL || "http://127.0.0.1:8000";
+// On Vercel, default to the deployed backend; override with BACKEND_URL.
+const DEFAULT_BACKEND_URL = "https://student-testapi.vercel.app";
+const BACKEND_URL = (
+  process.env.BACKEND_URL ||
+  (process.env.VERCEL ? DEFAULT_BACKEND_URL : "http://127.0.0.1:8000")
+).replace(/\/$/, "");
 
 const nextConfig = {
   reactStrictMode: true,
