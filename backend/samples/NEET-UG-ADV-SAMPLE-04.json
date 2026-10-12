@@ -1,0 +1,2708 @@
+{
+  "exam": "NEET UG (Advanced Level) - Full Length Mock",
+  "set_code": "NEET-UG-ADV-SAMPLE-04",
+  "set_label": "Sample Set 04",
+  "total_questions": 180,
+  "questions": [
+    {
+      "number": 1,
+      "subject": "Physics",
+      "question": "A small sphere falls through a viscous liquid with a terminal velocity. The terminal velocity is directly proportional to",
+      "options": {
+        "A": "r^3",
+        "B": "the square of the radius r^2",
+        "C": "1/r",
+        "D": "the radius r"
+      },
+      "answer": "B",
+      "explanation": "Stokes' law gives v_t = 2 r^2 (rho - sigma) g / (9 eta), so v_t ∝ r^2.",
+      "difficulty": "HARD",
+      "topic": "Mechanical Properties of Fluids"
+    },
+    {
+      "number": 2,
+      "subject": "Physics",
+      "question": "For a metallic conductor carrying a steady current, the drift velocity of the free electrons is inversely proportional to",
+      "options": {
+        "A": "the current",
+        "B": "the length of the conductor",
+        "C": "the potential difference",
+        "D": "the number density of free electrons"
+      },
+      "answer": "D",
+      "explanation": "I = n A e v_d; for fixed I and A, v_d is inversely proportional to the number density n of free electrons.",
+      "difficulty": "MEDIUM",
+      "topic": "Current Electricity"
+    },
+    {
+      "number": 3,
+      "subject": "Physics",
+      "question": "The rms speed of the molecules of a gas is proportional to",
+      "options": {
+        "A": "sqrt(M/T)",
+        "B": "T^2/M",
+        "C": "T/M",
+        "D": "sqrt(T/M)"
+      },
+      "answer": "D",
+      "explanation": "v_rms = sqrt(3RT/M), so it varies as sqrt(T/M), where M is the molar mass.",
+      "difficulty": "EASY",
+      "topic": "Kinetic Theory of Gases"
+    },
+    {
+      "number": 4,
+      "subject": "Physics",
+      "question": "The electrostatic force between two point charges separated by a distance r varies as",
+      "options": {
+        "A": "1/r",
+        "B": "1/r^2",
+        "C": "1/r^3",
+        "D": "r^2"
+      },
+      "answer": "B",
+      "explanation": "Coulomb's law gives F = (1/4 pi epsilon_0) q1 q2 / r^2, so F ∝ 1/r^2.",
+      "difficulty": "EASY",
+      "topic": "Electrostatics"
+    },
+    {
+      "number": 5,
+      "subject": "Physics",
+      "question": "The number of degrees of freedom of a diatomic gas molecule at ordinary temperature is",
+      "options": {
+        "A": "6",
+        "B": "5",
+        "C": "3",
+        "D": "7"
+      },
+      "answer": "B",
+      "explanation": "A diatomic molecule has 3 translational and 2 rotational degrees of freedom, giving 5 in all.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinetic Theory of Gases"
+    },
+    {
+      "number": 6,
+      "subject": "Physics",
+      "question": "A spring of force constant 200 N/m is compressed by 0.1 m. The elastic potential energy stored in it is",
+      "options": {
+        "A": "2 J",
+        "B": "1 J",
+        "C": "20 J",
+        "D": "0.5 J"
+      },
+      "answer": "B",
+      "explanation": "U = (1/2) k x^2 = 0.5 x 200 x 0.01 = 1 J.",
+      "difficulty": "HARD",
+      "topic": "Work, Energy and Power"
+    },
+    {
+      "number": 7,
+      "subject": "Physics",
+      "question": "The dimensional formula of surface tension is",
+      "options": {
+        "A": "[M L^-1 T^-2]",
+        "B": "[M T^-2]",
+        "C": "[M L^2 T^-2]",
+        "D": "[M L T^-2]"
+      },
+      "answer": "B",
+      "explanation": "Surface tension = force/length = [M L T^-2]/[L] = [M T^-2].",
+      "difficulty": "MEDIUM",
+      "topic": "Mechanical Properties of Fluids"
+    },
+    {
+      "number": 8,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 900.0?",
+      "options": {
+        "A": "5",
+        "B": "7",
+        "C": "4",
+        "D": "6"
+      },
+      "answer": "C",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 9,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 0.020?",
+      "options": {
+        "A": "3",
+        "B": "2",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "B",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 10,
+      "subject": "Physics",
+      "question": "Total internal reflection of light can occur when light travels",
+      "options": {
+        "A": "normally from a rarer to a denser medium",
+        "B": "from a rarer to a denser medium at any angle",
+        "C": "from a denser to a rarer medium at an angle greater than the critical angle",
+        "D": "from a denser to a rarer medium at any angle"
+      },
+      "answer": "D",
+      "explanation": "Total internal reflection requires travel from a denser to a rarer medium with the angle of incidence larger than the critical angle.",
+      "difficulty": "MEDIUM",
+      "topic": "Ray Optics"
+    },
+    {
+      "number": 11,
+      "subject": "Physics",
+      "question": "Two resistors of 6 ohm and 3 ohm are connected in parallel. Their equivalent resistance is",
+      "options": {
+        "A": "9 ohm",
+        "B": "2 ohm",
+        "C": "1 ohm",
+        "D": "4.5 ohm"
+      },
+      "answer": "B",
+      "explanation": "1/R = 1/6 + 1/3 = 1/2, so the equivalent resistance R = 2 ohm.",
+      "difficulty": "HARD",
+      "topic": "Current Electricity"
+    },
+    {
+      "number": 12,
+      "subject": "Physics",
+      "question": "The dimensional formula of angular momentum is",
+      "options": {
+        "A": "[M L^2 T^-2]",
+        "B": "[M L^2 T^-3]",
+        "C": "[M L T^-1]",
+        "D": "[M L^2 T^-1]"
+      },
+      "answer": "D",
+      "explanation": "Writing the defining equation for angular momentum gives the dimension [M L^2 T^-1].",
+      "difficulty": "MEDIUM",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 13,
+      "subject": "Physics",
+      "question": "The time period of a simple pendulum (for small oscillations) is independent of",
+      "options": {
+        "A": "the acceleration due to gravity",
+        "B": "its length",
+        "C": "the amplitude of oscillation",
+        "D": "the mass of the bob"
+      },
+      "answer": "D",
+      "explanation": "T = 2π sqrt(L/g); there is no dependence on the mass of the bob.",
+      "difficulty": "EASY",
+      "topic": "Oscillations and Waves"
+    },
+    {
+      "number": 14,
+      "subject": "Physics",
+      "question": "The dimensional formula of gravitational constant is",
+      "options": {
+        "A": "[M L^2 T^-2]",
+        "B": "[M^-1 L^2 T^-2]",
+        "C": "[M L^3 T^-2]",
+        "D": "[M^-1 L^3 T^-2]"
+      },
+      "answer": "D",
+      "explanation": "Writing the defining equation for gravitational constant gives the dimension [M^-1 L^3 T^-2].",
+      "difficulty": "MEDIUM",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 15,
+      "subject": "Physics",
+      "question": "If the net external torque acting on a system is zero, the quantity that remains conserved is",
+      "options": {
+        "A": "kinetic energy",
+        "B": "angular momentum",
+        "C": "moment of inertia",
+        "D": "linear momentum"
+      },
+      "answer": "B",
+      "explanation": "dL/dt = torque; with zero external torque the angular momentum L is constant.",
+      "difficulty": "MEDIUM",
+      "topic": "Rotational Motion"
+    },
+    {
+      "number": 16,
+      "subject": "Physics",
+      "question": "A charged particle moving in a uniform magnetic field experiences no magnetic force when its velocity is",
+      "options": {
+        "A": "perpendicular to the field",
+        "B": "at 60 degrees to the field",
+        "C": "at 45 degrees to the field",
+        "D": "parallel to the field"
+      },
+      "answer": "D",
+      "explanation": "F = q v B sin(theta); the force vanishes when the velocity is parallel (or antiparallel) to the field.",
+      "difficulty": "EASY",
+      "topic": "Moving Charges and Magnetism"
+    },
+    {
+      "number": 17,
+      "subject": "Physics",
+      "question": "In the photoelectric effect, the maximum kinetic energy of the emitted photoelectrons depends on",
+      "options": {
+        "A": "the intensity of the incident light",
+        "B": "the distance of the source",
+        "C": "the area of the metal surface",
+        "D": "the frequency of the incident light"
+      },
+      "answer": "D",
+      "explanation": "Einstein's equation K_max = h*nu - phi shows that the maximum kinetic energy depends on the frequency of the light, not on its intensity.",
+      "difficulty": "EASY",
+      "topic": "Dual Nature of Matter and Radiation"
+    },
+    {
+      "number": 18,
+      "subject": "Physics",
+      "question": "The dimensional formula of momentum is",
+      "options": {
+        "A": "[M L T^-2]",
+        "B": "[M L T^-1]",
+        "C": "[M L^2 T^-2]",
+        "D": "[M L^2 T^-1]"
+      },
+      "answer": "B",
+      "explanation": "Writing the defining equation for momentum gives the dimension [M L T^-1].",
+      "difficulty": "MEDIUM",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 19,
+      "subject": "Physics",
+      "question": "A body of mass 2 kg moving at 4 m/s is brought to rest by a resistive force after travelling 2 m. The magnitude of the force is",
+      "options": {
+        "A": "4 N",
+        "B": "16 N",
+        "C": "8 N",
+        "D": "2 N"
+      },
+      "answer": "C",
+      "explanation": "KE = (1/2)mv^2 = 0.5 x 2 x 16 = 16 J; by the work-energy theorem F = 16/2 = 8 N.",
+      "difficulty": "MEDIUM",
+      "topic": "Work, Energy and Power"
+    },
+    {
+      "number": 20,
+      "subject": "Physics",
+      "question": "During a reversible isothermal expansion of an ideal gas, the internal energy of the gas",
+      "options": {
+        "A": "increases",
+        "B": "decreases",
+        "C": "becomes zero",
+        "D": "remains constant"
+      },
+      "answer": "D",
+      "explanation": "The internal energy of an ideal gas depends only on temperature; in an isothermal process T is constant, so ΔU = 0.",
+      "difficulty": "MEDIUM",
+      "topic": "Thermodynamics"
+    },
+    {
+      "number": 21,
+      "subject": "Physics",
+      "question": "The energy stored in a capacitor of capacitance C charged to a potential difference V is",
+      "options": {
+        "A": "C V^2",
+        "B": "(1/2) C V^2",
+        "C": "(1/2) C V",
+        "D": "2 C V^2"
+      },
+      "answer": "B",
+      "explanation": "The stored energy is U = (1/2) C V^2.",
+      "difficulty": "HARD",
+      "topic": "Electrostatics"
+    },
+    {
+      "number": 22,
+      "subject": "Physics",
+      "question": "The escape velocity of a body from the surface of the Earth is independent of",
+      "options": {
+        "A": "mass of the body",
+        "B": "mass of the Earth",
+        "C": "acceleration due to gravity at the surface",
+        "D": "radius of the Earth"
+      },
+      "answer": "A",
+      "explanation": "v_escape = sqrt(2GM/R). The mass of the escaping body cancels out.",
+      "difficulty": "EASY",
+      "topic": "Gravitation"
+    },
+    {
+      "number": 23,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 20.04?",
+      "options": {
+        "A": "6",
+        "B": "4",
+        "C": "7",
+        "D": "5"
+      },
+      "answer": "B",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 24,
+      "subject": "Physics",
+      "question": "Ohm's law states that, at constant temperature, the current through a conductor is",
+      "options": {
+        "A": "independent of the potential difference",
+        "B": "directly proportional to the potential difference",
+        "C": "inversely proportional to the potential difference",
+        "D": "proportional to the square of the potential difference"
+      },
+      "answer": "B",
+      "explanation": "V = IR, so I ∝ V when R is constant (fixed temperature).",
+      "difficulty": "EASY",
+      "topic": "Current Electricity"
+    },
+    {
+      "number": 25,
+      "subject": "Physics",
+      "question": "A Carnot engine works between a source at 500 K and a sink at 300 K. Its efficiency is",
+      "options": {
+        "A": "25%",
+        "B": "40%",
+        "C": "30%",
+        "D": "60%"
+      },
+      "answer": "B",
+      "explanation": "eta = 1 - T_sink/T_source = 1 - 300/500 = 0.40 = 40%.",
+      "difficulty": "HARD",
+      "topic": "Thermodynamics"
+    },
+    {
+      "number": 26,
+      "subject": "Physics",
+      "question": "The SI unit of Young's modulus is",
+      "options": {
+        "A": "N m^2",
+        "B": "N m",
+        "C": "N / m^2",
+        "D": "N / m"
+      },
+      "answer": "C",
+      "explanation": "Young's modulus = stress/strain; strain is dimensionless, so its unit is that of stress, N/m^2 (pascal).",
+      "difficulty": "EASY",
+      "topic": "Mechanical Properties of Solids"
+    },
+    {
+      "number": 27,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 105.0?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "7",
+        "D": "6"
+      },
+      "answer": "A",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 28,
+      "subject": "Physics",
+      "question": "The work done by a force F = (2i + 3j) N producing a displacement s = (3i + 4j) m is",
+      "options": {
+        "A": "18 J",
+        "B": "12 J",
+        "C": "6 J",
+        "D": "5 J"
+      },
+      "answer": "A",
+      "explanation": "W = F . s = (2)(3) + (3)(4) = 6 + 12 = 18 J.",
+      "difficulty": "EASY",
+      "topic": "Work, Energy and Power"
+    },
+    {
+      "number": 29,
+      "subject": "Physics",
+      "question": "According to the first law of thermodynamics, the heat supplied to a system is given by",
+      "options": {
+        "A": "ΔU + ΔW",
+        "B": "ΔU x ΔW",
+        "C": "ΔW - ΔU",
+        "D": "ΔU - ΔW"
+      },
+      "answer": "A",
+      "explanation": "First law: ΔQ = ΔU + ΔW, where ΔU is the change in internal energy and ΔW the work done by the system.",
+      "difficulty": "EASY",
+      "topic": "Thermodynamics"
+    },
+    {
+      "number": 30,
+      "subject": "Physics",
+      "question": "The time period of a satellite moving in a circular orbit of radius r around the Earth is proportional to",
+      "options": {
+        "A": "r^(3/2)",
+        "B": "r^(1/2)",
+        "C": "r^2",
+        "D": "r"
+      },
+      "answer": "A",
+      "explanation": "Kepler's third law gives T^2 ∝ r^3, hence T ∝ r^(3/2).",
+      "difficulty": "HARD",
+      "topic": "Gravitation"
+    },
+    {
+      "number": 31,
+      "subject": "Physics",
+      "question": "A plane progressive wave is represented by y = A sin(kx - omega t). The speed of the wave is",
+      "options": {
+        "A": "omega k",
+        "B": "k/omega",
+        "C": "omega + k",
+        "D": "omega/k"
+      },
+      "answer": "D",
+      "explanation": "For y = A sin(kx - omega t), the wave speed v = omega/k.",
+      "difficulty": "HARD",
+      "topic": "Oscillations and Waves"
+    },
+    {
+      "number": 32,
+      "subject": "Physics",
+      "question": "For a particle executing simple harmonic motion, its acceleration is",
+      "options": {
+        "A": "constant in magnitude and direction",
+        "B": "zero at the extreme positions of displacement",
+        "C": "directed away from the mean position",
+        "D": "proportional to the displacement and directed towards the mean position"
+      },
+      "answer": "D",
+      "explanation": "In SHM a = -omega^2 x, so the acceleration is proportional to the displacement and always directed towards the mean position.",
+      "difficulty": "MEDIUM",
+      "topic": "Oscillations and Waves"
+    },
+    {
+      "number": 33,
+      "subject": "Physics",
+      "question": "A monkey of mass 20 kg climbs up a rope with an acceleration of 2 m/s^2 (g = 10 m/s^2). The tension in the rope is",
+      "options": {
+        "A": "160 N",
+        "B": "40 N",
+        "C": "240 N",
+        "D": "200 N"
+      },
+      "answer": "C",
+      "explanation": "For upward acceleration, T = m(g + a) = 20 x (10 + 2) = 240 N.",
+      "difficulty": "HARD",
+      "topic": "Laws of Motion"
+    },
+    {
+      "number": 34,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 4.500?",
+      "options": {
+        "A": "7",
+        "B": "6",
+        "C": "4",
+        "D": "5"
+      },
+      "answer": "C",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 35,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 0.0006?",
+      "options": {
+        "A": "3",
+        "B": "2",
+        "C": "1",
+        "D": "4"
+      },
+      "answer": "C",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 36,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 6.02?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "3"
+      },
+      "answer": "D",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 37,
+      "subject": "Physics",
+      "question": "A solid sphere rolls without slipping on a horizontal surface. The ratio of its rotational kinetic energy to its total kinetic energy is",
+      "options": {
+        "A": "5/7",
+        "B": "3/5",
+        "C": "2/7",
+        "D": "2/5"
+      },
+      "answer": "C",
+      "explanation": "Rotational fraction = I/(I + M R^2). For a solid sphere I = (2/5) M R^2, giving (2/5)/(7/5) = 2/7.",
+      "difficulty": "HARD",
+      "topic": "Rotational Motion"
+    },
+    {
+      "number": 38,
+      "subject": "Physics",
+      "question": "The moment of inertia of a uniform rod of mass M and length L about an axis through its centre and perpendicular to its length is",
+      "options": {
+        "A": "M L^2 / 12",
+        "B": "M L^2 / 3",
+        "C": "M L^2 / 2",
+        "D": "M L^2"
+      },
+      "answer": "A",
+      "explanation": "For a thin rod about an axis through its centre, I = M L^2 / 12.",
+      "difficulty": "EASY",
+      "topic": "Rotational Motion"
+    },
+    {
+      "number": 39,
+      "subject": "Physics",
+      "question": "The cyclotron frequency of a charged particle moving in a uniform magnetic field is independent of",
+      "options": {
+        "A": "its speed",
+        "B": "its charge",
+        "C": "its mass",
+        "D": "the magnetic field"
+      },
+      "answer": "A",
+      "explanation": "f = qB/(2 pi m) depends only on q, B and m, and not on the speed of the particle.",
+      "difficulty": "HARD",
+      "topic": "Moving Charges and Magnetism"
+    },
+    {
+      "number": 40,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 0.00340?",
+      "options": {
+        "A": "6",
+        "B": "3",
+        "C": "5",
+        "D": "4"
+      },
+      "answer": "B",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 41,
+      "subject": "Physics",
+      "question": "The electric field inside a charged conductor in electrostatic equilibrium is",
+      "options": {
+        "A": "infinite",
+        "B": "zero",
+        "C": "equal to the surface field",
+        "D": "directed radially outward"
+      },
+      "answer": "B",
+      "explanation": "Free charges redistribute until the field inside a conductor in electrostatic equilibrium becomes zero.",
+      "difficulty": "MEDIUM",
+      "topic": "Electrostatics"
+    },
+    {
+      "number": 42,
+      "subject": "Physics",
+      "question": "If the value of g at the Earth's surface is g, then its value at a height equal to the Earth's radius R is",
+      "options": {
+        "A": "g/9",
+        "B": "g/4",
+        "C": "g/8",
+        "D": "g/2"
+      },
+      "answer": "B",
+      "explanation": "g' = g R^2/(R + h)^2. With h = R, g' = g R^2/(2R)^2 = g/4.",
+      "difficulty": "MEDIUM",
+      "topic": "Gravitation"
+    },
+    {
+      "number": 43,
+      "subject": "Physics",
+      "question": "Lenz's law is a direct consequence of the conservation of",
+      "options": {
+        "A": "energy",
+        "B": "charge",
+        "C": "mass",
+        "D": "momentum"
+      },
+      "answer": "A",
+      "explanation": "The induced effect opposes the change producing it; otherwise energy could be created, violating conservation of energy.",
+      "difficulty": "EASY",
+      "topic": "Electromagnetic Induction"
+    },
+    {
+      "number": 44,
+      "subject": "Physics",
+      "question": "A charged particle of charge q and mass m moves with speed v perpendicular to a uniform magnetic field B. The radius of its circular path is",
+      "options": {
+        "A": "q v / (m B)",
+        "B": "q B / (m v)",
+        "C": "m v / (q B)",
+        "D": "m B / (q v)"
+      },
+      "answer": "C",
+      "explanation": "Equating q v B to m v^2/r gives r = m v / (q B).",
+      "difficulty": "MEDIUM",
+      "topic": "Moving Charges and Magnetism"
+    },
+    {
+      "number": 45,
+      "subject": "Physics",
+      "question": "In a series LCR circuit at resonance, the impedance of the circuit is",
+      "options": {
+        "A": "equal to R and maximum",
+        "B": "infinite",
+        "C": "zero",
+        "D": "equal to R and minimum"
+      },
+      "answer": "D",
+      "explanation": "At resonance X_L = X_C, so the reactances cancel and Z = R, the minimum impedance.",
+      "difficulty": "MEDIUM",
+      "topic": "Alternating Current"
+    },
+    {
+      "number": 46,
+      "subject": "Chemistry",
+      "question": "The number of moles of solute dissolved per litre of solution is called",
+      "options": {
+        "A": "mole fraction",
+        "B": "normality",
+        "C": "molality",
+        "D": "molarity"
+      },
+      "answer": "D",
+      "explanation": "Molarity (M) is the number of moles of solute per litre of solution.",
+      "difficulty": "EASY",
+      "topic": "Solutions"
+    },
+    {
+      "number": 47,
+      "subject": "Chemistry",
+      "question": "The oxidation state of chromium in K2Cr2O7 is",
+      "options": {
+        "A": "+7",
+        "B": "+2",
+        "C": "+3",
+        "D": "+6"
+      },
+      "answer": "D",
+      "explanation": "2(+1) + 2x + 7(-2) = 0 gives x = +6.",
+      "difficulty": "MEDIUM",
+      "topic": "Redox Reactions"
+    },
+    {
+      "number": 48,
+      "subject": "Chemistry",
+      "question": "Colligative properties of a dilute solution depend on",
+      "options": {
+        "A": "the size of the solute particles",
+        "B": "the nature of the solute",
+        "C": "the nature of the solvent",
+        "D": "the number of solute particles"
+      },
+      "answer": "D",
+      "explanation": "Colligative properties depend only on the number of solute particles, not on their chemical nature.",
+      "difficulty": "MEDIUM",
+      "topic": "Solutions"
+    },
+    {
+      "number": 49,
+      "subject": "Chemistry",
+      "question": "The IUPAC name of K4[Fe(CN)6] is",
+      "options": {
+        "A": "potassium hexacyanoiron(II)",
+        "B": "potassium hexacyanidoferrate(II)",
+        "C": "potassium hexacyanidoferrate(III)",
+        "D": "potassium ferrocyanide(III)"
+      },
+      "answer": "B",
+      "explanation": "The complex anion [Fe(CN)6]^4- contains Fe in the +2 state, so the name is potassium hexacyanidoferrate(II).",
+      "difficulty": "MEDIUM",
+      "topic": "Coordination Compounds"
+    },
+    {
+      "number": 50,
+      "subject": "Chemistry",
+      "question": "The geometry of the complex ion [Ni(CN)4]^2- is",
+      "options": {
+        "A": "linear",
+        "B": "octahedral",
+        "C": "tetrahedral",
+        "D": "square planar"
+      },
+      "answer": "D",
+      "explanation": "CN^- is a strong-field ligand; Ni^2+ (d8) undergoes dsp2 hybridisation, giving a square planar geometry.",
+      "difficulty": "HARD",
+      "topic": "Coordination Compounds"
+    },
+    {
+      "number": 51,
+      "subject": "Chemistry",
+      "question": "For a certain reaction, doubling the concentration of A doubles the rate. The order of the reaction with respect to A is",
+      "options": {
+        "A": "first",
+        "B": "zero",
+        "C": "third",
+        "D": "second"
+      },
+      "answer": "A",
+      "explanation": "Rate doubling when [A] doubles means rate ∝ [A]^1, so the order with respect to A is one.",
+      "difficulty": "HARD",
+      "topic": "Chemical Kinetics"
+    },
+    {
+      "number": 52,
+      "subject": "Chemistry",
+      "question": "The bond formed by the sharing of electrons between two atoms is called a",
+      "options": {
+        "A": "hydrogen bond",
+        "B": "covalent bond",
+        "C": "ionic bond",
+        "D": "metallic bond"
+      },
+      "answer": "B",
+      "explanation": "A covalent bond is formed by the mutual sharing of electron pairs between atoms.",
+      "difficulty": "EASY",
+      "topic": "Chemical Bonding"
+    },
+    {
+      "number": 53,
+      "subject": "Chemistry",
+      "question": "The most electronegative element among the group 15 elements is",
+      "options": {
+        "A": "phosphorus",
+        "B": "arsenic",
+        "C": "nitrogen",
+        "D": "bismuth"
+      },
+      "answer": "C",
+      "explanation": "Electronegativity decreases down group 15; nitrogen is the most electronegative of them.",
+      "difficulty": "EASY",
+      "topic": "p-Block Elements (Group 15)"
+    },
+    {
+      "number": 54,
+      "subject": "Chemistry",
+      "question": "In an electrochemical cell, oxidation takes place at the",
+      "options": {
+        "A": "salt bridge",
+        "B": "cathode",
+        "C": "anode",
+        "D": "voltmeter"
+      },
+      "answer": "C",
+      "explanation": "Oxidation (loss of electrons) always occurs at the anode.",
+      "difficulty": "EASY",
+      "topic": "Electrochemistry"
+    },
+    {
+      "number": 55,
+      "subject": "Chemistry",
+      "question": "Which of the following is more acidic?",
+      "options": {
+        "A": "Ethanol",
+        "B": "Neither is acidic",
+        "C": "Both are equally acidic",
+        "D": "Phenol"
+      },
+      "answer": "D",
+      "explanation": "The phenoxide ion is stabilised by resonance, so phenol is more acidic than ethanol.",
+      "difficulty": "MEDIUM",
+      "topic": "Alcohols and Phenols"
+    },
+    {
+      "number": 56,
+      "subject": "Chemistry",
+      "question": "The strongest base in aqueous solution among the following is",
+      "options": {
+        "A": "CH3NH2",
+        "B": "C6H5NH2",
+        "C": "NH3",
+        "D": "(CH3)2NH"
+      },
+      "answer": "D",
+      "explanation": "The +I effect of two methyl groups and hydration make dimethylamine a stronger base than the others; aniline is weakest due to resonance.",
+      "difficulty": "MEDIUM",
+      "topic": "Amines"
+    },
+    {
+      "number": 57,
+      "subject": "Chemistry",
+      "question": "The hydride of group 16 with the highest boiling point is",
+      "options": {
+        "A": "H2O",
+        "B": "H2Te",
+        "C": "H2Se",
+        "D": "H2S"
+      },
+      "answer": "A",
+      "explanation": "Water has extensive hydrogen bonding, giving it a much higher boiling point than the other group 16 hydrides.",
+      "difficulty": "MEDIUM",
+      "topic": "p-Block Elements (Group 16)"
+    },
+    {
+      "number": 58,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 98 g of sulphuric acid (molar mass = 98 g/mol) is",
+      "options": {
+        "A": "1 mol",
+        "B": "2 mol",
+        "C": "0.5 mol",
+        "D": "9604 mol"
+      },
+      "answer": "A",
+      "explanation": "n = mass / molar mass = 98/98 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 59,
+      "subject": "Chemistry",
+      "question": "The building blocks (monomers) of proteins are",
+      "options": {
+        "A": "nucleotides",
+        "B": "amino acids",
+        "C": "glucose units",
+        "D": "fatty acids"
+      },
+      "answer": "B",
+      "explanation": "Proteins are polymers built from amino acid monomers linked by peptide bonds.",
+      "difficulty": "EASY",
+      "topic": "Biomolecules"
+    },
+    {
+      "number": 60,
+      "subject": "Chemistry",
+      "question": "The correct order of reactivity towards the SN2 reaction is",
+      "options": {
+        "A": "methyl > primary > secondary > tertiary",
+        "B": "primary > methyl > secondary > tertiary",
+        "C": "secondary > tertiary > primary > methyl",
+        "D": "tertiary > secondary > primary > methyl"
+      },
+      "answer": "A",
+      "explanation": "SN2 reactivity decreases with increasing steric hindrance, so methyl > primary > secondary > tertiary.",
+      "difficulty": "MEDIUM",
+      "topic": "Haloalkanes"
+    },
+    {
+      "number": 61,
+      "subject": "Chemistry",
+      "question": "The number of sigma and pi bonds in a benzene molecule (C6H6) is",
+      "options": {
+        "A": "6 sigma and 3 pi",
+        "B": "12 sigma and 3 pi",
+        "C": "6 sigma and 6 pi",
+        "D": "12 sigma and 6 pi"
+      },
+      "answer": "B",
+      "explanation": "There are 6 C-H sigma bonds, 6 C-C sigma bonds in the ring and 3 pi bonds, i.e. 12 sigma and 3 pi bonds.",
+      "difficulty": "HARD",
+      "topic": "Chemical Bonding"
+    },
+    {
+      "number": 62,
+      "subject": "Chemistry",
+      "question": "The IUPAC name of CH3CHO is",
+      "options": {
+        "A": "ethanone",
+        "B": "ethanal",
+        "C": "methanal",
+        "D": "propanal"
+      },
+      "answer": "B",
+      "explanation": "CH3CHO has two carbon atoms and an aldehyde group, so it is ethanal.",
+      "difficulty": "EASY",
+      "topic": "Aldehydes and Ketones"
+    },
+    {
+      "number": 63,
+      "subject": "Chemistry",
+      "question": "The pH of a 0.01 M aqueous HCl solution is",
+      "options": {
+        "A": "3",
+        "B": "1",
+        "C": "2",
+        "D": "12"
+      },
+      "answer": "C",
+      "explanation": "HCl is a strong acid, so [H+] = 0.01 M = 10^-2 M and pH = 2.",
+      "difficulty": "MEDIUM",
+      "topic": "Equilibrium"
+    },
+    {
+      "number": 64,
+      "subject": "Chemistry",
+      "question": "The bond between carbon and chlorine in CH3Cl is best described as",
+      "options": {
+        "A": "polar covalent",
+        "B": "coordinate",
+        "C": "ionic",
+        "D": "non-polar covalent"
+      },
+      "answer": "A",
+      "explanation": "The electronegativity difference makes the C-Cl bond a polar covalent bond.",
+      "difficulty": "EASY",
+      "topic": "Haloalkanes"
+    },
+    {
+      "number": 65,
+      "subject": "Chemistry",
+      "question": "For an exothermic reaction at constant pressure, the change in enthalpy (ΔH) is",
+      "options": {
+        "A": "unpredictable",
+        "B": "zero",
+        "C": "negative",
+        "D": "positive"
+      },
+      "answer": "C",
+      "explanation": "In an exothermic reaction heat is released, so ΔH is negative.",
+      "difficulty": "MEDIUM",
+      "topic": "Thermodynamics"
+    },
+    {
+      "number": 66,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 44 g of carbon dioxide (molar mass = 44 g/mol) is",
+      "options": {
+        "A": "1 mol",
+        "B": "1936 mol",
+        "C": "0.5 mol",
+        "D": "2 mol"
+      },
+      "answer": "A",
+      "explanation": "n = mass / molar mass = 44/44 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 67,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 40 g of sodium hydroxide (molar mass = 40 g/mol) is",
+      "options": {
+        "A": "2 mol",
+        "B": "0.5 mol",
+        "C": "1 mol",
+        "D": "1600 mol"
+      },
+      "answer": "C",
+      "explanation": "n = mass / molar mass = 40/40 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 68,
+      "subject": "Chemistry",
+      "question": "The correct order of the first ionisation enthalpy of carbon, nitrogen and oxygen is",
+      "options": {
+        "A": "N > O > C",
+        "B": "O > N > C",
+        "C": "C > N > O",
+        "D": "C > O > N"
+      },
+      "answer": "A",
+      "explanation": "Nitrogen has a half-filled 2p^3 configuration, giving it the highest first ionisation enthalpy: N > O > C.",
+      "difficulty": "HARD",
+      "topic": "Classification of Elements and Periodicity"
+    },
+    {
+      "number": 69,
+      "subject": "Chemistry",
+      "question": "The shape of the methane (CH4) molecule is",
+      "options": {
+        "A": "tetrahedral",
+        "B": "linear",
+        "C": "square planar",
+        "D": "trigonal planar"
+      },
+      "answer": "A",
+      "explanation": "Four bonding pairs around carbon with no lone pairs give a tetrahedral shape with bond angles of 109.5 degrees.",
+      "difficulty": "MEDIUM",
+      "topic": "Chemical Bonding"
+    },
+    {
+      "number": 70,
+      "subject": "Chemistry",
+      "question": "Which of the following undergoes an SN1 reaction most readily?",
+      "options": {
+        "A": "CH3CH2Br",
+        "B": "(CH3)2CHBr",
+        "C": "(CH3)3CBr",
+        "D": "CH3Br"
+      },
+      "answer": "C",
+      "explanation": "SN1 proceeds through a carbocation; the tertiary carbonium ion from (CH3)3CBr is the most stable, so it reacts fastest.",
+      "difficulty": "HARD",
+      "topic": "Haloalkanes"
+    },
+    {
+      "number": 71,
+      "subject": "Chemistry",
+      "question": "The number of P-O-P bridges present in a molecule of P4O10 is",
+      "options": {
+        "A": "4",
+        "B": "12",
+        "C": "6",
+        "D": "10"
+      },
+      "answer": "C",
+      "explanation": "P4O10 contains 6 P-O-P bridges linking the four phosphorus atoms.",
+      "difficulty": "HARD",
+      "topic": "p-Block Elements (Group 15)"
+    },
+    {
+      "number": 72,
+      "subject": "Chemistry",
+      "question": "The unit of the rate constant of a first-order reaction is",
+      "options": {
+        "A": "L mol^-1 s^-1",
+        "B": "s^-1",
+        "C": "mol L^-1 s^-1",
+        "D": "mol^-1 s^-1"
+      },
+      "answer": "B",
+      "explanation": "For a first-order reaction rate = k[A]; matching units gives k in s^-1.",
+      "difficulty": "EASY",
+      "topic": "Chemical Kinetics"
+    },
+    {
+      "number": 73,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 18 g of water (molar mass = 18 g/mol) is",
+      "options": {
+        "A": "2 mol",
+        "B": "1 mol",
+        "C": "324 mol",
+        "D": "0.5 mol"
+      },
+      "answer": "B",
+      "explanation": "n = mass / molar mass = 18/18 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 74,
+      "subject": "Chemistry",
+      "question": "Ethanol reacts with metallic sodium to give",
+      "options": {
+        "A": "ethanol and sodium hydroxide",
+        "B": "sodium ethoxide and hydrogen",
+        "C": "sodium ethanoate and water",
+        "D": "ethene and hydrogen"
+      },
+      "answer": "B",
+      "explanation": "2 C2H5OH + 2 Na -> 2 C2H5ONa + H2, giving sodium ethoxide and hydrogen.",
+      "difficulty": "EASY",
+      "topic": "Alcohols and Phenols"
+    },
+    {
+      "number": 75,
+      "subject": "Chemistry",
+      "question": "The standard enthalpy of formation of an element in its most stable standard state is",
+      "options": {
+        "A": "zero",
+        "B": "always negative",
+        "C": "equal to its atomic mass",
+        "D": "always positive"
+      },
+      "answer": "A",
+      "explanation": "By convention the standard enthalpy of formation of an element in its standard state is taken as zero.",
+      "difficulty": "HARD",
+      "topic": "Thermodynamics"
+    },
+    {
+      "number": 76,
+      "subject": "Chemistry",
+      "question": "Which of the following is a characteristic of physical adsorption?",
+      "options": {
+        "A": "It involves strong chemical bonds",
+        "B": "It is highly specific",
+        "C": "It is irreversible",
+        "D": "It is reversible"
+      },
+      "answer": "D",
+      "explanation": "Physical adsorption arises from weak van der Waals forces, so it is reversible and not specific.",
+      "difficulty": "EASY",
+      "topic": "Surface Chemistry"
+    },
+    {
+      "number": 77,
+      "subject": "Chemistry",
+      "question": "The van't Hoff factor (i) for K2SO4 in dilute aqueous solution, assuming complete dissociation, is",
+      "options": {
+        "A": "3",
+        "B": "1",
+        "C": "2",
+        "D": "4"
+      },
+      "answer": "A",
+      "explanation": "K2SO4 dissociates into 2 K+ and 1 SO4^2-, giving i = 3 for complete dissociation.",
+      "difficulty": "HARD",
+      "topic": "Solutions"
+    },
+    {
+      "number": 78,
+      "subject": "Chemistry",
+      "question": "The half-life of a first-order reaction is",
+      "options": {
+        "A": "proportional to the square of initial concentration",
+        "B": "directly proportional to initial concentration",
+        "C": "inversely proportional to initial concentration",
+        "D": "independent of initial concentration"
+      },
+      "answer": "D",
+      "explanation": "For a first-order reaction t(1/2) = 0.693/k, which does not contain the initial concentration.",
+      "difficulty": "MEDIUM",
+      "topic": "Chemical Kinetics"
+    },
+    {
+      "number": 79,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 56 g of potassium hydroxide (molar mass = 56 g/mol) is",
+      "options": {
+        "A": "0.5 mol",
+        "B": "1 mol",
+        "C": "2 mol",
+        "D": "3136 mol"
+      },
+      "answer": "B",
+      "explanation": "n = mass / molar mass = 56/56 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 80,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 80 g of ammonium nitrate (molar mass = 80 g/mol) is",
+      "options": {
+        "A": "6400 mol",
+        "B": "2 mol",
+        "C": "1 mol",
+        "D": "0.5 mol"
+      },
+      "answer": "C",
+      "explanation": "n = mass / molar mass = 80/80 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 81,
+      "subject": "Chemistry",
+      "question": "The SI unit of enthalpy is",
+      "options": {
+        "A": "kelvin",
+        "B": "pascal",
+        "C": "calorie",
+        "D": "joule"
+      },
+      "answer": "D",
+      "explanation": "Enthalpy is a form of energy, so its SI unit is the joule (J).",
+      "difficulty": "EASY",
+      "topic": "Thermodynamics"
+    },
+    {
+      "number": 82,
+      "subject": "Chemistry",
+      "question": "One faraday of electric charge is equal to",
+      "options": {
+        "A": "9650 C",
+        "B": "96500 C",
+        "C": "1 C",
+        "D": "965 C"
+      },
+      "answer": "B",
+      "explanation": "One faraday equals the charge on one mole of electrons, about 96500 C mol^-1.",
+      "difficulty": "HARD",
+      "topic": "Electrochemistry"
+    },
+    {
+      "number": 83,
+      "subject": "Chemistry",
+      "question": "Oxidation, in terms of electrons, means",
+      "options": {
+        "A": "gain of electrons",
+        "B": "gain of neutrons",
+        "C": "loss of electrons",
+        "D": "loss of protons"
+      },
+      "answer": "C",
+      "explanation": "Oxidation is the loss of electrons; reduction is the gain of electrons (OIL RIG).",
+      "difficulty": "EASY",
+      "topic": "Redox Reactions"
+    },
+    {
+      "number": 84,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 180 g of glucose (molar mass = 180 g/mol) is",
+      "options": {
+        "A": "0.5 mol",
+        "B": "2 mol",
+        "C": "32400 mol",
+        "D": "1 mol"
+      },
+      "answer": "D",
+      "explanation": "n = mass / molar mass = 180/180 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 85,
+      "subject": "Chemistry",
+      "question": "The SI unit of molar conductivity is",
+      "options": {
+        "A": "S m^2 mol^-1",
+        "B": "S m mol^-1",
+        "C": "S m^-1",
+        "D": "S^-1 m^2 mol^-1"
+      },
+      "answer": "A",
+      "explanation": "Molar conductivity = conductivity/concentration, giving the SI unit S m^2 mol^-1.",
+      "difficulty": "MEDIUM",
+      "topic": "Electrochemistry"
+    },
+    {
+      "number": 86,
+      "subject": "Chemistry",
+      "question": "For the sparingly soluble salt Ag2CrO4, the solubility product expression is",
+      "options": {
+        "A": "[Ag+] [CrO4^2-]",
+        "B": "[Ag+]^2 [CrO4^2-]",
+        "C": "[Ag+] [CrO4^2-]^2",
+        "D": "[Ag+]^2 [CrO4^2-]^2"
+      },
+      "answer": "B",
+      "explanation": "Ag2CrO4 dissolves to give 2 Ag+ and 1 CrO4^2-, so Ksp = [Ag+]^2 [CrO4^2-].",
+      "difficulty": "HARD",
+      "topic": "Equilibrium"
+    },
+    {
+      "number": 87,
+      "subject": "Chemistry",
+      "question": "Which of the following is a transition element?",
+      "options": {
+        "A": "Ca (Z = 20)",
+        "B": "Fe (Z = 26)",
+        "C": "Na (Z = 11)",
+        "D": "Zn (Z = 30)"
+      },
+      "answer": "B",
+      "explanation": "A transition element has a partially filled d subshell in a common oxidation state; Fe qualifies, whereas Ca, Zn and Na do not.",
+      "difficulty": "EASY",
+      "topic": "d-Block Elements"
+    },
+    {
+      "number": 88,
+      "subject": "Chemistry",
+      "question": "The electronic configuration of copper (Z = 29) is",
+      "options": {
+        "A": "[Ar]3d8 4s2",
+        "B": "[Ar]3d10 4s2",
+        "C": "[Ar]3d9 4s2",
+        "D": "[Ar]3d10 4s1"
+      },
+      "answer": "D",
+      "explanation": "The fully filled 3d10 4s1 arrangement is more stable for copper, so Cu is [Ar]3d10 4s1.",
+      "difficulty": "MEDIUM",
+      "topic": "d-Block Elements"
+    },
+    {
+      "number": 89,
+      "subject": "Chemistry",
+      "question": "According to Le Chatelier's principle, an increase in pressure shifts a gaseous equilibrium towards",
+      "options": {
+        "A": "no change at all",
+        "B": "the reactant side always",
+        "C": "the side with fewer moles of gas",
+        "D": "the side with more moles of gas"
+      },
+      "answer": "C",
+      "explanation": "Raising the pressure favours the direction that reduces the number of gas molecules, i.e. the side with fewer moles of gas.",
+      "difficulty": "EASY",
+      "topic": "Equilibrium"
+    },
+    {
+      "number": 90,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 58.5 g of sodium chloride (molar mass = 58.5 g/mol) is",
+      "options": {
+        "A": "0.5 mol",
+        "B": "2 mol",
+        "C": "3422 mol",
+        "D": "1 mol"
+      },
+      "answer": "D",
+      "explanation": "n = mass / molar mass = 58.5/58.5 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 91,
+      "subject": "Botany",
+      "question": "The final electron acceptor of the electron transport chain in aerobic respiration is",
+      "options": {
+        "A": "NAD+",
+        "B": "FAD",
+        "C": "Carbon dioxide",
+        "D": "Oxygen"
+      },
+      "answer": "D",
+      "explanation": "Oxygen accepts the electrons at the end of the mitochondrial electron transport chain and forms water.",
+      "difficulty": "EASY",
+      "topic": "Respiration in Plants"
+    },
+    {
+      "number": 92,
+      "subject": "Botany",
+      "question": "The 'father of genetics' is",
+      "options": {
+        "A": "Gregor Mendel",
+        "B": "T.H. Morgan",
+        "C": "Charles Darwin",
+        "D": "Hugo de Vries"
+      },
+      "answer": "A",
+      "explanation": "Gregor Mendel is regarded as the father of genetics for his work on the laws of inheritance.",
+      "difficulty": "EASY",
+      "topic": "Principles of Inheritance and Variation"
+    },
+    {
+      "number": 93,
+      "subject": "Botany",
+      "question": "The greenhouse gas that contributes most to global warming is",
+      "options": {
+        "A": "Carbon dioxide",
+        "B": "Methane",
+        "C": "Nitrogen",
+        "D": "Oxygen"
+      },
+      "answer": "A",
+      "explanation": "Carbon dioxide is the principal greenhouse gas responsible for global warming, although methane is more potent per molecule.",
+      "difficulty": "MEDIUM",
+      "topic": "Environmental Issues"
+    },
+    {
+      "number": 94,
+      "subject": "Botany",
+      "question": "Water and dissolved minerals are transported through the",
+      "options": {
+        "A": "Cortex",
+        "B": "Phloem",
+        "C": "Xylem",
+        "D": "Cambium"
+      },
+      "answer": "C",
+      "explanation": "Xylem conducts water and minerals upward from the roots in plants.",
+      "difficulty": "EASY",
+      "topic": "Transport in Plants"
+    },
+    {
+      "number": 95,
+      "subject": "Botany",
+      "question": "The rate of transpiration in a small leafy shoot is measured using a",
+      "options": {
+        "A": "Auxanometer",
+        "B": "Clinostat",
+        "C": "Potometer",
+        "D": "Porometer"
+      },
+      "answer": "C",
+      "explanation": "A potometer measures the rate of water uptake, which closely reflects the rate of transpiration.",
+      "difficulty": "HARD",
+      "topic": "Transport in Plants"
+    },
+    {
+      "number": 96,
+      "subject": "Botany",
+      "question": "The fruit of the pea plant is a",
+      "options": {
+        "A": "Capsule",
+        "B": "Berry",
+        "C": "Drupe",
+        "D": "Legume"
+      },
+      "answer": "D",
+      "explanation": "The pea fruit develops from a superior monocarpellary ovary and splits along two sutures, so it is a legume (pod).",
+      "difficulty": "MEDIUM",
+      "topic": "Morphology of Flowering Plants"
+    },
+    {
+      "number": 97,
+      "subject": "Botany",
+      "question": "Apical dominance in plants is caused mainly by",
+      "options": {
+        "A": "Cytokinin",
+        "B": "Auxin",
+        "C": "Ethylene",
+        "D": "Gibberellin"
+      },
+      "answer": "B",
+      "explanation": "Auxin produced by the apical bud suppresses the growth of lateral buds, causing apical dominance.",
+      "difficulty": "HARD",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 98,
+      "subject": "Botany",
+      "question": "The variety of living organisms present in a region is called",
+      "options": {
+        "A": "Succession",
+        "B": "Ecology",
+        "C": "Biodiversity",
+        "D": "Homeostasis"
+      },
+      "answer": "C",
+      "explanation": "Biodiversity refers to the variety and variability of living organisms and the ecosystems they form.",
+      "difficulty": "EASY",
+      "topic": "Biodiversity and Conservation"
+    },
+    {
+      "number": 99,
+      "subject": "Botany",
+      "question": "The first stable product of the C4 (Hatch-Slack) pathway is",
+      "options": {
+        "A": "Ribulose bisphosphate",
+        "B": "3-phosphoglyceric acid",
+        "C": "Oxaloacetic acid (OAA)",
+        "D": "Malic acid"
+      },
+      "answer": "C",
+      "explanation": "In C4 plants CO2 is first fixed onto phosphoenolpyruvate to give the 4-carbon oxaloacetic acid (OAA).",
+      "difficulty": "MEDIUM",
+      "topic": "Photosynthesis"
+    },
+    {
+      "number": 100,
+      "subject": "Botany",
+      "question": "The dominant phase in the life cycle of a fern is the",
+      "options": {
+        "A": "Gametophyte (haploid)",
+        "B": "Gametophyte (diploid)",
+        "C": "Sporophyte (diploid)",
+        "D": "Sporophyte (haploid)"
+      },
+      "answer": "C",
+      "explanation": "In pteridophytes such as ferns, the conspicuous and long-lived phase is the diploid sporophyte; the gametophyte is small and short-lived.",
+      "difficulty": "HARD",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 101,
+      "subject": "Botany",
+      "question": "Which of the following is a micronutrient?",
+      "options": {
+        "A": "Phosphorus",
+        "B": "Zinc",
+        "C": "Potassium",
+        "D": "Nitrogen"
+      },
+      "answer": "B",
+      "explanation": "Zinc is required in very small amounts and is therefore a micronutrient, unlike N, P and K.",
+      "difficulty": "EASY",
+      "topic": "Mineral Nutrition"
+    },
+    {
+      "number": 102,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the lysosome?",
+      "options": {
+        "A": "the site of aerobic respiration and ATP synthesis",
+        "B": "an organelle containing hydrolytic enzymes for intracellular digestion",
+        "C": "the site of photosynthesis in plant cells",
+        "D": "the packaging and secretion of proteins and lipids"
+      },
+      "answer": "B",
+      "explanation": "the lysosome refers to an organelle containing hydrolytic enzymes for intracellular digestion.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 103,
+      "subject": "Botany",
+      "question": "Leghemoglobin, which protects the nitrogenase enzyme, is present in",
+      "options": {
+        "A": "Root nodules of legumes",
+        "B": "Leaves of grasses",
+        "C": "Fruits of tomato",
+        "D": "Stem of sugarcane"
+      },
+      "answer": "A",
+      "explanation": "Leghemoglobin occurs in the root nodules of legumes and keeps the nodule interior anaerobic, protecting nitrogenase.",
+      "difficulty": "MEDIUM",
+      "topic": "Mineral Nutrition"
+    },
+    {
+      "number": 104,
+      "subject": "Botany",
+      "question": "The type of placentation in which ovules are borne on a single placenta along the ventral suture, as in pea, is",
+      "options": {
+        "A": "Parietal",
+        "B": "Free central",
+        "C": "Axile",
+        "D": "Marginal"
+      },
+      "answer": "D",
+      "explanation": "In marginal placentation the ovules are arranged in two rows on the ventral suture, as in pea.",
+      "difficulty": "HARD",
+      "topic": "Morphology of Flowering Plants"
+    },
+    {
+      "number": 105,
+      "subject": "Botany",
+      "question": "The phenotypic ratio obtained in the F2 generation of a dihybrid cross is",
+      "options": {
+        "A": "1:1:1:1",
+        "B": "9:3:3:1",
+        "C": "1:2:1",
+        "D": "3:1"
+      },
+      "answer": "B",
+      "explanation": "Mendel's dihybrid cross gives the F2 phenotypic ratio 9:3:3:1.",
+      "difficulty": "MEDIUM",
+      "topic": "Principles of Inheritance and Variation"
+    },
+    {
+      "number": 106,
+      "subject": "Botany",
+      "question": "In the Calvin cycle, the first stable product is",
+      "options": {
+        "A": "Glucose",
+        "B": "Oxaloacetic acid",
+        "C": "Pyruvic acid",
+        "D": "3-phosphoglyceric acid"
+      },
+      "answer": "D",
+      "explanation": "Ribulose bisphosphate carboxylase fixes CO2 onto RuBP, and the first stable product is 3-phosphoglyceric acid (3-PGA).",
+      "difficulty": "HARD",
+      "topic": "Photosynthesis"
+    },
+    {
+      "number": 107,
+      "subject": "Botany",
+      "question": "The double-helix model of DNA was proposed by",
+      "options": {
+        "A": "Watson and Crick",
+        "B": "Mendel and Morgan",
+        "C": "Nirenberg and Khorana",
+        "D": "Griffith and Avery"
+      },
+      "answer": "A",
+      "explanation": "James Watson and Francis Crick proposed the double-helix model of DNA in 1953.",
+      "difficulty": "MEDIUM",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 108,
+      "subject": "Botany",
+      "question": "The deficiency of magnesium in plants typically causes",
+      "options": {
+        "A": "Marginal necrosis of leaves",
+        "B": "Interveinal chlorosis",
+        "C": "Premature leaf fall",
+        "D": "Stunted root growth"
+      },
+      "answer": "B",
+      "explanation": "Magnesium is a central atom of chlorophyll; its deficiency causes chlorosis between the veins (interveinal chlorosis).",
+      "difficulty": "HARD",
+      "topic": "Mineral Nutrition"
+    },
+    {
+      "number": 109,
+      "subject": "Botany",
+      "question": "The plant hormone that promotes cell division (cytokinesis) is",
+      "options": {
+        "A": "Gibberellin",
+        "B": "Auxin",
+        "C": "Cytokinin",
+        "D": "Abscisic acid"
+      },
+      "answer": "C",
+      "explanation": "Cytokinins promote cell division and are synthesised in regions of rapid division such as root tips.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 110,
+      "subject": "Botany",
+      "question": "The logistic growth equation for a population is",
+      "options": {
+        "A": "dN/dt = rN/N",
+        "B": "dN/dt = rN",
+        "C": "dN/dt = rN(K - N)/K",
+        "D": "dN/dt = rK"
+      },
+      "answer": "C",
+      "explanation": "Logistic growth is described by dN/dt = rN(K - N)/K, where K is the carrying capacity.",
+      "difficulty": "MEDIUM",
+      "topic": "Organisms and Populations"
+    },
+    {
+      "number": 111,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the nucleolus?",
+      "options": {
+        "A": "the site of ribosomal RNA synthesis",
+        "B": "a cytoplasmic channel connecting adjacent plant cells",
+        "C": "the membrane surrounding the plant cell vacuole",
+        "D": "an organelle involved in photorespiration and fatty-acid breakdown"
+      },
+      "answer": "A",
+      "explanation": "the nucleolus refers to the site of ribosomal RNA synthesis.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 112,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the Golgi apparatus?",
+      "options": {
+        "A": "the packaging and secretion of proteins and lipids",
+        "B": "the site of photosynthesis in plant cells",
+        "C": "the site of ribosomal RNA synthesis",
+        "D": "the site of aerobic respiration and ATP synthesis"
+      },
+      "answer": "A",
+      "explanation": "the Golgi apparatus refers to the packaging and secretion of proteins and lipids.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 113,
+      "subject": "Botany",
+      "question": "Palisade parenchyma is a part of the",
+      "options": {
+        "A": "Epidermis",
+        "B": "Pith",
+        "C": "Mesophyll",
+        "D": "Endodermis"
+      },
+      "answer": "C",
+      "explanation": "Palisade and spongy parenchyma together form the mesophyll of a leaf.",
+      "difficulty": "MEDIUM",
+      "topic": "Anatomy of Flowering Plants"
+    },
+    {
+      "number": 114,
+      "subject": "Botany",
+      "question": "The plant hormone responsible for cell elongation and phototropism is",
+      "options": {
+        "A": "Cytokinin",
+        "B": "Ethylene",
+        "C": "Auxin",
+        "D": "Gibberellin"
+      },
+      "answer": "C",
+      "explanation": "Auxin (IAA) promotes cell elongation and mediates phototropism by unequal distribution on the shaded side.",
+      "difficulty": "EASY",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 115,
+      "subject": "Botany",
+      "question": "According to the ten per cent law, the energy transferred from one trophic level to the next is about",
+      "options": {
+        "A": "10%",
+        "B": "90%",
+        "C": "1%",
+        "D": "50%"
+      },
+      "answer": "A",
+      "explanation": "Lindeman's ten percent law states that only about 10% of the energy at one trophic level is transferred to the next.",
+      "difficulty": "HARD",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 116,
+      "subject": "Botany",
+      "question": "The number of NADH molecules produced per glucose molecule during the Krebs cycle is",
+      "options": {
+        "A": "4 NADH",
+        "B": "3 NADH",
+        "C": "2 NADH",
+        "D": "6 NADH"
+      },
+      "answer": "D",
+      "explanation": "Each turn of the Krebs cycle yields 3 NADH; one glucose gives two turns, so 6 NADH are produced.",
+      "difficulty": "HARD",
+      "topic": "Respiration in Plants"
+    },
+    {
+      "number": 117,
+      "subject": "Botany",
+      "question": "The genetic material in most organisms is",
+      "options": {
+        "A": "Lipid",
+        "B": "DNA",
+        "C": "RNA",
+        "D": "Protein"
+      },
+      "answer": "B",
+      "explanation": "DNA is the genetic material in the vast majority of organisms, although some viruses use RNA.",
+      "difficulty": "EASY",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 118,
+      "subject": "Botany",
+      "question": "Which group of plants is called the 'amphibians of the plant kingdom'?",
+      "options": {
+        "A": "Angiosperms",
+        "B": "Bryophytes",
+        "C": "Pteridophytes",
+        "D": "Gymnosperms"
+      },
+      "answer": "B",
+      "explanation": "Bryophytes need water for the movement of male gametes to the egg, so they are called amphibians of the plant kingdom.",
+      "difficulty": "EASY",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 119,
+      "subject": "Botany",
+      "question": "The genotypic ratio obtained in the F2 generation of a monohybrid cross is",
+      "options": {
+        "A": "9:3:3:1",
+        "B": "1:1",
+        "C": "1:2:1",
+        "D": "3:1"
+      },
+      "answer": "C",
+      "explanation": "A monohybrid cross gives the genotypic ratio 1 (homozygous dominant) : 2 (heterozygous) : 1 (homozygous recessive).",
+      "difficulty": "HARD",
+      "topic": "Principles of Inheritance and Variation"
+    },
+    {
+      "number": 120,
+      "subject": "Botany",
+      "question": "The cohesion-tension theory explains the ascent of sap in the",
+      "options": {
+        "A": "Both phloem and xylem",
+        "B": "Xylem",
+        "C": "Neither",
+        "D": "Phloem"
+      },
+      "answer": "B",
+      "explanation": "According to the cohesion-tension theory, water rises through the xylem due to transpiration pull, cohesion and adhesion.",
+      "difficulty": "MEDIUM",
+      "topic": "Transport in Plants"
+    },
+    {
+      "number": 121,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the ribosome?",
+      "options": {
+        "A": "the site of protein synthesis",
+        "B": "the site of aerobic respiration and ATP synthesis",
+        "C": "the packaging and secretion of proteins and lipids",
+        "D": "an organelle containing hydrolytic enzymes for intracellular digestion"
+      },
+      "answer": "A",
+      "explanation": "the ribosome refers to the site of protein synthesis.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 122,
+      "subject": "Botany",
+      "question": "The fleshy edible part of a mango fruit is the",
+      "options": {
+        "A": "Mesocarp",
+        "B": "Seed",
+        "C": "Epicarp",
+        "D": "Endocarp"
+      },
+      "answer": "A",
+      "explanation": "The mango is a drupe whose fleshy edible portion is the mesocarp.",
+      "difficulty": "EASY",
+      "topic": "Morphology of Flowering Plants"
+    },
+    {
+      "number": 123,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the mitochondrion?",
+      "options": {
+        "A": "the site of ribosomal RNA synthesis",
+        "B": "an organelle involved in photorespiration and fatty-acid breakdown",
+        "C": "the site of photosynthesis in plant cells",
+        "D": "the site of aerobic respiration and ATP synthesis"
+      },
+      "answer": "D",
+      "explanation": "the mitochondrion refers to the site of aerobic respiration and ATP synthesis.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 124,
+      "subject": "Botany",
+      "question": "Double fertilisation is a characteristic feature of",
+      "options": {
+        "A": "Gymnosperms",
+        "B": "Bryophytes",
+        "C": "Pteridophytes",
+        "D": "Angiosperms"
+      },
+      "answer": "D",
+      "explanation": "Double fertilisation (syngamy and triple fusion) is found only in angiosperms.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 125,
+      "subject": "Botany",
+      "question": "In a parasitic food chain, the pyramid of numbers is",
+      "options": {
+        "A": "Always upright",
+        "B": "Not defined",
+        "C": "Inverted",
+        "D": "Always spindle-shaped"
+      },
+      "answer": "C",
+      "explanation": "A single host can support a large number of parasites, so the pyramid of numbers in a parasitic food chain is inverted.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 126,
+      "subject": "Botany",
+      "question": "Casparian strips are found in the",
+      "options": {
+        "A": "Cortex",
+        "B": "Pericycle",
+        "C": "Endodermis",
+        "D": "Epidermis"
+      },
+      "answer": "C",
+      "explanation": "The endodermal cell walls bear casparian strips (suberised bands) that block the apoplastic pathway in roots.",
+      "difficulty": "HARD",
+      "topic": "Anatomy of Flowering Plants"
+    },
+    {
+      "number": 127,
+      "subject": "Botany",
+      "question": "The process by which mRNA is synthesised from a DNA template is called",
+      "options": {
+        "A": "Translation",
+        "B": "Replication",
+        "C": "Mutation",
+        "D": "Transcription"
+      },
+      "answer": "D",
+      "explanation": "Transcription is the synthesis of RNA from a DNA template.",
+      "difficulty": "EASY",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 128,
+      "subject": "Botany",
+      "question": "The enzyme that unwinds the DNA double helix during replication is",
+      "options": {
+        "A": "DNA polymerase",
+        "B": "Helicase",
+        "C": "Primase",
+        "D": "Ligase"
+      },
+      "answer": "B",
+      "explanation": "Helicase unwinds the DNA double helix at the replication fork.",
+      "difficulty": "MEDIUM",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 129,
+      "subject": "Botany",
+      "question": "In a DNA double helix, adenine pairs with",
+      "options": {
+        "A": "Guanine",
+        "B": "Thymine",
+        "C": "Uracil",
+        "D": "Cytosine"
+      },
+      "answer": "B",
+      "explanation": "A pairs with T through two hydrogen bonds and G pairs with C through three hydrogen bonds.",
+      "difficulty": "HARD",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 130,
+      "subject": "Botany",
+      "question": "The net gain of ATP molecules by substrate-level phosphorylation during glycolysis of one glucose molecule is",
+      "options": {
+        "A": "38 ATP",
+        "B": "2 ATP",
+        "C": "1 ATP",
+        "D": "4 ATP"
+      },
+      "answer": "B",
+      "explanation": "Glycolysis uses 2 ATP and produces 4 ATP, giving a net gain of 2 ATP.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiration in Plants"
+    },
+    {
+      "number": 131,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the chloroplast?",
+      "options": {
+        "A": "the site of ribosomal RNA synthesis",
+        "B": "an organelle involved in photorespiration and fatty-acid breakdown",
+        "C": "the membrane surrounding the plant cell vacuole",
+        "D": "the site of photosynthesis in plant cells"
+      },
+      "answer": "D",
+      "explanation": "the chloroplast refers to the site of photosynthesis in plant cells.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 132,
+      "subject": "Botany",
+      "question": "A vascular bundle in which the cambium is present is called",
+      "options": {
+        "A": "Open",
+        "B": "Closed",
+        "C": "Radial",
+        "D": "Conjoint"
+      },
+      "answer": "A",
+      "explanation": "The presence of cambium between xylem and phloem makes a bundle open, allowing secondary growth.",
+      "difficulty": "EASY",
+      "topic": "Anatomy of Flowering Plants"
+    },
+    {
+      "number": 133,
+      "subject": "Botany",
+      "question": "The producers of an ecosystem are",
+      "options": {
+        "A": "Decomposers",
+        "B": "Green plants (autotrophs)",
+        "C": "Herbivores",
+        "D": "Consumers"
+      },
+      "answer": "B",
+      "explanation": "Green plants (autotrophs) trap solar energy and form the base of every food chain.",
+      "difficulty": "EASY",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 134,
+      "subject": "Botany",
+      "question": "The light reaction of photosynthesis takes place in the",
+      "options": {
+        "A": "Cytoplasm",
+        "B": "Stroma",
+        "C": "Outer chloroplast membrane",
+        "D": "Thylakoid membrane"
+      },
+      "answer": "D",
+      "explanation": "The photosystems and electron carriers of the light reaction are embedded in the thylakoid membrane.",
+      "difficulty": "EASY",
+      "topic": "Photosynthesis"
+    },
+    {
+      "number": 135,
+      "subject": "Botany",
+      "question": "The association between an alga and a fungus in a lichen is an example of",
+      "options": {
+        "A": "Commensalism",
+        "B": "Predation",
+        "C": "Parasitism",
+        "D": "Mutualism"
+      },
+      "answer": "D",
+      "explanation": "In a lichen the alga photosynthesises and the fungus provides shelter and minerals, so both benefit (mutualism).",
+      "difficulty": "EASY",
+      "topic": "Organisms and Populations"
+    },
+    {
+      "number": 136,
+      "subject": "Zoology",
+      "question": "The hormone secreted by the corpus luteum is",
+      "options": {
+        "A": "FSH",
+        "B": "Progesterone",
+        "C": "LH",
+        "D": "Estrogen only"
+      },
+      "answer": "B",
+      "explanation": "The corpus luteum mainly secretes progesterone, which maintains the uterine lining during the early stages of pregnancy.",
+      "difficulty": "HARD",
+      "topic": "Chemical Coordination and Integration"
+    },
+    {
+      "number": 137,
+      "subject": "Zoology",
+      "question": "Fertilisation in humans normally occurs in the",
+      "options": {
+        "A": "Uterus",
+        "B": "Cervix",
+        "C": "Ovary",
+        "D": "Fallopian tube (ampulla)"
+      },
+      "answer": "D",
+      "explanation": "Fertilisation normally takes place in the ampullary-isthmic junction of the fallopian tube.",
+      "difficulty": "MEDIUM",
+      "topic": "Human Reproduction"
+    },
+    {
+      "number": 138,
+      "subject": "Zoology",
+      "question": "The blood group regarded as the universal donor is",
+      "options": {
+        "A": "A positive",
+        "B": "AB positive",
+        "C": "O negative",
+        "D": "B negative"
+      },
+      "answer": "C",
+      "explanation": "O negative red cells carry neither A, B nor Rh D antigens, so they can be given to almost all recipients (universal donor).",
+      "difficulty": "MEDIUM",
+      "topic": "Body Fluids and Circulation"
+    },
+    {
+      "number": 139,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Porifera?",
+      "options": {
+        "A": "sponges with a water-canal system and spongin fibres",
+        "B": "roundworms possessing a pseudocoelom",
+        "C": "radially symmetrical animals bearing stinging cells (cnidoblasts)",
+        "D": "flattened worms with flame cells for excretion"
+      },
+      "answer": "A",
+      "explanation": "Porifera refers to sponges with a water-canal system and spongin fibres.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 140,
+      "subject": "Zoology",
+      "question": "Bt cotton is resistant to insect pests because it carries",
+      "options": {
+        "A": "a gene from Agrobacterium",
+        "B": "a gene from E. coli",
+        "C": "a gene from yeast",
+        "D": "cry genes from Bacillus thuringiensis"
+      },
+      "answer": "D",
+      "explanation": "Bt cotton expresses cry genes from Bacillus thuringiensis, whose protein is toxic to certain insect larvae.",
+      "difficulty": "HARD",
+      "topic": "Biotechnology and its Applications"
+    },
+    {
+      "number": 141,
+      "subject": "Zoology",
+      "question": "The hormone that increases water reabsorption in the collecting duct is",
+      "options": {
+        "A": "Renin",
+        "B": "Aldosterone",
+        "C": "ANF",
+        "D": "ADH (vasopressin)"
+      },
+      "answer": "D",
+      "explanation": "Antidiuretic hormone increases the permeability of the collecting duct to water, concentrating the urine.",
+      "difficulty": "MEDIUM",
+      "topic": "Excretory Products and their Elimination"
+    },
+    {
+      "number": 142,
+      "subject": "Zoology",
+      "question": "The hormone that lowers blood glucose is",
+      "options": {
+        "A": "Glucagon",
+        "B": "Adrenaline",
+        "C": "Insulin",
+        "D": "Cortisol"
+      },
+      "answer": "C",
+      "explanation": "Insulin, secreted by the beta cells of the islets of Langerhans, lowers blood glucose by promoting its uptake and storage.",
+      "difficulty": "EASY",
+      "topic": "Chemical Coordination and Integration"
+    },
+    {
+      "number": 143,
+      "subject": "Zoology",
+      "question": "The polymerase chain reaction (PCR) is used to",
+      "options": {
+        "A": "stain DNA",
+        "B": "separate proteins",
+        "C": "amplify DNA",
+        "D": "join DNA fragments"
+      },
+      "answer": "C",
+      "explanation": "PCR amplifies (makes many copies of) a specific segment of DNA using primers, a polymerase and thermal cycling.",
+      "difficulty": "MEDIUM",
+      "topic": "Biotechnology and its Applications"
+    },
+    {
+      "number": 144,
+      "subject": "Zoology",
+      "question": "Antibody-mediated immunity is also known as",
+      "options": {
+        "A": "Humoral immunity",
+        "B": "Passive immunity",
+        "C": "Cell-mediated immunity",
+        "D": "Innate immunity"
+      },
+      "answer": "A",
+      "explanation": "Antibody-mediated (B-cell) immunity acts through antibodies in the body fluids, so it is called humoral immunity.",
+      "difficulty": "HARD",
+      "topic": "Human Health and Disease"
+    },
+    {
+      "number": 145,
+      "subject": "Zoology",
+      "question": "Exchange of respiratory gases in the lungs occurs across the",
+      "options": {
+        "A": "Bronchi",
+        "B": "Larynx",
+        "C": "Alveoli",
+        "D": "Trachea"
+      },
+      "answer": "C",
+      "explanation": "The thin, highly vascular walls of the alveoli are the actual site of gaseous exchange between air and blood.",
+      "difficulty": "EASY",
+      "topic": "Breathing and Exchange of Gases"
+    },
+    {
+      "number": 146,
+      "subject": "Zoology",
+      "question": "Malaria is caused by",
+      "options": {
+        "A": "Plasmodium",
+        "B": "Vibrio cholerae",
+        "C": "Trypanosoma",
+        "D": "HIV"
+      },
+      "answer": "A",
+      "explanation": "Malaria is caused by the protozoan Plasmodium, transmitted by the bite of an infected female Anopheles mosquito.",
+      "difficulty": "EASY",
+      "topic": "Human Health and Disease"
+    },
+    {
+      "number": 147,
+      "subject": "Zoology",
+      "question": "Erythroblastosis foetalis is likely to occur when",
+      "options": {
+        "A": "only ABO incompatibility exists",
+        "B": "the mother is Rh-negative and the foetus is Rh-positive",
+        "C": "both the mother and the foetus are Rh-negative",
+        "D": "the mother is Rh-positive and the foetus is Rh-negative"
+      },
+      "answer": "B",
+      "explanation": "An Rh-negative mother sensitised to Rh-positive foetal cells produces antibodies that destroy the red cells of a subsequent Rh-positive foetus.",
+      "difficulty": "HARD",
+      "topic": "Body Fluids and Circulation"
+    },
+    {
+      "number": 148,
+      "subject": "Zoology",
+      "question": "Bile juice helps mainly in the",
+      "options": {
+        "A": "absorption of water",
+        "B": "emulsification of fats",
+        "C": "digestion of proteins",
+        "D": "absorption of glucose"
+      },
+      "answer": "B",
+      "explanation": "Bile salts emulsify fats, breaking large fat globules into smaller droplets so that lipases can act on them.",
+      "difficulty": "HARD",
+      "topic": "Digestion and Absorption"
+    },
+    {
+      "number": 149,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Arthropoda?",
+      "options": {
+        "A": "soft-bodied animals usually with a calcareous shell and a mantle",
+        "B": "spiny-skinned animals with a water-vascular system",
+        "C": "a phylum of worm-like animals with a stomochord",
+        "D": "the largest phylum, with jointed appendages and chitinous exoskeleton"
+      },
+      "answer": "D",
+      "explanation": "Arthropoda refers to the largest phylum, with jointed appendages and chitinous exoskeleton.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 150,
+      "subject": "Zoology",
+      "question": "The enzyme pepsin acts in the",
+      "options": {
+        "A": "Mouth",
+        "B": "Ileum",
+        "C": "Stomach",
+        "D": "Duodenum"
+      },
+      "answer": "C",
+      "explanation": "Pepsin is a protease that acts in the acidic medium of the stomach, converting proteins into peptones.",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion and Absorption"
+    },
+    {
+      "number": 151,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Platyhelminthes?",
+      "options": {
+        "A": "roundworms possessing a pseudocoelom",
+        "B": "flattened worms with flame cells for excretion",
+        "C": "the largest phylum, with jointed appendages and chitinous exoskeleton",
+        "D": "worms with true metameric segmentation and a closed circulatory system"
+      },
+      "answer": "B",
+      "explanation": "Platyhelminthes refers to flattened worms with flame cells for excretion.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 152,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Aschelminthes?",
+      "options": {
+        "A": "worms with true metameric segmentation and a closed circulatory system",
+        "B": "soft-bodied animals usually with a calcareous shell and a mantle",
+        "C": "the largest phylum, with jointed appendages and chitinous exoskeleton",
+        "D": "roundworms possessing a pseudocoelom"
+      },
+      "answer": "D",
+      "explanation": "Aschelminthes refers to roundworms possessing a pseudocoelom.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 153,
+      "subject": "Zoology",
+      "question": "The number of bones in the adult human body is",
+      "options": {
+        "A": "106",
+        "B": "206",
+        "C": "156",
+        "D": "306"
+      },
+      "answer": "B",
+      "explanation": "An adult human skeleton has 206 bones.",
+      "difficulty": "MEDIUM",
+      "topic": "Locomotion and Movement"
+    },
+    {
+      "number": 154,
+      "subject": "Zoology",
+      "question": "The theory of natural selection was proposed by",
+      "options": {
+        "A": "De Vries",
+        "B": "Mendel",
+        "C": "Darwin",
+        "D": "Lamarck"
+      },
+      "answer": "C",
+      "explanation": "Charles Darwin proposed the theory of natural selection in his book 'On the Origin of Species'.",
+      "difficulty": "MEDIUM",
+      "topic": "Evolution"
+    },
+    {
+      "number": 155,
+      "subject": "Zoology",
+      "question": "The structural and functional unit of the nervous system is the",
+      "options": {
+        "A": "Nephron",
+        "B": "Axon",
+        "C": "Neuron",
+        "D": "Neuroglia"
+      },
+      "answer": "C",
+      "explanation": "The neuron is the structural and functional unit of the nervous system.",
+      "difficulty": "EASY",
+      "topic": "Neural Control and Coordination"
+    },
+    {
+      "number": 156,
+      "subject": "Zoology",
+      "question": "The ten percent law of energy transfer was given by",
+      "options": {
+        "A": "Darwin",
+        "B": "Odum",
+        "C": "Tansley",
+        "D": "Lindeman"
+      },
+      "answer": "D",
+      "explanation": "Lindeman (1942) proposed that only about 10% of the energy at one trophic level is transferred to the next.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 157,
+      "subject": "Zoology",
+      "question": "The gap between two successive myelin sheaths along an axon is called a",
+      "options": {
+        "A": "Synapse",
+        "B": "Node of Ranvier",
+        "C": "Neurotransmitter",
+        "D": "Dendrite"
+      },
+      "answer": "B",
+      "explanation": "The unmyelinated gaps in a myelinated axon are called nodes of Ranvier, where saltatory conduction occurs.",
+      "difficulty": "MEDIUM",
+      "topic": "Neural Control and Coordination"
+    },
+    {
+      "number": 158,
+      "subject": "Zoology",
+      "question": "The natural pacemaker of the human heart is the",
+      "options": {
+        "A": "Bundle of His",
+        "B": "Purkinje fibres",
+        "C": "SA node",
+        "D": "AV node"
+      },
+      "answer": "C",
+      "explanation": "The sino-atrial (SA) node generates the impulses that set the rhythm of the heartbeat, so it acts as the pacemaker.",
+      "difficulty": "EASY",
+      "topic": "Body Fluids and Circulation"
+    },
+    {
+      "number": 159,
+      "subject": "Zoology",
+      "question": "The non-living components of an ecosystem are called",
+      "options": {
+        "A": "Biotic",
+        "B": "Organic",
+        "C": "Climatic only",
+        "D": "Abiotic"
+      },
+      "answer": "D",
+      "explanation": "Abiotic components include physical and chemical factors such as light, temperature, water and minerals.",
+      "difficulty": "EASY",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 160,
+      "subject": "Zoology",
+      "question": "The juxtaglomerular cells of the kidney secrete",
+      "options": {
+        "A": "Renin",
+        "B": "ADH",
+        "C": "Aldosterone",
+        "D": "Erythropoietin"
+      },
+      "answer": "A",
+      "explanation": "Juxtaglomerular cells release renin, which starts the renin-angiotensin-aldosterone system that raises blood pressure.",
+      "difficulty": "HARD",
+      "topic": "Excretory Products and their Elimination"
+    },
+    {
+      "number": 161,
+      "subject": "Zoology",
+      "question": "The functional unit of contraction in a muscle fibre is the",
+      "options": {
+        "A": "Myofibril",
+        "B": "Myosin",
+        "C": "Actin",
+        "D": "Sarcomere"
+      },
+      "answer": "D",
+      "explanation": "The sarcomere, the region between two successive Z-lines, is the functional unit of muscle contraction.",
+      "difficulty": "EASY",
+      "topic": "Locomotion and Movement"
+    },
+    {
+      "number": 162,
+      "subject": "Zoology",
+      "question": "Oral contraceptive pills prevent pregnancy mainly by",
+      "options": {
+        "A": "preventing ovulation",
+        "B": "blocking the fallopian tubes",
+        "C": "preventing implantation only",
+        "D": "killing sperms in the vagina"
+      },
+      "answer": "A",
+      "explanation": "Combined oral pills contain hormones that suppress the release of gonadotropins, thereby preventing ovulation.",
+      "difficulty": "MEDIUM",
+      "topic": "Reproductive Health"
+    },
+    {
+      "number": 163,
+      "subject": "Zoology",
+      "question": "The enzyme used to cut DNA at specific recognition sites is",
+      "options": {
+        "A": "Restriction endonuclease",
+        "B": "DNA ligase",
+        "C": "Helicase",
+        "D": "DNA polymerase"
+      },
+      "answer": "A",
+      "explanation": "Restriction endonucleases recognise specific base sequences and cut DNA at those sites, producing sticky ends.",
+      "difficulty": "EASY",
+      "topic": "Biotechnology and its Applications"
+    },
+    {
+      "number": 164,
+      "subject": "Zoology",
+      "question": "The male gamete in humans is the",
+      "options": {
+        "A": "Ovum",
+        "B": "Zygote",
+        "C": "Oogonium",
+        "D": "Spermatozoon"
+      },
+      "answer": "D",
+      "explanation": "The spermatozoon (sperm) is the motile male gamete.",
+      "difficulty": "EASY",
+      "topic": "Human Reproduction"
+    },
+    {
+      "number": 165,
+      "subject": "Zoology",
+      "question": "Most of the carbon dioxide is transported in the blood as",
+      "options": {
+        "A": "dissolved CO2 in plasma",
+        "B": "bicarbonate ions",
+        "C": "carbaminohemoglobin",
+        "D": "carbonic acid"
+      },
+      "answer": "B",
+      "explanation": "About 70% of CO2 is carried as bicarbonate ions, about 20-25% as carbaminohemoglobin and the rest dissolved in plasma.",
+      "difficulty": "HARD",
+      "topic": "Breathing and Exchange of Gases"
+    },
+    {
+      "number": 166,
+      "subject": "Zoology",
+      "question": "Alternative forms of the same gene are called",
+      "options": {
+        "A": "Alleles",
+        "B": "Chromosomes",
+        "C": "Genes",
+        "D": "Genomes"
+      },
+      "answer": "A",
+      "explanation": "Alleles are the alternative forms of a gene that occupy the same locus on homologous chromosomes.",
+      "difficulty": "EASY",
+      "topic": "Principles of Inheritance and Variation"
+    },
+    {
+      "number": 167,
+      "subject": "Zoology",
+      "question": "AIDS is caused by",
+      "options": {
+        "A": "a retrovirus (HIV)",
+        "B": "a protozoan",
+        "C": "a bacterium",
+        "D": "a DNA virus"
+      },
+      "answer": "A",
+      "explanation": "HIV is a retrovirus that infects helper T-lymphocytes and causes AIDS.",
+      "difficulty": "MEDIUM",
+      "topic": "Human Health and Disease"
+    },
+    {
+      "number": 168,
+      "subject": "Zoology",
+      "question": "The volume of air inspired or expired during normal breathing (tidal volume) is about",
+      "options": {
+        "A": "3000 mL",
+        "B": "2500 mL",
+        "C": "1500 mL",
+        "D": "500 mL"
+      },
+      "answer": "D",
+      "explanation": "Tidal volume is about 500 mL in a healthy adult; larger volumes are used during forced breathing.",
+      "difficulty": "MEDIUM",
+      "topic": "Breathing and Exchange of Gases"
+    },
+    {
+      "number": 169,
+      "subject": "Zoology",
+      "question": "The resting membrane potential of a neuron is maintained chiefly by the",
+      "options": {
+        "A": "K+ channels only",
+        "B": "Na+/K+ ATPase pump",
+        "C": "Ca2+ pump",
+        "D": "Na+ channels only"
+      },
+      "answer": "B",
+      "explanation": "The Na+/K+ ATPase pump transports 3 Na+ out and 2 K+ in, maintaining the resting potential across the membrane.",
+      "difficulty": "HARD",
+      "topic": "Neural Control and Coordination"
+    },
+    {
+      "number": 170,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Cnidaria?",
+      "options": {
+        "A": "roundworms possessing a pseudocoelom",
+        "B": "flattened worms with flame cells for excretion",
+        "C": "worms with true metameric segmentation and a closed circulatory system",
+        "D": "radially symmetrical animals bearing stinging cells (cnidoblasts)"
+      },
+      "answer": "D",
+      "explanation": "Cnidaria refers to radially symmetrical animals bearing stinging cells (cnidoblasts).",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 171,
+      "subject": "Zoology",
+      "question": "The ABO blood group system in humans is an example of",
+      "options": {
+        "A": "Codominance only",
+        "B": "Pleiotropy",
+        "C": "Incomplete dominance",
+        "D": "Multiple alleles"
+      },
+      "answer": "D",
+      "explanation": "The ABO system is controlled by three alleles (IA, IB and i) of a single gene, so it is an example of multiple alleles.",
+      "difficulty": "HARD",
+      "topic": "Principles of Inheritance and Variation"
+    },
+    {
+      "number": 172,
+      "subject": "Zoology",
+      "question": "The pyramid of energy in an ecosystem is",
+      "options": {
+        "A": "Always upright",
+        "B": "Always inverted",
+        "C": "Sometimes inverted",
+        "D": "Variable"
+      },
+      "answer": "A",
+      "explanation": "Energy decreases at each successive trophic level, so the pyramid of energy is always upright.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 173,
+      "subject": "Zoology",
+      "question": "The joint between the humerus and the pectoral girdle is a",
+      "options": {
+        "A": "Gliding joint",
+        "B": "Pivot joint",
+        "C": "Hinge joint",
+        "D": "Ball and socket joint"
+      },
+      "answer": "D",
+      "explanation": "The shoulder joint is a ball-and-socket joint, allowing movement in all planes.",
+      "difficulty": "HARD",
+      "topic": "Locomotion and Movement"
+    },
+    {
+      "number": 174,
+      "subject": "Zoology",
+      "question": "The 'master gland' of the human body is the",
+      "options": {
+        "A": "Pancreas",
+        "B": "Pituitary",
+        "C": "Thyroid",
+        "D": "Adrenal"
+      },
+      "answer": "B",
+      "explanation": "The pituitary is called the master gland because it controls the secretion of many other endocrine glands.",
+      "difficulty": "MEDIUM",
+      "topic": "Chemical Coordination and Integration"
+    },
+    {
+      "number": 175,
+      "subject": "Zoology",
+      "question": "The surgical method of permanent birth control in females is",
+      "options": {
+        "A": "Vasectomy",
+        "B": "IUD",
+        "C": "Tubectomy",
+        "D": "Condom"
+      },
+      "answer": "C",
+      "explanation": "Tubectomy (tubal ligation) is the surgical sterilisation method used in females; vasectomy is used in males.",
+      "difficulty": "EASY",
+      "topic": "Reproductive Health"
+    },
+    {
+      "number": 176,
+      "subject": "Zoology",
+      "question": "The interaction in which both interacting species benefit is called",
+      "options": {
+        "A": "Predation",
+        "B": "Parasitism",
+        "C": "Commensalism",
+        "D": "Mutualism"
+      },
+      "answer": "D",
+      "explanation": "In mutualism both partners benefit, giving a (+/+) relationship, as in lichens and mycorrhizae.",
+      "difficulty": "EASY",
+      "topic": "Organisms and Populations"
+    },
+    {
+      "number": 177,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Annelida?",
+      "options": {
+        "A": "spiny-skinned animals with a water-vascular system",
+        "B": "the largest phylum, with jointed appendages and chitinous exoskeleton",
+        "C": "worms with true metameric segmentation and a closed circulatory system",
+        "D": "soft-bodied animals usually with a calcareous shell and a mantle"
+      },
+      "answer": "C",
+      "explanation": "Annelida refers to worms with true metameric segmentation and a closed circulatory system.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 178,
+      "subject": "Zoology",
+      "question": "The ozone layer protects living organisms from",
+      "options": {
+        "A": "X-rays",
+        "B": "Ultraviolet radiation",
+        "C": "Microwaves",
+        "D": "Infrared rays"
+      },
+      "answer": "B",
+      "explanation": "Stratospheric ozone absorbs harmful ultraviolet radiation from the Sun, protecting living organisms.",
+      "difficulty": "HARD",
+      "topic": "Environmental Issues"
+    },
+    {
+      "number": 179,
+      "subject": "Zoology",
+      "question": "The structural and functional unit of the kidney is the",
+      "options": {
+        "A": "Alveolus",
+        "B": "Neuron",
+        "C": "Nephron",
+        "D": "Nephridium"
+      },
+      "answer": "C",
+      "explanation": "Each kidney contains about a million nephrons, the units that filter blood and form urine.",
+      "difficulty": "EASY",
+      "topic": "Excretory Products and their Elimination"
+    },
+    {
+      "number": 180,
+      "subject": "Zoology",
+      "question": "The hormone that triggers ovulation is",
+      "options": {
+        "A": "FSH",
+        "B": "LH",
+        "C": "Estrogen",
+        "D": "Progesterone"
+      },
+      "answer": "B",
+      "explanation": "A surge of luteinising hormone (LH) around the middle of the cycle triggers the rupture of the mature follicle (ovulation).",
+      "difficulty": "HARD",
+      "topic": "Human Reproduction"
+    }
+  ]
+}
