@@ -29,6 +29,7 @@ export const ADMIN_NAV: NavGroup[] = [
       { href: "/admin/topics", label: "Topics", icon: "🗂️", permission: "exam.view" },
       { href: "/admin/questions", label: "Questions", icon: "❓", permission: "question.view" },
       { href: "/admin/tests", label: "Tests", icon: "🧪", permission: "test.view" },
+      { href: "/admin/upload", label: "Upload XLSX", icon: "📤", permission: "test.create" },
       { href: "/admin/assignments", label: "Assignments", icon: "📝", permission: "test.assign" },
     ],
   },

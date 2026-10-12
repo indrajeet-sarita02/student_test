@@ -885,6 +885,8 @@ POST   /tests/{id}/publish
 POST   /tests/{id}/close
 POST   /tests/{id}/questions
 DELETE /tests/{id}/questions/{question_id}
+GET    /tests/import/template  (download XLSX import template)
+POST   /tests/import            (import test + questions from XLSX)
 ```
 
 ## Assignments
@@ -1494,4 +1496,5 @@ The backend is considered MVP-ready when:
 - Swagger documents all APIs.
 - API tests cover critical workflows.
 - Security checks are completed.
+- Test import from XLSX validates against exam, auto-creates subjects/topics when missing (per spec), keeps imported test/questions in `DRAFT`, returns per-row validation errors on failure and writes audit entry.
 - No cache dependency exists.

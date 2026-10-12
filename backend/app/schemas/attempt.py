@@ -84,6 +84,7 @@ class AttemptAnswerAdminResponse(BaseModel):
     question_text: Optional[str] = None
     selected_option_id: Optional[int] = None
     selected_option_ids: Optional[List[int]] = None
+    selected_option_text: Optional[str] = None
     answer_text: Optional[str] = None
     numerical_answer: Optional[str] = None
     is_marked_for_review: bool

@@ -215,11 +215,11 @@ def submit_my_attempt(
 
 @router.get(
     "/results",
-    response_model=List[ResultResponse],
+    response_model=Page[ResultResponse],
     summary="List my results",
     description=(
-        "Return the authenticated student's results (published or not), "
-        "optionally filtered by `test_id`."
+        "Paginated list of the authenticated student's results (published or "
+        "not), newest first, optionally filtered by `test_id`."
     ),
     responses={**_UNAUTHORIZED},
 )
@@ -228,7 +228,7 @@ def list_my_results(
     params: PaginationParams = Depends(),
     current_user: User = Depends(get_current_user),
     test_id: Optional[int] = Query(None, ge=1, description="Filter by test."),
-) -> List[ResultResponse]:
+) -> Any:
     """List the student's results."""
     return attempt_service.list_student_results(
         db, params, student_id=current_user.id, test_id=test_id

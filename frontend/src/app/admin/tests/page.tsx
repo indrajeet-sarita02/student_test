@@ -24,25 +24,7 @@ import {
   Textarea,
 } from "@/components/ui";
 import { loadExamOptions } from "@/lib/options";
-
-interface ImportRowError {
-  row: number | null;
-  field: string | null;
-  message: string;
-}
-
-function extractImportErrors(details: unknown): ImportRowError[] {
-  if (!details || typeof details !== "object") return [];
-  const list = (details as { errors?: unknown }).errors;
-  if (!Array.isArray(list)) return [];
-  return list
-    .filter((entry): entry is Record<string, unknown> => Boolean(entry) && typeof entry === "object")
-    .map((entry) => ({
-      row: typeof entry.row === "number" ? entry.row : null,
-      field: typeof entry.field === "string" ? entry.field : null,
-      message: typeof entry.message === "string" ? entry.message : "Invalid value",
-    }));
-}
+import { extractImportErrors, type ImportRowError } from "@/lib/test-import";
 
 interface TestForm {
   exam_id: string;
@@ -610,6 +592,83 @@ export default function AdminTestsPage() {
             value={form.instructions}
             onChange={(e) => setF("instructions", e.target.value)}
           />
+        </form>
+      </Modal>
+
+      {/* Import from XLSX */}
+      <Modal
+        open={importOpen}
+        onClose={closeImport}
+        title="Import test from XLSX"
+        description="Upload a workbook to create a new draft test with its questions."
+        footer={
+          <>
+            <Button variant="outline" onClick={closeImport} disabled={importing}>
+              Cancel
+            </Button>
+            <Button type="submit" form="test-import-form" loading={importing}>
+              Import test
+            </Button>
+          </>
+        }
+      >
+        <form id="test-import-form" onSubmit={submitImport} className="space-y-4">
+          {importError && <Alert tone="error">{importError}</Alert>}
+
+          <Select
+            label="Exam"
+            required
+            options={examOptions}
+            placeholder="Select exam"
+            value={importExamId}
+            onChange={(e) => setImportExamId(e.target.value)}
+          />
+
+          <div>
+            <Label htmlFor="test-import-file" required>
+              XLSX file
+            </Label>
+            <input
+              id="test-import-file"
+              type="file"
+              accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+              onChange={(e) => setImportFile(e.target.files?.[0] ?? null)}
+              className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm file:mr-3 file:rounded-md file:border-0 file:bg-brand-50 file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-brand-700 hover:file:bg-brand-100"
+            />
+            <p className="mt-1 text-xs text-slate-500">
+              One question per row on the “Questions” sheet; test settings on the “Test” sheet.
+              Imported questions are created as drafts.
+            </p>
+          </div>
+
+          <div className="flex items-center justify-between rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+            <span className="text-xs text-slate-600">Need the column layout?</span>
+            <Button
+              type="button"
+              size="sm"
+              variant="outline"
+              onClick={downloadTemplate}
+              loading={downloadingTemplate}
+            >
+              Download template
+            </Button>
+          </div>
+
+          {importRowErrors.length > 0 && (
+            <div className="max-h-56 overflow-y-auto rounded-lg border border-rose-200 bg-rose-50 p-3">
+              <p className="mb-2 text-xs font-semibold text-rose-700">
+                {importRowErrors.length} problem(s) found — fix these and upload again:
+              </p>
+              <ul className="space-y-1">
+                {importRowErrors.map((err, index) => (
+                  <li key={index} className="text-xs text-rose-700">
+                    {err.row !== null ? `Row ${err.row}` : "File"}
+                    {err.field ? ` · ${err.field}` : ""}: {err.message}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </form>
       </Modal>
 

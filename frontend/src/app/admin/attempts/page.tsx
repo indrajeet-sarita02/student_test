@@ -271,6 +271,7 @@ export default function AdminAttemptsPage() {
                         <td className="px-3 py-2 text-slate-600">
                           {a.answer_text ||
                             a.numerical_answer ||
+                            a.selected_option_text ||
                             (a.selected_option_ids?.length
                               ? a.selected_option_ids.join(", ")
                               : a.selected_option_id !== null && a.selected_option_id !== undefined

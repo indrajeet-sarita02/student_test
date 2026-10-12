@@ -27,7 +27,7 @@ _ROLE_SORTABLE = {
     "code": Role.code,
     "created_at": Role.created_at,
 }
-DEFAULT_ROLE_SORT = "name"
+DEFAULT_ROLE_SORT = "created_at"
 
 
 def _snapshot(role: Role) -> Dict[str, Any]:
@@ -70,7 +70,7 @@ def list_roles(db: Session, params: PaginationParams) -> Dict[str, Any]:
 
     sort_by = (params.sort_by or "").strip()
     if not sort_by:
-        sort_column, descending = _ROLE_SORTABLE[DEFAULT_ROLE_SORT], False
+        sort_column, descending = _ROLE_SORTABLE[DEFAULT_ROLE_SORT], True
     else:
         if sort_by not in _ROLE_SORTABLE:
             raise BadRequestError(

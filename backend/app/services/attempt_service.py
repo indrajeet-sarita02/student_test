@@ -174,7 +174,20 @@ def get_attempt_answers(db: Session, attempt_id: int) -> List[AttemptAnswer]:
         )
         marks, _ = _effective_marks(test, link) if (test is not None and link is not None) else (0.0, 0.0)
         answer.marks_awarded = scoring_service.awarded_marks(status, marks, 0.0) if question is not None else None
+        marks, _ = _effective_marks(test, link) if (test is not None and link is not None) else (0.0, 0.0)
+        answer.marks_awarded = scoring_service.awarded_marks(status, marks, 0.0) if question is not None else None
         answer.question_text = getattr(question, "question_text", None)
+        labels = _option_label_map(question)
+        if answer.selected_option_ids:
+            answer.selected_option_text = ", ".join(
+                labels.get(int(value), str(value)) for value in answer.selected_option_ids
+            )
+        elif answer.selected_option_id is not None:
+            answer.selected_option_text = labels.get(
+                int(answer.selected_option_id), str(answer.selected_option_id)
+            )
+        else:
+            answer.selected_option_text = None
     return answers
 
 
@@ -622,12 +635,15 @@ def list_student_results(
     *,
     student_id: int,
     test_id: Optional[int] = None,
-) -> List[ResultResponse]:
+) -> Dict[str, Any]:
+    """Paginated own-results listing, newest first (``created_at`` DESC)."""
     stmt = attempt_repository.build_student_result_stmt(
         params, student_id=student_id, test_id=test_id
     )
-    results = db.scalars(stmt).all()
-    return [_result_response(result) for result in results]
+    page = paginate(db, stmt, params)
+    for result in page["items"]:
+        _result_response(result)
+    return page
 
 
 def list_student_attempts(
@@ -708,7 +724,7 @@ def review_result(db: Session, result_id: int, *, student_id: Optional[int] = No
                     question_id=question.id,
                     question_text=question.question_text,
                     question_type=question.question_type,
-                    your_answer=_answer_display(answer),
+                    your_answer=_answer_display(answer, question),
                     correct_answer=_correct_display(question),
                     is_correct=(
                         True if status == scoring_service.CORRECT
@@ -732,13 +748,30 @@ def review_result(db: Session, result_id: int, *, student_id: Optional[int] = No
     return {"result": _result_response(result), "answers": reviews}
 
 
-def _answer_display(answer: Optional[AttemptAnswer]) -> Optional[str]:
+def _option_label_map(question: Optional[Question]) -> dict:
+    """Map each option id to a ``"A. option text"`` style label."""
+    labels: dict = {}
+    if question is None:
+        return labels
+    for option in question.options:
+        order = option.option_order or 0
+        letter = chr(ord("A") + order - 1) if 1 <= order <= 26 else str(order)
+        labels[option.id] = f"{letter}. {option.option_text}"
+    return labels
+
+
+def _answer_display(
+    answer: Optional[AttemptAnswer], question: Optional[Question] = None
+) -> Optional[str]:
     if answer is None:
         return None
+    labels = _option_label_map(question)
     if answer.selected_option_ids:
-        return ", ".join(str(value) for value in answer.selected_option_ids)
+        return ", ".join(
+            labels.get(int(value), str(value)) for value in answer.selected_option_ids
+        )
     if answer.selected_option_id is not None:
-        return str(answer.selected_option_id)
+        return labels.get(int(answer.selected_option_id), str(answer.selected_option_id))
     if answer.numerical_answer:
         return answer.numerical_answer
     if answer.answer_text:
@@ -749,10 +782,14 @@ def _answer_display(answer: Optional[AttemptAnswer]) -> Optional[str]:
 def _correct_display(question: Optional[Question]) -> Optional[str]:
     if question is None:
         return None
-    correct = [option for option in question.options if option.is_correct]
+    correct = sorted(
+        (option for option in question.options if option.is_correct),
+        key=lambda option: option.option_order or 0,
+    )
     if not correct:
         return None
-    return ", ".join(str(option.id) for option in correct)
+    labels = _option_label_map(question)
+    return ", ".join(labels.get(option.id, str(option.id)) for option in correct)
 
 
 def export_results(

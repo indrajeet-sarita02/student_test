@@ -1444,3 +1444,31 @@ There is deliberately **no Redis/cache layer**.
 This keeps the first release easier to deploy and maintain while leaving room to add caching later if actual performance measurements demonstrate a need.
 
 The backend remains the authoritative source for authentication, authorization, exam rules, test timing, scoring and results.
+
+---
+
+# 51. Import Test from XLSX
+
+## Objective
+Enable admin/examiner users to create a new `DRAFT` test and its questions in one step by uploading a structured `.xlsx` workbook. Features: downloadable XLSX template, all-or-nothing validation with per-row errors, auto-creation of referenced `subjects`/`topics` inside the selected `exam`, and frontend UI in Admin → Tests.
+
+## Backend Summary (for integration)
+- `GET /api/v1/tests/import/template` returns `.xlsx` template (requires `test.create` and `question.create`).
+- `POST /api/v1/tests/import` accepts `multipart/form-data` with `file` and `exam_id`; returns `TestImportResponse` on success (201). Errors: 404 `EXAM_NOT_FOUND`, 409 `TEST_CODE_EXISTS`, 422 `TEST_IMPORT_INVALID` with `details.errors` (list of `{row,field,message}`).
+- Imported test and questions are created as `DRAFT`; `total_marks` recomputed from questions; `test.import` audit written.
+
+## Frontend Implementation
+- `frontend/src/lib/types.ts`: `TestImportResponse`.
+- `frontend/src/lib/api/endpoints.ts`: `testsApi.importXlsx(FormData)`, `testsApi.importTemplate()` (download).
+- `frontend/src/app/admin/tests/page.tsx`: Import XLSX button + modal. Modal includes exam select, file input, "Download template" button, scrollable per-row error list on validation failure, and success toast with created counts. Uses `downloadBlob`.
+
+## Integration Contract Additions
+- `POST /tests/import`: multipart; 201 TestImportResponse; 422 returns `error.details.errors` (array). Requires `test.create` and `question.create`.
+- `GET /tests/import/template`: file download; requires `test.create` and `question.create`.
+
+## Definition of Done (updates)
+- Template downloadable and valid; import creates test+questions atomically with correct counts and DRAFT status.
+- Auto-create subjects/topics inside selected exam works; re-import reuses existing.
+- All-or-nothing validation returns per-row errors with clear messages; frontend displays them.
+- UI handles upload, download, success/error; backend/frontend types/endpoints in sync.
+- Tests cover happy path, conflicts, validation, permissions, template.

@@ -1,0 +1,85 @@
+{
+  "exam": "NEET UG (Advanced Level) - Full Length Mock",
+  "set_code": "NEET-UG-ADV-SET-01",
+  "set_number": 1,
+  "set_label": "Set 01",
+  "difficulty": "Advanced",
+  "total_questions": 5,
+  "questions": [
+    {
+      "subject": "Physics",
+      "q_id": "PHY_001",
+      "question": "The dimensional formula of Planck's constant is",
+      "options": {
+        "A": "[M L^2 T^-1]",
+        "B": "[M L^2 T^-2]",
+        "C": "[M L T^-1]",
+        "D": "[M L^2 T^-3]"
+      },
+      "correct_answer": "A",
+      "explanation": "Energy E = h*nu, so h = E/nu = [M L^2 T^-2]/[T^-1] = [M L^2 T^-1].",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "subject": "Chemistry",
+      "q_id": "CHEM_002",
+      "question": "The mass of one molecule of water is approximately (N_A = 6.022 x 10^23 mol^-1)",
+      "options": {
+        "A": "1.8 x 10^-23 g",
+        "B": "3.0 x 10^-23 g",
+        "C": "6.0 x 10^-23 g",
+        "D": "9.0 x 10^-23 g"
+      },
+      "correct_answer": "B",
+      "explanation": "Mass of one molecule = 18 / (6.022 x 10^23) = 2.99 x 10^-23 g, about 3.0 x 10^-23 g.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "subject": "Botany",
+      "q_id": "BOT_007",
+      "question": "Which group of plants is called the 'amphibians of the plant kingdom'?",
+      "options": {
+        "A": "Bryophytes",
+        "B": "Pteridophytes",
+        "C": "Gymnosperms",
+        "D": "Angiosperms"
+      },
+      "correct_answer": "A",
+      "explanation": "Bryophytes need water for the movement of male gametes to the egg, so they are called amphibians of the plant kingdom.",
+      "difficulty": "EASY",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "subject": "Zoology",
+      "q_id": "ZOO_012",
+      "question": "The natural pacemaker of the human heart is the",
+      "options": {
+        "A": "AV node",
+        "B": "Bundle of His",
+        "C": "SA node",
+        "D": "Purkinje fibres"
+      },
+      "correct_answer": "C",
+      "explanation": "The sino-atrial (SA) node generates the impulses that set the rhythm of the heartbeat, so it acts as the pacemaker.",
+      "difficulty": "EASY",
+      "topic": "Body Fluids and Circulation"
+    },
+    {
+      "subject": "Physics",
+      "q_id": "PHY_002",
+      "question": "The number of significant figures in the measured value 0.00250 m is",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct_answer": "B",
+      "explanation": "Leading zeros are not significant; the trailing zero after 5 is. Hence 2, 5 and the trailing 0 give three significant figures.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    }
+  ]
+}

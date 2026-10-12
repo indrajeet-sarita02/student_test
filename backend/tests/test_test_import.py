@@ -41,6 +41,7 @@ def _workbook(
         ["negative_marking_enabled", "TRUE"],
         ["negative_marks", 1],
     ]
+    option_count = 4
     question_sheet = [
         [
             "subject_code",
@@ -51,10 +52,7 @@ def _workbook(
             "difficulty",
             "marks",
             "negative_marks",
-            "option_1",
-            "option_2",
-            "option_3",
-            "option_4",
+            *[f"option_{index}" for index in range(1, option_count + 1)],
             "correct_options",
         ],
         [
@@ -66,7 +64,8 @@ def _workbook(
             "EASY",
             4,
             1,
-            *options,
+            *list(options),
+            *([""] * (option_count - len(options))),
             correct,
         ],
     ]

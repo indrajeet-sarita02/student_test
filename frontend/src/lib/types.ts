@@ -352,6 +352,7 @@ export interface AttemptAnswerAdminResponse {
   question_text: string | null;
   selected_option_id: number | null;
   selected_option_ids: number[] | null;
+  selected_option_text: string | null;
   answer_text: string | null;
   numerical_answer: string | null;
   is_marked_for_review: boolean;

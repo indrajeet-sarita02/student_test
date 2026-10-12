@@ -180,11 +180,14 @@ def test_full_student_workflow(client, admin_headers, student_headers, unique):
     assert reviewed["is_correct"] is True
     assert reviewed["marks_awarded"] == 4.0
     assert reviewed["explanation"] == "Basic arithmetic."
+    # The review must show the option text, not the raw option id.
+    assert reviewed["your_answer"] == "B. 4"
+    assert reviewed["correct_answer"] == "B. 4"
 
     # Student result listing includes the attempt.
     my_results = client.get(f"{API}/student/results", headers=student_headers)
     assert my_results.status_code == 200
-    assert any(item["id"] == result_id for item in my_results.json())
+    assert any(item["id"] == result_id for item in my_results.json()["items"])
 
     # Admin views and publishes the result.
     detail = client.get(f"{API}/attempts/{attempt_id}", headers=admin_headers)

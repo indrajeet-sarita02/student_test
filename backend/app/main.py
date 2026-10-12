@@ -130,8 +130,8 @@ async def validation_error_handler(request: Request, exc: RequestValidationError
             "error": {
                 "code": "VALIDATION_ERROR",
                 "message": "Request validation failed.",
+                "details": details,
             },
-            "details": details,
         },
     )
 

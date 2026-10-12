@@ -268,7 +268,7 @@ def build_student_test_stmt(
     if search:
         pattern = f"%{search}%"
         stmt = stmt.where(or_(Test.name.ilike(pattern), Test.code.ilike(pattern)))
-    return stmt.order_by(Test.scheduled_start_at.asc().nullsfirst(), Test.id.desc())
+    return stmt.order_by(Test.created_at.desc(), Test.id.desc())
 
 
 def bulk_attempt_counts(
