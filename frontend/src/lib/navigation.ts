@@ -51,6 +51,9 @@ export const MAIN_NAV: NavGroup[] = [
     section: "Main",
     items: [
       { href: "/", label: "Home", icon: "🏠" },
+      { href: "/tests", label: "Available Tests", icon: "🧪" },
+      { href: "/history", label: "My Attempts", icon: "⏱️" },
+      { href: "/results", label: "My Results", icon: "🏆" },
       { href: "/notifications", label: "Notifications", icon: "🔔" },
       { href: "/profile", label: "Profile", icon: "👤" },
     ],
