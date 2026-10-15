@@ -22,7 +22,6 @@ from sqlalchemy.orm import Session
 from app.core.exceptions import (
     AppError,
     BadRequestError,
-    ConflictError,
     NotFoundError,
 )
 from app.models.question import Question, QuestionOption
@@ -364,30 +363,13 @@ def delete_question(
     user_id: int,
     request: Optional[Request] = None,
 ) -> None:
-    """Delete a question, respecting historical attempts.
-
-    * referenced by a test that has attempts -> ``409 QUESTION_IN_USE``
-    * referenced by tests without attempts -> soft-deactivate (``is_active=False``)
-    * otherwise -> hard delete
-    """
+    """Hard-delete a question (and, by cascade, its options)."""
     question = get_question(db, question_id)
     old_data = _snapshot(question)
 
-    if repository.question_referenced_by_attempted_test(db, question_id):
-        raise ConflictError(
-            "Question is used in a test that has attempts and cannot be deleted.",
-            code="QUESTION_IN_USE",
-        )
-
-    if repository.question_is_referenced(db, question_id):
-        question.is_active = False
-        question.updated_by = user_id
-        action = "deactivate"
-        new_data: Optional[Dict[str, Any]] = {"is_active": False}
-    else:
-        db.delete(question)
-        action = "delete"
-        new_data = None
+    db.delete(question)
+    action = "delete"
+    new_data: Optional[Dict[str, Any]] = None
 
     try:
         _audit(

@@ -17,13 +17,11 @@ import {
   Pagination,
 } from "@/components/ui";
 
-const TYPE_TONE: Record<string, "blue" | "green" | "amber" | "red" | "indigo" | "purple"> = {
+const TYPE_TONE: Record<string, "blue" | "green" | "amber" | "red"> = {
   INFO: "blue",
   SUCCESS: "green",
   WARNING: "amber",
   ERROR: "red",
-  TEST_ASSIGNED: "indigo",
-  RESULT_PUBLISHED: "purple",
 };
 
 export default function NotificationsPage() {

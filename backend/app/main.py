@@ -30,8 +30,7 @@ app = FastAPI(
     version="1.0.0",
     description=(
         "REST API for the Student Test Application: authentication, RBAC, exam & "
-        "question management, test assembly, assignment, test taking, scoring, "
-        "results and reports."
+        "question management and notifications."
     ),
     docs_url="/docs",
     redoc_url="/redoc",

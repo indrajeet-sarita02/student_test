@@ -2,7 +2,7 @@
 
 The repository only *reads*: it builds ``SELECT`` statements for the list
 endpoint and answers the existence / cardinality questions the service layer
-needs to enforce business rules (question referenced by tests or attempts).
+needs to enforce business rules.
 
 Sort columns are whitelisted; an unknown ``sort_by`` query value never reaches
 SQL - it falls back to ``created_at DESC``.
@@ -10,12 +10,10 @@ SQL - it falls back to ``created_at DESC``.
 
 from typing import FrozenSet, Optional, Tuple
 
-from sqlalchemy import Select, func, select
+from sqlalchemy import Select, select
 from sqlalchemy.orm import Session
 
-from app.models.attempt import Attempt
 from app.models.question import Question, QuestionOption
-from app.models.test import TestQuestion
 from app.utils.pagination import PaginationParams
 
 #: Columns clients may pass as ``?sort_by=`` on the question listing.
@@ -87,34 +85,3 @@ def get_question(db: Session, question_id: int) -> Optional[Question]:
 def get_question_option(db: Session, option_id: int) -> Optional[QuestionOption]:
     """Return the option with ``option_id`` or ``None``."""
     return db.get(QuestionOption, option_id)
-
-
-def question_is_referenced(db: Session, question_id: int) -> bool:
-    """True when any ``test_questions`` row references the question."""
-    stmt = (
-        select(TestQuestion.id)
-        .where(TestQuestion.question_id == question_id)
-        .limit(1)
-    )
-    return db.scalar(stmt) is not None
-
-
-def question_referenced_by_attempted_test(db: Session, question_id: int) -> bool:
-    """True when the question belongs to a test that already has attempts."""
-    stmt = (
-        select(TestQuestion.id)
-        .join(Attempt, Attempt.test_id == TestQuestion.test_id)
-        .where(TestQuestion.question_id == question_id)
-        .limit(1)
-    )
-    return db.scalar(stmt) is not None
-
-
-def count_question_references(db: Session, question_id: int) -> int:
-    """Number of ``test_questions`` rows referencing the question."""
-    stmt = (
-        select(func.count())
-        .select_from(TestQuestion)
-        .where(TestQuestion.question_id == question_id)
-    )
-    return int(db.scalar(stmt) or 0)

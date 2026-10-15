@@ -11,12 +11,10 @@ from sqlalchemy import distinct, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.core.permissions import SUPER_ADMIN_ROLE
-from app.models.attempt import Attempt
 from app.models.exam import Exam
 from app.models.permission import Permission
 from app.models.question import Question
 from app.models.role import Role
-from app.models.test import Test
 from app.models.user import User, UserRole
 
 
@@ -96,13 +94,10 @@ def count_super_admins(db: Session) -> int:
 def owns_content(db: Session, user_id: int) -> bool:
     """Whether the user authored/owns rows that must survive their deletion.
 
-    Checked entities: test attempts (``student_id``) plus authored exams,
-    questions and tests (``created_by``).
+    Checked entities: authored exams and questions (``created_by``).
     """
     probes = (
-        select(Attempt.id).where(Attempt.student_id == user_id).limit(1),
         select(Exam.id).where(Exam.created_by == user_id).limit(1),
         select(Question.id).where(Question.created_by == user_id).limit(1),
-        select(Test.id).where(Test.created_by == user_id).limit(1),
     )
     return any(db.scalar(probe) is not None for probe in probes)

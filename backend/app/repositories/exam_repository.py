@@ -17,7 +17,6 @@ from sqlalchemy.orm import Session
 from app.models.exam import Exam
 from app.models.question import Question
 from app.models.subject import Subject
-from app.models.test import Test
 from app.models.topic import Topic
 from app.utils.pagination import PaginationParams
 
@@ -107,11 +106,6 @@ def exam_code_exists(db: Session, code: str) -> bool:
 def count_exam_subjects(db: Session, exam_id: int) -> int:
     """Number of subjects (any activation state) owned by the exam."""
     return _count(db, Subject, Subject.exam_id == exam_id)
-
-
-def count_exam_tests(db: Session, exam_id: int) -> int:
-    """Number of tests (any status) owned by the exam."""
-    return _count(db, Test, Test.exam_id == exam_id)
 
 
 # ---------------------------------------------------------------------------

@@ -17,8 +17,7 @@ export const ADMIN_NAV: NavGroup[] = [
   {
     section: "Overview",
     items: [
-      { href: "/admin", label: "Dashboard", icon: "📊", permission: "report.view" },
-      { href: "/admin/reports", label: "Reports", icon: "📈", permission: "report.view" },
+      { href: "/admin", label: "Dashboard", icon: "📊" },
     ],
   },
   {
@@ -28,16 +27,6 @@ export const ADMIN_NAV: NavGroup[] = [
       { href: "/admin/subjects", label: "Subjects", icon: "📚", permission: "exam.view" },
       { href: "/admin/topics", label: "Topics", icon: "🗂️", permission: "exam.view" },
       { href: "/admin/questions", label: "Questions", icon: "❓", permission: "question.view" },
-      { href: "/admin/tests", label: "Tests", icon: "🧪", permission: "test.view" },
-      { href: "/admin/upload", label: "Upload XLSX", icon: "📤", permission: "test.create" },
-      { href: "/admin/assignments", label: "Assignments", icon: "📝", permission: "test.assign" },
-    ],
-  },
-  {
-    section: "Evaluation",
-    items: [
-      { href: "/admin/attempts", label: "Attempts", icon: "⏱️", permission: "attempt.view" },
-      { href: "/admin/results", label: "Results", icon: "🏆", permission: "result.view" },
     ],
   },
   {
@@ -62,9 +51,6 @@ export const MAIN_NAV: NavGroup[] = [
     section: "Main",
     items: [
       { href: "/", label: "Home", icon: "🏠" },
-      { href: "/tests", label: "Available Tests", icon: "🧪" },
-      { href: "/history", label: "My Attempts", icon: "⏱️" },
-      { href: "/results", label: "My Results", icon: "🏆" },
       { href: "/notifications", label: "Notifications", icon: "🔔" },
       { href: "/profile", label: "Profile", icon: "👤" },
     ],

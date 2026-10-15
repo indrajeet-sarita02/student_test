@@ -271,8 +271,8 @@ def delete_user(
     """Delete or deactivate a user.
 
     Returns ``True`` when the account was only deactivated.  Deactivation
-    (never deletion) is applied when the user owns content (attempts, exams,
-    questions, tests) or is the last holder of the ``SUPER_ADMIN`` role.
+    (never deletion) is applied when the user owns content (exams, questions)
+    or is the last holder of the ``SUPER_ADMIN`` role.
     Self-deletion is rejected with ``403 SELF_ACTION``.
     """
     if user_id == actor_id:

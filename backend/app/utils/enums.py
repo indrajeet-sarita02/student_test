@@ -57,37 +57,8 @@ class Difficulty(StrEnum):
     HARD = "HARD"
 
 
-class TestStatus(StrEnum):
-    DRAFT = "DRAFT"
-    PUBLISHED = "PUBLISHED"
-    CLOSED = "CLOSED"
-    ARCHIVED = "ARCHIVED"
-
-
-class AssignmentStatus(StrEnum):
-    ASSIGNED = "ASSIGNED"
-    COMPLETED = "COMPLETED"
-    CANCELLED = "CANCELLED"
-
-
-class AttemptStatus(StrEnum):
-    STARTED = "STARTED"
-    SUBMITTED = "SUBMITTED"
-    AUTO_SUBMITTED = "AUTO_SUBMITTED"
-    EVALUATED = "EVALUATED"
-    CANCELLED = "CANCELLED"
-
-
-class SubmissionType(StrEnum):
-    MANUAL = "MANUAL"
-    AUTO = "AUTO"
-    EXPIRED = "EXPIRED"
-
-
 class NotificationType(StrEnum):
     INFO = "INFO"
     SUCCESS = "SUCCESS"
     WARNING = "WARNING"
     ERROR = "ERROR"
-    TEST_ASSIGNED = "TEST_ASSIGNED"
-    RESULT_PUBLISHED = "RESULT_PUBLISHED"

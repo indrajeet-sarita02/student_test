@@ -20,9 +20,9 @@ set objects such as ``NEET_UG_Advanced_All_20_Sets.json``)::
       ]
     }
 
-The importer maps each subject to the matching subject of the target exam,
-creates one published test per set (180 questions, 720 marks, 180 minutes,
--1 for a wrong answer) and assigns it to the demo students.
+The importer maps each subject to the matching subject of the target exam and
+creates one ``SINGLE_CHOICE`` question per entry (4 marks, -1 for a wrong
+answer) under that subject.
 
 Usage (from the ``backend/`` directory)::
 
@@ -32,10 +32,9 @@ Usage (from the ``backend/`` directory)::
     .venv/bin/python scripts/import_neet_json.py ../samples/NEET_UG_Advanced_Set_1.json --replace
 
 Idempotency: every question is keyed by a ``source`` tag derived from the file
-name, set number and ``q_id``.  Tests are keyed by their generated ``code``.
-Re-running skips rows that already exist; ``--replace`` deletes the tests and
-questions created from the same file first.  ``--validate-only`` checks the
-file without touching the database.
+name, set number and ``q_id``.  Re-running skips rows that already exist;
+``--replace`` deletes the questions created from the same file first.
+``--validate-only`` checks the file without touching the database.
 """
 
 from __future__ import annotations
@@ -43,7 +42,6 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
@@ -59,10 +57,6 @@ from app.models import (  # noqa: E402
     Question,
     QuestionOption,
     Subject,
-    Test,
-    TestAssignment,
-    TestQuestion,
-    Topic,
     User,
 )
 
@@ -86,9 +80,6 @@ MARKS_PER_QUESTION = 4.0
 NEGATIVE_MARKS = 1.0
 DURATION_MINUTES = 180
 PASSING_PERCENT = 40.0
-MAX_ATTEMPTS = 2
-ASSIGN_DURATION_DAYS = 30
-ASSIGN_STUDENT_EMAILS = ("student@example.com", "student2@example.com")
 
 DEFAULT_EXAM_CODE = "NEET-ADV"
 
@@ -208,10 +199,8 @@ def upsert_subjects(session, exam: Exam, needed: set) -> Dict[str, Subject]:
     return subjects
 
 
-def replace_existing(session, source_prefixes: List[str], test_codes: List[str]) -> None:
-    """Delete only the tests/questions produced for the *selected* sets."""
-    if test_codes:
-        session.execute(delete(Test).where(Test.code.in_(test_codes)))
+def replace_existing(session, source_prefixes: List[str]) -> None:
+    """Delete only the questions produced for the *selected* sets."""
     for prefix in source_prefixes:
         session.execute(delete(Question).where(Question.source.like(f"{prefix}-%")))
     session.commit()
@@ -219,14 +208,11 @@ def replace_existing(session, source_prefixes: List[str], test_codes: List[str])
 
 def upsert_set(
     session,
-    exam: Exam,
     subjects: Dict[str, Subject],
     source_tag: str,
-    test_code: str,
-    test_name: str,
     set_data: dict,
     owner_id: Optional[int],
-) -> Tuple[Test, int, int]:
+) -> Tuple[int, int]:
     questions_json = set_data["questions"]
     difficulty = question_difficulty(set_data.get("difficulty"))
     set_number = set_data.get("set_number")
@@ -245,7 +231,6 @@ def upsert_set(
         ).scalars()
     }
 
-    ordered: List[Question] = []
     created = skipped = 0
     for q, source in zip(questions_json, wanted_sources):
         question = existing.get(source)
@@ -280,77 +265,8 @@ def upsert_set(
             created += 1
         else:
             skipped += 1
-        ordered.append(question)
     session.flush()
-
-    total_marks = MARKS_PER_QUESTION * len(ordered)
-    passing_marks = round(total_marks * PASSING_PERCENT / 100.0, 2)
-    test = session.execute(
-        select(Test).where(Test.code == test_code)
-    ).scalar_one_or_none()
-    if test is None:
-        test = Test(
-            exam_id=exam.id,
-            name=test_name,
-            code=test_code,
-            description=f"Imported from JSON (set {set_number}).",
-            instructions="180 single-correct questions, 4 marks each, -1 for a "
-                         "wrong answer, duration 180 minutes.",
-            duration_minutes=DURATION_MINUTES,
-            total_marks=total_marks,
-            passing_marks=passing_marks,
-            negative_marking_enabled=True,
-            negative_marks=NEGATIVE_MARKS,
-            randomize_questions=False,
-            randomize_options=False,
-            max_attempts=MAX_ATTEMPTS,
-            status="PUBLISHED",
-            created_by=owner_id,
-            updated_by=owner_id,
-        )
-        session.add(test)
-        session.flush()
-    else:
-        test.total_marks = total_marks
-        test.passing_marks = passing_marks
-
-    linked = set(
-        session.execute(
-            select(TestQuestion.question_id).where(TestQuestion.test_id == test.id)
-        ).scalars()
-    )
-    for order, question in enumerate(ordered, start=1):
-        if question.id not in linked:
-            session.add(
-                TestQuestion(test_id=test.id, question_id=question.id, question_order=order)
-            )
-    session.flush()
-
-    now = datetime.now(timezone.utc)
-    students = session.execute(
-        select(User).where(User.email.in_(ASSIGN_STUDENT_EMAILS))
-    ).scalars().all()
-    for student in students:
-        assignment = session.execute(
-            select(TestAssignment).where(
-                TestAssignment.test_id == test.id,
-                TestAssignment.student_id == student.id,
-            )
-        ).scalar_one_or_none()
-        if assignment is None:
-            session.add(
-                TestAssignment(
-                    test_id=test.id,
-                    student_id=student.id,
-                    assigned_at=now,
-                    available_from=now - timedelta(days=1),
-                    available_until=now + timedelta(days=ASSIGN_DURATION_DAYS),
-                    max_attempts=MAX_ATTEMPTS,
-                    status="ASSIGNED",
-                )
-            )
-    session.flush()
-    return test, created, skipped
+    return created, skipped
 
 
 # ---------------------------------------------------------------------------
@@ -364,12 +280,10 @@ def main() -> None:
     parser.add_argument("--exam-name", default="NEET UG (Advanced Level) - Full Length Mock")
     parser.add_argument("--source-tag", default=None,
                         help="prefix for question source tags (default: file stem)")
-    parser.add_argument("--test-prefix", default=None,
-                        help="prefix for test codes (default: file stem)")
     parser.add_argument("--sets", default=None,
                         help="comma-separated set numbers to import (default: all)")
     parser.add_argument("--replace", action="store_true",
-                        help="delete this file's tests/questions first")
+                        help="delete this file's questions first")
     parser.add_argument("--dry-run", action="store_true",
                         help="parse and validate, then stop without writing")
     parser.add_argument("--validate-only", action="store_true",
@@ -383,7 +297,6 @@ def main() -> None:
         raise SystemExit(f"file not found: {path}")
     stem = path.stem
     source_tag = (args.source_tag or stem).upper().replace(" ", "_")
-    test_prefix = (args.test_prefix or stem).upper().replace(" ", "_")
 
     sets = load_sets(path)
 
@@ -416,9 +329,7 @@ def main() -> None:
     if args.dry_run:
         for s in selected:
             sn = s.get("set_number")
-            print(f"   would import set {sn}: {len(s['questions'])} questions, "
-                  f"test code {test_prefix}-S{int(sn):02d}" if isinstance(sn, int)
-                  else f"   would import set {sn}: {len(s['questions'])} questions")
+            print(f"   would import set {sn}: {len(s['questions'])} questions")
         print("dry run: nothing written")
         return
     if problems and not args.skip_validation:
@@ -427,19 +338,15 @@ def main() -> None:
 
     session = SessionLocal()
     try:
-        test_codes = [
-            f"{test_prefix}-S{int(s['set_number']):02d}"
-            for s in selected if isinstance(s.get("set_number"), int)
-        ]
         source_prefixes = [
             f"{source_tag}-S{int(s['set_number']):02d}"
             if isinstance(s.get("set_number"), int) else source_tag
             for s in selected
         ]
         if args.replace:
-            print(f"--replace: removing {len(test_codes)} test(s) and questions for "
+            print(f"--replace: removing questions for "
                   f"{len(source_prefixes)} selected set(s) ...")
-            replace_existing(session, source_prefixes, test_codes)
+            replace_existing(session, source_prefixes)
 
         owner_id = get_owner_id(session)
         exam = upsert_exam(session, args.exam_code, args.exam_name, owner_id)
@@ -448,16 +355,11 @@ def main() -> None:
 
         for s in selected:
             sn = s.get("set_number")
-            test_code = f"{test_prefix}-S{int(sn):02d}" if isinstance(sn, int) else f"{test_prefix}-S"
-            test_name = f"NEET UG Advanced - Imported Set {sn}"
-            test, created, skipped = upsert_set(
-                session, exam, subjects, source_tag, test_code, test_name,
-                s, owner_id,
+            created, skipped = upsert_set(
+                session, subjects, source_tag, s, owner_id,
             )
             session.commit()
-            print(f"  set {sn}: test {test.code} (id={test.id}) | "
-                  f"created {created}, existing {skipped}, "
-                  f"{test.total_marks} marks")
+            print(f"  set {sn}: created {created}, existing {skipped}")
         session.commit()
         print("Done.")
     except Exception:

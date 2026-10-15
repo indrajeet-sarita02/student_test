@@ -2,57 +2,50 @@
 
 import Link from "next/link";
 
-import { reportsApi } from "@/lib/api/endpoints";
+import { examsApi, questionsApi, usersApi } from "@/lib/api/endpoints";
 import { useApi } from "@/lib/hooks";
-import { formatPercent } from "@/lib/utils";
 import {
   Alert,
   Card,
   CardBody,
-  CardHeader,
   LoadingBlock,
   PageHeader,
   StatCard,
 } from "@/components/ui";
 
 export default function AdminDashboardPage() {
-  const report = useApi(() => reportsApi.dashboard());
+  const stats = useApi(async () => {
+    const [users, exams, questions] = await Promise.all([
+      usersApi.list({ page: 1, page_size: 1 }),
+      examsApi.list({ page: 1, page_size: 1 }),
+      questionsApi.list({ page: 1, page_size: 1 }),
+    ]);
+    return {
+      totalUsers: users.total,
+      totalExams: exams.total,
+      totalQuestions: questions.total,
+    };
+  });
 
-  const d = report.data;
+  const d = stats.data;
 
   return (
     <div>
       <PageHeader
         title="Dashboard"
         description="A snapshot of platform activity."
-        actions={
-          <Link
-            href="/admin/reports"
-            className="rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700"
-          >
-            View reports
-          </Link>
-        }
       />
 
-      {report.loading ? (
+      {stats.loading ? (
         <LoadingBlock />
-      ) : report.error ? (
-        <Alert tone="error">{report.error}</Alert>
+      ) : stats.error ? (
+        <Alert tone="error">{stats.error}</Alert>
       ) : !d ? null : (
         <>
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-            <StatCard label="Students" value={d.total_students} icon="🎓" hint={`${d.total_users} users total`} />
-            <StatCard label="Exams" value={d.total_exams} icon="📘" />
-            <StatCard label="Tests" value={d.total_tests} icon="🧪" hint={`${d.published_tests} published`} />
-            <StatCard label="Questions" value={d.total_questions} icon="❓" />
-          </div>
-
-          <div className="mt-3 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-            <StatCard label="Attempts" value={d.total_attempts} icon="⏱️" hint={`${d.active_attempts} active`} />
-            <StatCard label="Results" value={d.total_results} icon="🏆" />
-            <StatCard label="Avg percentage" value={formatPercent(d.average_percentage)} icon="📈" />
-            <StatCard label="Pass rate" value={formatPercent(d.pass_rate)} icon="✅" />
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+            <StatCard label="Users" value={d.totalUsers} icon="👥" />
+            <StatCard label="Exams" value={d.totalExams} icon="📘" />
+            <StatCard label="Questions" value={d.totalQuestions} icon="❓" />
           </div>
 
           <div className="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
@@ -63,16 +56,16 @@ export default function AdminDashboardPage() {
               icon="👥"
             />
             <QuickLinkCard
+              title="Manage exams"
+              description="Create exams, subjects and topics."
+              href="/admin/exams"
+              icon="🎓"
+            />
+            <QuickLinkCard
               title="Author questions"
               description="Add questions and organise them by subject and topic."
               href="/admin/questions"
               icon="❓"
-            />
-            <QuickLinkCard
-              title="Build tests"
-              description="Assemble tests, attach questions and publish."
-              href="/admin/tests"
-              icon="🧪"
             />
           </div>
         </>

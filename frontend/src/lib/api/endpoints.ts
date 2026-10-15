@@ -4,14 +4,7 @@
 
 import { api, qs } from "@/lib/api/client";
 import type {
-  AnswerItem,
-  AssignmentResponse,
-  AttemptAnswerAdminResponse,
-  AttemptDetailResponse,
-  AttemptResponse,
   AuditLogResponse,
-  DashboardReport,
-  ExamReportRow,
   ExamResponse,
   MessageResponse,
   MeResponse,
@@ -23,24 +16,10 @@ import type {
   PermissionResponse,
   QuestionImportRequest,
   QuestionImportResponse,
-  QuestionReportRow,
   QuestionResponse,
-  ResultResponse,
-  ResultReviewResponse,
   RoleResponse,
-  SaveAnswersResponse,
   SettingResponse,
-  StartAttemptResponse,
-  StudentAttemptResponse,
-  StudentReportRow,
-  StudentTestItem,
-  SubjectReportRow,
   SubjectResponse,
-  SubmitAttemptResponse,
-  TestImportResponse,
-  TestQuestionResponse,
-  TestReportRow,
-  TestResponse,
   TokenResponse,
   TopicResponse,
   UnreadCountResponse,
@@ -142,77 +121,6 @@ export const questionsApi = {
     api.post<QuestionImportResponse>("/questions/import", body),
 };
 
-// ------------------------------------------------------------------ tests
-export const testsApi = {
-  list: (params: PageParams = {}) => api.get<Page<TestResponse>>(`/tests/${qs(params)}`),
-  create: (body: Dict) => api.post<TestResponse>("/tests/", body),
-  get: (id: number) => api.get<TestResponse>(`/tests/${id}`),
-  update: (id: number, body: Dict) => api.put<TestResponse>(`/tests/${id}`, body),
-  remove: (id: number) => api.delete<void>(`/tests/${id}`),
-  publish: (id: number) => api.post<TestResponse>(`/tests/${id}/publish`),
-  close: (id: number) => api.post<TestResponse>(`/tests/${id}/close`),
-  questions: (id: number) =>
-    api.get<TestQuestionResponse[]>(`/tests/${id}/questions`),
-  addQuestion: (id: number, body: Dict) =>
-    api.post<TestQuestionResponse>(`/tests/${id}/questions`, body),
-  bulkAddQuestions: (id: number, question_ids: number[], start_order?: number) =>
-    api.post<TestQuestionResponse[]>(`/tests/${id}/questions/bulk`, {
-      question_ids,
-      start_order,
-    }),
-  removeQuestion: (id: number, questionId: number) =>
-    api.delete<void>(`/tests/${id}/questions/${questionId}`),
-  importXlsx: (form: FormData) =>
-    api.post<TestImportResponse>("/tests/import", form),
-  importTemplate: () => api.download("/tests/import/template"),
-};
-
-// ------------------------------------------------------------------ assignments
-export const assignmentsApi = {
-  list: (params: PageParams = {}) =>
-    api.get<Page<AssignmentResponse>>(`/assignments/${qs(params)}`),
-  create: (body: Dict) => api.post<AssignmentResponse>("/assignments/", body),
-  get: (id: number) => api.get<AssignmentResponse>(`/assignments/${id}`),
-  remove: (id: number) => api.delete<void>(`/assignments/${id}`),
-  bulk: (body: Dict) =>
-    api.post<{ created: number; skipped: number; assignments: AssignmentResponse[] }>(
-      "/assignments/bulk",
-      body
-    ),
-};
-
-// ------------------------------------------------------------------ attempts (admin)
-export const attemptsApi = {
-  list: (params: PageParams = {}) =>
-    api.get<Page<AttemptResponse>>(`/attempts/${qs(params)}`),
-  get: (id: number) => api.get<AttemptDetailResponse>(`/attempts/${id}`),
-  answers: (id: number) =>
-    api.get<AttemptAnswerAdminResponse[]>(`/attempts/${id}/answers`),
-};
-
-// ------------------------------------------------------------------ results (admin)
-export const resultsApi = {
-  list: (params: PageParams = {}) =>
-    api.get<Page<ResultResponse>>(`/results/${qs(params)}`),
-  get: (id: number) => api.get<ResultResponse>(`/results/${id}`),
-  publish: (id: number) => api.post<ResultResponse>(`/results/${id}/publish`),
-  exportCsv: (params: PageParams = {}) => api.download(`/results/export${qs(params)}`),
-};
-
-// ------------------------------------------------------------------ reports
-export const reportsApi = {
-  dashboard: () => api.get<DashboardReport>("/reports/dashboard"),
-  exams: () => api.get<ExamReportRow[]>("/reports/exams"),
-  tests: (exam_id?: number) =>
-    api.get<TestReportRow[]>(`/reports/tests${qs({ exam_id })}`),
-  questions: (subject_id?: number) =>
-    api.get<QuestionReportRow[]>(`/reports/questions${qs({ subject_id })}`),
-  subjects: (exam_id?: number) =>
-    api.get<SubjectReportRow[]>(`/reports/subjects${qs({ exam_id })}`),
-  student: (student_id: number) =>
-    api.get<StudentReportRow>(`/reports/students/${student_id}`),
-};
-
 // ------------------------------------------------------------------ notifications
 export const notificationsApi = {
   list: (params: PageParams = {}) =>
@@ -242,22 +150,4 @@ export const settingsApi = {
   update: (key: string, body: Dict) =>
     api.put<SettingResponse>(`/settings/${encodeURIComponent(key)}`, body),
   remove: (key: string) => api.delete<void>(`/settings/${encodeURIComponent(key)}`),
-};
-
-// ------------------------------------------------------------------ student
-export const studentApi = {
-  tests: (search?: string) =>
-    api.get<StudentTestItem[]>(`/student/tests${qs({ search })}`),
-  test: (id: number) => api.get<StudentTestItem>(`/student/tests/${id}`),
-  start: (id: number) => api.post<StartAttemptResponse>(`/student/tests/${id}/start`),
-  attempts: (params: PageParams = {}) =>
-    api.get<Page<AttemptResponse>>(`/student/attempts${qs(params)}`),
-  attempt: (id: number) => api.get<StudentAttemptResponse>(`/student/attempts/${id}`),
-  saveAnswers: (id: number, answers: AnswerItem[]) =>
-    api.put<SaveAnswersResponse>(`/student/attempts/${id}/answers`, { answers }),
-  submit: (id: number) => api.post<SubmitAttemptResponse>(`/student/attempts/${id}/submit`),
-  results: (params: PageParams = {}) =>
-    api.get<Page<ResultResponse>>(`/student/results${qs(params)}`),
-  review: (resultId: number) =>
-    api.get<ResultReviewResponse>(`/student/results/${resultId}/review`),
 };

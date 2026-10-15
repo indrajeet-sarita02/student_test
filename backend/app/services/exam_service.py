@@ -265,14 +265,11 @@ def delete_exam(
     user_id: int,
     request: Optional[Request] = None,
 ) -> None:
-    """Soft-deactivate when subjects/tests exist, otherwise hard-delete."""
+    """Soft-deactivate when subjects exist, otherwise hard-delete."""
     exam = get_exam(db, exam_id)
     entity_id = exam.id
     old_data = _exam_snapshot(exam)
-    has_children = (
-        repository.count_exam_subjects(db, exam_id) > 0
-        or repository.count_exam_tests(db, exam_id) > 0
-    )
+    has_children = repository.count_exam_subjects(db, exam_id) > 0
     if has_children:
         exam.is_active = False
         exam.updated_by = user_id

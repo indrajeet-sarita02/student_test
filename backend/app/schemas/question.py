@@ -1,8 +1,6 @@
 """Question bank schemas.
 
 ``QuestionResponse`` is the admin/author view and contains ``is_correct``.
-``StudentQuestionView`` is the test-taking view and must NEVER contain the
-answer key or the explanation.
 """
 
 from datetime import datetime
@@ -34,16 +32,6 @@ class OptionResponse(BaseModel):
     option_text: str
     option_order: int
     is_correct: bool
-
-
-class OptionPublic(BaseModel):
-    """Answer-key free option used in student APIs."""
-
-    model_config = ConfigDict(from_attributes=True)
-
-    id: int
-    option_text: str
-    option_order: int
 
 
 class QuestionCreate(BaseModel):
@@ -90,20 +78,6 @@ class QuestionResponse(BaseModel):
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
     options: List[OptionResponse] = Field(default_factory=list)
-
-
-class StudentQuestionView(BaseModel):
-    """Question as seen while taking a test - no answer key, no explanation."""
-
-    id: int
-    subject_id: int
-    topic_id: Optional[int] = None
-    question_type: str
-    question_text: str
-    difficulty: str
-    marks: float
-    negative_marks: float
-    options: List[OptionPublic] = Field(default_factory=list)
 
 
 class QuestionImportItem(BaseModel):

@@ -191,7 +191,7 @@ def update_user_status(
     summary="Delete user",
     description=(
         "Remove a user. Deleting your own account is rejected with 403 "
-        "`SELF_ACTION`. When the user owns attempts, exams, questions or tests, "
+        "`SELF_ACTION`. When the user owns exams or questions, "
         "or is the last holder of the SUPER_ADMIN role, the account is instead "
         "deactivated (`status=INACTIVE`, action `deactivate`); otherwise it is "
         "hard-deleted (action `delete`). Both paths are audited. Requires the "
