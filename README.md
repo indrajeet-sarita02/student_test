@@ -1,21 +1,16 @@
 # Student Test Platform
 
-A full-stack MCQ examination **content platform**: a FastAPI + PostgreSQL
-backend and a Next.js admin/student frontend for managing exams, subjects,
-topics, the question bank, users/RBAC, notifications, audit logs and settings.
-
-> **Removed.** The test-assembly, test-assignment and test-taking subsystem
-> (tests, attempts, scoring, results, reports) is no longer part of the
-> application. Its API modules, models, tables and frontend pages have been
-> removed — see [`backend/README.md`](backend/README.md) for details.
+A full-stack MCQ examination platform: a **FastAPI + PostgreSQL** backend and a
+**Next.js (App Router)** frontend for managing exams, subjects, topics, the
+question bank, users/RBAC, test assembly and assignment, server-timed test
+taking, scoring, results, reports, notifications, audit logs and settings.
 
 ## Repository layout
 
 | Path | Description |
 |---|---|
-| [`backend/`](backend/) | FastAPI + SQLAlchemy 2.x + PostgreSQL REST API |
-| [`frontend/`](frontend/) | Next.js (App Router) + React + TypeScript + Tailwind client |
-| [`samples/`](samples/) | NEET UG question-bank JSON sets |
+| [`backend/`](backend/) | FastAPI + SQLAlchemy 2.x + PostgreSQL REST API — see [`backend/README.md`](backend/README.md) |
+| [`frontend/`](frontend/) | Next.js + React + TypeScript + Tailwind client |
 | [`Student_Test_Backend_FastAPI_PostgreSQL_Technical_Design.md`](Student_Test_Backend_FastAPI_PostgreSQL_Technical_Design.md) | Backend technical design |
 | [`Student_Test_Frontend_NextJS_Technical_Design.md`](Student_Test_Frontend_NextJS_Technical_Design.md) | Frontend technical design |
 
@@ -57,6 +52,8 @@ uvicorn app.main:app --reload
 ```
 
 - API: <http://localhost:8000> · Swagger: `/docs` · Health: `/health`
+- Run tests with `pytest -v` (see [`backend/README.md`](backend/README.md) for
+  the full API layout, migrations, Docker usage and project structure).
 
 ### 2. Frontend
 
@@ -69,9 +66,32 @@ npm run dev
 
 - App: <http://localhost:3000>
 
-See [`backend/README.md`](backend/README.md) and
-[`frontend/README.md`](frontend/README.md) for full setup, environment
-variables, and module documentation.
+Frontend scripts: `npm run dev` · `npm run build` · `npm run start` ·
+`npm run lint`.
+
+#### Frontend structure
+
+```text
+src/
+  app/
+    api/backend/[...path]/route.ts   same-origin proxy to FastAPI
+    (main)/                          student-facing pages (tests, results,
+                                     history, notifications, profile)
+    attempts/[attemptId]/            live test-taking screen
+    admin/                           admin console (exams, subjects, topics,
+                                     questions, tests, assignments, attempts,
+                                     results, reports, users, roles,
+                                     permissions, notifications, audit-logs,
+                                     settings, upload, profile)
+    login/ forgot-password/ reset-password/
+  components/                        DataTable, Modal, Toast, guards, layout,
+                                     admin + student widgets
+  lib/                               api client, auth, permissions, types,
+                                     hooks, test-import helpers
+```
+
+Role-based guards (`src/components/guards.tsx` + `src/lib/permissions.ts`) hide
+UI the current user cannot use; the backend still enforces every permission.
 
 ## Demo accounts (seeded, dev-only)
 
