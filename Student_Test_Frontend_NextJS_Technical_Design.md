@@ -1,35 +1,5 @@
 # Student Test Application — Frontend Technical Design & Development Specification
 
-## Removal notice (test-taking subsystem)
-
-> **The student test-taking UI and every admin screen that managed tests has
-> been removed from the frontend**, alongside the deleted backend subsystem.
-> The following are no longer part of the application:
->
-> - **Admin routes:** `/admin/tests`, `/admin/upload`, `/admin/assignments`,
->   `/admin/attempts`, `/admin/results`, `/admin/reports`.
-> - **Student routes:** `/tests`, `/tests/[id]`, `/history`, `/results`,
->   `/results/[id]` and `/attempts/[attemptId]` (the test player).
-> - **API modules (`src/lib/api/endpoints.ts`):** `testsApi`, `assignmentsApi`,
->   `attemptsApi`, `resultsApi`, `reportsApi`, `studentApi`.
-> - **Types (`src/lib/types.ts`):** test / assignment / attempt / student /
->   result / report types (`TestResponse`, `AssignmentResponse`,
->   `AttemptResponse`, `ResultResponse`, `DashboardReport`, …).
-> - **Navigation:** the admin *Reports / Tests / Upload XLSX / Assignments /
->   Attempts / Results* items and the student *Available Tests / My Attempts /
->   My Results* items.
-> - **Components / helpers:** `components/student/StartTestButton.tsx`,
->   `lib/test-import.ts` and the option loaders that referenced tests.
-> - **Permissions:** `test.*`, `attempt.view`, `result.*`, `report.view`.
->
-> What remains is the **content & administration core**: login/auth, role-based
-> dashboards, users, roles & permissions, exams, subjects, topics, the question
-> bank, notifications, audit logs, settings and the student profile.
->
-> Sections below that describe the removed subsystem (notably **19–29**, the
-> test-related parts of **11/12/36/45/47/48** and **51**) are retained for
-> historical context only and **no longer describe the running UI**.
-
 ## 1. Document Overview
 
 | Item | Specification |
@@ -46,7 +16,7 @@
 | Cache | No application cache |
 | API Documentation | Backend Swagger |
 | Form Validation | Zod or equivalent |
-| Testing | Not included (the test domain and its test suite were removed) |
+| Testing | Vitest/Jest + Playwright recommended |
 
 ---
 
@@ -56,10 +26,11 @@ The Next.js application will provide:
 
 - Public authentication screens.
 - Role-based dashboards.
+- Student examination experience.
 - Administrative management interfaces.
-- Exam / subject / topic management.
 - Question-bank management.
-- Notifications, audit logs and settings.
+- Test creation and scheduling.
+- Results and analytics.
 - Responsive UI.
 - Secure integration with FastAPI.
 
@@ -87,10 +58,21 @@ frontend/
 │   │   │   ├── subjects/
 │   │   │   ├── topics/
 │   │   │   ├── questions/
+│   │   │   ├── tests/
+│   │   │   ├── assignments/
+│   │   │   ├── attempts/
+│   │   │   ├── results/
+│   │   │   ├── reports/
 │   │   │   ├── notifications/
 │   │   │   ├── audit-logs/
 │   │   │   ├── settings/
 │   │   │   └── profile/
+│   │   │
+│   │   ├── student/
+│   │   │   ├── tests/
+│   │   │   ├── attempts/
+│   │   │   ├── results/
+│   │   │   └── history/
 │   │   │
 │   │   └── layout.tsx
 │   │
@@ -98,7 +80,9 @@ frontend/
 │   │   ├── ui/
 │   │   ├── forms/
 │   │   ├── tables/
-│   │   └── modals/
+│   │   ├── modals/
+│   │   ├── charts/
+│   │   └── test-player/
 │   │
 │   ├── lib/
 │   │   ├── api/
@@ -113,6 +97,7 @@ frontend/
 │   └── middleware.ts
 │
 ├── public/
+├── tests/
 ├── .env.example
 ├── package.json
 └── README.md
@@ -314,14 +299,10 @@ Authenticated layout:
 |                |                                  |
 | Dashboard      | Page                             |
 | Exams          |                                  |
-| Subjects       |                                  |
-| Topics         |                                  |
 | Questions      |                                  |
+| Tests          |                                  |
+| Reports        |                                  |
 | Users          |                                  |
-| Roles          |                                  |
-| Notifications  |                                  |
-| Audit Logs     |                                  |
-| Settings       |                                  |
 +----------------+----------------------------------+
 ```
 
@@ -334,22 +315,21 @@ Sidebar items should be dynamically filtered by permissions.
 Display:
 
 - Total users.
+- Active students.
 - Total exams.
-- Total questions.
-- Quick links to users, exams and the question bank.
+- Published tests.
+- Scheduled tests.
+- Active attempts.
+- Completed attempts.
+- Average score.
+- Pass percentage.
+- Recent activities.
 
-The dashboard no longer calls a reports API. It derives its counters from the
-resource list endpoints (requesting a single item per resource and reading the
-pagination `total`):
+Dashboard APIs:
 
 ```text
-GET /users?page=1&page_size=1
-GET /exams?page=1&page_size=1
-GET /questions?page=1&page_size=1
+GET /reports/dashboard
 ```
-
-> The former `GET /reports/dashboard` and the test/attempt/result statistics
-> have been removed.
 
 ---
 
@@ -357,20 +337,23 @@ GET /questions?page=1&page_size=1
 
 Display:
 
-- Welcome message.
-- Recent notifications.
-- A link to the profile screen.
+- Available exams.
+- Upcoming tests.
+- Tests in progress.
+- Completed tests.
+- Recent results.
+- Average score.
+- Subject performance.
+- Notifications.
 
 APIs:
 
 ```text
+GET /student/tests
+GET /student/attempts
+GET /student/results
 GET /notifications
-GET /notifications/unread-count
 ```
-
-> The former student dashboard (available tests, in-progress tests, recent
-> results, subject performance) relied on `/student/*` endpoints that have been
-> removed.
 
 ---
 
@@ -555,33 +538,322 @@ COMPREHENSION
 IMAGE_BASED
 ```
 
-without redesigning the question renderer.
+without redesigning the entire test player.
 
 ---
 
-# 19–29. Test-taking UI — REMOVED
+# 19. Test Builder
 
-> **Removed.** The entire student test-taking experience and its administration
-> screens were deleted together with the backend test subsystem. The following
-> sections are retained only as historical design context and no longer
-> describe the running UI:
->
-> - **19. Test Builder** and **20. Test Publishing Workflow** → the
->   `/admin/tests` page (assembly, publish/close, XLSX import) was removed.
-> - **21. Assignment Management** → `/admin/assignments` was removed.
-> - **22. Student Test Player**, **23. Timer Requirements**, **24. Autosave**
->   and **25. Submission** → `/tests/[id]` and `/attempts/[attemptId]` were
->   removed.
-> - **26. Result Screen** and **27. Student History** → `/results`,
->   `/results/[id]` and `/history` were removed.
-> - **28. Reports** and **29. Export** → `/admin/reports` and the CSV/XLSX
->   export actions were removed.
->
-> The remaining student surface is the home dashboard (welcome message +
-> recent notifications), the notification inbox and the profile screen. The
-> remaining admin surface is the dashboard plus users, roles, permissions,
-> exams, subjects, topics, questions, notifications, audit logs, settings and
-> profile.
+Routes:
+
+```text
+/tests
+/tests/create
+/tests/[id]
+/tests/[id]/edit
+```
+
+Configuration:
+
+```text
+Exam
+Test Name
+Code
+Instructions
+Duration
+Total Marks
+Passing Marks
+Negative Marking
+Max Attempts
+Randomize Questions
+Randomize Options
+Start Date/Time
+End Date/Time
+```
+
+Question selection:
+
+```text
+Select individual questions
+OR
+Select question pool/rules
+```
+
+---
+
+# 20. Test Publishing Workflow
+
+```text
+DRAFT
+  |
+  v
+READY
+  |
+  v
+PUBLISHED
+  |
+  v
+SCHEDULED / ACTIVE
+  |
+  v
+COMPLETED
+  |
+  v
+ARCHIVED
+```
+
+Frontend should prevent invalid state transitions.
+
+Backend remains authoritative.
+
+---
+
+# 21. Assignment Management
+
+Admin/examiner can assign tests to:
+
+- Individual students.
+- Student groups.
+- Classes/batches.
+- Eligible users.
+
+UI:
+
+```text
+/tests/[id]/assign
+```
+
+Features:
+
+- Search students.
+- Multi-select.
+- Set availability.
+- Set attempt limit.
+- Bulk assignment.
+- Assignment status.
+
+---
+
+# 22. Student Test Player
+
+Route:
+
+```text
+/student/attempts/[attemptId]
+```
+
+Layout:
+
+```text
++------------------------------------------------------+
+| Test Name                       Remaining Time       |
++----------------------+-------------------------------+
+| Question Palette    | Question                       |
+| 1 2 3 4 5 ...       |                               |
+|                      | A. Option                     |
+| Answered            | B. Option                     |
+| Unanswered          | C. Option                     |
+| Review               | D. Option                     |
++----------------------+-------------------------------+
+| Previous | Mark Review | Save | Next                |
++------------------------------------------------------+
+```
+
+Features:
+
+- Countdown timer.
+- Question navigation.
+- Answer selection.
+- Mark for review.
+- Clear answer.
+- Autosave.
+- Question palette.
+- Final submission confirmation.
+- Auto-submit on timeout.
+
+---
+
+# 23. Timer Requirements
+
+The frontend timer is only a display mechanism.
+
+The backend calculates:
+
+```text
+expires_at
+```
+
+The frontend calculates remaining display time from server-provided timestamps.
+
+Never trust the browser timer for exam security.
+
+---
+
+# 24. Autosave
+
+Student answers should be saved frequently.
+
+Example:
+
+```http
+PUT /student/attempts/{attempt_id}/answers
+```
+
+Payload:
+
+```json
+{
+  "question_id": 123,
+  "selected_option_id": 456,
+  "is_marked_for_review": false
+}
+```
+
+UI should show:
+
+```text
+Saved
+Saving...
+Unable to save
+```
+
+A temporary network failure should not silently discard the student's answer.
+
+---
+
+# 25. Submission
+
+Before submission:
+
+```text
+Are you sure you want to submit?
+Answered: 45
+Unanswered: 5
+Marked for review: 3
+```
+
+Then:
+
+```http
+POST /student/attempts/{attempt_id}/submit
+```
+
+After successful submission:
+
+```text
+No further editing.
+Redirect to result page or submission confirmation.
+```
+
+---
+
+# 26. Result Screen
+
+Route:
+
+```text
+/student/results/[id]
+```
+
+Display according to result-visibility rules:
+
+```text
+Score
+Maximum Score
+Percentage
+Correct
+Incorrect
+Unanswered
+Pass/Fail
+Rank
+Percentile
+Time Used
+```
+
+Optional:
+
+```text
+Subject-wise performance
+Question review
+Correct answer
+Explanation
+```
+
+Correct answers must only be shown when the backend allows them.
+
+---
+
+# 27. Student History
+
+Route:
+
+```text
+/student/history
+```
+
+Columns:
+
+```text
+Test
+Exam
+Attempt
+Date
+Score
+Percentage
+Status
+Action
+```
+
+Filters:
+
+```text
+Exam
+Date
+Status
+```
+
+---
+
+# 28. Reports
+
+Admin report screens:
+
+```text
+/reports
+/reports/exams
+/reports/tests
+/reports/students
+/reports/questions
+/reports/subjects
+```
+
+Use tables and charts where useful.
+
+Examples:
+
+- Pass/fail distribution.
+- Average score.
+- Subject accuracy.
+- Question difficulty performance.
+- Student progress.
+
+---
+
+# 29. Export
+
+Where backend provides export endpoints:
+
+```text
+CSV
+Excel
+PDF
+```
+
+Frontend should trigger downloads through authenticated API calls.
+
+Do not generate authoritative reports only on the frontend.
+
+---
 
 # 30. Notifications
 
@@ -688,20 +960,14 @@ Do not expose stack traces to users.
 Protected routes:
 
 ```text
-/admin/*
-/admin/users/*
-/admin/roles/*
-/admin/permissions/*
-/admin/exams/*
-/admin/subjects/*
-/admin/topics/*
-/admin/questions/*
-/admin/notifications/*
-/admin/audit-logs/*
-/admin/settings/*
-/admin/profile/*
-/notifications/*
-/profile/*
+/dashboard/*
+/users/*
+/roles/*
+/exams/*
+/questions/*
+/tests/*
+/reports/*
+/student/*
 ```
 
 Public:
@@ -748,19 +1014,16 @@ export interface Exam {
   status: string;
 }
 
-export interface Question {
+export interface Test {
   id: number;
-  subjectId: number;
-  topicId: number | null;
-  questionType: string;
-  questionText: string;
-  difficulty: string;
+  examId: number;
+  name: string;
+  durationMinutes: number;
+  totalMarks: number;
+  passingMarks: number;
   status: string;
 }
 ```
-
-> The former `Test`, `Assignment`, `Attempt`, `Result` and report types were
-> removed together with the test domain.
 
 All backend numeric IDs should remain `number` on the frontend.
 
@@ -799,7 +1062,7 @@ The application does not require Redis or a dedicated cache layer.
 
 Frontend should also avoid implementing a complex persistent cache.
 
-For list-heavy admin screens, the priority is reliable server synchronization rather than caching.
+For test attempts, the priority is reliable server synchronization rather than caching.
 
 Temporary in-memory UI state is acceptable.
 
@@ -814,7 +1077,7 @@ Frontend:
 - Prefer HttpOnly secure cookies for refresh/session credentials.
 - Protect routes.
 - Do not trust frontend permissions.
-- Never expose question answer keys through read-only APIs.
+- Never expose answer keys before submission.
 - Do not expose internal API secrets.
 - Sanitize/secure rich HTML content.
 - Avoid dangerous `dangerouslySetInnerHTML` unless content is sanitized.
@@ -835,7 +1098,7 @@ Support:
 - Appropriate color contrast.
 - Responsive layouts.
 
-Status must not be conveyed by color alone.
+The test player must be usable without relying only on color.
 
 ---
 
@@ -851,27 +1114,56 @@ Mobile browser
 
 Priority:
 
-1. Desktop admin experience.
+1. Desktop test/admin experience.
 2. Tablet.
-3. Mobile experience.
+3. Mobile student experience.
 
-The admin and student surfaces should remain usable on small screens.
+The student test player should remain usable on small screens.
 
 ---
 
 # 42. Frontend Testing
 
-> **Not included.** No unit/integration/E2E test framework is configured for the
-> frontend; the project is verified with `npx tsc --noEmit` and `next build`.
-> There is no test-player/scoring/timer surface left to test.
+## Unit Tests
 
-If tests are reintroduced, cover the surviving surface:
+Test:
 
 - Permission helpers.
 - Form validation.
+- Scoring display.
+- Timer calculation.
 - UI components.
 - API error mapping.
-- Authentication and protected-route redirects.
+
+## Integration Tests
+
+Test:
+
+- Login.
+- Protected routes.
+- Role-based navigation.
+- Test creation.
+- Question creation.
+- Student test flow.
+
+## E2E
+
+Recommended Playwright scenarios:
+
+```text
+Admin Login
+Create Exam
+Create Question
+Create Test
+Publish Test
+Assign Student
+Student Login
+Start Test
+Answer Questions
+Submit Test
+View Result
+Admin View Report
+```
 
 ---
 
@@ -917,11 +1209,11 @@ npm run build
 npm run start
 ```
 
-Type-check / production build:
+Tests:
 
 ```bash
-npx tsc --noEmit
-npm run build
+npm run test
+npm run test:e2e
 ```
 
 ---
@@ -930,7 +1222,7 @@ npm run build
 
 ```text
 Auth
-Admin Dashboard
+Dashboard
 Users
 Roles
 Permissions
@@ -938,15 +1230,18 @@ Exams
 Subjects
 Topics
 Question Bank
+Test Builder
+Assignments
+Attempt Monitor
+Results
+Reports
 Notifications
 Audit Logs
 Settings
-Student Dashboard
+Student Test Player
+Student History
 Profile
 ```
-
-> The former *Test Builder*, *Assignments*, *Attempt Monitor*, *Results*,
-> *Reports*, *Student Test Player* and *Student History* modules were removed.
 
 ---
 
@@ -964,14 +1259,17 @@ MVP frontend is complete when:
 - Exam management works.
 - Subject/topic management works.
 - Question bank works.
-- Notifications, audit logs, settings and profile work.
-- Admin dashboard works.
+- Test builder works.
+- Assignment works.
+- Student test player works.
+- Timer uses backend expiry information.
+- Answers autosave.
+- Submission works.
+- Results display correctly.
+- Reports display correctly.
 - API errors are handled.
 - Responsive layout is implemented.
-- The project type-checks (`npx tsc --noEmit`) and builds (`next build`).
-
-> Test-builder, assignment, student-test-player, timer, autosave, submission,
-> results and reports items were removed with the test domain.
+- Critical E2E tests pass.
 
 ---
 
@@ -983,6 +1281,11 @@ The backend owns:
 Authentication
 Authorization
 Business Rules
+Exam Eligibility
+Timer Authority
+Question Correctness
+Scoring
+Result Calculation
 Data Integrity
 ```
 
@@ -994,10 +1297,12 @@ Navigation
 Forms
 Client-side Validation
 User Experience
+Visual Timer
 Tables
+Charts
 ```
 
-Never move authoritative business rules into Next.js.
+Never move authoritative business rules such as scoring or eligibility only into Next.js.
 
 ---
 
@@ -1013,23 +1318,41 @@ Never move authoritative business rules into Next.js.
             Create Subjects
                    |
                    v
-             Create Topics
-                   |
-                   v
              Create Questions
                    |
                    v
-        Publish Exam / Question
+              Create Test
                    |
                    v
-             STUDENT
+             Publish Test
                    |
                    v
-        View notifications & profile
+             Assign Students
+                   |
+                   v
+              STUDENT
+                   |
+                   v
+             View Test
+                   |
+                   v
+              Start Test
+                   |
+                   v
+              Answer Qs
+                   |
+                   v
+              Submit Test
+                   |
+                   v
+             FastAPI Scoring
+                   |
+                   v
+                Result
+                   |
+                   v
+           Student / Admin Reports
 ```
-
-> The former test-assembly → assignment → attempt → submission → scoring →
-> result → report flow was removed.
 
 ---
 
@@ -1064,25 +1387,39 @@ Admin frontend
 ## Sprint 3
 
 ```text
-Notifications
-Audit Logs
-Settings
+Test Builder
+Assignments
 Student Dashboard
-Profile
 ```
 
 ## Sprint 4
 
 ```text
-Deployment
-Security review
-Performance review
-Monitoring
+Test Player
+Timer
+Autosave
+Submission
+Scoring
 ```
 
-> The former sprints building the Test Builder, Assignments, Test Player, Timer,
-> Autosave, Submission, Scoring, Results and Reports were dropped with the test
-> domain.
+## Sprint 5
+
+```text
+Results
+Reports
+Audit Logs
+Notifications
+```
+
+## Sprint 6
+
+```text
+Security testing
+Performance testing
+E2E testing
+Production deployment
+Monitoring
+```
 
 ---
 
@@ -1106,18 +1443,32 @@ There is deliberately **no Redis/cache layer**.
 
 This keeps the first release easier to deploy and maintain while leaving room to add caching later if actual performance measurements demonstrate a need.
 
-The backend remains the authoritative source for authentication, authorization and business rules.
+The backend remains the authoritative source for authentication, authorization, exam rules, test timing, scoring and results.
 
 ---
 
-# 51. Import Test from XLSX — REMOVED
+# 51. Import Test from XLSX
 
-> **Removed.** The XLSX test-import feature (backend `/tests/import` +
-> `/tests/import/template`, `test_import_service`, `app/utils/xlsx.py`, the
-> `TestImportResponse` type, `testsApi.importXlsx` / `importTemplate`, the
-> `/admin/upload` and `/admin/tests` UI, and `lib/test-import.ts`) has been
-> deleted with the test domain.
->
-> Questions can still be imported through the question-bank endpoint
-> `POST /questions/import` (JSON), which is unrelated to the removed test
-> import.
+## Objective
+Enable admin/examiner users to create a new `DRAFT` test and its questions in one step by uploading a structured `.xlsx` workbook. Features: downloadable XLSX template, all-or-nothing validation with per-row errors, auto-creation of referenced `subjects`/`topics` inside the selected `exam`, and frontend UI in Admin → Tests.
+
+## Backend Summary (for integration)
+- `GET /api/v1/tests/import/template` returns `.xlsx` template (requires `test.create` and `question.create`).
+- `POST /api/v1/tests/import` accepts `multipart/form-data` with `file` and `exam_id`; returns `TestImportResponse` on success (201). Errors: 404 `EXAM_NOT_FOUND`, 409 `TEST_CODE_EXISTS`, 422 `TEST_IMPORT_INVALID` with `details.errors` (list of `{row,field,message}`).
+- Imported test and questions are created as `DRAFT`; `total_marks` recomputed from questions; `test.import` audit written.
+
+## Frontend Implementation
+- `frontend/src/lib/types.ts`: `TestImportResponse`.
+- `frontend/src/lib/api/endpoints.ts`: `testsApi.importXlsx(FormData)`, `testsApi.importTemplate()` (download).
+- `frontend/src/app/admin/tests/page.tsx`: Import XLSX button + modal. Modal includes exam select, file input, "Download template" button, scrollable per-row error list on validation failure, and success toast with created counts. Uses `downloadBlob`.
+
+## Integration Contract Additions
+- `POST /tests/import`: multipart; 201 TestImportResponse; 422 returns `error.details.errors` (array). Requires `test.create` and `question.create`.
+- `GET /tests/import/template`: file download; requires `test.create` and `question.create`.
+
+## Definition of Done (updates)
+- Template downloadable and valid; import creates test+questions atomically with correct counts and DRAFT status.
+- Auto-create subjects/topics inside selected exam works; re-import reuses existing.
+- All-or-nothing validation returns per-row errors with clear messages; frontend displays them.
+- UI handles upload, download, success/error; backend/frontend types/endpoints in sync.
+- Tests cover happy path, conflicts, validation, permissions, template.

@@ -1,19 +1,11 @@
 # Student Test Application — Backend
 
-FastAPI + SQLAlchemy 2.x + PostgreSQL REST API for a student examination
-content platform. Implements the specification in
+FastAPI + SQLAlchemy 2.x + PostgreSQL REST API for a student examination /
+test platform. Implements the specification in
 [`../Student_Test_Backend_FastAPI_PostgreSQL_Technical_Design.md`](../Student_Test_Backend_FastAPI_PostgreSQL_Technical_Design.md):
-JWT authentication, role-based access control, exam / subject / topic and
-question-bank management, notifications, settings and audit logging.
-
-> **Removed.** The test-assembly, test-assignment, test-taking (attempts),
-> scoring, results and reports subsystem — and its pytest suite — have been
-> removed. The related tables (`tests`, `test_questions`, `test_assignments`,
-> `attempts`, `attempt_answers`, `results`) are dropped by the
-> `c4d8e2f6a1b3_drop_test_domain_tables` migration. The test-domain API modules
-> (`/tests`, `/assignments`, `/attempts`, `/results`, `/reports`, `/student`)
-> and their permissions (`test.*`, `attempt.view`, `result.*`, `report.view`)
-> no longer exist.
+JWT authentication, role-based access control, exam & question-bank management,
+test assembly and assignment, a server-timed test engine with transaction-safe
+submission, scoring with negative marking, results, reports and audit logging.
 
 ## Stack
 
@@ -26,6 +18,7 @@ question-bank management, notifications, settings and audit logging.
 | Validation | Pydantic v2 + pydantic-settings |
 | Auth | JWT (PyJWT), access + refresh tokens |
 | Passwords | Argon2id (`pwdlib`) |
+| Tests | Pytest + HTTPX / Starlette TestClient |
 
 ## Quick start (local)
 
@@ -95,6 +88,12 @@ All routes are served under `/api/v1`.
 | Exams | `/exams` | CRUD, publish, archive |
 | Subjects / Topics | `/subjects`, `/topics` | syllabus tree |
 | Questions | `/questions` | CRUD, publish, bulk import |
+| Tests | `/tests` | assembly, publish/close, add/remove questions |
+| Assignments | `/assignments` | assign tests to students (single/bulk) |
+| Admin attempts | `/attempts` | attempt + answer inspection |
+| Results | `/results` | list, publish, CSV export |
+| Reports | `/reports` | dashboard, exam/test/student/question/subject analytics |
+| Student tests | `/student` | list/start/answer/submit/review, own results |
 | Notifications | `/notifications` | inbox, mark read, admin create |
 | Audit logs | `/audit-logs` | administrative audit trail |
 | Settings | `/settings` | public + private key/value settings |
@@ -106,12 +105,18 @@ envelope `{items, page, page_size, total, total_pages}`). Errors always use:
 { "success": false, "error": { "code": "QUESTION_NOT_FOUND", "message": "Question was not found." } }
 ```
 
-## Security notes
+## Test engine & security notes
 
+- Test duration is enforced **server-side**: an attempt gets an `expires_at` at
+  start; saving answers after expiry triggers auto-submission.
+- Submissions take a row lock (`SELECT ... FOR UPDATE`) and transition the
+  attempt state atomically, so double/concurrent submissions cannot create two
+  results.
+- Answer keys (`is_correct`, explanations, correct option ids) are never
+  returned by test-taking endpoints; they are available only after submission
+  via `/student/results/{id}/review`.
 - Authorization is always enforced server-side using the RBAC permission
   catalogue; ownership checks return `404` (not `403`) to avoid IDOR leaks.
-- Question answer keys (`is_correct`, correct option ids) are not exposed
-  through list/get responses beyond what the question CRUD endpoints require.
 - Login failures are rate-limited (sliding window) per identifier+IP.
 
 ## Migrations
@@ -123,15 +128,17 @@ alembic revision --autogenerate -m "message"
 alembic check                   # detect model/migration drift
 ```
 
-## Verification
-
-There is no automated test suite. Verify the app imports and the schema is in
-sync instead:
+## Tests
 
 ```bash
-python -c "import app.main"   # import check
-alembic check                 # model/migration drift check
+pytest -v
 ```
+
+Integration tests run against a **separate, per-run PostgreSQL schema**
+(`student_test_pytest_<pid>`) created and dropped automatically, so your real
+data is never touched and two concurrent runs cannot collide. If that schema
+cannot be created (e.g. restricted credentials), the DB-backed tests are
+skipped and the unit tests still run.
 
 ## Docker
 
@@ -147,7 +154,7 @@ app/
   main.py            FastAPI app, error handlers, health, CORS
   core/              config, security, JWT, RBAC, exceptions
   db/                declarative base + mixins, engine/session
-  models/            SQLAlchemy models (15 tables)
+  models/            SQLAlchemy models (21 tables)
   schemas/           Pydantic request/response models
   repositories/      reusable query layer
   services/          business logic + transactions
@@ -155,4 +162,5 @@ app/
   utils/             pagination, enums, datetime helpers
 alembic/             migrations
 scripts/seed.py      idempotent demo data
+tests/               unit + integration tests
 ```

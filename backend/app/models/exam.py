@@ -1,4 +1,4 @@
-"""``exams`` - top level container for subjects, topics and questions."""
+"""``exams`` - top level container for subjects, topics, questions and tests."""
 
 from datetime import datetime
 from typing import List, Optional
@@ -33,4 +33,9 @@ class Exam(IDMixin, TimestampMixin, AuditMixin, ActiveMixin, Base):
         back_populates="exam",
         lazy="selectin",
         order_by="Subject.sort_order",
+    )
+    tests: Mapped[List["Test"]] = relationship(  # noqa: F821
+        "Test",
+        back_populates="exam",
+        lazy="selectin",
     )

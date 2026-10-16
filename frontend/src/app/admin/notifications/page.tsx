@@ -24,7 +24,7 @@ import {
 } from "@/components/ui";
 import { loadUserOptions } from "@/lib/options";
 
-const TYPES = ["INFO", "SUCCESS", "WARNING", "ERROR"];
+const TYPES = ["INFO", "SUCCESS", "WARNING", "ERROR", "TEST_ASSIGNED", "RESULT_PUBLISHED"];
 
 export default function AdminNotificationsPage() {
   const toast = useToast();

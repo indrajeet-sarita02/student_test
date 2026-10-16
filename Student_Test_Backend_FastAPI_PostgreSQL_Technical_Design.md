@@ -1,34 +1,5 @@
 # Student Test Application — Backend Technical Design & Development Specification
 
-## Removal notice (test-taking subsystem)
-
-> **The test-assembly / test-taking / scoring / results / reports subsystem has
-> been removed from the backend.** The following are no longer part of the
-> application:
->
-> - **Models & tables:** `tests`, `test_questions`, `test_assignments`,
->   `attempts`, `attempt_answers`, `results`.
-> - **API modules & endpoints:** `/tests`, `/assignments`, `/attempts`,
->   `/results`, `/reports` and `/student` (including the XLSX test-import
->   endpoint and its template download).
-> - **Services & repositories:** test assembly, assignment, attempt, scoring,
->   test-import and report services plus their repositories and schemas.
-> - **Permissions & roles:** `test.*`, `attempt.*`, `result.*`, `report.view`
->   and the `TEST_ASSIGNED` / `RESULT_PUBLISHED` notification types (and the
->   `TestStatus` / `AssignmentStatus` / `AttemptStatus` / `SubmissionType`
->   enums).
-> - **Migration:** `c4d8e2f6a1b3_drop_test_domain_tables` drops the tables
->   listed above.
->
-> What remains is the **content & administration core**: JWT authentication,
-> RBAC, users/roles/permissions, exams, subjects, topics, the question bank,
-> notifications, audit logs and settings.
->
-> Sections below that describe the removed subsystem (notably **8.12–8.17**,
-> the test/admin-attempt/result/report parts of **13**, **17**, **18**, **20**,
-> the test parts of **21**, and **24**) are retained for historical context only
-> and **no longer describe the running system**. Treat them as archival.
-
 ## 1. Document Overview
 
 | Item | Specification |
@@ -46,7 +17,7 @@
 | Cache | **Not required** |
 | Validation | Pydantic |
 | Password Hashing | Argon2id or bcrypt |
-| Testing | Not included (the test subsystem and its pytest suite were removed) |
+| Testing | Pytest + HTTPX |
 | Configuration | Environment variables / `.env` |
 | Containerization | Docker recommended |
 
@@ -70,7 +41,7 @@ Core principles:
 - Swagger/OpenAPI documentation for every API.
 - Centralized exception handling and validation.
 - Auditability of important administrative operations.
-- Historical audit-log entries must remain consistent and immutable.
+- Historical test attempts and results must remain consistent.
 
 ---
 
@@ -90,7 +61,7 @@ Core principles:
           +--------------------+--------------------+
           |                    |                    |
    +------v------+      +------v------+      +------v------+
-   | Auth / RBAC |      |  Services   |      |   Content   |
+   | Auth / RBAC |      |  Services   |      |   Reports   |
    +-------------+      +------+------+      +-------------+
                                |
                         +------v------+
@@ -135,6 +106,10 @@ backend/
 │   │   ├── subject.py
 │   │   ├── topic.py
 │   │   ├── question.py
+│   │   ├── test.py
+│   │   ├── assignment.py
+│   │   ├── attempt.py
+│   │   ├── result.py
 │   │   ├── notification.py
 │   │   ├── audit_log.py
 │   │   └── setting.py
@@ -147,18 +122,27 @@ backend/
 │   │   ├── subject.py
 │   │   ├── topic.py
 │   │   ├── question.py
+│   │   ├── test.py
+│   │   ├── attempt.py
+│   │   ├── result.py
 │   │   └── common.py
 │   │
 │   ├── repositories/
 │   │   ├── user_repository.py
 │   │   ├── exam_repository.py
-│   │   └── question_repository.py
+│   │   ├── question_repository.py
+│   │   ├── test_repository.py
+│   │   └── attempt_repository.py
 │   │
 │   ├── services/
 │   │   ├── auth_service.py
 │   │   ├── user_service.py
 │   │   ├── exam_service.py
 │   │   ├── question_service.py
+│   │   ├── test_service.py
+│   │   ├── attempt_service.py
+│   │   ├── scoring_service.py
+│   │   ├── report_service.py
 │   │   └── notification_service.py
 │   │
 │   ├── api/
@@ -173,6 +157,11 @@ backend/
 │   │       ├── subjects.py
 │   │       ├── topics.py
 │   │       ├── questions.py
+│   │       ├── tests.py
+│   │       ├── assignments.py
+│   │       ├── attempts.py
+│   │       ├── results.py
+│   │       ├── reports.py
 │   │       ├── notifications.py
 │   │       ├── audit_logs.py
 │   │       └── settings.py
@@ -186,6 +175,7 @@ backend/
 │   ├── versions/
 │   └── env.py
 │
+├── tests/
 ├── scripts/
 │   └── seed.py
 ├── requirements.txt
@@ -215,6 +205,7 @@ python-jose or PyJWT
 pwdlib / Argon2id or bcrypt
 python-multipart
 email-validator
+pytest
 httpx
 ```
 
@@ -232,6 +223,7 @@ pyjwt
 pwdlib[argon2]
 python-multipart
 email-validator
+pytest
 httpx
 ```
 
@@ -307,7 +299,7 @@ Where soft deletion is required:
 deleted_at
 ```
 
-Prefer soft deletion (or `is_active` flags) for content such as exams, subjects, topics and questions.
+Avoid physically deleting historical entities such as questions referenced by completed attempts.
 
 ---
 
@@ -392,11 +384,13 @@ question.create
 question.update
 question.delete
 question.publish
-notification.view
-notification.create
-audit.view
-settings.view
-settings.update
+test.view
+test.create
+test.update
+test.publish
+attempt.view
+result.view
+result.export
 ```
 
 ## 8.5 user_roles
@@ -488,30 +482,116 @@ option_order
 is_correct
 ```
 
-For security, `is_correct` should never be exposed through any public/read-only API.
+For security, `is_correct` must never be exposed to students through test-taking APIs.
 
-## 8.12–8.17 Tests, assignments, attempts & results — REMOVED
+## 8.12 tests
 
-> **Removed.** The `tests`, `test_questions`, `test_assignments`, `attempts`,
-> `attempt_answers` and `results` tables (and their models, schemas,
-> repositories, services and endpoints) have been dropped from the application.
-> Migration `c4d8e2f6a1b3_drop_test_domain_tables` removes them. The historical
-> column definitions were: `tests` (exam_id, name, code, description,
-> instructions, duration_minutes, total_marks, passing_marks,
-> negative_marking_enabled, negative_marks, randomize_questions,
-> randomize_options, max_attempts, status, scheduled_start_at, scheduled_end_at,
-> audit columns); `test_questions` (test_id, question_id, question_order,
-> marks_override, negative_marks_override); `test_assignments` (test_id,
-> student_id, assigned_at, available_from, available_until, max_attempts,
-> status); `attempts` (test_id, student_id, attempt_number, started_at,
-> submitted_at, expires_at, status, score, max_score, percentage,
-> submission_type); `attempt_answers` (attempt_id, question_id,
-> selected_option_id, answer_text, numerical_answer, is_marked_for_review,
-> answered_at); `results` (attempt_id, student_id, test_id, score, max_score,
-> percentage, correct_count, incorrect_count, unanswered_count, rank, percentile,
-> pass_status, published_at).
->
-> The numbering gap is intentional so the surviving sections keep their numbers.
+```text
+id
+exam_id
+name
+code
+description
+instructions
+duration_minutes
+total_marks
+passing_marks
+negative_marking_enabled
+negative_marks
+randomize_questions
+randomize_options
+max_attempts
+status
+scheduled_start_at
+scheduled_end_at
+created_by
+updated_by
+created_at
+updated_at
+```
+
+## 8.13 test_questions
+
+```text
+id
+test_id
+question_id
+question_order
+marks_override nullable
+negative_marks_override nullable
+```
+
+## 8.14 test_assignments
+
+```text
+id
+test_id
+student_id
+assigned_at
+available_from
+available_until
+max_attempts
+status
+```
+
+## 8.15 attempts
+
+```text
+id
+test_id
+student_id
+attempt_number
+started_at
+submitted_at
+expires_at
+status
+score
+max_score
+percentage
+submission_type
+```
+
+Statuses:
+
+```text
+STARTED
+SUBMITTED
+AUTO_SUBMITTED
+EVALUATED
+CANCELLED
+```
+
+## 8.16 attempt_answers
+
+```text
+id
+attempt_id
+question_id
+selected_option_id nullable
+answer_text nullable
+numerical_answer nullable
+is_marked_for_review
+answered_at
+```
+
+## 8.17 results
+
+```text
+id
+attempt_id
+student_id
+test_id
+score
+max_score
+percentage
+correct_count
+incorrect_count
+unanswered_count
+rank nullable
+percentile nullable
+pass_status
+published_at
+```
 
 ## 8.18 notifications
 
@@ -567,17 +647,26 @@ Role
  └── Permissions
 
 Exam
- └── Subjects
-      └── Topics
+ ├── Subjects
+ │    └── Topics
+ └── Tests
+      ├── TestQuestions
+      └── Assignments
 
 Question
  ├── Subject
  ├── Topic
  └── QuestionOptions
-```
 
-> **Removed.** `Tests`, `TestQuestions`, `Assignments`, `Attempts`,
-> `AttemptAnswers` and `Results` and their relationships have been dropped.
+Test
+ ├── Questions
+ ├── Assignments
+ └── Attempts
+
+Attempt
+ ├── AttemptAnswers
+ └── Result
+```
 
 ---
 
@@ -687,9 +776,10 @@ DELETE /resources/{id}
 For actions:
 
 ```text
-POST /exams/{id}/publish
-POST /exams/{id}/archive
-POST /questions/{id}/publish
+POST /tests/{id}/publish
+POST /tests/{id}/close
+POST /attempts/{id}/submit
+POST /results/{id}/publish
 ```
 
 ---
@@ -783,28 +873,71 @@ POST   /questions/{id}/publish
 POST   /questions/import
 ```
 
-## Tests, Assignments, Attempts, Results & Reports — REMOVED
+## Tests
 
-> **Removed.** The `/tests`, `/assignments`, `/attempts`, `/results`, `/reports`
-> and `/student` routers (and every endpoint they exposed, including the XLSX
-> test-import and template download) have been deleted from the API. They were:
->
-> ```text
-> # tests
-> GET/POST /tests, GET/PUT/DELETE /tests/{id}, POST /tests/{id}/publish,
-> POST /tests/{id}/close, POST/DELETE /tests/{id}/questions..., 
-> GET /tests/import/template, POST /tests/import
-> # assignments
-> GET/POST /assignments, POST /assignments/bulk, DELETE /assignments/{id}
-> # student
-> GET /student/tests, GET /student/tests/{id}, POST /student/tests/{id}/start,
-> GET/PUT/POST /student/attempts/{id}..., GET /student/attempts,
-> GET /student/results
-> # admin attempts / results / reports
-> GET /attempts..., GET /results..., GET /reports/...
-> ```
->
-> Only the content & administration endpoints below remain.
+```text
+GET    /tests
+POST   /tests
+GET    /tests/{id}
+PUT    /tests/{id}
+DELETE /tests/{id}
+POST   /tests/{id}/publish
+POST   /tests/{id}/close
+POST   /tests/{id}/questions
+DELETE /tests/{id}/questions/{question_id}
+GET    /tests/import/template  (download XLSX import template)
+POST   /tests/import            (import test + questions from XLSX)
+```
+
+## Assignments
+
+```text
+GET  /assignments
+POST /assignments
+POST /assignments/bulk
+DELETE /assignments/{id}
+```
+
+## Student Test APIs
+
+```text
+GET  /student/tests
+GET  /student/tests/{id}
+POST /student/tests/{id}/start
+GET  /student/attempts/{attempt_id}
+PUT  /student/attempts/{attempt_id}/answers
+POST /student/attempts/{attempt_id}/submit
+GET  /student/attempts
+GET  /student/results
+```
+
+## Admin Attempts
+
+```text
+GET /attempts
+GET /attempts/{id}
+GET /attempts/{id}/answers
+```
+
+## Results
+
+```text
+GET  /results
+GET  /results/{id}
+POST /results/{id}/publish
+GET  /results/export
+```
+
+## Reports
+
+```text
+GET /reports/dashboard
+GET /reports/exams
+GET /reports/tests
+GET /reports/students/{student_id}
+GET /reports/questions
+GET /reports/subjects
+```
 
 ## Notifications
 
@@ -940,20 +1073,80 @@ Recommended HTTP statuses:
 
 ---
 
-# 17. Test Engine Design — REMOVED
+# 17. Test Engine Design
 
-> **Removed.** The server-timed test engine (attempt start, answer autosave and
-> submission endpoints under `/student/...`) has been deleted along with the
-> `attempts` / `attempt_answers` tables and the student router. There is no
-> test-taking flow in the current application.
+## Start Test
+
+When a student starts a test:
+
+1. Validate authentication.
+2. Validate student eligibility.
+3. Validate test status.
+4. Validate availability window.
+5. Validate attempt count.
+6. Create attempt.
+7. Calculate server-side `expires_at`.
+8. Return test questions without answer keys.
+
+## Answer Save
+
+Answers should be persisted through:
+
+```text
+PUT /student/attempts/{attempt_id}/answers
+```
+
+The endpoint must verify that:
+
+- Attempt belongs to authenticated student.
+- Attempt is still active.
+- Question belongs to the test.
+- Current time is before `expires_at`.
+
+## Submit
+
+```text
+POST /student/attempts/{attempt_id}/submit
+```
+
+The server:
+
+1. Locks/validates the attempt.
+2. Prevents duplicate submission.
+3. Evaluates answers.
+4. Calculates score.
+5. Creates result.
+6. Marks attempt submitted/evaluated.
+7. Returns permitted result data.
 
 ---
 
-# 18. Scoring Service — REMOVED
+# 18. Scoring Service
 
-> **Removed.** The scoring service (`app/services/scoring_service.py`) that
-> evaluated answers, applied positive/negative marking and produced results has
-> been deleted together with the `results` table and its endpoints.
+Scoring must be isolated in a dedicated service.
+
+Example:
+
+```python
+score = 0
+
+if correct:
+    score += positive_marks
+elif incorrect:
+    score -= negative_marks
+```
+
+Support:
+
+- Question-level marks.
+- Test-level overrides.
+- Negative marking.
+- Unanswered questions.
+- Multiple correct options.
+- Numerical questions.
+- Future custom evaluation strategies.
+
+The scoring rules used for an attempt must be reproducible from the test/question configuration applicable at that time.
 
 ---
 
@@ -963,21 +1156,28 @@ Use SQLAlchemy transactions for critical workflows.
 
 Examples:
 
-- Creating an exam with its subjects and topics.
-- Importing questions in bulk.
-- Publishing an exam or question.
-- Assigning roles to a user.
-- Recording audit-log entries.
+- Creating a test and its questions.
+- Starting an attempt.
+- Saving final submission.
+- Generating a result.
+- Publishing a test.
+- Manual result correction.
 
 A failed transaction must not leave partial business data.
 
 ---
 
-# 20. Concurrency and Submission Safety — REMOVED
+# 20. Concurrency and Submission Safety
 
-> **Removed.** Submission-safety concerns (double submission, expiry races,
-> `SELECT ... FOR UPDATE` on attempts) applied only to the deleted test-taking
-> flow and no longer apply.
+The test submission API must be designed to prevent:
+
+- Double submission.
+- Two simultaneous submissions generating two results.
+- Submission after expiration.
+- Modification of submitted attempts.
+- Unauthorized attempt access.
+
+Use database transactions and appropriate row-level locking/atomic state transitions where necessary.
 
 ---
 
@@ -1051,12 +1251,16 @@ Include:
 - True/false.
 - Numerical.
 
-### Sample Tests — REMOVED
+### Sample Tests
 
-> **Removed.** Tests are no longer seeded (the `tests` / `test_questions` /
-> `test_assignments` tables were dropped). The seeder now covers permissions,
-> roles, users, student profiles, exams, subjects, topics, questions, question
-> options and settings only.
+Create at least:
+
+```text
+NEET Physics Practice Test
+NEET Full Mock Test
+JEE Mathematics Practice Test
+SSC General Knowledge Test
+```
 
 Seed scripts should be idempotent or provide a clear reset option.
 
@@ -1106,23 +1310,57 @@ Required controls:
 - CORS restricted to approved frontend origins.
 - Rate limiting on authentication/sensitive endpoints.
 - Secure token handling.
-- No leakage of question answer keys through any read-only API.
+- No answer-key leakage.
+- Ownership checks on student resources.
 - Audit logging.
 - Environment-based secrets.
 - No sensitive information in logs.
 
 ---
 
-# 24. Testing Strategy — REMOVED
+# 24. Testing Strategy
 
-> **Removed.** The pytest suite (`backend/tests/`, `pytest.ini`, the `pytest`
-> dependency and the `httpx`-based TestClient harness) has been deleted. There
-> is currently no automated backend test suite; the application is verified by
-> `python -c "import app.main"`, `alembic check` and manual/smoke checks.
->
-> If automated tests are reintroduced, cover the surviving core: authentication,
-> permission checks, CRUD for exams/subjects/topics/questions, pagination,
-> validation and audit logging.
+## Unit Tests
+
+Test:
+
+- Authentication service.
+- Permission checks.
+- Scoring.
+- Eligibility.
+- Attempt state transitions.
+- Pagination.
+- Validation.
+
+## Integration Tests
+
+Test:
+
+- API + PostgreSQL.
+- Login.
+- CRUD operations.
+- Test creation.
+- Attempt lifecycle.
+- Submission.
+- Result generation.
+
+## Security Tests
+
+Test:
+
+- Unauthorized API access.
+- Cross-student attempt access.
+- Privilege escalation.
+- IDOR/BOLA.
+- Invalid JWT.
+- Expired JWT.
+- Answer-key exposure.
+
+## Example
+
+```bash
+pytest -v
+```
 
 ---
 
@@ -1177,6 +1415,7 @@ Because no cache is required:
 - Use pagination for large tables.
 - Avoid N+1 ORM queries.
 - Use `selectinload`/`joinedload` appropriately.
+- Use database aggregation for reports.
 - Keep transactions short.
 - Index foreign keys and frequently filtered columns.
 
@@ -1188,9 +1427,15 @@ users.username
 questions.subject_id
 questions.topic_id
 questions.status
-subjects.exam_id
-topics.subject_id
-notifications.user_id
+tests.exam_id
+tests.status
+assignments.test_id
+assignments.student_id
+attempts.test_id
+attempts.student_id
+attempt_answers.attempt_id
+results.student_id
+results.test_id
 audit_logs.user_id
 audit_logs.created_at
 ```
@@ -1241,13 +1486,15 @@ The backend is considered MVP-ready when:
 - RBAC works.
 - Admin CRUD APIs work.
 - Question bank APIs work.
-- Subject/topic and exam management work.
-- Notification, audit-log and settings APIs work.
+- Test creation/publishing works.
+- Student test APIs work.
+- Server-side timer is enforced.
+- Submission is transaction-safe.
+- Scoring works.
+- Results work.
+- Reports work.
 - Swagger documents all APIs.
+- API tests cover critical workflows.
 - Security checks are completed.
-
-> **Note.** The former definition-of-done items for test creation/publishing,
-> the student test APIs, the server-side timer, transaction-safe submission,
-> scoring, results, reports and XLSX test import no longer apply — that
-> subsystem has been removed.
+- Test import from XLSX validates against exam, auto-creates subjects/topics when missing (per spec), keeps imported test/questions in `DRAFT`, returns per-row validation errors on failure and writes audit entry.
 - No cache dependency exists.

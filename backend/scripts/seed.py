@@ -1,7 +1,8 @@
 """Idempotent seed script for the Student Test backend (spec §21).
 
 Creates the RBAC catalogue, demo users, exams/subjects/topics, a question bank
-covering every question type and the runtime settings.
+covering every question type, four published tests with assignments and the
+runtime settings.
 
 Usage (from the ``backend/`` directory):
 
@@ -22,9 +23,10 @@ from __future__ import annotations
 
 import argparse
 import sys
+from datetime import datetime, timedelta, timezone
 from decimal import Decimal
 from pathlib import Path
-from typing import Any, Dict, List, Sequence, Tuple
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 # Make sure the project root (the directory that contains ``app/``) is importable
 # regardless of where the script is invoked from.
@@ -47,6 +49,9 @@ from app.models import (  # noqa: E402
     Setting,
     StudentProfile,
     Subject,
+    Test,
+    TestAssignment,
+    TestQuestion,
     Topic,
     User,
     UserRole,
@@ -70,6 +75,9 @@ ENTITIES: Sequence[str] = (
     "topics",
     "questions",
     "question_options",
+    "tests",
+    "test_questions",
+    "test_assignments",
     "settings",
 )
 
@@ -164,6 +172,17 @@ PERMISSION_SPECS: Sequence[Tuple[str, str]] = (
     ("question.update", "Update questions"),
     ("question.delete", "Delete questions"),
     ("question.publish", "Publish questions"),
+    ("test.view", "View tests"),
+    ("test.create", "Create tests"),
+    ("test.update", "Update tests"),
+    ("test.delete", "Delete tests"),
+    ("test.publish", "Publish tests"),
+    ("test.assign", "Assign tests"),  # canonical code test.assign → action "assign"
+    ("attempt.view", "View attempts"),
+    ("result.view", "View results"),
+    ("result.publish", "Publish results"),
+    ("result.export", "Export results"),
+    ("report.view", "View reports"),
     ("notification.view", "View notifications"),
     ("notification.create", "Create notifications"),
     ("audit.view", "View audit logs"),
@@ -174,6 +193,8 @@ ALL_PERMISSION_CODES: List[str] = [code for code, _ in PERMISSION_SPECS]
 
 _EXAM_ALL = [f"exam.{a}" for a in ("view", "create", "update", "delete", "publish")]
 _QUESTION_ALL = [f"question.{a}" for a in ("view", "create", "update", "delete", "publish")]
+_TEST_ALL = [f"test.{a}" for a in ("view", "create", "update", "delete", "publish", "assign")]
+_TEST_WRITE = ["test.view", "test.create", "test.update", "test.publish", "test.assign"]
 
 # code -> (display name, description, is_system_role)
 ROLES: Dict[str, Tuple[str, str, bool]] = {
@@ -181,20 +202,20 @@ ROLES: Dict[str, Tuple[str, str, bool]] = {
     "ADMIN": ("Administrator", "Administrative access to every module.", False),
     "CONTENT_MANAGER": (
         "Content Manager",
-        "Manages users (read), exams, subjects, topics and questions.",
+        "Manages users (read), exams, questions and tests.",
         False,
     ),
     "EXAMINER": (
         "Examiner",
-        "Creates exams and questions.",
+        "Creates exams/questions/tests and publishes results.",
         False,
     ),
     "REPORT_VIEWER": (
         "Report Viewer",
-        "Read-only access to content and audit logs.",
+        "Read-only access to reports, results and audit logs.",
         False,
     ),
-    "STUDENT": ("Student", "Read-only access to published content.", False),
+    "STUDENT": ("Student", "Takes assigned tests (ownership-based student APIs).", False),
 }
 
 ROLE_PERMISSIONS: Dict[str, List[str]] = {
@@ -206,6 +227,10 @@ ROLE_PERMISSIONS: Dict[str, List[str]] = {
         "permission.view",
         *_EXAM_ALL,
         *_QUESTION_ALL,
+        *_TEST_WRITE,
+        "attempt.view",
+        "result.view",
+        "report.view",
         "notification.view",
         "notification.create",
         "audit.view",
@@ -218,6 +243,12 @@ ROLE_PERMISSIONS: Dict[str, List[str]] = {
         "exam.create",
         "exam.update",
         *_QUESTION_ALL,
+        *_TEST_ALL,
+        "attempt.view",
+        "result.view",
+        "result.publish",
+        "result.export",
+        "report.view",
         "notification.view",
     ],
     "REPORT_VIEWER": [
@@ -226,9 +257,14 @@ ROLE_PERMISSIONS: Dict[str, List[str]] = {
         "permission.view",
         "exam.view",
         "question.view",
+        "test.view",
+        "attempt.view",
+        "result.view",
+        "result.export",
+        "report.view",
         "audit.view",
     ],
-    "STUDENT": [],  # content is public to authenticated students; no RBAC codes required
+    "STUDENT": [],  # student APIs are ownership-based; no RBAC codes required
 }
 
 # username, email, first name, last name, role code
@@ -433,14 +469,58 @@ QUESTIONS: Sequence[Dict[str, Any]] = (
     ),
 )
 
+# code, name, exam code, duration, randomize, description, instructions, question keys
+TESTS: Sequence[Dict[str, Any]] = (
+    dict(
+        code="NEET-PHY-PT01", name="NEET Physics Practice Test", exam="NEET",
+        duration=60, randomize=False,
+        description="Topic-wise physics practice test for NEET aspirants.",
+        instructions="Duration: 60 minutes. Each question carries 4 marks. "
+                     "Negative marking: 1 mark is deducted for every wrong answer.",
+        question_keys=["NEET-PHY-Q01", "NEET-PHY-Q02", "NEET-PHY-Q03", "NEET-PHY-Q04"],
+    ),
+    dict(
+        code="NEET-FULL-MT01", name="NEET Full Mock Test", exam="NEET",
+        duration=180, randomize=True,
+        description="Full-length NEET mock test covering Physics, Chemistry and Biology.",
+        instructions="Duration: 180 minutes. Question order is randomised. "
+                     "Negative marking: 1 mark is deducted for every wrong answer.",
+        question_keys=[
+            "NEET-PHY-Q01", "NEET-PHY-Q02", "NEET-PHY-Q03", "NEET-PHY-Q04",
+            "NEET-CHM-Q01", "NEET-CHM-Q02", "NEET-BIO-Q01", "NEET-BIO-Q02",
+        ],
+    ),
+    dict(
+        code="JEE-MATH-PT01", name="JEE Mathematics Practice Test", exam="JEE",
+        duration=60, randomize=False,
+        description="Practice test for the JEE Mathematics syllabus.",
+        instructions="Duration: 60 minutes. Each question carries 4 marks. "
+                     "Negative marking: 1 mark is deducted for every wrong answer.",
+        question_keys=["JEE-MAT-Q01", "JEE-MAT-Q02", "JEE-MAT-Q03", "JEE-MAT-Q04"],
+    ),
+    dict(
+        code="SSC-GK-T01", name="SSC General Knowledge Test", exam="SSC",
+        duration=30, randomize=False,
+        description="General knowledge test for SSC aspirants.",
+        instructions="Duration: 30 minutes. Each question carries 4 marks. "
+                     "Negative marking: 1 mark is deducted for every wrong answer.",
+        question_keys=["SSC-GS-Q01", "SSC-GS-Q02", "SSC-GS-Q03", "SSC-GS-Q04"],
+    ),
+)
+
 # setting key, value, description, is_public
 SETTINGS: Sequence[Tuple[str, str, str, bool]] = (
     ("site_name", "Student Test Portal", "Public site title shown in the UI.", True),
+    ("default_test_duration_minutes", "180",
+     "Default duration (minutes) pre-filled when creating a test.", True),
+    ("enable_negative_marking", "true",
+     "Whether negative marking is enabled by default for new tests.", True),
     ("support_email", "support@example.com", "Public support contact email.", True),
     ("maintenance_mode", "false",
      "When true the portal rejects non-admin requests.", False),
 )
 
+ASSIGNMENT_STUDENTS: Sequence[str] = ("student@example.com", "student2@example.com")
 
 
 # ---------------------------------------------------------------------------
@@ -647,6 +727,71 @@ def seed_questions(session, owner_id: int, subject_ids, topic_ids) -> Dict[str, 
     return question_ids
 
 
+def seed_tests(session, exam_ids, question_ids, user_ids) -> None:
+    now = datetime.now(timezone.utc)
+    available_from = now - timedelta(days=1)
+    available_until = now + timedelta(days=30)
+
+    for spec in TESTS:
+        marks_by_key = {q["key"]: q for q in QUESTIONS}
+        total_marks = float(sum(
+            _Q_MARKS for _ in spec["question_keys"]
+        ))
+        passing_marks = round(total_marks * 0.4, 2)
+
+        test, _ = upsert(
+            session,
+            Test,
+            key={"code": spec["code"]},
+            values={
+                "exam_id": exam_ids[spec["exam"]],
+                "name": spec["name"],
+                "description": spec["description"],
+                "instructions": spec["instructions"],
+                "duration_minutes": spec["duration"],
+                "total_marks": total_marks,
+                "passing_marks": passing_marks,
+                "negative_marking_enabled": True,
+                "negative_marks": 1.0,
+                "randomize_questions": spec["randomize"],
+                "randomize_options": False,
+                "max_attempts": 2,
+                "status": "PUBLISHED",
+                "created_by": user_ids["superadmin@example.com"],
+                "updated_by": user_ids["superadmin@example.com"],
+            },
+            entity="tests",
+        )
+        del marks_by_key  # marks are uniform (4.0) — see _Q_MARKS
+
+        for order, q_key in enumerate(spec["question_keys"], start=1):
+            link_row(
+                session,
+                TestQuestion,
+                key={"test_id": test.id, "question_id": question_ids[q_key]},
+                entity="test_questions",
+                question_order=order,
+            )
+
+        for email in ASSIGNMENT_STUDENTS:
+            upsert(
+                session,
+                TestAssignment,
+                key={"test_id": test.id, "student_id": user_ids[email]},
+                values={
+                    "assigned_at": now,
+                    "available_from": available_from,
+                    "available_until": available_until,
+                    "max_attempts": 2,
+                    "status": "ASSIGNED",
+                },
+                entity="test_assignments",
+                # volatile timestamps: never re-compared, so re-runs stay skips
+                ignore=("assigned_at", "available_from", "available_until"),
+            )
+    session.commit()
+
+
 def seed_settings(session, owner_id: int) -> None:
     for key, value, description, is_public in SETTINGS:
         upsert(
@@ -678,8 +823,9 @@ def run_seed(session) -> Dict[str, int]:
     exam_ids_cache.update(exam_ids)
     subject_ids = seed_subjects(session, exam_ids)
     topic_ids = seed_topics(session, subject_ids)
-    seed_questions(session, user_ids["superadmin@example.com"],
-                   subject_ids, topic_ids)
+    question_ids = seed_questions(session, user_ids["superadmin@example.com"],
+                                  subject_ids, topic_ids)
+    seed_tests(session, exam_ids, question_ids, user_ids)
     seed_settings(session, user_ids["superadmin@example.com"])
     return STATS
 

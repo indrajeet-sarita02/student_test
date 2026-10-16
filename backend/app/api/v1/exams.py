@@ -160,9 +160,9 @@ def update_exam(
     status_code=status.HTTP_204_NO_CONTENT,
     summary="Delete exam",
     description=(
-        "Remove an exam. When the exam still owns subjects it is "
+        "Remove an exam. When the exam still owns subjects or tests it is "
         "only soft-deactivated (`is_active=false`, action `deactivate`) so "
-        "historic data is preserved; an empty exam is hard-deleted "
+        "historical data is preserved; an empty exam is hard-deleted "
         "(action `delete`). Both paths are audited. "
         "Requires the `exam.delete` permission."
     ),

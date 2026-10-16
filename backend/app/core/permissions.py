@@ -74,7 +74,12 @@ def require_permission(*codes: str):
 def require_all_permissions(*codes: str):
     """Dependency factory: allow the request only when the user holds ALL codes.
 
-    Used by composite operations that touch more than one module.
+    Used by composite operations that touch more than one module (e.g. a test
+    import that creates both a test and question-bank rows).
+
+    Usage::
+
+        @router.post("/import", dependencies=[Depends(require_all_permissions("test.create", "question.create"))])
     """
     if not codes:
         raise ValueError("require_all_permissions() needs at least one permission code")

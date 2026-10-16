@@ -55,6 +55,13 @@ _BAD_REQUEST: Dict[int, Dict[str, Any]] = {
         "model": ErrorResponse,
     }
 }
+_CONFLICT: Dict[int, Dict[str, Any]] = {
+    409: {
+        "description": "Question is referenced by a test that has attempts "
+        "(QUESTION_IN_USE).",
+        "model": ErrorResponse,
+    }
+}
 
 
 @router.get(
@@ -208,10 +215,13 @@ def update_question(
     status_code=status.HTTP_204_NO_CONTENT,
     summary="Delete question",
     description=(
-        "Remove a question (and its options). The action is audited. Requires "
-        "the `question.delete` permission."
+        "Remove a question. When it is referenced by a test that already has "
+        "attempts it is refused with 409 `QUESTION_IN_USE`; when referenced by "
+        "tests without attempts it is soft-deactivated (`is_active=false`); "
+        "otherwise it is hard-deleted. Both paths are audited. Requires the "
+        "`question.delete` permission."
     ),
-    responses={**_UNAUTHORIZED, **_FORBIDDEN, **_NOT_FOUND},
+    responses={**_UNAUTHORIZED, **_FORBIDDEN, **_NOT_FOUND, **_CONFLICT},
     dependencies=[Depends(require_permission("question.delete"))],
 )
 def delete_question(
@@ -220,7 +230,7 @@ def delete_question(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ) -> None:
-    """Delete a question."""
+    """Delete, soft-deactivate or refuse deletion of a question."""
     question_service.delete_question(
         db, question_id, user_id=current_user.id, request=request
     )

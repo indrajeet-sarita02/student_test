@@ -12,7 +12,7 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 BigIntPK = BigInteger().with_variant(Integer, "sqlite")
 # JSONB storage with a portable fallback.  ``none_as_null=True`` stores a Python
 # ``None`` as SQL NULL rather than the JSON scalar ``null``; the latter breaks
-# jsonb functions such as ``jsonb_array_length``.
+# jsonb functions such as ``jsonb_array_length`` (see report_service).
 Jsonb = JSONB(none_as_null=True).with_variant(SqliteJSON(none_as_null=True), "sqlite")
 
 
