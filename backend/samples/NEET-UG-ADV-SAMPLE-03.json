@@ -1,0 +1,2708 @@
+{
+  "exam": "NEET UG (Advanced Level) - Full Length Mock",
+  "set_code": "NEET-UG-ADV-SAMPLE-03",
+  "set_label": "Sample Set 03",
+  "total_questions": 180,
+  "questions": [
+    {
+      "number": 1,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 30 m/s at 60 degrees to the horizontal (g = 10 m/s^2). Its horizontal range is",
+      "options": {
+        "A": "155.9 m",
+        "B": "33.7 m",
+        "C": "77.9 m",
+        "D": "58.5 m"
+      },
+      "answer": "C",
+      "explanation": "R = u^2 sin(2 theta)/g = 30^2 sin(120)/10.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 2,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 3 m/s accelerates uniformly at 2.5 m/s^2 for 4 s. Its final velocity is",
+      "options": {
+        "A": "10.5 m/s",
+        "B": "13 m/s",
+        "C": "18 m/s",
+        "D": "15.5 m/s"
+      },
+      "answer": "B",
+      "explanation": "v = u + at = 3 + (2.5)(4).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 3,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 20 m/s accelerates uniformly at 5 m/s^2 for 2 s. Its final velocity is",
+      "options": {
+        "A": "30 m/s",
+        "B": "25 m/s",
+        "C": "35 m/s",
+        "D": "40 m/s"
+      },
+      "answer": "A",
+      "explanation": "v = u + at = 20 + (5)(2).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 4,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 8 m/s accelerates uniformly at -2 m/s^2 for 4 s. Its final velocity is",
+      "options": {
+        "A": "0 m/s",
+        "B": "-2 m/s",
+        "C": "2 m/s",
+        "D": "-4 m/s"
+      },
+      "answer": "A",
+      "explanation": "v = u + at = 8 + (-2)(4).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 5,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 0 m/s accelerates uniformly at 3 m/s^2 for 6 s. Its final velocity is",
+      "options": {
+        "A": "18 m/s",
+        "B": "24 m/s",
+        "C": "21 m/s",
+        "D": "15 m/s"
+      },
+      "answer": "A",
+      "explanation": "v = u + at = 0 + (3)(6).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 6,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 20 m/s at 30 degrees to the horizontal (g = 10 m/s^2). Its horizontal range is",
+      "options": {
+        "A": "5 m",
+        "B": "69.3 m",
+        "C": "34.6 m",
+        "D": "8.7 m"
+      },
+      "answer": "C",
+      "explanation": "R = u^2 sin(2 theta)/g = 20^2 sin(60)/10.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 7,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 40 m/s at 45 degrees to the horizontal (g = 10 m/s^2). Its horizontal range is",
+      "options": {
+        "A": "160 m",
+        "B": "320 m",
+        "C": "80 m",
+        "D": "40 m"
+      },
+      "answer": "A",
+      "explanation": "R = u^2 sin(2 theta)/g = 40^2 sin(90)/10.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 8,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 30 m/s at 60 degrees to the horizontal (g = 10 m/s^2). Its time of flight is",
+      "options": {
+        "A": "2.6 s",
+        "B": "5.2 s",
+        "C": "10.39 s",
+        "D": "6.2 s"
+      },
+      "answer": "B",
+      "explanation": "T = 2u sin(theta)/g = 2(30) sin(60)/10.",
+      "difficulty": "HARD",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 9,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 20 m/s at 30 degrees to the horizontal (g = 10 m/s^2). Its maximum height is",
+      "options": {
+        "A": "5 m",
+        "B": "34.6 m",
+        "C": "6 m",
+        "D": "10 m"
+      },
+      "answer": "A",
+      "explanation": "H = u^2 sin^2(theta)/(2g) = 20^2 sin^2(30)/20.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 10,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 60 m/s at 60 degrees to the horizontal (g = 10 m/s^2). Its time of flight is",
+      "options": {
+        "A": "20.78 s",
+        "B": "5.2 s",
+        "C": "10.39 s",
+        "D": "11.39 s"
+      },
+      "answer": "C",
+      "explanation": "T = 2u sin(theta)/g = 2(60) sin(60)/10.",
+      "difficulty": "HARD",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 11,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 30 m/s at 60 degrees to the horizontal (g = 10 m/s^2). Its maximum height is",
+      "options": {
+        "A": "67.5 m",
+        "B": "34.7 m",
+        "C": "33.7 m",
+        "D": "77.9 m"
+      },
+      "answer": "C",
+      "explanation": "H = u^2 sin^2(theta)/(2g) = 30^2 sin^2(60)/20.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 12,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 10 m/s accelerates uniformly at 4 m/s^2 for 5 s. Its final velocity is",
+      "options": {
+        "A": "34 m/s",
+        "B": "26 m/s",
+        "C": "38 m/s",
+        "D": "30 m/s"
+      },
+      "answer": "D",
+      "explanation": "v = u + at = 10 + (4)(5).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 13,
+      "subject": "Physics",
+      "question": "The dimensional formula of electric flux is",
+      "options": {
+        "A": "[M L^2 T^-3 A^-1]",
+        "B": "[M L^3 T^-3 A^-1]",
+        "C": "[M L T^-3 A^-1]",
+        "D": "[M L^3 T^-2 A^-1]"
+      },
+      "answer": "B",
+      "explanation": "Writing the defining equation for electric flux gives the dimension [M L^3 T^-3 A^-1].",
+      "difficulty": "MEDIUM",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 14,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 12 m/s accelerates uniformly at 1.5 m/s^2 for 4 s. Its final velocity is",
+      "options": {
+        "A": "18 m/s",
+        "B": "16.5 m/s",
+        "C": "19.5 m/s",
+        "D": "21 m/s"
+      },
+      "answer": "A",
+      "explanation": "v = u + at = 12 + (1.5)(4).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 15,
+      "subject": "Physics",
+      "question": "A body starts with velocity 2 m/s and moves with uniform acceleration 6 m/s^2. The distance travelled in the 5th second is",
+      "options": {
+        "A": "28 m",
+        "B": "35 m",
+        "C": "30 m",
+        "D": "29 m"
+      },
+      "answer": "D",
+      "explanation": "s_n = u + (a/2)(2n - 1) = 2 + (6/2)(2(5) - 1).",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 16,
+      "subject": "Physics",
+      "question": "A body starts with velocity 5 m/s and moves with uniform acceleration 4 m/s^2. The distance travelled in the 3rd second is",
+      "options": {
+        "A": "14 m",
+        "B": "15 m",
+        "C": "16 m",
+        "D": "19 m"
+      },
+      "answer": "B",
+      "explanation": "s_n = u + (a/2)(2n - 1) = 5 + (4/2)(2(3) - 1).",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 17,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 10 m/s at 45 degrees to the horizontal (g = 10 m/s^2). Its horizontal range is",
+      "options": {
+        "A": "20 m",
+        "B": "2.5 m",
+        "C": "5 m",
+        "D": "10 m"
+      },
+      "answer": "D",
+      "explanation": "R = u^2 sin(2 theta)/g = 10^2 sin(90)/10.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 18,
+      "subject": "Physics",
+      "question": "A lift (with its contents) of mass 5 kg accelerates upward at 6 m/s^2 (g = 10 m/s^2). The tension in the supporting cable is",
+      "options": {
+        "A": "20 N",
+        "B": "40 N",
+        "C": "80 N",
+        "D": "50 N"
+      },
+      "answer": "C",
+      "explanation": "T = m(g + a) = 5(10 + 6).",
+      "difficulty": "MEDIUM",
+      "topic": "Laws of Motion"
+    },
+    {
+      "number": 19,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 25 m/s accelerates uniformly at 2 m/s^2 for 10 s. Its final velocity is",
+      "options": {
+        "A": "43 m/s",
+        "B": "49 m/s",
+        "C": "47 m/s",
+        "D": "45 m/s"
+      },
+      "answer": "D",
+      "explanation": "v = u + at = 25 + (2)(10).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 20,
+      "subject": "Physics",
+      "question": "A body starts with velocity 0 m/s and moves with uniform acceleration 2 m/s^2. The distance travelled in the 4th second is",
+      "options": {
+        "A": "8 m",
+        "B": "9 m",
+        "C": "7 m",
+        "D": "6 m"
+      },
+      "answer": "C",
+      "explanation": "s_n = u + (a/2)(2n - 1) = 0 + (2/2)(2(4) - 1).",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 21,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 40 m/s at 45 degrees to the horizontal (g = 10 m/s^2). Its maximum height is",
+      "options": {
+        "A": "80 m",
+        "B": "160 m",
+        "C": "40 m",
+        "D": "41 m"
+      },
+      "answer": "C",
+      "explanation": "H = u^2 sin^2(theta)/(2g) = 40^2 sin^2(45)/20.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 22,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 20 m/s at 30 degrees to the horizontal (g = 10 m/s^2). Its time of flight is",
+      "options": {
+        "A": "4 s",
+        "B": "1 s",
+        "C": "2 s",
+        "D": "3 s"
+      },
+      "answer": "C",
+      "explanation": "T = 2u sin(theta)/g = 2(20) sin(30)/10.",
+      "difficulty": "HARD",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 23,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 5 m/s accelerates uniformly at 2 m/s^2 for 3 s. Its final velocity is",
+      "options": {
+        "A": "15 m/s",
+        "B": "9 m/s",
+        "C": "11 m/s",
+        "D": "13 m/s"
+      },
+      "answer": "C",
+      "explanation": "v = u + at = 5 + (2)(3).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 24,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 25 m/s at 30 degrees to the horizontal (g = 10 m/s^2). Its horizontal range is",
+      "options": {
+        "A": "7.8 m",
+        "B": "54.1 m",
+        "C": "108.3 m",
+        "D": "13.5 m"
+      },
+      "answer": "B",
+      "explanation": "R = u^2 sin(2 theta)/g = 25^2 sin(60)/10.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 25,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 25 m/s at 30 degrees to the horizontal (g = 10 m/s^2). Its maximum height is",
+      "options": {
+        "A": "15.6 m",
+        "B": "7.8 m",
+        "C": "54.1 m",
+        "D": "8.8 m"
+      },
+      "answer": "B",
+      "explanation": "H = u^2 sin^2(theta)/(2g) = 25^2 sin^2(30)/20.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 26,
+      "subject": "Physics",
+      "question": "The dimensional formula of universal gas constant is",
+      "options": {
+        "A": "[M L T^-2 K^-1 mol^-1]",
+        "B": "[M L^2 T^-2 K^-1 mol^-1]",
+        "C": "[M L^2 T^-3 K^-1 mol^-1]",
+        "D": "[M L^2 T^-2 K^-1]"
+      },
+      "answer": "B",
+      "explanation": "Writing the defining equation for universal gas constant gives the dimension [M L^2 T^-2 K^-1 mol^-1].",
+      "difficulty": "MEDIUM",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 27,
+      "subject": "Physics",
+      "question": "A body starts with velocity 8 m/s and moves with uniform acceleration 2 m/s^2. The distance travelled in the 7th second is",
+      "options": {
+        "A": "20 m",
+        "B": "22 m",
+        "C": "21 m",
+        "D": "23 m"
+      },
+      "answer": "C",
+      "explanation": "s_n = u + (a/2)(2n - 1) = 8 + (2/2)(2(7) - 1).",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 28,
+      "subject": "Physics",
+      "question": "A body starts with velocity 0 m/s and moves with uniform acceleration 10 m/s^2. The distance travelled in the 4th second is",
+      "options": {
+        "A": "35 m",
+        "B": "36 m",
+        "C": "34 m",
+        "D": "45 m"
+      },
+      "answer": "A",
+      "explanation": "s_n = u + (a/2)(2n - 1) = 0 + (10/2)(2(4) - 1).",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 29,
+      "subject": "Physics",
+      "question": "A lift (with its contents) of mass 30 kg accelerates upward at 1 m/s^2 (g = 10 m/s^2). The tension in the supporting cable is",
+      "options": {
+        "A": "300 N",
+        "B": "270 N",
+        "C": "330 N",
+        "D": "165 N"
+      },
+      "answer": "C",
+      "explanation": "T = m(g + a) = 30(10 + 1).",
+      "difficulty": "MEDIUM",
+      "topic": "Laws of Motion"
+    },
+    {
+      "number": 30,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 40 m/s at 45 degrees to the horizontal (g = 10 m/s^2). Its time of flight is",
+      "options": {
+        "A": "6.66 s",
+        "B": "11.31 s",
+        "C": "5.66 s",
+        "D": "2.83 s"
+      },
+      "answer": "C",
+      "explanation": "T = 2u sin(theta)/g = 2(40) sin(45)/10.",
+      "difficulty": "HARD",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 31,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 50 m/s at 30 degrees to the horizontal (g = 10 m/s^2). Its horizontal range is",
+      "options": {
+        "A": "31.2 m",
+        "B": "433 m",
+        "C": "216.5 m",
+        "D": "54.1 m"
+      },
+      "answer": "C",
+      "explanation": "R = u^2 sin(2 theta)/g = 50^2 sin(60)/10.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 32,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 10 m/s at 45 degrees to the horizontal (g = 10 m/s^2). Its time of flight is",
+      "options": {
+        "A": "2.83 s",
+        "B": "2.41 s",
+        "C": "1.41 s",
+        "D": "0.71 s"
+      },
+      "answer": "C",
+      "explanation": "T = 2u sin(theta)/g = 2(10) sin(45)/10.",
+      "difficulty": "HARD",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 33,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 50 m/s at 30 degrees to the horizontal (g = 10 m/s^2). Its time of flight is",
+      "options": {
+        "A": "6 s",
+        "B": "2.5 s",
+        "C": "10 s",
+        "D": "5 s"
+      },
+      "answer": "D",
+      "explanation": "T = 2u sin(theta)/g = 2(50) sin(30)/10.",
+      "difficulty": "HARD",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 34,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 25 m/s at 30 degrees to the horizontal (g = 10 m/s^2). Its time of flight is",
+      "options": {
+        "A": "2.5 s",
+        "B": "3.5 s",
+        "C": "1.25 s",
+        "D": "5 s"
+      },
+      "answer": "A",
+      "explanation": "T = 2u sin(theta)/g = 2(25) sin(30)/10.",
+      "difficulty": "HARD",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 35,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 10 m/s at 45 degrees to the horizontal (g = 10 m/s^2). Its maximum height is",
+      "options": {
+        "A": "2.5 m",
+        "B": "5 m",
+        "C": "3.5 m",
+        "D": "10 m"
+      },
+      "answer": "A",
+      "explanation": "H = u^2 sin^2(theta)/(2g) = 10^2 sin^2(45)/20.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 36,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 6 m/s accelerates uniformly at 0.5 m/s^2 for 8 s. Its final velocity is",
+      "options": {
+        "A": "11 m/s",
+        "B": "10.5 m/s",
+        "C": "9.5 m/s",
+        "D": "10 m/s"
+      },
+      "answer": "D",
+      "explanation": "v = u + at = 6 + (0.5)(8).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 37,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 15 m/s accelerates uniformly at -3 m/s^2 for 5 s. Its final velocity is",
+      "options": {
+        "A": "-6 m/s",
+        "B": "3 m/s",
+        "C": "-3 m/s",
+        "D": "0 m/s"
+      },
+      "answer": "D",
+      "explanation": "v = u + at = 15 + (-3)(5).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 38,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 60 m/s at 60 degrees to the horizontal (g = 10 m/s^2). Its horizontal range is",
+      "options": {
+        "A": "311.8 m",
+        "B": "623.5 m",
+        "C": "135 m",
+        "D": "233.8 m"
+      },
+      "answer": "A",
+      "explanation": "R = u^2 sin(2 theta)/g = 60^2 sin(120)/10.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 39,
+      "subject": "Physics",
+      "question": "A lift (with its contents) of mass 10 kg accelerates upward at 4 m/s^2 (g = 10 m/s^2). The tension in the supporting cable is",
+      "options": {
+        "A": "100 N",
+        "B": "140 N",
+        "C": "60 N",
+        "D": "70 N"
+      },
+      "answer": "B",
+      "explanation": "T = m(g + a) = 10(10 + 4).",
+      "difficulty": "MEDIUM",
+      "topic": "Laws of Motion"
+    },
+    {
+      "number": 40,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 60 m/s at 60 degrees to the horizontal (g = 10 m/s^2). Its maximum height is",
+      "options": {
+        "A": "311.8 m",
+        "B": "136 m",
+        "C": "135 m",
+        "D": "270 m"
+      },
+      "answer": "C",
+      "explanation": "H = u^2 sin^2(theta)/(2g) = 60^2 sin^2(60)/20.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 41,
+      "subject": "Physics",
+      "question": "A body starts with velocity 10 m/s and moves with uniform acceleration 2 m/s^2. The distance travelled in the 6th second is",
+      "options": {
+        "A": "23 m",
+        "B": "22 m",
+        "C": "20 m",
+        "D": "21 m"
+      },
+      "answer": "D",
+      "explanation": "s_n = u + (a/2)(2n - 1) = 10 + (2/2)(2(6) - 1).",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 42,
+      "subject": "Physics",
+      "question": "A lift (with its contents) of mass 20 kg accelerates upward at 2 m/s^2 (g = 10 m/s^2). The tension in the supporting cable is",
+      "options": {
+        "A": "240 N",
+        "B": "120 N",
+        "C": "200 N",
+        "D": "160 N"
+      },
+      "answer": "A",
+      "explanation": "T = m(g + a) = 20(10 + 2).",
+      "difficulty": "MEDIUM",
+      "topic": "Laws of Motion"
+    },
+    {
+      "number": 43,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 50 m/s at 30 degrees to the horizontal (g = 10 m/s^2). Its maximum height is",
+      "options": {
+        "A": "32.2 m",
+        "B": "62.5 m",
+        "C": "216.5 m",
+        "D": "31.2 m"
+      },
+      "answer": "D",
+      "explanation": "H = u^2 sin^2(theta)/(2g) = 50^2 sin^2(30)/20.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 44,
+      "subject": "Physics",
+      "question": "A lift (with its contents) of mass 15 kg accelerates upward at 5 m/s^2 (g = 10 m/s^2). The tension in the supporting cable is",
+      "options": {
+        "A": "225 N",
+        "B": "150 N",
+        "C": "112.5 N",
+        "D": "75 N"
+      },
+      "answer": "A",
+      "explanation": "T = m(g + a) = 15(10 + 5).",
+      "difficulty": "MEDIUM",
+      "topic": "Laws of Motion"
+    },
+    {
+      "number": 45,
+      "subject": "Physics",
+      "question": "The dimensional formula of latent heat is",
+      "options": {
+        "A": "[L T^-2]",
+        "B": "[L^2 T^-2]",
+        "C": "[M L^2 T^-2]",
+        "D": "[M L T^-2]"
+      },
+      "answer": "B",
+      "explanation": "Writing the defining equation for latent heat gives the dimension [L^2 T^-2].",
+      "difficulty": "MEDIUM",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 46,
+      "subject": "Chemistry",
+      "question": "The strongest base in aqueous solution among the following is",
+      "options": {
+        "A": "CH3NH2",
+        "B": "C6H5NH2",
+        "C": "(CH3)2NH",
+        "D": "NH3"
+      },
+      "answer": "C",
+      "explanation": "The +I effect of two methyl groups and hydration make dimethylamine a stronger base than the others; aniline is weakest due to resonance.",
+      "difficulty": "MEDIUM",
+      "topic": "Amines"
+    },
+    {
+      "number": 47,
+      "subject": "Chemistry",
+      "question": "The pH of a solution with hydrogen ion concentration 0.01 M is",
+      "options": {
+        "A": "3",
+        "B": "1",
+        "C": "12",
+        "D": "2"
+      },
+      "answer": "D",
+      "explanation": "pH = -log[H+] = -log(0.01) = 2.0.",
+      "difficulty": "MEDIUM",
+      "topic": "Ionic Equilibrium"
+    },
+    {
+      "number": 48,
+      "subject": "Chemistry",
+      "question": "The pH of a solution with hydrogen ion concentration 0.001 M is",
+      "options": {
+        "A": "4",
+        "B": "11",
+        "C": "1.5",
+        "D": "3"
+      },
+      "answer": "D",
+      "explanation": "pH = -log[H+] = -log(0.001) = 3.0.",
+      "difficulty": "MEDIUM",
+      "topic": "Ionic Equilibrium"
+    },
+    {
+      "number": 49,
+      "subject": "Chemistry",
+      "question": "The building blocks (monomers) of proteins are",
+      "options": {
+        "A": "fatty acids",
+        "B": "nucleotides",
+        "C": "amino acids",
+        "D": "glucose units"
+      },
+      "answer": "C",
+      "explanation": "Proteins are polymers built from amino acid monomers linked by peptide bonds.",
+      "difficulty": "EASY",
+      "topic": "Biomolecules"
+    },
+    {
+      "number": 50,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 40 g of sodium hydroxide (molar mass = 40 g/mol) is",
+      "options": {
+        "A": "1 mol",
+        "B": "2 mol",
+        "C": "1600 mol",
+        "D": "0.5 mol"
+      },
+      "answer": "A",
+      "explanation": "n = mass / molar mass = 40/40 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 51,
+      "subject": "Chemistry",
+      "question": "1 mol of an ideal gas occupies 22.4 L at 273 K (R = 0.0821 L atm/mol/K). Its pressure is",
+      "options": {
+        "A": "2.001 atm",
+        "B": "1.001 atm",
+        "C": "22.41 atm",
+        "D": "0.999 atm"
+      },
+      "answer": "B",
+      "explanation": "P = nRT/V = 1 x 0.0821 x 273 / 22.4.",
+      "difficulty": "MEDIUM",
+      "topic": "States of Matter"
+    },
+    {
+      "number": 52,
+      "subject": "Chemistry",
+      "question": "The mass of a single molecule of a gas of molar mass 32 g/mol is (N_A = 6.022 x 10^23 mol^-1), approximately",
+      "options": {
+        "A": "1.93e+25 g",
+        "B": "2.66e-23 g",
+        "C": "3.19e-22 g",
+        "D": "5.31e-23 g"
+      },
+      "answer": "D",
+      "explanation": "Mass of one molecule = M/N_A = 32/6.022e23 g.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 53,
+      "subject": "Chemistry",
+      "question": "The mass of a single molecule of a gas of molar mass 44 g/mol is (N_A = 6.022 x 10^23 mol^-1), approximately",
+      "options": {
+        "A": "4.38e-22 g",
+        "B": "7.31e-23 g",
+        "C": "3.65e-23 g",
+        "D": "2.65e+25 g"
+      },
+      "answer": "B",
+      "explanation": "Mass of one molecule = M/N_A = 44/6.022e23 g.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 54,
+      "subject": "Chemistry",
+      "question": "The mass of a single molecule of a gas of molar mass 64 g/mol is (N_A = 6.022 x 10^23 mol^-1), approximately",
+      "options": {
+        "A": "1.06e-22 g",
+        "B": "6.38e-22 g",
+        "C": "5.31e-23 g",
+        "D": "3.85e+25 g"
+      },
+      "answer": "A",
+      "explanation": "Mass of one molecule = M/N_A = 64/6.022e23 g.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 55,
+      "subject": "Chemistry",
+      "question": "The molality of a solution containing 18 g of a solute (molar mass 180 g/mol) in 0.5 kg of solvent is",
+      "options": {
+        "A": "0.4 m",
+        "B": "36 m",
+        "C": "0.1 m",
+        "D": "0.2 m"
+      },
+      "answer": "D",
+      "explanation": "Molality = moles of solute / kg of solvent = (18/180)/0.5.",
+      "difficulty": "HARD",
+      "topic": "Solutions"
+    },
+    {
+      "number": 56,
+      "subject": "Chemistry",
+      "question": "For a first-order reaction with rate constant k = 0.0693 s^-1, the half-life is",
+      "options": {
+        "A": "10 s",
+        "B": "14.43 s",
+        "C": "5 s",
+        "D": "0.04802 s"
+      },
+      "answer": "A",
+      "explanation": "t(1/2) = 0.693/k = 0.693/0.0693.",
+      "difficulty": "HARD",
+      "topic": "Chemical Kinetics"
+    },
+    {
+      "number": 57,
+      "subject": "Chemistry",
+      "question": "The number of molecules in 28 g of a substance of molar mass 28 g/mol is (N_A = 6.022 x 10^23 mol^-1)",
+      "options": {
+        "A": "1",
+        "B": "4.72e+26",
+        "C": "6.02e+23",
+        "D": "3.01e+23"
+      },
+      "answer": "C",
+      "explanation": "N = (mass/M) x N_A = (28/28) x 6.022e23.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 58,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 44 g of carbon dioxide (molar mass = 44 g/mol) is",
+      "options": {
+        "A": "1 mol",
+        "B": "1936 mol",
+        "C": "2 mol",
+        "D": "0.5 mol"
+      },
+      "answer": "A",
+      "explanation": "n = mass / molar mass = 44/44 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 59,
+      "subject": "Chemistry",
+      "question": "The pH of a solution with hydrogen ion concentration 1e-06 M is",
+      "options": {
+        "A": "3",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "answer": "B",
+      "explanation": "pH = -log[H+] = -log(1e-06) = 6.0.",
+      "difficulty": "MEDIUM",
+      "topic": "Ionic Equilibrium"
+    },
+    {
+      "number": 60,
+      "subject": "Chemistry",
+      "question": "For a first-order reaction with rate constant k = 0.693 s^-1, the half-life is",
+      "options": {
+        "A": "1.44 s",
+        "B": "1 s",
+        "C": "0.4803 s",
+        "D": "0.5 s"
+      },
+      "answer": "B",
+      "explanation": "t(1/2) = 0.693/k = 0.693/0.693.",
+      "difficulty": "HARD",
+      "topic": "Chemical Kinetics"
+    },
+    {
+      "number": 61,
+      "subject": "Chemistry",
+      "question": "2 mol of an ideal gas occupies 22.4 L at 273 K (R = 0.0821 L atm/mol/K). Its pressure is",
+      "options": {
+        "A": "4.002 atm",
+        "B": "44.83 atm",
+        "C": "2.001 atm",
+        "D": "0.5 atm"
+      },
+      "answer": "C",
+      "explanation": "P = nRT/V = 2 x 0.0821 x 273 / 22.4.",
+      "difficulty": "MEDIUM",
+      "topic": "States of Matter"
+    },
+    {
+      "number": 62,
+      "subject": "Chemistry",
+      "question": "The molality of a solution containing 4 g of a solute (molar mass 40 g/mol) in 1 kg of solvent is",
+      "options": {
+        "A": "4 m",
+        "B": "0.2 m",
+        "C": "0.05 m",
+        "D": "0.1 m"
+      },
+      "answer": "D",
+      "explanation": "Molality = moles of solute / kg of solvent = (4/40)/1.",
+      "difficulty": "HARD",
+      "topic": "Solutions"
+    },
+    {
+      "number": 63,
+      "subject": "Chemistry",
+      "question": "For a first-order reaction with rate constant k = 0.00693 s^-1, the half-life is",
+      "options": {
+        "A": "100 s",
+        "B": "50 s",
+        "C": "0.0048 s",
+        "D": "144.3 s"
+      },
+      "answer": "A",
+      "explanation": "t(1/2) = 0.693/k = 0.693/0.00693.",
+      "difficulty": "HARD",
+      "topic": "Chemical Kinetics"
+    },
+    {
+      "number": 64,
+      "subject": "Chemistry",
+      "question": "The mass of a single molecule of a gas of molar mass 28 g/mol is (N_A = 6.022 x 10^23 mol^-1), approximately",
+      "options": {
+        "A": "4.65e-23 g",
+        "B": "1.69e+25 g",
+        "C": "2.79e-22 g",
+        "D": "2.32e-23 g"
+      },
+      "answer": "A",
+      "explanation": "Mass of one molecule = M/N_A = 28/6.022e23 g.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 65,
+      "subject": "Chemistry",
+      "question": "The density of a gas of molar mass 28 g/mol at 273 K and 1 atm (R = 0.0821 L atm/mol/K) is",
+      "options": {
+        "A": "627.6 g/L",
+        "B": "1.249 g/L",
+        "C": "0.8 g/L",
+        "D": "0.625 g/L"
+      },
+      "answer": "B",
+      "explanation": "d = PM/RT = 1 x 28 / (0.0821 x 273).",
+      "difficulty": "HARD",
+      "topic": "States of Matter"
+    },
+    {
+      "number": 66,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 56 g of potassium hydroxide (molar mass = 56 g/mol) is",
+      "options": {
+        "A": "0.5 mol",
+        "B": "1 mol",
+        "C": "3136 mol",
+        "D": "2 mol"
+      },
+      "answer": "B",
+      "explanation": "n = mass / molar mass = 56/56 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 67,
+      "subject": "Chemistry",
+      "question": "The molarity of a solution containing 0.5 mol of solute in 0.5 L of solution is",
+      "options": {
+        "A": "2 M",
+        "B": "0.25 M",
+        "C": "0.001 M",
+        "D": "1 M"
+      },
+      "answer": "D",
+      "explanation": "Molarity = moles of solute / volume of solution (L) = 0.5/0.5.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 68,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 98 g of sulphuric acid (molar mass = 98 g/mol) is",
+      "options": {
+        "A": "2 mol",
+        "B": "1 mol",
+        "C": "9604 mol",
+        "D": "0.5 mol"
+      },
+      "answer": "B",
+      "explanation": "n = mass / molar mass = 98/98 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 69,
+      "subject": "Chemistry",
+      "question": "The number of molecules in 32 g of a substance of molar mass 32 g/mol is (N_A = 6.022 x 10^23 mol^-1)",
+      "options": {
+        "A": "6.17e+26",
+        "B": "1",
+        "C": "6.02e+23",
+        "D": "3.01e+23"
+      },
+      "answer": "C",
+      "explanation": "N = (mass/M) x N_A = (32/32) x 6.022e23.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 70,
+      "subject": "Chemistry",
+      "question": "The number of molecules in 2 g of a substance of molar mass 2 g/mol is (N_A = 6.022 x 10^23 mol^-1)",
+      "options": {
+        "A": "6.02e+23",
+        "B": "1",
+        "C": "3.01e+23",
+        "D": "2.41e+24"
+      },
+      "answer": "A",
+      "explanation": "N = (mass/M) x N_A = (2/2) x 6.022e23.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 71,
+      "subject": "Chemistry",
+      "question": "The pH of a solution with hydrogen ion concentration 0.0001 M is",
+      "options": {
+        "A": "5",
+        "B": "2",
+        "C": "10",
+        "D": "4"
+      },
+      "answer": "D",
+      "explanation": "pH = -log[H+] = -log(0.0001) = 4.0.",
+      "difficulty": "MEDIUM",
+      "topic": "Ionic Equilibrium"
+    },
+    {
+      "number": 72,
+      "subject": "Chemistry",
+      "question": "The molarity of a solution containing 0.25 mol of solute in 0.25 L of solution is",
+      "options": {
+        "A": "1 M",
+        "B": "2 M",
+        "C": "0.001 M",
+        "D": "0.062 M"
+      },
+      "answer": "A",
+      "explanation": "Molarity = moles of solute / volume of solution (L) = 0.25/0.25.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 73,
+      "subject": "Chemistry",
+      "question": "The density of a gas of molar mass 44 g/mol at 273 K and 1 atm (R = 0.0821 L atm/mol/K) is",
+      "options": {
+        "A": "986.2 g/L",
+        "B": "0.982 g/L",
+        "C": "0.509 g/L",
+        "D": "1.963 g/L"
+      },
+      "answer": "D",
+      "explanation": "d = PM/RT = 1 x 44 / (0.0821 x 273).",
+      "difficulty": "HARD",
+      "topic": "States of Matter"
+    },
+    {
+      "number": 74,
+      "subject": "Chemistry",
+      "question": "The molarity of a solution containing 0.1 mol of solute in 0.1 L of solution is",
+      "options": {
+        "A": "0.001 M",
+        "B": "0.01 M",
+        "C": "2 M",
+        "D": "1 M"
+      },
+      "answer": "D",
+      "explanation": "Molarity = moles of solute / volume of solution (L) = 0.1/0.1.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 75,
+      "subject": "Chemistry",
+      "question": "The molarity of a solution containing 1 mol of solute in 2 L of solution is",
+      "options": {
+        "A": "0.5 M",
+        "B": "1 M",
+        "C": "0.001 M",
+        "D": "2 M"
+      },
+      "answer": "A",
+      "explanation": "Molarity = moles of solute / volume of solution (L) = 1/2.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 76,
+      "subject": "Chemistry",
+      "question": "The mass of a single molecule of a gas of molar mass 18 g/mol is (N_A = 6.022 x 10^23 mol^-1), approximately",
+      "options": {
+        "A": "1.08e+25 g",
+        "B": "1.49e-23 g",
+        "C": "2.99e-23 g",
+        "D": "1.79e-22 g"
+      },
+      "answer": "C",
+      "explanation": "Mass of one molecule = M/N_A = 18/6.022e23 g.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 77,
+      "subject": "Chemistry",
+      "question": "The number of molecules in 44 g of a substance of molar mass 44 g/mol is (N_A = 6.022 x 10^23 mol^-1)",
+      "options": {
+        "A": "1",
+        "B": "3.01e+23",
+        "C": "1.17e+27",
+        "D": "6.02e+23"
+      },
+      "answer": "D",
+      "explanation": "N = (mass/M) x N_A = (44/44) x 6.022e23.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 78,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 18 g of water (molar mass = 18 g/mol) is",
+      "options": {
+        "A": "2 mol",
+        "B": "0.5 mol",
+        "C": "324 mol",
+        "D": "1 mol"
+      },
+      "answer": "D",
+      "explanation": "n = mass / molar mass = 18/18 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 79,
+      "subject": "Chemistry",
+      "question": "The number of molecules in 18 g of a substance of molar mass 18 g/mol is (N_A = 6.022 x 10^23 mol^-1)",
+      "options": {
+        "A": "6.02e+23",
+        "B": "3.01e+23",
+        "C": "1.95e+26",
+        "D": "1"
+      },
+      "answer": "A",
+      "explanation": "N = (mass/M) x N_A = (18/18) x 6.022e23.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 80,
+      "subject": "Chemistry",
+      "question": "If the pOH of a solution at 298 K is 3, its pH is",
+      "options": {
+        "A": "5.5",
+        "B": "17",
+        "C": "11",
+        "D": "3"
+      },
+      "answer": "C",
+      "explanation": "pH + pOH = 14, so pH = 14 - 3 = 11.",
+      "difficulty": "EASY",
+      "topic": "Ionic Equilibrium"
+    },
+    {
+      "number": 81,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 180 g of glucose (molar mass = 180 g/mol) is",
+      "options": {
+        "A": "32400 mol",
+        "B": "1 mol",
+        "C": "2 mol",
+        "D": "0.5 mol"
+      },
+      "answer": "B",
+      "explanation": "n = mass / molar mass = 180/180 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 82,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 58.5 g of sodium chloride (molar mass = 58.5 g/mol) is",
+      "options": {
+        "A": "1 mol",
+        "B": "0.5 mol",
+        "C": "2 mol",
+        "D": "3422 mol"
+      },
+      "answer": "A",
+      "explanation": "n = mass / molar mass = 58.5/58.5 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 83,
+      "subject": "Chemistry",
+      "question": "If the pOH of a solution at 298 K is 5, its pH is",
+      "options": {
+        "A": "19",
+        "B": "4.5",
+        "C": "5",
+        "D": "9"
+      },
+      "answer": "D",
+      "explanation": "pH + pOH = 14, so pH = 14 - 5 = 9.",
+      "difficulty": "EASY",
+      "topic": "Ionic Equilibrium"
+    },
+    {
+      "number": 84,
+      "subject": "Chemistry",
+      "question": "If the pOH of a solution at 298 K is 6.5, its pH is",
+      "options": {
+        "A": "7.5",
+        "B": "3.8",
+        "C": "6.5",
+        "D": "20.5"
+      },
+      "answer": "A",
+      "explanation": "pH + pOH = 14, so pH = 14 - 6.5 = 7.5.",
+      "difficulty": "EASY",
+      "topic": "Ionic Equilibrium"
+    },
+    {
+      "number": 85,
+      "subject": "Chemistry",
+      "question": "The molarity of a solution containing 2 mol of solute in 0.5 L of solution is",
+      "options": {
+        "A": "0.004 M",
+        "B": "4 M",
+        "C": "1 M",
+        "D": "8 M"
+      },
+      "answer": "B",
+      "explanation": "Molarity = moles of solute / volume of solution (L) = 2/0.5.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 86,
+      "subject": "Chemistry",
+      "question": "The IUPAC name of CH3CHO is",
+      "options": {
+        "A": "ethanal",
+        "B": "ethanone",
+        "C": "propanal",
+        "D": "methanal"
+      },
+      "answer": "A",
+      "explanation": "CH3CHO has two carbon atoms and an aldehyde group, so it is ethanal.",
+      "difficulty": "EASY",
+      "topic": "Aldehydes and Ketones"
+    },
+    {
+      "number": 87,
+      "subject": "Chemistry",
+      "question": "The molality of a solution containing 5.85 g of a solute (molar mass 58.5 g/mol) in 0.5 kg of solvent is",
+      "options": {
+        "A": "0.2 m",
+        "B": "11.7 m",
+        "C": "0.4 m",
+        "D": "0.1 m"
+      },
+      "answer": "A",
+      "explanation": "Molality = moles of solute / kg of solvent = (5.85/58.5)/0.5.",
+      "difficulty": "HARD",
+      "topic": "Solutions"
+    },
+    {
+      "number": 88,
+      "subject": "Chemistry",
+      "question": "0.5 mol of an ideal gas occupies 10 L at 300 K (R = 0.0821 L atm/mol/K). Its pressure is",
+      "options": {
+        "A": "12.31 atm",
+        "B": "0.812 atm",
+        "C": "2.463 atm",
+        "D": "1.232 atm"
+      },
+      "answer": "D",
+      "explanation": "P = nRT/V = 0.5 x 0.0821 x 300 / 10.",
+      "difficulty": "MEDIUM",
+      "topic": "States of Matter"
+    },
+    {
+      "number": 89,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 80 g of ammonium nitrate (molar mass = 80 g/mol) is",
+      "options": {
+        "A": "1 mol",
+        "B": "2 mol",
+        "C": "6400 mol",
+        "D": "0.5 mol"
+      },
+      "answer": "A",
+      "explanation": "n = mass / molar mass = 80/80 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 90,
+      "subject": "Chemistry",
+      "question": "The density of a gas of molar mass 32 g/mol at 300 K and 2 atm (R = 0.0821 L atm/mol/K) is",
+      "options": {
+        "A": "2.598 g/L",
+        "B": "1576 g/L",
+        "C": "1.299 g/L",
+        "D": "0.385 g/L"
+      },
+      "answer": "A",
+      "explanation": "d = PM/RT = 2 x 32 / (0.0821 x 300).",
+      "difficulty": "HARD",
+      "topic": "States of Matter"
+    },
+    {
+      "number": 91,
+      "subject": "Botany",
+      "question": "In a DNA double helix, adenine pairs with",
+      "options": {
+        "A": "Guanine",
+        "B": "Cytosine",
+        "C": "Uracil",
+        "D": "Thymine"
+      },
+      "answer": "D",
+      "explanation": "A pairs with T through two hydrogen bonds and G pairs with C through three hydrogen bonds.",
+      "difficulty": "HARD",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 92,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes fucoxanthin?",
+      "options": {
+        "A": "the brown pigment characteristic of Phaeophyceae",
+        "B": "the stored food of red algae",
+        "C": "the stored food of brown algae",
+        "D": "the red pigment characteristic of Rhodophyceae"
+      },
+      "answer": "A",
+      "explanation": "fucoxanthin refers to the brown pigment characteristic of Phaeophyceae.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 93,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the prothallus?",
+      "options": {
+        "A": "the brown pigment characteristic of Phaeophyceae",
+        "B": "the free-living gametophyte of a fern",
+        "C": "the red pigment characteristic of Rhodophyceae",
+        "D": "the stored food of red algae"
+      },
+      "answer": "B",
+      "explanation": "the prothallus refers to the free-living gametophyte of a fern.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 94,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the Krebs cycle?",
+      "options": {
+        "A": "the oxidation of acetyl-CoA in the mitochondrial matrix",
+        "B": "ATP synthesis driven by the proton gradient",
+        "C": "anaerobic breakdown of pyruvate giving ethanol or lactic acid",
+        "D": "the transfer of electrons to oxygen on the inner mitochondrial membrane"
+      },
+      "answer": "A",
+      "explanation": "the Krebs cycle refers to the oxidation of acetyl-CoA in the mitochondrial matrix.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiration in Plants"
+    },
+    {
+      "number": 95,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the electron transport system?",
+      "options": {
+        "A": "the breakdown of glucose to pyruvate in the cytoplasm",
+        "B": "anaerobic breakdown of pyruvate giving ethanol or lactic acid",
+        "C": "the transfer of electrons to oxygen on the inner mitochondrial membrane",
+        "D": "ATP synthesis driven by the proton gradient"
+      },
+      "answer": "C",
+      "explanation": "the electron transport system refers to the transfer of electrons to oxygen on the inner mitochondrial membrane.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiration in Plants"
+    },
+    {
+      "number": 96,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes photosystem II?",
+      "options": {
+        "A": "carbon fixation that occurs in the stroma of the chloroplast",
+        "B": "the pigment system that splits water and absorbs light at 680 nm",
+        "C": "the pigment system that absorbs light at 700 nm",
+        "D": "the enzyme that fixes carbon dioxide in the Calvin cycle"
+      },
+      "answer": "B",
+      "explanation": "photosystem II refers to the pigment system that splits water and absorbs light at 680 nm.",
+      "difficulty": "HARD",
+      "topic": "Photosynthesis"
+    },
+    {
+      "number": 97,
+      "subject": "Botany",
+      "question": "In a parasitic food chain, the pyramid of numbers is",
+      "options": {
+        "A": "Always upright",
+        "B": "Inverted",
+        "C": "Not defined",
+        "D": "Always spindle-shaped"
+      },
+      "answer": "B",
+      "explanation": "A single host can support a large number of parasites, so the pyramid of numbers in a parasitic food chain is inverted.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 98,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes auxin?",
+      "options": {
+        "A": "a gaseous hormone that promotes fruit ripening",
+        "B": "promoting stem elongation, bolting and seed germination",
+        "C": "promoting apical dominance and cell elongation",
+        "D": "promoting cell division and delaying senescence"
+      },
+      "answer": "C",
+      "explanation": "auxin refers to promoting apical dominance and cell elongation.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 99,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes photorespiration?",
+      "options": {
+        "A": "the pigment system that absorbs light at 700 nm",
+        "B": "the enzyme that fixes carbon dioxide in the Calvin cycle",
+        "C": "the pigment system that splits water and absorbs light at 680 nm",
+        "D": "the wasteful oxygenation of RuBP that produces no sugar or ATP"
+      },
+      "answer": "D",
+      "explanation": "photorespiration refers to the wasteful oxygenation of RuBP that produces no sugar or ATP.",
+      "difficulty": "HARD",
+      "topic": "Photosynthesis"
+    },
+    {
+      "number": 100,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the chloroplast?",
+      "options": {
+        "A": "the site of photosynthesis in plant cells",
+        "B": "the membrane surrounding the plant cell vacuole",
+        "C": "the site of ribosomal RNA synthesis",
+        "D": "an organelle involved in photorespiration and fatty-acid breakdown"
+      },
+      "answer": "A",
+      "explanation": "the chloroplast refers to the site of photosynthesis in plant cells.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 101,
+      "subject": "Botany",
+      "question": "The greenhouse gas that contributes most to global warming is",
+      "options": {
+        "A": "Carbon dioxide",
+        "B": "Oxygen",
+        "C": "Methane",
+        "D": "Nitrogen"
+      },
+      "answer": "A",
+      "explanation": "Carbon dioxide is the principal greenhouse gas responsible for global warming, although methane is more potent per molecule.",
+      "difficulty": "MEDIUM",
+      "topic": "Environmental Issues"
+    },
+    {
+      "number": 102,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes chlorenchyma?",
+      "options": {
+        "A": "the brown pigment characteristic of Phaeophyceae",
+        "B": "the free-living gametophyte of a fern",
+        "C": "photosynthetic parenchyma of green algae",
+        "D": "the first filamentous stage of a moss"
+      },
+      "answer": "C",
+      "explanation": "chlorenchyma refers to photosynthetic parenchyma of green algae.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 103,
+      "subject": "Botany",
+      "question": "The producers of an ecosystem are",
+      "options": {
+        "A": "Decomposers",
+        "B": "Consumers",
+        "C": "Green plants (autotrophs)",
+        "D": "Herbivores"
+      },
+      "answer": "C",
+      "explanation": "Green plants (autotrophs) trap solar energy and form the base of every food chain.",
+      "difficulty": "EASY",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 104,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the tonoplast?",
+      "options": {
+        "A": "the site of protein synthesis",
+        "B": "the membrane surrounding the plant cell vacuole",
+        "C": "a cytoplasmic channel connecting adjacent plant cells",
+        "D": "a structure that organises the spindle during cell division"
+      },
+      "answer": "B",
+      "explanation": "the tonoplast refers to the membrane surrounding the plant cell vacuole.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 105,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the Golgi apparatus?",
+      "options": {
+        "A": "the site of ribosomal RNA synthesis",
+        "B": "the packaging and secretion of proteins and lipids",
+        "C": "the site of aerobic respiration and ATP synthesis",
+        "D": "the site of photosynthesis in plant cells"
+      },
+      "answer": "B",
+      "explanation": "the Golgi apparatus refers to the packaging and secretion of proteins and lipids.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 106,
+      "subject": "Botany",
+      "question": "The enzyme that unwinds the DNA double helix during replication is",
+      "options": {
+        "A": "DNA polymerase",
+        "B": "Helicase",
+        "C": "Ligase",
+        "D": "Primase"
+      },
+      "answer": "B",
+      "explanation": "Helicase unwinds the DNA double helix at the replication fork.",
+      "difficulty": "MEDIUM",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 107,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the plasmodesma?",
+      "options": {
+        "A": "an organelle containing hydrolytic enzymes for intracellular digestion",
+        "B": "the site of protein synthesis",
+        "C": "a cytoplasmic channel connecting adjacent plant cells",
+        "D": "a structure that organises the spindle during cell division"
+      },
+      "answer": "C",
+      "explanation": "the plasmodesma refers to a cytoplasmic channel connecting adjacent plant cells.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 108,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes Kranz anatomy?",
+      "options": {
+        "A": "the wreath-like arrangement of bundle-sheath cells in C4 plants",
+        "B": "the pigment system that splits water and absorbs light at 680 nm",
+        "C": "the wasteful oxygenation of RuBP that produces no sugar or ATP",
+        "D": "the conversion of light energy into ATP and NADPH"
+      },
+      "answer": "A",
+      "explanation": "Kranz anatomy refers to the wreath-like arrangement of bundle-sheath cells in C4 plants.",
+      "difficulty": "HARD",
+      "topic": "Photosynthesis"
+    },
+    {
+      "number": 109,
+      "subject": "Botany",
+      "question": "The association between an alga and a fungus in a lichen is an example of",
+      "options": {
+        "A": "Parasitism",
+        "B": "Mutualism",
+        "C": "Predation",
+        "D": "Commensalism"
+      },
+      "answer": "B",
+      "explanation": "In a lichen the alga photosynthesises and the fungus provides shelter and minerals, so both benefit (mutualism).",
+      "difficulty": "EASY",
+      "topic": "Organisms and Populations"
+    },
+    {
+      "number": 110,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the light reaction?",
+      "options": {
+        "A": "the wasteful oxygenation of RuBP that produces no sugar or ATP",
+        "B": "the pigment system that splits water and absorbs light at 680 nm",
+        "C": "the pigment system that absorbs light at 700 nm",
+        "D": "the conversion of light energy into ATP and NADPH"
+      },
+      "answer": "D",
+      "explanation": "the light reaction refers to the conversion of light energy into ATP and NADPH.",
+      "difficulty": "HARD",
+      "topic": "Photosynthesis"
+    },
+    {
+      "number": 111,
+      "subject": "Botany",
+      "question": "The genetic material in most organisms is",
+      "options": {
+        "A": "Lipid",
+        "B": "DNA",
+        "C": "Protein",
+        "D": "RNA"
+      },
+      "answer": "B",
+      "explanation": "DNA is the genetic material in the vast majority of organisms, although some viruses use RNA.",
+      "difficulty": "EASY",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 112,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the nucleolus?",
+      "options": {
+        "A": "the membrane surrounding the plant cell vacuole",
+        "B": "the site of ribosomal RNA synthesis",
+        "C": "a cytoplasmic channel connecting adjacent plant cells",
+        "D": "an organelle involved in photorespiration and fatty-acid breakdown"
+      },
+      "answer": "B",
+      "explanation": "the nucleolus refers to the site of ribosomal RNA synthesis.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 113,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the centriole?",
+      "options": {
+        "A": "an organelle containing hydrolytic enzymes for intracellular digestion",
+        "B": "a structure that organises the spindle during cell division",
+        "C": "the site of protein synthesis",
+        "D": "the packaging and secretion of proteins and lipids"
+      },
+      "answer": "B",
+      "explanation": "the centriole refers to a structure that organises the spindle during cell division.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 114,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes laminarin and mannitol?",
+      "options": {
+        "A": "photosynthetic parenchyma of green algae",
+        "B": "the stored food of brown algae",
+        "C": "the first filamentous stage of a moss",
+        "D": "the free-living gametophyte of a fern"
+      },
+      "answer": "B",
+      "explanation": "laminarin and mannitol refers to the stored food of brown algae.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 115,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the lysosome?",
+      "options": {
+        "A": "the packaging and secretion of proteins and lipids",
+        "B": "the site of photosynthesis in plant cells",
+        "C": "the site of aerobic respiration and ATP synthesis",
+        "D": "an organelle containing hydrolytic enzymes for intracellular digestion"
+      },
+      "answer": "D",
+      "explanation": "the lysosome refers to an organelle containing hydrolytic enzymes for intracellular digestion.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 116,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes photosystem I?",
+      "options": {
+        "A": "the pigment system that absorbs light at 700 nm",
+        "B": "the wreath-like arrangement of bundle-sheath cells in C4 plants",
+        "C": "carbon fixation that occurs in the stroma of the chloroplast",
+        "D": "the enzyme that fixes carbon dioxide in the Calvin cycle"
+      },
+      "answer": "A",
+      "explanation": "photosystem I refers to the pigment system that absorbs light at 700 nm.",
+      "difficulty": "HARD",
+      "topic": "Photosynthesis"
+    },
+    {
+      "number": 117,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the peroxisome?",
+      "options": {
+        "A": "a cytoplasmic channel connecting adjacent plant cells",
+        "B": "the membrane surrounding the plant cell vacuole",
+        "C": "an organelle involved in photorespiration and fatty-acid breakdown",
+        "D": "a structure that organises the spindle during cell division"
+      },
+      "answer": "C",
+      "explanation": "the peroxisome refers to an organelle involved in photorespiration and fatty-acid breakdown.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 118,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes ethylene?",
+      "options": {
+        "A": "a gaseous hormone that promotes fruit ripening",
+        "B": "promoting apical dominance and cell elongation",
+        "C": "closing stomata and inducing seed dormancy",
+        "D": "promoting stem elongation, bolting and seed germination"
+      },
+      "answer": "A",
+      "explanation": "ethylene refers to a gaseous hormone that promotes fruit ripening.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 119,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the protonema?",
+      "options": {
+        "A": "the red pigment characteristic of Rhodophyceae",
+        "B": "the first filamentous stage of a moss",
+        "C": "the free-living gametophyte of a fern",
+        "D": "the brown pigment characteristic of Phaeophyceae"
+      },
+      "answer": "B",
+      "explanation": "the protonema refers to the first filamentous stage of a moss.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 120,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes gibberellin?",
+      "options": {
+        "A": "promoting stem elongation, bolting and seed germination",
+        "B": "closing stomata and inducing seed dormancy",
+        "C": "a gaseous hormone that promotes fruit ripening",
+        "D": "promoting cell division and delaying senescence"
+      },
+      "answer": "A",
+      "explanation": "gibberellin refers to promoting stem elongation, bolting and seed germination.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 121,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the Calvin cycle?",
+      "options": {
+        "A": "the wasteful oxygenation of RuBP that produces no sugar or ATP",
+        "B": "the conversion of light energy into ATP and NADPH",
+        "C": "carbon fixation that occurs in the stroma of the chloroplast",
+        "D": "the wreath-like arrangement of bundle-sheath cells in C4 plants"
+      },
+      "answer": "C",
+      "explanation": "the Calvin cycle refers to carbon fixation that occurs in the stroma of the chloroplast.",
+      "difficulty": "HARD",
+      "topic": "Photosynthesis"
+    },
+    {
+      "number": 122,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the ribosome?",
+      "options": {
+        "A": "the site of aerobic respiration and ATP synthesis",
+        "B": "an organelle containing hydrolytic enzymes for intracellular digestion",
+        "C": "the packaging and secretion of proteins and lipids",
+        "D": "the site of protein synthesis"
+      },
+      "answer": "D",
+      "explanation": "the ribosome refers to the site of protein synthesis.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 123,
+      "subject": "Botany",
+      "question": "The process by which mRNA is synthesised from a DNA template is called",
+      "options": {
+        "A": "Transcription",
+        "B": "Mutation",
+        "C": "Replication",
+        "D": "Translation"
+      },
+      "answer": "A",
+      "explanation": "Transcription is the synthesis of RNA from a DNA template.",
+      "difficulty": "EASY",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 124,
+      "subject": "Botany",
+      "question": "The variety of living organisms present in a region is called",
+      "options": {
+        "A": "Succession",
+        "B": "Homeostasis",
+        "C": "Ecology",
+        "D": "Biodiversity"
+      },
+      "answer": "D",
+      "explanation": "Biodiversity refers to the variety and variability of living organisms and the ecosystems they form.",
+      "difficulty": "EASY",
+      "topic": "Biodiversity and Conservation"
+    },
+    {
+      "number": 125,
+      "subject": "Botany",
+      "question": "According to the ten per cent law, the energy transferred from one trophic level to the next is about",
+      "options": {
+        "A": "1%",
+        "B": "50%",
+        "C": "90%",
+        "D": "10%"
+      },
+      "answer": "D",
+      "explanation": "Lindeman's ten percent law states that only about 10% of the energy at one trophic level is transferred to the next.",
+      "difficulty": "HARD",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 126,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes RuBisCO?",
+      "options": {
+        "A": "carbon fixation that occurs in the stroma of the chloroplast",
+        "B": "the enzyme that fixes carbon dioxide in the Calvin cycle",
+        "C": "the wreath-like arrangement of bundle-sheath cells in C4 plants",
+        "D": "the conversion of light energy into ATP and NADPH"
+      },
+      "answer": "B",
+      "explanation": "RuBisCO refers to the enzyme that fixes carbon dioxide in the Calvin cycle.",
+      "difficulty": "HARD",
+      "topic": "Photosynthesis"
+    },
+    {
+      "number": 127,
+      "subject": "Botany",
+      "question": "The double-helix model of DNA was proposed by",
+      "options": {
+        "A": "Watson and Crick",
+        "B": "Mendel and Morgan",
+        "C": "Nirenberg and Khorana",
+        "D": "Griffith and Avery"
+      },
+      "answer": "A",
+      "explanation": "James Watson and Francis Crick proposed the double-helix model of DNA in 1953.",
+      "difficulty": "MEDIUM",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 128,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes phycoerythrin?",
+      "options": {
+        "A": "the red pigment characteristic of Rhodophyceae",
+        "B": "the stored food of brown algae",
+        "C": "photosynthetic parenchyma of green algae",
+        "D": "the stored food of red algae"
+      },
+      "answer": "A",
+      "explanation": "phycoerythrin refers to the red pigment characteristic of Rhodophyceae.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 129,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes abscisic acid?",
+      "options": {
+        "A": "closing stomata and inducing seed dormancy",
+        "B": "promoting apical dominance and cell elongation",
+        "C": "promoting stem elongation, bolting and seed germination",
+        "D": "promoting cell division and delaying senescence"
+      },
+      "answer": "A",
+      "explanation": "abscisic acid refers to closing stomata and inducing seed dormancy.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 130,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes glycolysis?",
+      "options": {
+        "A": "ATP synthesis driven by the proton gradient",
+        "B": "the transfer of electrons to oxygen on the inner mitochondrial membrane",
+        "C": "the oxidation of acetyl-CoA in the mitochondrial matrix",
+        "D": "the breakdown of glucose to pyruvate in the cytoplasm"
+      },
+      "answer": "D",
+      "explanation": "glycolysis refers to the breakdown of glucose to pyruvate in the cytoplasm.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiration in Plants"
+    },
+    {
+      "number": 131,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes oxidative phosphorylation?",
+      "options": {
+        "A": "anaerobic breakdown of pyruvate giving ethanol or lactic acid",
+        "B": "the oxidation of acetyl-CoA in the mitochondrial matrix",
+        "C": "the breakdown of glucose to pyruvate in the cytoplasm",
+        "D": "ATP synthesis driven by the proton gradient"
+      },
+      "answer": "D",
+      "explanation": "oxidative phosphorylation refers to ATP synthesis driven by the proton gradient.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiration in Plants"
+    },
+    {
+      "number": 132,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes cytokinin?",
+      "options": {
+        "A": "promoting cell division and delaying senescence",
+        "B": "closing stomata and inducing seed dormancy",
+        "C": "a gaseous hormone that promotes fruit ripening",
+        "D": "promoting apical dominance and cell elongation"
+      },
+      "answer": "A",
+      "explanation": "cytokinin refers to promoting cell division and delaying senescence.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 133,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes floridean starch?",
+      "options": {
+        "A": "photosynthetic parenchyma of green algae",
+        "B": "the stored food of brown algae",
+        "C": "the first filamentous stage of a moss",
+        "D": "the stored food of red algae"
+      },
+      "answer": "D",
+      "explanation": "floridean starch refers to the stored food of red algae.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 134,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the mitochondrion?",
+      "options": {
+        "A": "the site of photosynthesis in plant cells",
+        "B": "an organelle involved in photorespiration and fatty-acid breakdown",
+        "C": "the site of aerobic respiration and ATP synthesis",
+        "D": "the site of ribosomal RNA synthesis"
+      },
+      "answer": "C",
+      "explanation": "the mitochondrion refers to the site of aerobic respiration and ATP synthesis.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 135,
+      "subject": "Botany",
+      "question": "The logistic growth equation for a population is",
+      "options": {
+        "A": "dN/dt = rN",
+        "B": "dN/dt = rK",
+        "C": "dN/dt = rN/N",
+        "D": "dN/dt = rN(K - N)/K"
+      },
+      "answer": "D",
+      "explanation": "Logistic growth is described by dN/dt = rN(K - N)/K, where K is the carrying capacity.",
+      "difficulty": "MEDIUM",
+      "topic": "Organisms and Populations"
+    },
+    {
+      "number": 136,
+      "subject": "Zoology",
+      "question": "The interaction in which both interacting species benefit is called",
+      "options": {
+        "A": "Mutualism",
+        "B": "Parasitism",
+        "C": "Commensalism",
+        "D": "Predation"
+      },
+      "answer": "A",
+      "explanation": "In mutualism both partners benefit, giving a (+/+) relationship, as in lichens and mycorrhizae.",
+      "difficulty": "EASY",
+      "topic": "Organisms and Populations"
+    },
+    {
+      "number": 137,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes tidal volume?",
+      "options": {
+        "A": "the enzyme that speeds up the conversion of CO2 to bicarbonate in red blood cells",
+        "B": "the volume of air inhaled or exhaled during normal breathing, about 500 mL",
+        "C": "the maximum volume of air a person can exhale after a maximum inspiration",
+        "D": "the shift of the oxygen-haemoglobin curve caused by a rise in CO2"
+      },
+      "answer": "B",
+      "explanation": "tidal volume refers to the volume of air inhaled or exhaled during normal breathing, about 500 mL.",
+      "difficulty": "MEDIUM",
+      "topic": "Breathing and Exchange of Gases"
+    },
+    {
+      "number": 138,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes the Bohr effect?",
+      "options": {
+        "A": "the shift of the oxygen-haemoglobin curve caused by a rise in CO2",
+        "B": "the enzyme that speeds up the conversion of CO2 to bicarbonate in red blood cells",
+        "C": "the volume of air inhaled or exhaled during normal breathing, about 500 mL",
+        "D": "an active process caused by contraction of the diaphragm and external intercostals"
+      },
+      "answer": "A",
+      "explanation": "the Bohr effect refers to the shift of the oxygen-haemoglobin curve caused by a rise in CO2.",
+      "difficulty": "MEDIUM",
+      "topic": "Breathing and Exchange of Gases"
+    },
+    {
+      "number": 139,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Chordata?",
+      "options": {
+        "A": "animals having a notochord, dorsal nerve cord and pharyngeal gill slits",
+        "B": "sponges with a water-canal system and spongin fibres",
+        "C": "radially symmetrical animals bearing stinging cells (cnidoblasts)",
+        "D": "flattened worms with flame cells for excretion"
+      },
+      "answer": "A",
+      "explanation": "Chordata refers to animals having a notochord, dorsal nerve cord and pharyngeal gill slits.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 140,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes villi?",
+      "options": {
+        "A": "a protease secreted by the pancreas that acts in the alkaline small intestine",
+        "B": "finger-like projections that increase the surface area for absorption",
+        "C": "a protease that digests proteins to peptones in the acidic stomach",
+        "D": "an enzyme that digests starch to maltose in the mouth"
+      },
+      "answer": "B",
+      "explanation": "villi refers to finger-like projections that increase the surface area for absorption.",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion and Absorption"
+    },
+    {
+      "number": 141,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Arthropoda?",
+      "options": {
+        "A": "spiny-skinned animals with a water-vascular system",
+        "B": "soft-bodied animals usually with a calcareous shell and a mantle",
+        "C": "the largest phylum, with jointed appendages and chitinous exoskeleton",
+        "D": "a phylum of worm-like animals with a stomochord"
+      },
+      "answer": "C",
+      "explanation": "Arthropoda refers to the largest phylum, with jointed appendages and chitinous exoskeleton.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 142,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Aschelminthes?",
+      "options": {
+        "A": "worms with true metameric segmentation and a closed circulatory system",
+        "B": "the largest phylum, with jointed appendages and chitinous exoskeleton",
+        "C": "roundworms possessing a pseudocoelom",
+        "D": "soft-bodied animals usually with a calcareous shell and a mantle"
+      },
+      "answer": "C",
+      "explanation": "Aschelminthes refers to roundworms possessing a pseudocoelom.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 143,
+      "subject": "Zoology",
+      "question": "Alternative forms of the same gene are called",
+      "options": {
+        "A": "Alleles",
+        "B": "Chromosomes",
+        "C": "Genes",
+        "D": "Genomes"
+      },
+      "answer": "A",
+      "explanation": "Alleles are the alternative forms of a gene that occupy the same locus on homologous chromosomes.",
+      "difficulty": "EASY",
+      "topic": "Principles of Inheritance and Variation"
+    },
+    {
+      "number": 144,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes carbonic anhydrase?",
+      "options": {
+        "A": "the volume of air inhaled or exhaled during normal breathing, about 500 mL",
+        "B": "the maximum volume of air a person can exhale after a maximum inspiration",
+        "C": "an active process caused by contraction of the diaphragm and external intercostals",
+        "D": "the enzyme that speeds up the conversion of CO2 to bicarbonate in red blood cells"
+      },
+      "answer": "D",
+      "explanation": "carbonic anhydrase refers to the enzyme that speeds up the conversion of CO2 to bicarbonate in red blood cells.",
+      "difficulty": "MEDIUM",
+      "topic": "Breathing and Exchange of Gases"
+    },
+    {
+      "number": 145,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes blood plasma?",
+      "options": {
+        "A": "a red blood cell that transports oxygen using haemoglobin",
+        "B": "the liquid matrix that transports nutrients, hormones and wastes",
+        "C": "the pacemaker of the human heart",
+        "D": "a white blood cell that mediates immune responses"
+      },
+      "answer": "B",
+      "explanation": "blood plasma refers to the liquid matrix that transports nutrients, hormones and wastes.",
+      "difficulty": "MEDIUM",
+      "topic": "Body Fluids and Circulation"
+    },
+    {
+      "number": 146,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Mollusca?",
+      "options": {
+        "A": "animals having a notochord, dorsal nerve cord and pharyngeal gill slits",
+        "B": "soft-bodied animals usually with a calcareous shell and a mantle",
+        "C": "spiny-skinned animals with a water-vascular system",
+        "D": "a phylum of worm-like animals with a stomochord"
+      },
+      "answer": "B",
+      "explanation": "Mollusca refers to soft-bodied animals usually with a calcareous shell and a mantle.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 147,
+      "subject": "Zoology",
+      "question": "The non-living components of an ecosystem are called",
+      "options": {
+        "A": "Abiotic",
+        "B": "Biotic",
+        "C": "Organic",
+        "D": "Climatic only"
+      },
+      "answer": "A",
+      "explanation": "Abiotic components include physical and chemical factors such as light, temperature, water and minerals.",
+      "difficulty": "EASY",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 148,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes lipase?",
+      "options": {
+        "A": "a secretion that emulsifies fats but contains no digestive enzyme",
+        "B": "an enzyme that splits fats into glycerol and fatty acids",
+        "C": "finger-like projections that increase the surface area for absorption",
+        "D": "a protease that digests proteins to peptones in the acidic stomach"
+      },
+      "answer": "B",
+      "explanation": "lipase refers to an enzyme that splits fats into glycerol and fatty acids.",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion and Absorption"
+    },
+    {
+      "number": 149,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Annelida?",
+      "options": {
+        "A": "worms with true metameric segmentation and a closed circulatory system",
+        "B": "spiny-skinned animals with a water-vascular system",
+        "C": "soft-bodied animals usually with a calcareous shell and a mantle",
+        "D": "the largest phylum, with jointed appendages and chitinous exoskeleton"
+      },
+      "answer": "A",
+      "explanation": "Annelida refers to worms with true metameric segmentation and a closed circulatory system.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 150,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes the SA node?",
+      "options": {
+        "A": "the pacemaker of the human heart",
+        "B": "the most abundant leucocyte, which carries out phagocytosis",
+        "C": "a red blood cell that transports oxygen using haemoglobin",
+        "D": "a granulocyte that secretes histamine and heparin"
+      },
+      "answer": "A",
+      "explanation": "the SA node refers to the pacemaker of the human heart.",
+      "difficulty": "MEDIUM",
+      "topic": "Body Fluids and Circulation"
+    },
+    {
+      "number": 151,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Echinodermata?",
+      "options": {
+        "A": "spiny-skinned animals with a water-vascular system",
+        "B": "a phylum of worm-like animals with a stomochord",
+        "C": "sponges with a water-canal system and spongin fibres",
+        "D": "animals having a notochord, dorsal nerve cord and pharyngeal gill slits"
+      },
+      "answer": "A",
+      "explanation": "Echinodermata refers to spiny-skinned animals with a water-vascular system.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 152,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Porifera?",
+      "options": {
+        "A": "roundworms possessing a pseudocoelom",
+        "B": "flattened worms with flame cells for excretion",
+        "C": "radially symmetrical animals bearing stinging cells (cnidoblasts)",
+        "D": "sponges with a water-canal system and spongin fibres"
+      },
+      "answer": "D",
+      "explanation": "Porifera refers to sponges with a water-canal system and spongin fibres.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 153,
+      "subject": "Zoology",
+      "question": "The enzyme used to cut DNA at specific recognition sites is",
+      "options": {
+        "A": "Restriction endonuclease",
+        "B": "Helicase",
+        "C": "DNA ligase",
+        "D": "DNA polymerase"
+      },
+      "answer": "A",
+      "explanation": "Restriction endonucleases recognise specific base sequences and cut DNA at those sites, producing sticky ends.",
+      "difficulty": "EASY",
+      "topic": "Biotechnology and its Applications"
+    },
+    {
+      "number": 154,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes a lymphocyte?",
+      "options": {
+        "A": "a white blood cell that mediates immune responses",
+        "B": "the most abundant leucocyte, which carries out phagocytosis",
+        "C": "a red blood cell that transports oxygen using haemoglobin",
+        "D": "the pacemaker of the human heart"
+      },
+      "answer": "A",
+      "explanation": "a lymphocyte refers to a white blood cell that mediates immune responses.",
+      "difficulty": "MEDIUM",
+      "topic": "Body Fluids and Circulation"
+    },
+    {
+      "number": 155,
+      "subject": "Zoology",
+      "question": "The ABO blood group system in humans is an example of",
+      "options": {
+        "A": "Pleiotropy",
+        "B": "Multiple alleles",
+        "C": "Incomplete dominance",
+        "D": "Codominance only"
+      },
+      "answer": "B",
+      "explanation": "The ABO system is controlled by three alleles (IA, IB and i) of a single gene, so it is an example of multiple alleles.",
+      "difficulty": "HARD",
+      "topic": "Principles of Inheritance and Variation"
+    },
+    {
+      "number": 156,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes a basophil?",
+      "options": {
+        "A": "a granulocyte that secretes histamine and heparin",
+        "B": "the liquid matrix that transports nutrients, hormones and wastes",
+        "C": "a white blood cell that mediates immune responses",
+        "D": "a blood cell fragment that helps in blood clotting"
+      },
+      "answer": "A",
+      "explanation": "a basophil refers to a granulocyte that secretes histamine and heparin.",
+      "difficulty": "MEDIUM",
+      "topic": "Body Fluids and Circulation"
+    },
+    {
+      "number": 157,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes pepsin?",
+      "options": {
+        "A": "a protease secreted by the pancreas that acts in the alkaline small intestine",
+        "B": "an enzyme that digests starch to maltose in the mouth",
+        "C": "an enzyme that splits fats into glycerol and fatty acids",
+        "D": "a protease that digests proteins to peptones in the acidic stomach"
+      },
+      "answer": "D",
+      "explanation": "pepsin refers to a protease that digests proteins to peptones in the acidic stomach.",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion and Absorption"
+    },
+    {
+      "number": 158,
+      "subject": "Zoology",
+      "question": "The theory of natural selection was proposed by",
+      "options": {
+        "A": "Mendel",
+        "B": "De Vries",
+        "C": "Darwin",
+        "D": "Lamarck"
+      },
+      "answer": "C",
+      "explanation": "Charles Darwin proposed the theory of natural selection in his book 'On the Origin of Species'.",
+      "difficulty": "MEDIUM",
+      "topic": "Evolution"
+    },
+    {
+      "number": 159,
+      "subject": "Zoology",
+      "question": "The pyramid of energy in an ecosystem is",
+      "options": {
+        "A": "Sometimes inverted",
+        "B": "Always inverted",
+        "C": "Always upright",
+        "D": "Variable"
+      },
+      "answer": "C",
+      "explanation": "Energy decreases at each successive trophic level, so the pyramid of energy is always upright.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 160,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Platyhelminthes?",
+      "options": {
+        "A": "flattened worms with flame cells for excretion",
+        "B": "the largest phylum, with jointed appendages and chitinous exoskeleton",
+        "C": "worms with true metameric segmentation and a closed circulatory system",
+        "D": "roundworms possessing a pseudocoelom"
+      },
+      "answer": "A",
+      "explanation": "Platyhelminthes refers to flattened worms with flame cells for excretion.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 161,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes ADH?",
+      "options": {
+        "A": "the structure that releases renin in response to low blood pressure",
+        "B": "the hormone that promotes water reabsorption in the collecting duct",
+        "C": "the tube that carries urine from the kidney to the urinary bladder",
+        "D": "the process in which blood is filtered in the renal corpuscle"
+      },
+      "answer": "B",
+      "explanation": "ADH refers to the hormone that promotes water reabsorption in the collecting duct.",
+      "difficulty": "MEDIUM",
+      "topic": "Excretory Products and their Elimination"
+    },
+    {
+      "number": 162,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes trypsin?",
+      "options": {
+        "A": "a secretion that emulsifies fats but contains no digestive enzyme",
+        "B": "a protease secreted by the pancreas that acts in the alkaline small intestine",
+        "C": "an enzyme that digests starch to maltose in the mouth",
+        "D": "an enzyme that splits fats into glycerol and fatty acids"
+      },
+      "answer": "B",
+      "explanation": "trypsin refers to a protease secreted by the pancreas that acts in the alkaline small intestine.",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion and Absorption"
+    },
+    {
+      "number": 163,
+      "subject": "Zoology",
+      "question": "The ozone layer protects living organisms from",
+      "options": {
+        "A": "X-rays",
+        "B": "Infrared rays",
+        "C": "Ultraviolet radiation",
+        "D": "Microwaves"
+      },
+      "answer": "C",
+      "explanation": "Stratospheric ozone absorbs harmful ultraviolet radiation from the Sun, protecting living organisms.",
+      "difficulty": "HARD",
+      "topic": "Environmental Issues"
+    },
+    {
+      "number": 164,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Cnidaria?",
+      "options": {
+        "A": "flattened worms with flame cells for excretion",
+        "B": "roundworms possessing a pseudocoelom",
+        "C": "worms with true metameric segmentation and a closed circulatory system",
+        "D": "radially symmetrical animals bearing stinging cells (cnidoblasts)"
+      },
+      "answer": "D",
+      "explanation": "Cnidaria refers to radially symmetrical animals bearing stinging cells (cnidoblasts).",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 165,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes inspiration?",
+      "options": {
+        "A": "the volume of air inhaled or exhaled during normal breathing, about 500 mL",
+        "B": "an active process caused by contraction of the diaphragm and external intercostals",
+        "C": "the shift of the oxygen-haemoglobin curve caused by a rise in CO2",
+        "D": "the maximum volume of air a person can exhale after a maximum inspiration"
+      },
+      "answer": "B",
+      "explanation": "inspiration refers to an active process caused by contraction of the diaphragm and external intercostals.",
+      "difficulty": "MEDIUM",
+      "topic": "Breathing and Exchange of Gases"
+    },
+    {
+      "number": 166,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes glomerular filtration?",
+      "options": {
+        "A": "the structure that releases renin in response to low blood pressure",
+        "B": "the hormone that promotes water reabsorption in the collecting duct",
+        "C": "the nephron region that establishes the medullary concentration gradient",
+        "D": "the process in which blood is filtered in the renal corpuscle"
+      },
+      "answer": "D",
+      "explanation": "glomerular filtration refers to the process in which blood is filtered in the renal corpuscle.",
+      "difficulty": "MEDIUM",
+      "topic": "Excretory Products and their Elimination"
+    },
+    {
+      "number": 167,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Hemichordata?",
+      "options": {
+        "A": "sponges with a water-canal system and spongin fibres",
+        "B": "a phylum of worm-like animals with a stomochord",
+        "C": "radially symmetrical animals bearing stinging cells (cnidoblasts)",
+        "D": "animals having a notochord, dorsal nerve cord and pharyngeal gill slits"
+      },
+      "answer": "B",
+      "explanation": "Hemichordata refers to a phylum of worm-like animals with a stomochord.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 168,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes vital capacity?",
+      "options": {
+        "A": "the maximum volume of air a person can exhale after a maximum inspiration",
+        "B": "the enzyme that speeds up the conversion of CO2 to bicarbonate in red blood cells",
+        "C": "an active process caused by contraction of the diaphragm and external intercostals",
+        "D": "the shift of the oxygen-haemoglobin curve caused by a rise in CO2"
+      },
+      "answer": "A",
+      "explanation": "vital capacity refers to the maximum volume of air a person can exhale after a maximum inspiration.",
+      "difficulty": "MEDIUM",
+      "topic": "Breathing and Exchange of Gases"
+    },
+    {
+      "number": 169,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes bile?",
+      "options": {
+        "A": "a protease that digests proteins to peptones in the acidic stomach",
+        "B": "a protease secreted by the pancreas that acts in the alkaline small intestine",
+        "C": "a secretion that emulsifies fats but contains no digestive enzyme",
+        "D": "finger-like projections that increase the surface area for absorption"
+      },
+      "answer": "C",
+      "explanation": "bile refers to a secretion that emulsifies fats but contains no digestive enzyme.",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion and Absorption"
+    },
+    {
+      "number": 170,
+      "subject": "Zoology",
+      "question": "Bt cotton is resistant to insect pests because it carries",
+      "options": {
+        "A": "cry genes from Bacillus thuringiensis",
+        "B": "a gene from E. coli",
+        "C": "a gene from Agrobacterium",
+        "D": "a gene from yeast"
+      },
+      "answer": "A",
+      "explanation": "Bt cotton expresses cry genes from Bacillus thuringiensis, whose protein is toxic to certain insect larvae.",
+      "difficulty": "HARD",
+      "topic": "Biotechnology and its Applications"
+    },
+    {
+      "number": 171,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes an erythrocyte?",
+      "options": {
+        "A": "a granulocyte that secretes histamine and heparin",
+        "B": "a blood cell fragment that helps in blood clotting",
+        "C": "the most abundant leucocyte, which carries out phagocytosis",
+        "D": "a red blood cell that transports oxygen using haemoglobin"
+      },
+      "answer": "D",
+      "explanation": "an erythrocyte refers to a red blood cell that transports oxygen using haemoglobin.",
+      "difficulty": "MEDIUM",
+      "topic": "Body Fluids and Circulation"
+    },
+    {
+      "number": 172,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes a neutrophil?",
+      "options": {
+        "A": "the liquid matrix that transports nutrients, hormones and wastes",
+        "B": "the most abundant leucocyte, which carries out phagocytosis",
+        "C": "a granulocyte that secretes histamine and heparin",
+        "D": "a blood cell fragment that helps in blood clotting"
+      },
+      "answer": "B",
+      "explanation": "a neutrophil refers to the most abundant leucocyte, which carries out phagocytosis.",
+      "difficulty": "MEDIUM",
+      "topic": "Body Fluids and Circulation"
+    },
+    {
+      "number": 173,
+      "subject": "Zoology",
+      "question": "The polymerase chain reaction (PCR) is used to",
+      "options": {
+        "A": "join DNA fragments",
+        "B": "amplify DNA",
+        "C": "stain DNA",
+        "D": "separate proteins"
+      },
+      "answer": "B",
+      "explanation": "PCR amplifies (makes many copies of) a specific segment of DNA using primers, a polymerase and thermal cycling.",
+      "difficulty": "MEDIUM",
+      "topic": "Biotechnology and its Applications"
+    },
+    {
+      "number": 174,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes the juxtaglomerular apparatus?",
+      "options": {
+        "A": "the process in which blood is filtered in the renal corpuscle",
+        "B": "the structure that releases renin in response to low blood pressure",
+        "C": "the nephron region that establishes the medullary concentration gradient",
+        "D": "the tube that carries urine from the kidney to the urinary bladder"
+      },
+      "answer": "B",
+      "explanation": "the juxtaglomerular apparatus refers to the structure that releases renin in response to low blood pressure.",
+      "difficulty": "MEDIUM",
+      "topic": "Excretory Products and their Elimination"
+    },
+    {
+      "number": 175,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes the loop of Henle?",
+      "options": {
+        "A": "the hormone that promotes water reabsorption in the collecting duct",
+        "B": "the tube that carries urine from the kidney to the urinary bladder",
+        "C": "the structure that releases renin in response to low blood pressure",
+        "D": "the nephron region that establishes the medullary concentration gradient"
+      },
+      "answer": "D",
+      "explanation": "the loop of Henle refers to the nephron region that establishes the medullary concentration gradient.",
+      "difficulty": "MEDIUM",
+      "topic": "Excretory Products and their Elimination"
+    },
+    {
+      "number": 176,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes salivary amylase?",
+      "options": {
+        "A": "finger-like projections that increase the surface area for absorption",
+        "B": "an enzyme that splits fats into glycerol and fatty acids",
+        "C": "a secretion that emulsifies fats but contains no digestive enzyme",
+        "D": "an enzyme that digests starch to maltose in the mouth"
+      },
+      "answer": "D",
+      "explanation": "salivary amylase refers to an enzyme that digests starch to maltose in the mouth.",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion and Absorption"
+    },
+    {
+      "number": 177,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes a thrombocyte?",
+      "options": {
+        "A": "a white blood cell that mediates immune responses",
+        "B": "the pacemaker of the human heart",
+        "C": "a blood cell fragment that helps in blood clotting",
+        "D": "the liquid matrix that transports nutrients, hormones and wastes"
+      },
+      "answer": "C",
+      "explanation": "a thrombocyte refers to a blood cell fragment that helps in blood clotting.",
+      "difficulty": "MEDIUM",
+      "topic": "Body Fluids and Circulation"
+    },
+    {
+      "number": 178,
+      "subject": "Zoology",
+      "question": "AIDS is caused by",
+      "options": {
+        "A": "a retrovirus (HIV)",
+        "B": "a bacterium",
+        "C": "a protozoan",
+        "D": "a DNA virus"
+      },
+      "answer": "A",
+      "explanation": "HIV is a retrovirus that infects helper T-lymphocytes and causes AIDS.",
+      "difficulty": "MEDIUM",
+      "topic": "Human Health and Disease"
+    },
+    {
+      "number": 179,
+      "subject": "Zoology",
+      "question": "The ten percent law of energy transfer was given by",
+      "options": {
+        "A": "Lindeman",
+        "B": "Darwin",
+        "C": "Odum",
+        "D": "Tansley"
+      },
+      "answer": "A",
+      "explanation": "Lindeman (1942) proposed that only about 10% of the energy at one trophic level is transferred to the next.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 180,
+      "subject": "Zoology",
+      "question": "Antibody-mediated immunity is also known as",
+      "options": {
+        "A": "Humoral immunity",
+        "B": "Innate immunity",
+        "C": "Cell-mediated immunity",
+        "D": "Passive immunity"
+      },
+      "answer": "A",
+      "explanation": "Antibody-mediated (B-cell) immunity acts through antibodies in the body fluids, so it is called humoral immunity.",
+      "difficulty": "HARD",
+      "topic": "Human Health and Disease"
+    }
+  ]
+}

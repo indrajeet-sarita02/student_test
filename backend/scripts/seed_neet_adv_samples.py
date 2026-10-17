@@ -129,6 +129,12 @@ def parse_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--first", type=int, default=4, help="first sample number (default 4)")
     parser.add_argument("--count", type=int, default=10, help="number of samples (default 10)")
+    parser.add_argument(
+        "--max-attempts",
+        type=int,
+        default=1,
+        help="max attempts allowed per student (default 1)",
+    )
     parser.add_argument("--replace", action="store_true", help="delete and recreate each sample")
     parser.add_argument("--dry-run", action="store_true", help="build + write JSON only, no DB writes")
     parser.add_argument(
@@ -178,7 +184,7 @@ def main(argv=None) -> int:
                     f"Set {number:02d} (180 questions, 720 marks, 180 minutes)."
                 ),
                 selection=None,
-                max_attempts=1,
+                max_attempts=args.max_attempts,
             )
             result = seed_paper(
                 session,

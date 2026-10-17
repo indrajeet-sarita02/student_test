@@ -1,0 +1,2708 @@
+{
+  "exam": "NEET UG (Advanced Level) - Full Length Mock",
+  "set_code": "NEET-UG-ADV-SAMPLE-02",
+  "set_label": "Sample Set 02",
+  "total_questions": 180,
+  "questions": [
+    {
+      "number": 1,
+      "subject": "Physics",
+      "question": "The dimensional formula of electric flux is",
+      "options": {
+        "A": "[M L^3 T^-2 A^-1]",
+        "B": "[M L^3 T^-3 A^-1]",
+        "C": "[M L^2 T^-3 A^-1]",
+        "D": "[M L T^-3 A^-1]"
+      },
+      "answer": "B",
+      "explanation": "Writing the defining equation for electric flux gives the dimension [M L^3 T^-3 A^-1].",
+      "difficulty": "MEDIUM",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 2,
+      "subject": "Physics",
+      "question": "Lenz's law is a direct consequence of the conservation of",
+      "options": {
+        "A": "mass",
+        "B": "momentum",
+        "C": "charge",
+        "D": "energy"
+      },
+      "answer": "D",
+      "explanation": "The induced effect opposes the change producing it; otherwise energy could be created, violating conservation of energy.",
+      "difficulty": "EASY",
+      "topic": "Electromagnetic Induction"
+    },
+    {
+      "number": 3,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 10 m/s accelerates uniformly at 4 m/s^2 for 5 s. Its final velocity is",
+      "options": {
+        "A": "26 m/s",
+        "B": "30 m/s",
+        "C": "34 m/s",
+        "D": "38 m/s"
+      },
+      "answer": "B",
+      "explanation": "v = u + at = 10 + (4)(5).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 4,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 4.500?",
+      "options": {
+        "A": "5",
+        "B": "4",
+        "C": "6",
+        "D": "7"
+      },
+      "answer": "B",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 5,
+      "subject": "Physics",
+      "question": "The dimensional formula of latent heat is",
+      "options": {
+        "A": "[M L T^-2]",
+        "B": "[L^2 T^-2]",
+        "C": "[L T^-2]",
+        "D": "[M L^2 T^-2]"
+      },
+      "answer": "B",
+      "explanation": "Writing the defining equation for latent heat gives the dimension [L^2 T^-2].",
+      "difficulty": "MEDIUM",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 6,
+      "subject": "Physics",
+      "question": "Ohm's law states that, at constant temperature, the current through a conductor is",
+      "options": {
+        "A": "inversely proportional to the potential difference",
+        "B": "independent of the potential difference",
+        "C": "proportional to the square of the potential difference",
+        "D": "directly proportional to the potential difference"
+      },
+      "answer": "D",
+      "explanation": "V = IR, so I ∝ V when R is constant (fixed temperature).",
+      "difficulty": "EASY",
+      "topic": "Current Electricity"
+    },
+    {
+      "number": 7,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 20.04?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "7",
+        "D": "6"
+      },
+      "answer": "A",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 8,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 0.020?",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "2",
+        "D": "4"
+      },
+      "answer": "C",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 9,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 20 m/s at 30 degrees to the horizontal (g = 10 m/s^2). Its maximum height is",
+      "options": {
+        "A": "10 m",
+        "B": "34.6 m",
+        "C": "5 m",
+        "D": "6 m"
+      },
+      "answer": "C",
+      "explanation": "H = u^2 sin^2(theta)/(2g) = 20^2 sin^2(30)/20.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 10,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 0.0006?",
+      "options": {
+        "A": "4",
+        "B": "1",
+        "C": "3",
+        "D": "2"
+      },
+      "answer": "B",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 11,
+      "subject": "Physics",
+      "question": "The dimensional formula of coefficient of viscosity is",
+      "options": {
+        "A": "[M L^-1 T^-2]",
+        "B": "[M L^-2 T^-1]",
+        "C": "[M L^-1 T^-1]",
+        "D": "[M L T^-1]"
+      },
+      "answer": "C",
+      "explanation": "Writing the defining equation for coefficient of viscosity gives the dimension [M L^-1 T^-1].",
+      "difficulty": "MEDIUM",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 12,
+      "subject": "Physics",
+      "question": "A projectile is fired with speed 20 m/s at 30 degrees to the horizontal (g = 10 m/s^2). Its horizontal range is",
+      "options": {
+        "A": "69.3 m",
+        "B": "34.6 m",
+        "C": "5 m",
+        "D": "8.7 m"
+      },
+      "answer": "B",
+      "explanation": "R = u^2 sin(2 theta)/g = 20^2 sin(60)/10.",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 13,
+      "subject": "Physics",
+      "question": "The dimensional formula of universal gas constant is",
+      "options": {
+        "A": "[M L^2 T^-2 K^-1]",
+        "B": "[M L T^-2 K^-1 mol^-1]",
+        "C": "[M L^2 T^-2 K^-1 mol^-1]",
+        "D": "[M L^2 T^-3 K^-1 mol^-1]"
+      },
+      "answer": "C",
+      "explanation": "Writing the defining equation for universal gas constant gives the dimension [M L^2 T^-2 K^-1 mol^-1].",
+      "difficulty": "MEDIUM",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 14,
+      "subject": "Physics",
+      "question": "The dimensional formula of momentum is",
+      "options": {
+        "A": "[M L^2 T^-2]",
+        "B": "[M L T^-2]",
+        "C": "[M L T^-1]",
+        "D": "[M L^2 T^-1]"
+      },
+      "answer": "C",
+      "explanation": "Writing the defining equation for momentum gives the dimension [M L T^-1].",
+      "difficulty": "MEDIUM",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 15,
+      "subject": "Physics",
+      "question": "In a series LCR circuit at resonance, the impedance of the circuit is",
+      "options": {
+        "A": "equal to R and maximum",
+        "B": "equal to R and minimum",
+        "C": "infinite",
+        "D": "zero"
+      },
+      "answer": "B",
+      "explanation": "At resonance X_L = X_C, so the reactances cancel and Z = R, the minimum impedance.",
+      "difficulty": "MEDIUM",
+      "topic": "Alternating Current"
+    },
+    {
+      "number": 16,
+      "subject": "Physics",
+      "question": "Total internal reflection of light can occur when light travels",
+      "options": {
+        "A": "normally from a rarer to a denser medium",
+        "B": "from a denser to a rarer medium at any angle",
+        "C": "from a denser to a rarer medium at an angle greater than the critical angle",
+        "D": "from a rarer to a denser medium at any angle"
+      },
+      "answer": "B",
+      "explanation": "Total internal reflection requires travel from a denser to a rarer medium with the angle of incidence larger than the critical angle.",
+      "difficulty": "MEDIUM",
+      "topic": "Ray Optics"
+    },
+    {
+      "number": 17,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 0.00340?",
+      "options": {
+        "A": "6",
+        "B": "5",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "C",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 18,
+      "subject": "Physics",
+      "question": "Two resistors of 6 ohm and 3 ohm are connected in parallel. Their equivalent resistance is",
+      "options": {
+        "A": "9 ohm",
+        "B": "2 ohm",
+        "C": "4.5 ohm",
+        "D": "1 ohm"
+      },
+      "answer": "B",
+      "explanation": "1/R = 1/6 + 1/3 = 1/2, so the equivalent resistance R = 2 ohm.",
+      "difficulty": "HARD",
+      "topic": "Current Electricity"
+    },
+    {
+      "number": 19,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 25 m/s accelerates uniformly at 2 m/s^2 for 10 s. Its final velocity is",
+      "options": {
+        "A": "49 m/s",
+        "B": "45 m/s",
+        "C": "47 m/s",
+        "D": "43 m/s"
+      },
+      "answer": "B",
+      "explanation": "v = u + at = 25 + (2)(10).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 20,
+      "subject": "Physics",
+      "question": "The dimensional formula of magnetic field is",
+      "options": {
+        "A": "[M T^-2 A^-1]",
+        "B": "[M T^-1 A^-1]",
+        "C": "[M L^2 T^-2 A^-1]",
+        "D": "[M L T^-2 A^-1]"
+      },
+      "answer": "A",
+      "explanation": "Writing the defining equation for magnetic field gives the dimension [M T^-2 A^-1].",
+      "difficulty": "MEDIUM",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 21,
+      "subject": "Physics",
+      "question": "The dimensional formula of angular momentum is",
+      "options": {
+        "A": "[M L^2 T^-2]",
+        "B": "[M L T^-1]",
+        "C": "[M L^2 T^-3]",
+        "D": "[M L^2 T^-1]"
+      },
+      "answer": "D",
+      "explanation": "Writing the defining equation for angular momentum gives the dimension [M L^2 T^-1].",
+      "difficulty": "MEDIUM",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 22,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 3 m/s accelerates uniformly at 2.5 m/s^2 for 4 s. Its final velocity is",
+      "options": {
+        "A": "13 m/s",
+        "B": "15.5 m/s",
+        "C": "10.5 m/s",
+        "D": "18 m/s"
+      },
+      "answer": "A",
+      "explanation": "v = u + at = 3 + (2.5)(4).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 23,
+      "subject": "Physics",
+      "question": "A body starts with velocity 5 m/s and moves with uniform acceleration 4 m/s^2. The distance travelled in the 3rd second is",
+      "options": {
+        "A": "14 m",
+        "B": "16 m",
+        "C": "15 m",
+        "D": "19 m"
+      },
+      "answer": "C",
+      "explanation": "s_n = u + (a/2)(2n - 1) = 5 + (4/2)(2(3) - 1).",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 24,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 6 m/s accelerates uniformly at 0.5 m/s^2 for 8 s. Its final velocity is",
+      "options": {
+        "A": "10 m/s",
+        "B": "10.5 m/s",
+        "C": "9.5 m/s",
+        "D": "11 m/s"
+      },
+      "answer": "A",
+      "explanation": "v = u + at = 6 + (0.5)(8).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 25,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 900.0?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "7",
+        "D": "6"
+      },
+      "answer": "A",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 26,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 5 m/s accelerates uniformly at 2 m/s^2 for 3 s. Its final velocity is",
+      "options": {
+        "A": "15 m/s",
+        "B": "9 m/s",
+        "C": "13 m/s",
+        "D": "11 m/s"
+      },
+      "answer": "D",
+      "explanation": "v = u + at = 5 + (2)(3).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 27,
+      "subject": "Physics",
+      "question": "A body starts with velocity 8 m/s and moves with uniform acceleration 2 m/s^2. The distance travelled in the 7th second is",
+      "options": {
+        "A": "22 m",
+        "B": "21 m",
+        "C": "20 m",
+        "D": "23 m"
+      },
+      "answer": "B",
+      "explanation": "s_n = u + (a/2)(2n - 1) = 8 + (2/2)(2(7) - 1).",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 28,
+      "subject": "Physics",
+      "question": "A body starts with velocity 2 m/s and moves with uniform acceleration 6 m/s^2. The distance travelled in the 5th second is",
+      "options": {
+        "A": "29 m",
+        "B": "30 m",
+        "C": "28 m",
+        "D": "35 m"
+      },
+      "answer": "A",
+      "explanation": "s_n = u + (a/2)(2n - 1) = 2 + (6/2)(2(5) - 1).",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 29,
+      "subject": "Physics",
+      "question": "A charged particle of charge q and mass m moves with speed v perpendicular to a uniform magnetic field B. The radius of its circular path is",
+      "options": {
+        "A": "q v / (m B)",
+        "B": "q B / (m v)",
+        "C": "m v / (q B)",
+        "D": "m B / (q v)"
+      },
+      "answer": "C",
+      "explanation": "Equating q v B to m v^2/r gives r = m v / (q B).",
+      "difficulty": "MEDIUM",
+      "topic": "Moving Charges and Magnetism"
+    },
+    {
+      "number": 30,
+      "subject": "Physics",
+      "question": "The dimensional formula of gravitational constant is",
+      "options": {
+        "A": "[M^-1 L^3 T^-2]",
+        "B": "[M^-1 L^2 T^-2]",
+        "C": "[M L^2 T^-2]",
+        "D": "[M L^3 T^-2]"
+      },
+      "answer": "A",
+      "explanation": "Writing the defining equation for gravitational constant gives the dimension [M^-1 L^3 T^-2].",
+      "difficulty": "MEDIUM",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 31,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 105.0?",
+      "options": {
+        "A": "6",
+        "B": "5",
+        "C": "7",
+        "D": "4"
+      },
+      "answer": "D",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 32,
+      "subject": "Physics",
+      "question": "The cyclotron frequency of a charged particle moving in a uniform magnetic field is independent of",
+      "options": {
+        "A": "its charge",
+        "B": "its speed",
+        "C": "the magnetic field",
+        "D": "its mass"
+      },
+      "answer": "B",
+      "explanation": "f = qB/(2 pi m) depends only on q, B and m, and not on the speed of the particle.",
+      "difficulty": "HARD",
+      "topic": "Moving Charges and Magnetism"
+    },
+    {
+      "number": 33,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 0 m/s accelerates uniformly at 3 m/s^2 for 6 s. Its final velocity is",
+      "options": {
+        "A": "18 m/s",
+        "B": "15 m/s",
+        "C": "21 m/s",
+        "D": "24 m/s"
+      },
+      "answer": "A",
+      "explanation": "v = u + at = 0 + (3)(6).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 34,
+      "subject": "Physics",
+      "question": "For a metallic conductor carrying a steady current, the drift velocity of the free electrons is inversely proportional to",
+      "options": {
+        "A": "the current",
+        "B": "the number density of free electrons",
+        "C": "the length of the conductor",
+        "D": "the potential difference"
+      },
+      "answer": "B",
+      "explanation": "I = n A e v_d; for fixed I and A, v_d is inversely proportional to the number density n of free electrons.",
+      "difficulty": "MEDIUM",
+      "topic": "Current Electricity"
+    },
+    {
+      "number": 35,
+      "subject": "Physics",
+      "question": "A body starts with velocity 10 m/s and moves with uniform acceleration 2 m/s^2. The distance travelled in the 6th second is",
+      "options": {
+        "A": "20 m",
+        "B": "23 m",
+        "C": "22 m",
+        "D": "21 m"
+      },
+      "answer": "D",
+      "explanation": "s_n = u + (a/2)(2n - 1) = 10 + (2/2)(2(6) - 1).",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 36,
+      "subject": "Physics",
+      "question": "How many significant figures are present in the measured value 6.02?",
+      "options": {
+        "A": "6",
+        "B": "5",
+        "C": "3",
+        "D": "4"
+      },
+      "answer": "C",
+      "explanation": "Leading zeros are not significant, while a trailing zero after the decimal point is significant.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
+    },
+    {
+      "number": 37,
+      "subject": "Physics",
+      "question": "The energy stored in a capacitor of capacitance C charged to a potential difference V is",
+      "options": {
+        "A": "(1/2) C V",
+        "B": "2 C V^2",
+        "C": "C V^2",
+        "D": "(1/2) C V^2"
+      },
+      "answer": "D",
+      "explanation": "The stored energy is U = (1/2) C V^2.",
+      "difficulty": "HARD",
+      "topic": "Electrostatics"
+    },
+    {
+      "number": 38,
+      "subject": "Physics",
+      "question": "A body starts with velocity 0 m/s and moves with uniform acceleration 10 m/s^2. The distance travelled in the 4th second is",
+      "options": {
+        "A": "35 m",
+        "B": "36 m",
+        "C": "45 m",
+        "D": "34 m"
+      },
+      "answer": "A",
+      "explanation": "s_n = u + (a/2)(2n - 1) = 0 + (10/2)(2(4) - 1).",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 39,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 15 m/s accelerates uniformly at -3 m/s^2 for 5 s. Its final velocity is",
+      "options": {
+        "A": "-3 m/s",
+        "B": "-6 m/s",
+        "C": "0 m/s",
+        "D": "3 m/s"
+      },
+      "answer": "C",
+      "explanation": "v = u + at = 15 + (-3)(5).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 40,
+      "subject": "Physics",
+      "question": "A body starts with velocity 0 m/s and moves with uniform acceleration 2 m/s^2. The distance travelled in the 4th second is",
+      "options": {
+        "A": "8 m",
+        "B": "7 m",
+        "C": "6 m",
+        "D": "9 m"
+      },
+      "answer": "B",
+      "explanation": "s_n = u + (a/2)(2n - 1) = 0 + (2/2)(2(4) - 1).",
+      "difficulty": "MEDIUM",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 41,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 8 m/s accelerates uniformly at -2 m/s^2 for 4 s. Its final velocity is",
+      "options": {
+        "A": "0 m/s",
+        "B": "2 m/s",
+        "C": "-2 m/s",
+        "D": "-4 m/s"
+      },
+      "answer": "A",
+      "explanation": "v = u + at = 8 + (-2)(4).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 42,
+      "subject": "Physics",
+      "question": "A charged particle moving in a uniform magnetic field experiences no magnetic force when its velocity is",
+      "options": {
+        "A": "at 45 degrees to the field",
+        "B": "at 60 degrees to the field",
+        "C": "perpendicular to the field",
+        "D": "parallel to the field"
+      },
+      "answer": "D",
+      "explanation": "F = q v B sin(theta); the force vanishes when the velocity is parallel (or antiparallel) to the field.",
+      "difficulty": "EASY",
+      "topic": "Moving Charges and Magnetism"
+    },
+    {
+      "number": 43,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 20 m/s accelerates uniformly at 5 m/s^2 for 2 s. Its final velocity is",
+      "options": {
+        "A": "25 m/s",
+        "B": "30 m/s",
+        "C": "35 m/s",
+        "D": "40 m/s"
+      },
+      "answer": "B",
+      "explanation": "v = u + at = 20 + (5)(2).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 44,
+      "subject": "Physics",
+      "question": "In the photoelectric effect, the maximum kinetic energy of the emitted photoelectrons depends on",
+      "options": {
+        "A": "the intensity of the incident light",
+        "B": "the distance of the source",
+        "C": "the frequency of the incident light",
+        "D": "the area of the metal surface"
+      },
+      "answer": "C",
+      "explanation": "Einstein's equation K_max = h*nu - phi shows that the maximum kinetic energy depends on the frequency of the light, not on its intensity.",
+      "difficulty": "EASY",
+      "topic": "Dual Nature of Matter and Radiation"
+    },
+    {
+      "number": 45,
+      "subject": "Physics",
+      "question": "A body moving with initial velocity 12 m/s accelerates uniformly at 1.5 m/s^2 for 4 s. Its final velocity is",
+      "options": {
+        "A": "19.5 m/s",
+        "B": "21 m/s",
+        "C": "16.5 m/s",
+        "D": "18 m/s"
+      },
+      "answer": "D",
+      "explanation": "v = u + at = 12 + (1.5)(4).",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
+    },
+    {
+      "number": 46,
+      "subject": "Chemistry",
+      "question": "The bond between carbon and chlorine in CH3Cl is best described as",
+      "options": {
+        "A": "polar covalent",
+        "B": "ionic",
+        "C": "coordinate",
+        "D": "non-polar covalent"
+      },
+      "answer": "A",
+      "explanation": "The electronegativity difference makes the C-Cl bond a polar covalent bond.",
+      "difficulty": "EASY",
+      "topic": "Haloalkanes"
+    },
+    {
+      "number": 47,
+      "subject": "Chemistry",
+      "question": "The mass of a single molecule of a gas of molar mass 28 g/mol is (N_A = 6.022 x 10^23 mol^-1), approximately",
+      "options": {
+        "A": "4.65e-23 g",
+        "B": "1.69e+25 g",
+        "C": "2.79e-22 g",
+        "D": "2.32e-23 g"
+      },
+      "answer": "A",
+      "explanation": "Mass of one molecule = M/N_A = 28/6.022e23 g.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 48,
+      "subject": "Chemistry",
+      "question": "The molarity of a solution containing 0.25 mol of solute in 0.25 L of solution is",
+      "options": {
+        "A": "0.001 M",
+        "B": "0.062 M",
+        "C": "1 M",
+        "D": "2 M"
+      },
+      "answer": "C",
+      "explanation": "Molarity = moles of solute / volume of solution (L) = 0.25/0.25.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 49,
+      "subject": "Chemistry",
+      "question": "The number of P-O-P bridges present in a molecule of P4O10 is",
+      "options": {
+        "A": "4",
+        "B": "12",
+        "C": "10",
+        "D": "6"
+      },
+      "answer": "D",
+      "explanation": "P4O10 contains 6 P-O-P bridges linking the four phosphorus atoms.",
+      "difficulty": "HARD",
+      "topic": "p-Block Elements (Group 15)"
+    },
+    {
+      "number": 50,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 80 g of ammonium nitrate (molar mass = 80 g/mol) is",
+      "options": {
+        "A": "6400 mol",
+        "B": "1 mol",
+        "C": "0.5 mol",
+        "D": "2 mol"
+      },
+      "answer": "B",
+      "explanation": "n = mass / molar mass = 80/80 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 51,
+      "subject": "Chemistry",
+      "question": "The molarity of a solution containing 0.1 mol of solute in 0.1 L of solution is",
+      "options": {
+        "A": "2 M",
+        "B": "1 M",
+        "C": "0.001 M",
+        "D": "0.01 M"
+      },
+      "answer": "B",
+      "explanation": "Molarity = moles of solute / volume of solution (L) = 0.1/0.1.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 52,
+      "subject": "Chemistry",
+      "question": "The molarity of a solution containing 0.5 mol of solute in 0.5 L of solution is",
+      "options": {
+        "A": "1 M",
+        "B": "2 M",
+        "C": "0.001 M",
+        "D": "0.25 M"
+      },
+      "answer": "A",
+      "explanation": "Molarity = moles of solute / volume of solution (L) = 0.5/0.5.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 53,
+      "subject": "Chemistry",
+      "question": "The building blocks (monomers) of proteins are",
+      "options": {
+        "A": "fatty acids",
+        "B": "nucleotides",
+        "C": "amino acids",
+        "D": "glucose units"
+      },
+      "answer": "C",
+      "explanation": "Proteins are polymers built from amino acid monomers linked by peptide bonds.",
+      "difficulty": "EASY",
+      "topic": "Biomolecules"
+    },
+    {
+      "number": 54,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 180 g of glucose (molar mass = 180 g/mol) is",
+      "options": {
+        "A": "2 mol",
+        "B": "0.5 mol",
+        "C": "1 mol",
+        "D": "32400 mol"
+      },
+      "answer": "C",
+      "explanation": "n = mass / molar mass = 180/180 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 55,
+      "subject": "Chemistry",
+      "question": "The mass of a single molecule of a gas of molar mass 64 g/mol is (N_A = 6.022 x 10^23 mol^-1), approximately",
+      "options": {
+        "A": "1.06e-22 g",
+        "B": "6.38e-22 g",
+        "C": "5.31e-23 g",
+        "D": "3.85e+25 g"
+      },
+      "answer": "A",
+      "explanation": "Mass of one molecule = M/N_A = 64/6.022e23 g.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 56,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 56 g of potassium hydroxide (molar mass = 56 g/mol) is",
+      "options": {
+        "A": "1 mol",
+        "B": "3136 mol",
+        "C": "0.5 mol",
+        "D": "2 mol"
+      },
+      "answer": "A",
+      "explanation": "n = mass / molar mass = 56/56 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 57,
+      "subject": "Chemistry",
+      "question": "The number of molecules in 28 g of a substance of molar mass 28 g/mol is (N_A = 6.022 x 10^23 mol^-1)",
+      "options": {
+        "A": "1",
+        "B": "6.02e+23",
+        "C": "4.72e+26",
+        "D": "3.01e+23"
+      },
+      "answer": "B",
+      "explanation": "N = (mass/M) x N_A = (28/28) x 6.022e23.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 58,
+      "subject": "Chemistry",
+      "question": "The hydride of group 16 with the highest boiling point is",
+      "options": {
+        "A": "H2Se",
+        "B": "H2S",
+        "C": "H2O",
+        "D": "H2Te"
+      },
+      "answer": "C",
+      "explanation": "Water has extensive hydrogen bonding, giving it a much higher boiling point than the other group 16 hydrides.",
+      "difficulty": "MEDIUM",
+      "topic": "p-Block Elements (Group 16)"
+    },
+    {
+      "number": 59,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 58.5 g of sodium chloride (molar mass = 58.5 g/mol) is",
+      "options": {
+        "A": "2 mol",
+        "B": "0.5 mol",
+        "C": "3422 mol",
+        "D": "1 mol"
+      },
+      "answer": "D",
+      "explanation": "n = mass / molar mass = 58.5/58.5 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 60,
+      "subject": "Chemistry",
+      "question": "Which of the following is a characteristic of physical adsorption?",
+      "options": {
+        "A": "It is highly specific",
+        "B": "It involves strong chemical bonds",
+        "C": "It is reversible",
+        "D": "It is irreversible"
+      },
+      "answer": "C",
+      "explanation": "Physical adsorption arises from weak van der Waals forces, so it is reversible and not specific.",
+      "difficulty": "EASY",
+      "topic": "Surface Chemistry"
+    },
+    {
+      "number": 61,
+      "subject": "Chemistry",
+      "question": "The unit of the rate constant of a first-order reaction is",
+      "options": {
+        "A": "mol^-1 s^-1",
+        "B": "L mol^-1 s^-1",
+        "C": "s^-1",
+        "D": "mol L^-1 s^-1"
+      },
+      "answer": "C",
+      "explanation": "For a first-order reaction rate = k[A]; matching units gives k in s^-1.",
+      "difficulty": "EASY",
+      "topic": "Chemical Kinetics"
+    },
+    {
+      "number": 62,
+      "subject": "Chemistry",
+      "question": "The mass of a single molecule of a gas of molar mass 32 g/mol is (N_A = 6.022 x 10^23 mol^-1), approximately",
+      "options": {
+        "A": "3.19e-22 g",
+        "B": "5.31e-23 g",
+        "C": "1.93e+25 g",
+        "D": "2.66e-23 g"
+      },
+      "answer": "B",
+      "explanation": "Mass of one molecule = M/N_A = 32/6.022e23 g.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 63,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 44 g of carbon dioxide (molar mass = 44 g/mol) is",
+      "options": {
+        "A": "1936 mol",
+        "B": "1 mol",
+        "C": "0.5 mol",
+        "D": "2 mol"
+      },
+      "answer": "B",
+      "explanation": "n = mass / molar mass = 44/44 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 64,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 18 g of water (molar mass = 18 g/mol) is",
+      "options": {
+        "A": "324 mol",
+        "B": "1 mol",
+        "C": "0.5 mol",
+        "D": "2 mol"
+      },
+      "answer": "B",
+      "explanation": "n = mass / molar mass = 18/18 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 65,
+      "subject": "Chemistry",
+      "question": "Ethanol reacts with metallic sodium to give",
+      "options": {
+        "A": "sodium ethanoate and water",
+        "B": "ethene and hydrogen",
+        "C": "ethanol and sodium hydroxide",
+        "D": "sodium ethoxide and hydrogen"
+      },
+      "answer": "D",
+      "explanation": "2 C2H5OH + 2 Na -> 2 C2H5ONa + H2, giving sodium ethoxide and hydrogen.",
+      "difficulty": "EASY",
+      "topic": "Alcohols and Phenols"
+    },
+    {
+      "number": 66,
+      "subject": "Chemistry",
+      "question": "The molality of a solution containing 5.85 g of a solute (molar mass 58.5 g/mol) in 0.5 kg of solvent is",
+      "options": {
+        "A": "11.7 m",
+        "B": "0.1 m",
+        "C": "0.2 m",
+        "D": "0.4 m"
+      },
+      "answer": "C",
+      "explanation": "Molality = moles of solute / kg of solvent = (5.85/58.5)/0.5.",
+      "difficulty": "HARD",
+      "topic": "Solutions"
+    },
+    {
+      "number": 67,
+      "subject": "Chemistry",
+      "question": "The geometry of the complex ion [Ni(CN)4]^2- is",
+      "options": {
+        "A": "square planar",
+        "B": "tetrahedral",
+        "C": "octahedral",
+        "D": "linear"
+      },
+      "answer": "A",
+      "explanation": "CN^- is a strong-field ligand; Ni^2+ (d8) undergoes dsp2 hybridisation, giving a square planar geometry.",
+      "difficulty": "HARD",
+      "topic": "Coordination Compounds"
+    },
+    {
+      "number": 68,
+      "subject": "Chemistry",
+      "question": "The mass of a single molecule of a gas of molar mass 44 g/mol is (N_A = 6.022 x 10^23 mol^-1), approximately",
+      "options": {
+        "A": "7.31e-23 g",
+        "B": "3.65e-23 g",
+        "C": "2.65e+25 g",
+        "D": "4.38e-22 g"
+      },
+      "answer": "A",
+      "explanation": "Mass of one molecule = M/N_A = 44/6.022e23 g.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 69,
+      "subject": "Chemistry",
+      "question": "The molarity of a solution containing 1 mol of solute in 2 L of solution is",
+      "options": {
+        "A": "0.5 M",
+        "B": "2 M",
+        "C": "0.001 M",
+        "D": "1 M"
+      },
+      "answer": "A",
+      "explanation": "Molarity = moles of solute / volume of solution (L) = 1/2.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 70,
+      "subject": "Chemistry",
+      "question": "Which of the following is a transition element?",
+      "options": {
+        "A": "Ca (Z = 20)",
+        "B": "Zn (Z = 30)",
+        "C": "Na (Z = 11)",
+        "D": "Fe (Z = 26)"
+      },
+      "answer": "D",
+      "explanation": "A transition element has a partially filled d subshell in a common oxidation state; Fe qualifies, whereas Ca, Zn and Na do not.",
+      "difficulty": "EASY",
+      "topic": "d-Block Elements"
+    },
+    {
+      "number": 71,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 98 g of sulphuric acid (molar mass = 98 g/mol) is",
+      "options": {
+        "A": "0.5 mol",
+        "B": "2 mol",
+        "C": "1 mol",
+        "D": "9604 mol"
+      },
+      "answer": "C",
+      "explanation": "n = mass / molar mass = 98/98 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 72,
+      "subject": "Chemistry",
+      "question": "The electronic configuration of copper (Z = 29) is",
+      "options": {
+        "A": "[Ar]3d9 4s2",
+        "B": "[Ar]3d8 4s2",
+        "C": "[Ar]3d10 4s2",
+        "D": "[Ar]3d10 4s1"
+      },
+      "answer": "D",
+      "explanation": "The fully filled 3d10 4s1 arrangement is more stable for copper, so Cu is [Ar]3d10 4s1.",
+      "difficulty": "MEDIUM",
+      "topic": "d-Block Elements"
+    },
+    {
+      "number": 73,
+      "subject": "Chemistry",
+      "question": "The number of molecules in 2 g of a substance of molar mass 2 g/mol is (N_A = 6.022 x 10^23 mol^-1)",
+      "options": {
+        "A": "3.01e+23",
+        "B": "1",
+        "C": "2.41e+24",
+        "D": "6.02e+23"
+      },
+      "answer": "D",
+      "explanation": "N = (mass/M) x N_A = (2/2) x 6.022e23.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 74,
+      "subject": "Chemistry",
+      "question": "The IUPAC name of K4[Fe(CN)6] is",
+      "options": {
+        "A": "potassium hexacyanoiron(II)",
+        "B": "potassium hexacyanidoferrate(III)",
+        "C": "potassium ferrocyanide(III)",
+        "D": "potassium hexacyanidoferrate(II)"
+      },
+      "answer": "D",
+      "explanation": "The complex anion [Fe(CN)6]^4- contains Fe in the +2 state, so the name is potassium hexacyanidoferrate(II).",
+      "difficulty": "MEDIUM",
+      "topic": "Coordination Compounds"
+    },
+    {
+      "number": 75,
+      "subject": "Chemistry",
+      "question": "The mass of a single molecule of a gas of molar mass 18 g/mol is (N_A = 6.022 x 10^23 mol^-1), approximately",
+      "options": {
+        "A": "1.49e-23 g",
+        "B": "1.08e+25 g",
+        "C": "2.99e-23 g",
+        "D": "1.79e-22 g"
+      },
+      "answer": "C",
+      "explanation": "Mass of one molecule = M/N_A = 18/6.022e23 g.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 76,
+      "subject": "Chemistry",
+      "question": "The number of molecules in 32 g of a substance of molar mass 32 g/mol is (N_A = 6.022 x 10^23 mol^-1)",
+      "options": {
+        "A": "3.01e+23",
+        "B": "6.02e+23",
+        "C": "1",
+        "D": "6.17e+26"
+      },
+      "answer": "B",
+      "explanation": "N = (mass/M) x N_A = (32/32) x 6.022e23.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 77,
+      "subject": "Chemistry",
+      "question": "The strongest base in aqueous solution among the following is",
+      "options": {
+        "A": "(CH3)2NH",
+        "B": "CH3NH2",
+        "C": "C6H5NH2",
+        "D": "NH3"
+      },
+      "answer": "A",
+      "explanation": "The +I effect of two methyl groups and hydration make dimethylamine a stronger base than the others; aniline is weakest due to resonance.",
+      "difficulty": "MEDIUM",
+      "topic": "Amines"
+    },
+    {
+      "number": 78,
+      "subject": "Chemistry",
+      "question": "For a certain reaction, doubling the concentration of A doubles the rate. The order of the reaction with respect to A is",
+      "options": {
+        "A": "second",
+        "B": "third",
+        "C": "zero",
+        "D": "first"
+      },
+      "answer": "D",
+      "explanation": "Rate doubling when [A] doubles means rate ∝ [A]^1, so the order with respect to A is one.",
+      "difficulty": "HARD",
+      "topic": "Chemical Kinetics"
+    },
+    {
+      "number": 79,
+      "subject": "Chemistry",
+      "question": "The number of molecules in 44 g of a substance of molar mass 44 g/mol is (N_A = 6.022 x 10^23 mol^-1)",
+      "options": {
+        "A": "6.02e+23",
+        "B": "3.01e+23",
+        "C": "1",
+        "D": "1.17e+27"
+      },
+      "answer": "A",
+      "explanation": "N = (mass/M) x N_A = (44/44) x 6.022e23.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 80,
+      "subject": "Chemistry",
+      "question": "The number of moles present in 40 g of sodium hydroxide (molar mass = 40 g/mol) is",
+      "options": {
+        "A": "0.5 mol",
+        "B": "2 mol",
+        "C": "1 mol",
+        "D": "1600 mol"
+      },
+      "answer": "C",
+      "explanation": "n = mass / molar mass = 40/40 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 81,
+      "subject": "Chemistry",
+      "question": "The molality of a solution containing 4 g of a solute (molar mass 40 g/mol) in 1 kg of solvent is",
+      "options": {
+        "A": "0.1 m",
+        "B": "0.05 m",
+        "C": "4 m",
+        "D": "0.2 m"
+      },
+      "answer": "A",
+      "explanation": "Molality = moles of solute / kg of solvent = (4/40)/1.",
+      "difficulty": "HARD",
+      "topic": "Solutions"
+    },
+    {
+      "number": 82,
+      "subject": "Chemistry",
+      "question": "The IUPAC name of CH3CHO is",
+      "options": {
+        "A": "ethanone",
+        "B": "ethanal",
+        "C": "propanal",
+        "D": "methanal"
+      },
+      "answer": "B",
+      "explanation": "CH3CHO has two carbon atoms and an aldehyde group, so it is ethanal.",
+      "difficulty": "EASY",
+      "topic": "Aldehydes and Ketones"
+    },
+    {
+      "number": 83,
+      "subject": "Chemistry",
+      "question": "The correct order of reactivity towards the SN2 reaction is",
+      "options": {
+        "A": "methyl > primary > secondary > tertiary",
+        "B": "secondary > tertiary > primary > methyl",
+        "C": "primary > methyl > secondary > tertiary",
+        "D": "tertiary > secondary > primary > methyl"
+      },
+      "answer": "A",
+      "explanation": "SN2 reactivity decreases with increasing steric hindrance, so methyl > primary > secondary > tertiary.",
+      "difficulty": "MEDIUM",
+      "topic": "Haloalkanes"
+    },
+    {
+      "number": 84,
+      "subject": "Chemistry",
+      "question": "Which of the following is more acidic?",
+      "options": {
+        "A": "Phenol",
+        "B": "Ethanol",
+        "C": "Both are equally acidic",
+        "D": "Neither is acidic"
+      },
+      "answer": "A",
+      "explanation": "The phenoxide ion is stabilised by resonance, so phenol is more acidic than ethanol.",
+      "difficulty": "MEDIUM",
+      "topic": "Alcohols and Phenols"
+    },
+    {
+      "number": 85,
+      "subject": "Chemistry",
+      "question": "The most electronegative element among the group 15 elements is",
+      "options": {
+        "A": "nitrogen",
+        "B": "phosphorus",
+        "C": "bismuth",
+        "D": "arsenic"
+      },
+      "answer": "A",
+      "explanation": "Electronegativity decreases down group 15; nitrogen is the most electronegative of them.",
+      "difficulty": "EASY",
+      "topic": "p-Block Elements (Group 15)"
+    },
+    {
+      "number": 86,
+      "subject": "Chemistry",
+      "question": "The molarity of a solution containing 2 mol of solute in 0.5 L of solution is",
+      "options": {
+        "A": "8 M",
+        "B": "1 M",
+        "C": "0.004 M",
+        "D": "4 M"
+      },
+      "answer": "D",
+      "explanation": "Molarity = moles of solute / volume of solution (L) = 2/0.5.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 87,
+      "subject": "Chemistry",
+      "question": "The half-life of a first-order reaction is",
+      "options": {
+        "A": "inversely proportional to initial concentration",
+        "B": "proportional to the square of initial concentration",
+        "C": "independent of initial concentration",
+        "D": "directly proportional to initial concentration"
+      },
+      "answer": "C",
+      "explanation": "For a first-order reaction t(1/2) = 0.693/k, which does not contain the initial concentration.",
+      "difficulty": "MEDIUM",
+      "topic": "Chemical Kinetics"
+    },
+    {
+      "number": 88,
+      "subject": "Chemistry",
+      "question": "Which of the following undergoes an SN1 reaction most readily?",
+      "options": {
+        "A": "(CH3)3CBr",
+        "B": "CH3CH2Br",
+        "C": "(CH3)2CHBr",
+        "D": "CH3Br"
+      },
+      "answer": "A",
+      "explanation": "SN1 proceeds through a carbocation; the tertiary carbonium ion from (CH3)3CBr is the most stable, so it reacts fastest.",
+      "difficulty": "HARD",
+      "topic": "Haloalkanes"
+    },
+    {
+      "number": 89,
+      "subject": "Chemistry",
+      "question": "One faraday of electric charge is equal to",
+      "options": {
+        "A": "9650 C",
+        "B": "965 C",
+        "C": "1 C",
+        "D": "96500 C"
+      },
+      "answer": "D",
+      "explanation": "One faraday equals the charge on one mole of electrons, about 96500 C mol^-1.",
+      "difficulty": "HARD",
+      "topic": "Electrochemistry"
+    },
+    {
+      "number": 90,
+      "subject": "Chemistry",
+      "question": "The number of molecules in 18 g of a substance of molar mass 18 g/mol is (N_A = 6.022 x 10^23 mol^-1)",
+      "options": {
+        "A": "1.95e+26",
+        "B": "6.02e+23",
+        "C": "1",
+        "D": "3.01e+23"
+      },
+      "answer": "B",
+      "explanation": "N = (mass/M) x N_A = (18/18) x 6.022e23.",
+      "difficulty": "MEDIUM",
+      "topic": "Some Basic Concepts of Chemistry"
+    },
+    {
+      "number": 91,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the mitochondrion?",
+      "options": {
+        "A": "the site of photosynthesis in plant cells",
+        "B": "the site of aerobic respiration and ATP synthesis",
+        "C": "an organelle involved in photorespiration and fatty-acid breakdown",
+        "D": "the site of ribosomal RNA synthesis"
+      },
+      "answer": "B",
+      "explanation": "the mitochondrion refers to the site of aerobic respiration and ATP synthesis.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 92,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the plasmodesma?",
+      "options": {
+        "A": "a structure that organises the spindle during cell division",
+        "B": "a cytoplasmic channel connecting adjacent plant cells",
+        "C": "the site of protein synthesis",
+        "D": "an organelle containing hydrolytic enzymes for intracellular digestion"
+      },
+      "answer": "B",
+      "explanation": "the plasmodesma refers to a cytoplasmic channel connecting adjacent plant cells.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 93,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes ethylene?",
+      "options": {
+        "A": "promoting stem elongation, bolting and seed germination",
+        "B": "a gaseous hormone that promotes fruit ripening",
+        "C": "promoting apical dominance and cell elongation",
+        "D": "closing stomata and inducing seed dormancy"
+      },
+      "answer": "B",
+      "explanation": "ethylene refers to a gaseous hormone that promotes fruit ripening.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 94,
+      "subject": "Botany",
+      "question": "The net gain of ATP molecules by substrate-level phosphorylation during glycolysis of one glucose molecule is",
+      "options": {
+        "A": "1 ATP",
+        "B": "38 ATP",
+        "C": "4 ATP",
+        "D": "2 ATP"
+      },
+      "answer": "D",
+      "explanation": "Glycolysis uses 2 ATP and produces 4 ATP, giving a net gain of 2 ATP.",
+      "difficulty": "MEDIUM",
+      "topic": "Respiration in Plants"
+    },
+    {
+      "number": 95,
+      "subject": "Botany",
+      "question": "The plant hormone responsible for cell elongation and phototropism is",
+      "options": {
+        "A": "Gibberellin",
+        "B": "Auxin",
+        "C": "Cytokinin",
+        "D": "Ethylene"
+      },
+      "answer": "B",
+      "explanation": "Auxin (IAA) promotes cell elongation and mediates phototropism by unequal distribution on the shaded side.",
+      "difficulty": "EASY",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 96,
+      "subject": "Botany",
+      "question": "The enzyme that unwinds the DNA double helix during replication is",
+      "options": {
+        "A": "Primase",
+        "B": "Ligase",
+        "C": "DNA polymerase",
+        "D": "Helicase"
+      },
+      "answer": "D",
+      "explanation": "Helicase unwinds the DNA double helix at the replication fork.",
+      "difficulty": "MEDIUM",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 97,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes phycoerythrin?",
+      "options": {
+        "A": "the stored food of red algae",
+        "B": "the stored food of brown algae",
+        "C": "the red pigment characteristic of Rhodophyceae",
+        "D": "photosynthetic parenchyma of green algae"
+      },
+      "answer": "C",
+      "explanation": "phycoerythrin refers to the red pigment characteristic of Rhodophyceae.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 98,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes laminarin and mannitol?",
+      "options": {
+        "A": "the free-living gametophyte of a fern",
+        "B": "the stored food of brown algae",
+        "C": "the first filamentous stage of a moss",
+        "D": "photosynthetic parenchyma of green algae"
+      },
+      "answer": "B",
+      "explanation": "laminarin and mannitol refers to the stored food of brown algae.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 99,
+      "subject": "Botany",
+      "question": "The process by which mRNA is synthesised from a DNA template is called",
+      "options": {
+        "A": "Transcription",
+        "B": "Replication",
+        "C": "Translation",
+        "D": "Mutation"
+      },
+      "answer": "A",
+      "explanation": "Transcription is the synthesis of RNA from a DNA template.",
+      "difficulty": "EASY",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 100,
+      "subject": "Botany",
+      "question": "The variety of living organisms present in a region is called",
+      "options": {
+        "A": "Homeostasis",
+        "B": "Ecology",
+        "C": "Succession",
+        "D": "Biodiversity"
+      },
+      "answer": "D",
+      "explanation": "Biodiversity refers to the variety and variability of living organisms and the ecosystems they form.",
+      "difficulty": "EASY",
+      "topic": "Biodiversity and Conservation"
+    },
+    {
+      "number": 101,
+      "subject": "Botany",
+      "question": "The final electron acceptor of the electron transport chain in aerobic respiration is",
+      "options": {
+        "A": "Oxygen",
+        "B": "NAD+",
+        "C": "Carbon dioxide",
+        "D": "FAD"
+      },
+      "answer": "A",
+      "explanation": "Oxygen accepts the electrons at the end of the mitochondrial electron transport chain and forms water.",
+      "difficulty": "EASY",
+      "topic": "Respiration in Plants"
+    },
+    {
+      "number": 102,
+      "subject": "Botany",
+      "question": "In a DNA double helix, adenine pairs with",
+      "options": {
+        "A": "Uracil",
+        "B": "Guanine",
+        "C": "Cytosine",
+        "D": "Thymine"
+      },
+      "answer": "D",
+      "explanation": "A pairs with T through two hydrogen bonds and G pairs with C through three hydrogen bonds.",
+      "difficulty": "HARD",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 103,
+      "subject": "Botany",
+      "question": "Apical dominance in plants is caused mainly by",
+      "options": {
+        "A": "Gibberellin",
+        "B": "Cytokinin",
+        "C": "Auxin",
+        "D": "Ethylene"
+      },
+      "answer": "C",
+      "explanation": "Auxin produced by the apical bud suppresses the growth of lateral buds, causing apical dominance.",
+      "difficulty": "HARD",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 104,
+      "subject": "Botany",
+      "question": "The 'father of genetics' is",
+      "options": {
+        "A": "Hugo de Vries",
+        "B": "Gregor Mendel",
+        "C": "T.H. Morgan",
+        "D": "Charles Darwin"
+      },
+      "answer": "B",
+      "explanation": "Gregor Mendel is regarded as the father of genetics for his work on the laws of inheritance.",
+      "difficulty": "EASY",
+      "topic": "Principles of Inheritance and Variation"
+    },
+    {
+      "number": 105,
+      "subject": "Botany",
+      "question": "The logistic growth equation for a population is",
+      "options": {
+        "A": "dN/dt = rN/N",
+        "B": "dN/dt = rN(K - N)/K",
+        "C": "dN/dt = rK",
+        "D": "dN/dt = rN"
+      },
+      "answer": "B",
+      "explanation": "Logistic growth is described by dN/dt = rN(K - N)/K, where K is the carrying capacity.",
+      "difficulty": "MEDIUM",
+      "topic": "Organisms and Populations"
+    },
+    {
+      "number": 106,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the Golgi apparatus?",
+      "options": {
+        "A": "the site of photosynthesis in plant cells",
+        "B": "the site of ribosomal RNA synthesis",
+        "C": "the packaging and secretion of proteins and lipids",
+        "D": "the site of aerobic respiration and ATP synthesis"
+      },
+      "answer": "C",
+      "explanation": "the Golgi apparatus refers to the packaging and secretion of proteins and lipids.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 107,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the peroxisome?",
+      "options": {
+        "A": "an organelle involved in photorespiration and fatty-acid breakdown",
+        "B": "the membrane surrounding the plant cell vacuole",
+        "C": "a structure that organises the spindle during cell division",
+        "D": "a cytoplasmic channel connecting adjacent plant cells"
+      },
+      "answer": "A",
+      "explanation": "the peroxisome refers to an organelle involved in photorespiration and fatty-acid breakdown.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 108,
+      "subject": "Botany",
+      "question": "The plant hormone that promotes cell division (cytokinesis) is",
+      "options": {
+        "A": "Gibberellin",
+        "B": "Auxin",
+        "C": "Cytokinin",
+        "D": "Abscisic acid"
+      },
+      "answer": "C",
+      "explanation": "Cytokinins promote cell division and are synthesised in regions of rapid division such as root tips.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 109,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes cytokinin?",
+      "options": {
+        "A": "closing stomata and inducing seed dormancy",
+        "B": "a gaseous hormone that promotes fruit ripening",
+        "C": "promoting apical dominance and cell elongation",
+        "D": "promoting cell division and delaying senescence"
+      },
+      "answer": "D",
+      "explanation": "cytokinin refers to promoting cell division and delaying senescence.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 110,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the tonoplast?",
+      "options": {
+        "A": "a cytoplasmic channel connecting adjacent plant cells",
+        "B": "the site of protein synthesis",
+        "C": "the membrane surrounding the plant cell vacuole",
+        "D": "a structure that organises the spindle during cell division"
+      },
+      "answer": "C",
+      "explanation": "the tonoplast refers to the membrane surrounding the plant cell vacuole.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 111,
+      "subject": "Botany",
+      "question": "According to the ten per cent law, the energy transferred from one trophic level to the next is about",
+      "options": {
+        "A": "50%",
+        "B": "90%",
+        "C": "1%",
+        "D": "10%"
+      },
+      "answer": "D",
+      "explanation": "Lindeman's ten percent law states that only about 10% of the energy at one trophic level is transferred to the next.",
+      "difficulty": "HARD",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 112,
+      "subject": "Botany",
+      "question": "The producers of an ecosystem are",
+      "options": {
+        "A": "Consumers",
+        "B": "Herbivores",
+        "C": "Decomposers",
+        "D": "Green plants (autotrophs)"
+      },
+      "answer": "D",
+      "explanation": "Green plants (autotrophs) trap solar energy and form the base of every food chain.",
+      "difficulty": "EASY",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 113,
+      "subject": "Botany",
+      "question": "The association between an alga and a fungus in a lichen is an example of",
+      "options": {
+        "A": "Predation",
+        "B": "Parasitism",
+        "C": "Commensalism",
+        "D": "Mutualism"
+      },
+      "answer": "D",
+      "explanation": "In a lichen the alga photosynthesises and the fungus provides shelter and minerals, so both benefit (mutualism).",
+      "difficulty": "EASY",
+      "topic": "Organisms and Populations"
+    },
+    {
+      "number": 114,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes floridean starch?",
+      "options": {
+        "A": "the stored food of brown algae",
+        "B": "the stored food of red algae",
+        "C": "photosynthetic parenchyma of green algae",
+        "D": "the first filamentous stage of a moss"
+      },
+      "answer": "B",
+      "explanation": "floridean starch refers to the stored food of red algae.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 115,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the nucleolus?",
+      "options": {
+        "A": "an organelle involved in photorespiration and fatty-acid breakdown",
+        "B": "a cytoplasmic channel connecting adjacent plant cells",
+        "C": "the membrane surrounding the plant cell vacuole",
+        "D": "the site of ribosomal RNA synthesis"
+      },
+      "answer": "D",
+      "explanation": "the nucleolus refers to the site of ribosomal RNA synthesis.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 116,
+      "subject": "Botany",
+      "question": "The light reaction of photosynthesis takes place in the",
+      "options": {
+        "A": "Outer chloroplast membrane",
+        "B": "Stroma",
+        "C": "Cytoplasm",
+        "D": "Thylakoid membrane"
+      },
+      "answer": "D",
+      "explanation": "The photosystems and electron carriers of the light reaction are embedded in the thylakoid membrane.",
+      "difficulty": "EASY",
+      "topic": "Photosynthesis"
+    },
+    {
+      "number": 117,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes chlorenchyma?",
+      "options": {
+        "A": "photosynthetic parenchyma of green algae",
+        "B": "the first filamentous stage of a moss",
+        "C": "the free-living gametophyte of a fern",
+        "D": "the brown pigment characteristic of Phaeophyceae"
+      },
+      "answer": "A",
+      "explanation": "chlorenchyma refers to photosynthetic parenchyma of green algae.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 118,
+      "subject": "Botany",
+      "question": "The genotypic ratio obtained in the F2 generation of a monohybrid cross is",
+      "options": {
+        "A": "1:1",
+        "B": "1:2:1",
+        "C": "3:1",
+        "D": "9:3:3:1"
+      },
+      "answer": "B",
+      "explanation": "A monohybrid cross gives the genotypic ratio 1 (homozygous dominant) : 2 (heterozygous) : 1 (homozygous recessive).",
+      "difficulty": "HARD",
+      "topic": "Principles of Inheritance and Variation"
+    },
+    {
+      "number": 119,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the lysosome?",
+      "options": {
+        "A": "the site of aerobic respiration and ATP synthesis",
+        "B": "the site of photosynthesis in plant cells",
+        "C": "an organelle containing hydrolytic enzymes for intracellular digestion",
+        "D": "the packaging and secretion of proteins and lipids"
+      },
+      "answer": "C",
+      "explanation": "the lysosome refers to an organelle containing hydrolytic enzymes for intracellular digestion.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 120,
+      "subject": "Botany",
+      "question": "In a parasitic food chain, the pyramid of numbers is",
+      "options": {
+        "A": "Always upright",
+        "B": "Not defined",
+        "C": "Inverted",
+        "D": "Always spindle-shaped"
+      },
+      "answer": "C",
+      "explanation": "A single host can support a large number of parasites, so the pyramid of numbers in a parasitic food chain is inverted.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 121,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the centriole?",
+      "options": {
+        "A": "an organelle containing hydrolytic enzymes for intracellular digestion",
+        "B": "the site of protein synthesis",
+        "C": "a structure that organises the spindle during cell division",
+        "D": "the packaging and secretion of proteins and lipids"
+      },
+      "answer": "C",
+      "explanation": "the centriole refers to a structure that organises the spindle during cell division.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 122,
+      "subject": "Botany",
+      "question": "The first stable product of the C4 (Hatch-Slack) pathway is",
+      "options": {
+        "A": "Ribulose bisphosphate",
+        "B": "Malic acid",
+        "C": "3-phosphoglyceric acid",
+        "D": "Oxaloacetic acid (OAA)"
+      },
+      "answer": "D",
+      "explanation": "In C4 plants CO2 is first fixed onto phosphoenolpyruvate to give the 4-carbon oxaloacetic acid (OAA).",
+      "difficulty": "MEDIUM",
+      "topic": "Photosynthesis"
+    },
+    {
+      "number": 123,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the ribosome?",
+      "options": {
+        "A": "an organelle containing hydrolytic enzymes for intracellular digestion",
+        "B": "the site of protein synthesis",
+        "C": "the site of aerobic respiration and ATP synthesis",
+        "D": "the packaging and secretion of proteins and lipids"
+      },
+      "answer": "B",
+      "explanation": "the ribosome refers to the site of protein synthesis.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 124,
+      "subject": "Botany",
+      "question": "The greenhouse gas that contributes most to global warming is",
+      "options": {
+        "A": "Methane",
+        "B": "Oxygen",
+        "C": "Carbon dioxide",
+        "D": "Nitrogen"
+      },
+      "answer": "C",
+      "explanation": "Carbon dioxide is the principal greenhouse gas responsible for global warming, although methane is more potent per molecule.",
+      "difficulty": "MEDIUM",
+      "topic": "Environmental Issues"
+    },
+    {
+      "number": 125,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes gibberellin?",
+      "options": {
+        "A": "a gaseous hormone that promotes fruit ripening",
+        "B": "closing stomata and inducing seed dormancy",
+        "C": "promoting stem elongation, bolting and seed germination",
+        "D": "promoting cell division and delaying senescence"
+      },
+      "answer": "C",
+      "explanation": "gibberellin refers to promoting stem elongation, bolting and seed germination.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 126,
+      "subject": "Botany",
+      "question": "The number of NADH molecules produced per glucose molecule during the Krebs cycle is",
+      "options": {
+        "A": "6 NADH",
+        "B": "3 NADH",
+        "C": "4 NADH",
+        "D": "2 NADH"
+      },
+      "answer": "A",
+      "explanation": "Each turn of the Krebs cycle yields 3 NADH; one glucose gives two turns, so 6 NADH are produced.",
+      "difficulty": "HARD",
+      "topic": "Respiration in Plants"
+    },
+    {
+      "number": 127,
+      "subject": "Botany",
+      "question": "The deficiency of magnesium in plants typically causes",
+      "options": {
+        "A": "Premature leaf fall",
+        "B": "Stunted root growth",
+        "C": "Interveinal chlorosis",
+        "D": "Marginal necrosis of leaves"
+      },
+      "answer": "C",
+      "explanation": "Magnesium is a central atom of chlorophyll; its deficiency causes chlorosis between the veins (interveinal chlorosis).",
+      "difficulty": "HARD",
+      "topic": "Mineral Nutrition"
+    },
+    {
+      "number": 128,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes auxin?",
+      "options": {
+        "A": "promoting cell division and delaying senescence",
+        "B": "promoting stem elongation, bolting and seed germination",
+        "C": "promoting apical dominance and cell elongation",
+        "D": "a gaseous hormone that promotes fruit ripening"
+      },
+      "answer": "C",
+      "explanation": "auxin refers to promoting apical dominance and cell elongation.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 129,
+      "subject": "Botany",
+      "question": "The genetic material in most organisms is",
+      "options": {
+        "A": "Lipid",
+        "B": "Protein",
+        "C": "RNA",
+        "D": "DNA"
+      },
+      "answer": "D",
+      "explanation": "DNA is the genetic material in the vast majority of organisms, although some viruses use RNA.",
+      "difficulty": "EASY",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 130,
+      "subject": "Botany",
+      "question": "The double-helix model of DNA was proposed by",
+      "options": {
+        "A": "Mendel and Morgan",
+        "B": "Watson and Crick",
+        "C": "Nirenberg and Khorana",
+        "D": "Griffith and Avery"
+      },
+      "answer": "B",
+      "explanation": "James Watson and Francis Crick proposed the double-helix model of DNA in 1953.",
+      "difficulty": "MEDIUM",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 131,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes the chloroplast?",
+      "options": {
+        "A": "the site of photosynthesis in plant cells",
+        "B": "the site of ribosomal RNA synthesis",
+        "C": "an organelle involved in photorespiration and fatty-acid breakdown",
+        "D": "the membrane surrounding the plant cell vacuole"
+      },
+      "answer": "A",
+      "explanation": "the chloroplast refers to the site of photosynthesis in plant cells.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell: The Unit of Life"
+    },
+    {
+      "number": 132,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes abscisic acid?",
+      "options": {
+        "A": "promoting stem elongation, bolting and seed germination",
+        "B": "closing stomata and inducing seed dormancy",
+        "C": "promoting apical dominance and cell elongation",
+        "D": "promoting cell division and delaying senescence"
+      },
+      "answer": "B",
+      "explanation": "abscisic acid refers to closing stomata and inducing seed dormancy.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Growth and Development"
+    },
+    {
+      "number": 133,
+      "subject": "Botany",
+      "question": "In the Calvin cycle, the first stable product is",
+      "options": {
+        "A": "Glucose",
+        "B": "Oxaloacetic acid",
+        "C": "3-phosphoglyceric acid",
+        "D": "Pyruvic acid"
+      },
+      "answer": "C",
+      "explanation": "Ribulose bisphosphate carboxylase fixes CO2 onto RuBP, and the first stable product is 3-phosphoglyceric acid (3-PGA).",
+      "difficulty": "HARD",
+      "topic": "Photosynthesis"
+    },
+    {
+      "number": 134,
+      "subject": "Botany",
+      "question": "The phenotypic ratio obtained in the F2 generation of a dihybrid cross is",
+      "options": {
+        "A": "3:1",
+        "B": "1:2:1",
+        "C": "9:3:3:1",
+        "D": "1:1:1:1"
+      },
+      "answer": "C",
+      "explanation": "Mendel's dihybrid cross gives the F2 phenotypic ratio 9:3:3:1.",
+      "difficulty": "MEDIUM",
+      "topic": "Principles of Inheritance and Variation"
+    },
+    {
+      "number": 135,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes fucoxanthin?",
+      "options": {
+        "A": "the brown pigment characteristic of Phaeophyceae",
+        "B": "the stored food of red algae",
+        "C": "the stored food of brown algae",
+        "D": "the red pigment characteristic of Rhodophyceae"
+      },
+      "answer": "A",
+      "explanation": "fucoxanthin refers to the brown pigment characteristic of Phaeophyceae.",
+      "difficulty": "MEDIUM",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 136,
+      "subject": "Zoology",
+      "question": "The structural and functional unit of the nervous system is the",
+      "options": {
+        "A": "Axon",
+        "B": "Neuron",
+        "C": "Nephron",
+        "D": "Neuroglia"
+      },
+      "answer": "B",
+      "explanation": "The neuron is the structural and functional unit of the nervous system.",
+      "difficulty": "EASY",
+      "topic": "Neural Control and Coordination"
+    },
+    {
+      "number": 137,
+      "subject": "Zoology",
+      "question": "The hormone secreted by the corpus luteum is",
+      "options": {
+        "A": "FSH",
+        "B": "Estrogen only",
+        "C": "Progesterone",
+        "D": "LH"
+      },
+      "answer": "C",
+      "explanation": "The corpus luteum mainly secretes progesterone, which maintains the uterine lining during the early stages of pregnancy.",
+      "difficulty": "HARD",
+      "topic": "Chemical Coordination and Integration"
+    },
+    {
+      "number": 138,
+      "subject": "Zoology",
+      "question": "The theory of natural selection was proposed by",
+      "options": {
+        "A": "Darwin",
+        "B": "Lamarck",
+        "C": "Mendel",
+        "D": "De Vries"
+      },
+      "answer": "A",
+      "explanation": "Charles Darwin proposed the theory of natural selection in his book 'On the Origin of Species'.",
+      "difficulty": "MEDIUM",
+      "topic": "Evolution"
+    },
+    {
+      "number": 139,
+      "subject": "Zoology",
+      "question": "Alternative forms of the same gene are called",
+      "options": {
+        "A": "Genomes",
+        "B": "Chromosomes",
+        "C": "Genes",
+        "D": "Alleles"
+      },
+      "answer": "D",
+      "explanation": "Alleles are the alternative forms of a gene that occupy the same locus on homologous chromosomes.",
+      "difficulty": "EASY",
+      "topic": "Principles of Inheritance and Variation"
+    },
+    {
+      "number": 140,
+      "subject": "Zoology",
+      "question": "The hormone that lowers blood glucose is",
+      "options": {
+        "A": "Glucagon",
+        "B": "Insulin",
+        "C": "Cortisol",
+        "D": "Adrenaline"
+      },
+      "answer": "B",
+      "explanation": "Insulin, secreted by the beta cells of the islets of Langerhans, lowers blood glucose by promoting its uptake and storage.",
+      "difficulty": "EASY",
+      "topic": "Chemical Coordination and Integration"
+    },
+    {
+      "number": 141,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes villi?",
+      "options": {
+        "A": "finger-like projections that increase the surface area for absorption",
+        "B": "a protease secreted by the pancreas that acts in the alkaline small intestine",
+        "C": "a protease that digests proteins to peptones in the acidic stomach",
+        "D": "an enzyme that digests starch to maltose in the mouth"
+      },
+      "answer": "A",
+      "explanation": "villi refers to finger-like projections that increase the surface area for absorption.",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion and Absorption"
+    },
+    {
+      "number": 142,
+      "subject": "Zoology",
+      "question": "The male gamete in humans is the",
+      "options": {
+        "A": "Zygote",
+        "B": "Ovum",
+        "C": "Oogonium",
+        "D": "Spermatozoon"
+      },
+      "answer": "D",
+      "explanation": "The spermatozoon (sperm) is the motile male gamete.",
+      "difficulty": "EASY",
+      "topic": "Human Reproduction"
+    },
+    {
+      "number": 143,
+      "subject": "Zoology",
+      "question": "The non-living components of an ecosystem are called",
+      "options": {
+        "A": "Biotic",
+        "B": "Abiotic",
+        "C": "Climatic only",
+        "D": "Organic"
+      },
+      "answer": "B",
+      "explanation": "Abiotic components include physical and chemical factors such as light, temperature, water and minerals.",
+      "difficulty": "EASY",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 144,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Chordata?",
+      "options": {
+        "A": "flattened worms with flame cells for excretion",
+        "B": "radially symmetrical animals bearing stinging cells (cnidoblasts)",
+        "C": "animals having a notochord, dorsal nerve cord and pharyngeal gill slits",
+        "D": "sponges with a water-canal system and spongin fibres"
+      },
+      "answer": "C",
+      "explanation": "Chordata refers to animals having a notochord, dorsal nerve cord and pharyngeal gill slits.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 145,
+      "subject": "Zoology",
+      "question": "The hormone that triggers ovulation is",
+      "options": {
+        "A": "Progesterone",
+        "B": "FSH",
+        "C": "LH",
+        "D": "Estrogen"
+      },
+      "answer": "C",
+      "explanation": "A surge of luteinising hormone (LH) around the middle of the cycle triggers the rupture of the mature follicle (ovulation).",
+      "difficulty": "HARD",
+      "topic": "Human Reproduction"
+    },
+    {
+      "number": 146,
+      "subject": "Zoology",
+      "question": "The pyramid of energy in an ecosystem is",
+      "options": {
+        "A": "Variable",
+        "B": "Sometimes inverted",
+        "C": "Always upright",
+        "D": "Always inverted"
+      },
+      "answer": "C",
+      "explanation": "Energy decreases at each successive trophic level, so the pyramid of energy is always upright.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 147,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes bile?",
+      "options": {
+        "A": "a protease that digests proteins to peptones in the acidic stomach",
+        "B": "a secretion that emulsifies fats but contains no digestive enzyme",
+        "C": "a protease secreted by the pancreas that acts in the alkaline small intestine",
+        "D": "finger-like projections that increase the surface area for absorption"
+      },
+      "answer": "B",
+      "explanation": "bile refers to a secretion that emulsifies fats but contains no digestive enzyme.",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion and Absorption"
+    },
+    {
+      "number": 148,
+      "subject": "Zoology",
+      "question": "The ten percent law of energy transfer was given by",
+      "options": {
+        "A": "Darwin",
+        "B": "Tansley",
+        "C": "Odum",
+        "D": "Lindeman"
+      },
+      "answer": "D",
+      "explanation": "Lindeman (1942) proposed that only about 10% of the energy at one trophic level is transferred to the next.",
+      "difficulty": "MEDIUM",
+      "topic": "Ecosystem"
+    },
+    {
+      "number": 149,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes salivary amylase?",
+      "options": {
+        "A": "a secretion that emulsifies fats but contains no digestive enzyme",
+        "B": "an enzyme that digests starch to maltose in the mouth",
+        "C": "finger-like projections that increase the surface area for absorption",
+        "D": "an enzyme that splits fats into glycerol and fatty acids"
+      },
+      "answer": "B",
+      "explanation": "salivary amylase refers to an enzyme that digests starch to maltose in the mouth.",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion and Absorption"
+    },
+    {
+      "number": 150,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Arthropoda?",
+      "options": {
+        "A": "the largest phylum, with jointed appendages and chitinous exoskeleton",
+        "B": "soft-bodied animals usually with a calcareous shell and a mantle",
+        "C": "spiny-skinned animals with a water-vascular system",
+        "D": "a phylum of worm-like animals with a stomochord"
+      },
+      "answer": "A",
+      "explanation": "Arthropoda refers to the largest phylum, with jointed appendages and chitinous exoskeleton.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 151,
+      "subject": "Zoology",
+      "question": "Fertilisation in humans normally occurs in the",
+      "options": {
+        "A": "Uterus",
+        "B": "Ovary",
+        "C": "Fallopian tube (ampulla)",
+        "D": "Cervix"
+      },
+      "answer": "C",
+      "explanation": "Fertilisation normally takes place in the ampullary-isthmic junction of the fallopian tube.",
+      "difficulty": "MEDIUM",
+      "topic": "Human Reproduction"
+    },
+    {
+      "number": 152,
+      "subject": "Zoology",
+      "question": "The surgical method of permanent birth control in females is",
+      "options": {
+        "A": "IUD",
+        "B": "Vasectomy",
+        "C": "Tubectomy",
+        "D": "Condom"
+      },
+      "answer": "C",
+      "explanation": "Tubectomy (tubal ligation) is the surgical sterilisation method used in females; vasectomy is used in males.",
+      "difficulty": "EASY",
+      "topic": "Reproductive Health"
+    },
+    {
+      "number": 153,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Porifera?",
+      "options": {
+        "A": "flattened worms with flame cells for excretion",
+        "B": "radially symmetrical animals bearing stinging cells (cnidoblasts)",
+        "C": "sponges with a water-canal system and spongin fibres",
+        "D": "roundworms possessing a pseudocoelom"
+      },
+      "answer": "C",
+      "explanation": "Porifera refers to sponges with a water-canal system and spongin fibres.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 154,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Aschelminthes?",
+      "options": {
+        "A": "worms with true metameric segmentation and a closed circulatory system",
+        "B": "the largest phylum, with jointed appendages and chitinous exoskeleton",
+        "C": "roundworms possessing a pseudocoelom",
+        "D": "soft-bodied animals usually with a calcareous shell and a mantle"
+      },
+      "answer": "C",
+      "explanation": "Aschelminthes refers to roundworms possessing a pseudocoelom.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 155,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes an erythrocyte?",
+      "options": {
+        "A": "a red blood cell that transports oxygen using haemoglobin",
+        "B": "a blood cell fragment that helps in blood clotting",
+        "C": "a granulocyte that secretes histamine and heparin",
+        "D": "the most abundant leucocyte, which carries out phagocytosis"
+      },
+      "answer": "A",
+      "explanation": "an erythrocyte refers to a red blood cell that transports oxygen using haemoglobin.",
+      "difficulty": "MEDIUM",
+      "topic": "Body Fluids and Circulation"
+    },
+    {
+      "number": 156,
+      "subject": "Zoology",
+      "question": "Antibody-mediated immunity is also known as",
+      "options": {
+        "A": "Passive immunity",
+        "B": "Innate immunity",
+        "C": "Cell-mediated immunity",
+        "D": "Humoral immunity"
+      },
+      "answer": "D",
+      "explanation": "Antibody-mediated (B-cell) immunity acts through antibodies in the body fluids, so it is called humoral immunity.",
+      "difficulty": "HARD",
+      "topic": "Human Health and Disease"
+    },
+    {
+      "number": 157,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Mollusca?",
+      "options": {
+        "A": "soft-bodied animals usually with a calcareous shell and a mantle",
+        "B": "spiny-skinned animals with a water-vascular system",
+        "C": "a phylum of worm-like animals with a stomochord",
+        "D": "animals having a notochord, dorsal nerve cord and pharyngeal gill slits"
+      },
+      "answer": "A",
+      "explanation": "Mollusca refers to soft-bodied animals usually with a calcareous shell and a mantle.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 158,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Platyhelminthes?",
+      "options": {
+        "A": "roundworms possessing a pseudocoelom",
+        "B": "worms with true metameric segmentation and a closed circulatory system",
+        "C": "the largest phylum, with jointed appendages and chitinous exoskeleton",
+        "D": "flattened worms with flame cells for excretion"
+      },
+      "answer": "D",
+      "explanation": "Platyhelminthes refers to flattened worms with flame cells for excretion.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 159,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes lipase?",
+      "options": {
+        "A": "a secretion that emulsifies fats but contains no digestive enzyme",
+        "B": "a protease that digests proteins to peptones in the acidic stomach",
+        "C": "an enzyme that splits fats into glycerol and fatty acids",
+        "D": "finger-like projections that increase the surface area for absorption"
+      },
+      "answer": "C",
+      "explanation": "lipase refers to an enzyme that splits fats into glycerol and fatty acids.",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion and Absorption"
+    },
+    {
+      "number": 160,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes pepsin?",
+      "options": {
+        "A": "an enzyme that digests starch to maltose in the mouth",
+        "B": "a protease that digests proteins to peptones in the acidic stomach",
+        "C": "an enzyme that splits fats into glycerol and fatty acids",
+        "D": "a protease secreted by the pancreas that acts in the alkaline small intestine"
+      },
+      "answer": "B",
+      "explanation": "pepsin refers to a protease that digests proteins to peptones in the acidic stomach.",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion and Absorption"
+    },
+    {
+      "number": 161,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Hemichordata?",
+      "options": {
+        "A": "animals having a notochord, dorsal nerve cord and pharyngeal gill slits",
+        "B": "radially symmetrical animals bearing stinging cells (cnidoblasts)",
+        "C": "sponges with a water-canal system and spongin fibres",
+        "D": "a phylum of worm-like animals with a stomochord"
+      },
+      "answer": "D",
+      "explanation": "Hemichordata refers to a phylum of worm-like animals with a stomochord.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 162,
+      "subject": "Zoology",
+      "question": "The joint between the humerus and the pectoral girdle is a",
+      "options": {
+        "A": "Ball and socket joint",
+        "B": "Hinge joint",
+        "C": "Gliding joint",
+        "D": "Pivot joint"
+      },
+      "answer": "A",
+      "explanation": "The shoulder joint is a ball-and-socket joint, allowing movement in all planes.",
+      "difficulty": "HARD",
+      "topic": "Locomotion and Movement"
+    },
+    {
+      "number": 163,
+      "subject": "Zoology",
+      "question": "The interaction in which both interacting species benefit is called",
+      "options": {
+        "A": "Predation",
+        "B": "Parasitism",
+        "C": "Commensalism",
+        "D": "Mutualism"
+      },
+      "answer": "D",
+      "explanation": "In mutualism both partners benefit, giving a (+/+) relationship, as in lichens and mycorrhizae.",
+      "difficulty": "EASY",
+      "topic": "Organisms and Populations"
+    },
+    {
+      "number": 164,
+      "subject": "Zoology",
+      "question": "The resting membrane potential of a neuron is maintained chiefly by the",
+      "options": {
+        "A": "Ca2+ pump",
+        "B": "Na+ channels only",
+        "C": "Na+/K+ ATPase pump",
+        "D": "K+ channels only"
+      },
+      "answer": "C",
+      "explanation": "The Na+/K+ ATPase pump transports 3 Na+ out and 2 K+ in, maintaining the resting potential across the membrane.",
+      "difficulty": "HARD",
+      "topic": "Neural Control and Coordination"
+    },
+    {
+      "number": 165,
+      "subject": "Zoology",
+      "question": "Malaria is caused by",
+      "options": {
+        "A": "Plasmodium",
+        "B": "Vibrio cholerae",
+        "C": "HIV",
+        "D": "Trypanosoma"
+      },
+      "answer": "A",
+      "explanation": "Malaria is caused by the protozoan Plasmodium, transmitted by the bite of an infected female Anopheles mosquito.",
+      "difficulty": "EASY",
+      "topic": "Human Health and Disease"
+    },
+    {
+      "number": 166,
+      "subject": "Zoology",
+      "question": "Oral contraceptive pills prevent pregnancy mainly by",
+      "options": {
+        "A": "preventing ovulation",
+        "B": "killing sperms in the vagina",
+        "C": "preventing implantation only",
+        "D": "blocking the fallopian tubes"
+      },
+      "answer": "A",
+      "explanation": "Combined oral pills contain hormones that suppress the release of gonadotropins, thereby preventing ovulation.",
+      "difficulty": "MEDIUM",
+      "topic": "Reproductive Health"
+    },
+    {
+      "number": 167,
+      "subject": "Zoology",
+      "question": "Bt cotton is resistant to insect pests because it carries",
+      "options": {
+        "A": "a gene from yeast",
+        "B": "a gene from E. coli",
+        "C": "cry genes from Bacillus thuringiensis",
+        "D": "a gene from Agrobacterium"
+      },
+      "answer": "C",
+      "explanation": "Bt cotton expresses cry genes from Bacillus thuringiensis, whose protein is toxic to certain insect larvae.",
+      "difficulty": "HARD",
+      "topic": "Biotechnology and its Applications"
+    },
+    {
+      "number": 168,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes a basophil?",
+      "options": {
+        "A": "a white blood cell that mediates immune responses",
+        "B": "a blood cell fragment that helps in blood clotting",
+        "C": "the liquid matrix that transports nutrients, hormones and wastes",
+        "D": "a granulocyte that secretes histamine and heparin"
+      },
+      "answer": "D",
+      "explanation": "a basophil refers to a granulocyte that secretes histamine and heparin.",
+      "difficulty": "MEDIUM",
+      "topic": "Body Fluids and Circulation"
+    },
+    {
+      "number": 169,
+      "subject": "Zoology",
+      "question": "The ozone layer protects living organisms from",
+      "options": {
+        "A": "Ultraviolet radiation",
+        "B": "X-rays",
+        "C": "Infrared rays",
+        "D": "Microwaves"
+      },
+      "answer": "A",
+      "explanation": "Stratospheric ozone absorbs harmful ultraviolet radiation from the Sun, protecting living organisms.",
+      "difficulty": "HARD",
+      "topic": "Environmental Issues"
+    },
+    {
+      "number": 170,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Cnidaria?",
+      "options": {
+        "A": "radially symmetrical animals bearing stinging cells (cnidoblasts)",
+        "B": "flattened worms with flame cells for excretion",
+        "C": "worms with true metameric segmentation and a closed circulatory system",
+        "D": "roundworms possessing a pseudocoelom"
+      },
+      "answer": "A",
+      "explanation": "Cnidaria refers to radially symmetrical animals bearing stinging cells (cnidoblasts).",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 171,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes a neutrophil?",
+      "options": {
+        "A": "a granulocyte that secretes histamine and heparin",
+        "B": "the liquid matrix that transports nutrients, hormones and wastes",
+        "C": "a blood cell fragment that helps in blood clotting",
+        "D": "the most abundant leucocyte, which carries out phagocytosis"
+      },
+      "answer": "D",
+      "explanation": "a neutrophil refers to the most abundant leucocyte, which carries out phagocytosis.",
+      "difficulty": "MEDIUM",
+      "topic": "Body Fluids and Circulation"
+    },
+    {
+      "number": 172,
+      "subject": "Zoology",
+      "question": "AIDS is caused by",
+      "options": {
+        "A": "a DNA virus",
+        "B": "a bacterium",
+        "C": "a retrovirus (HIV)",
+        "D": "a protozoan"
+      },
+      "answer": "C",
+      "explanation": "HIV is a retrovirus that infects helper T-lymphocytes and causes AIDS.",
+      "difficulty": "MEDIUM",
+      "topic": "Human Health and Disease"
+    },
+    {
+      "number": 173,
+      "subject": "Zoology",
+      "question": "The enzyme used to cut DNA at specific recognition sites is",
+      "options": {
+        "A": "DNA ligase",
+        "B": "Restriction endonuclease",
+        "C": "DNA polymerase",
+        "D": "Helicase"
+      },
+      "answer": "B",
+      "explanation": "Restriction endonucleases recognise specific base sequences and cut DNA at those sites, producing sticky ends.",
+      "difficulty": "EASY",
+      "topic": "Biotechnology and its Applications"
+    },
+    {
+      "number": 174,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Annelida?",
+      "options": {
+        "A": "worms with true metameric segmentation and a closed circulatory system",
+        "B": "the largest phylum, with jointed appendages and chitinous exoskeleton",
+        "C": "spiny-skinned animals with a water-vascular system",
+        "D": "soft-bodied animals usually with a calcareous shell and a mantle"
+      },
+      "answer": "A",
+      "explanation": "Annelida refers to worms with true metameric segmentation and a closed circulatory system.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 175,
+      "subject": "Zoology",
+      "question": "The polymerase chain reaction (PCR) is used to",
+      "options": {
+        "A": "separate proteins",
+        "B": "stain DNA",
+        "C": "amplify DNA",
+        "D": "join DNA fragments"
+      },
+      "answer": "C",
+      "explanation": "PCR amplifies (makes many copies of) a specific segment of DNA using primers, a polymerase and thermal cycling.",
+      "difficulty": "MEDIUM",
+      "topic": "Biotechnology and its Applications"
+    },
+    {
+      "number": 176,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes Echinodermata?",
+      "options": {
+        "A": "sponges with a water-canal system and spongin fibres",
+        "B": "a phylum of worm-like animals with a stomochord",
+        "C": "spiny-skinned animals with a water-vascular system",
+        "D": "animals having a notochord, dorsal nerve cord and pharyngeal gill slits"
+      },
+      "answer": "C",
+      "explanation": "Echinodermata refers to spiny-skinned animals with a water-vascular system.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 177,
+      "subject": "Zoology",
+      "question": "The gap between two successive myelin sheaths along an axon is called a",
+      "options": {
+        "A": "Neurotransmitter",
+        "B": "Synapse",
+        "C": "Node of Ranvier",
+        "D": "Dendrite"
+      },
+      "answer": "C",
+      "explanation": "The unmyelinated gaps in a myelinated axon are called nodes of Ranvier, where saltatory conduction occurs.",
+      "difficulty": "MEDIUM",
+      "topic": "Neural Control and Coordination"
+    },
+    {
+      "number": 178,
+      "subject": "Zoology",
+      "question": "The ABO blood group system in humans is an example of",
+      "options": {
+        "A": "Incomplete dominance",
+        "B": "Multiple alleles",
+        "C": "Pleiotropy",
+        "D": "Codominance only"
+      },
+      "answer": "B",
+      "explanation": "The ABO system is controlled by three alleles (IA, IB and i) of a single gene, so it is an example of multiple alleles.",
+      "difficulty": "HARD",
+      "topic": "Principles of Inheritance and Variation"
+    },
+    {
+      "number": 179,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes trypsin?",
+      "options": {
+        "A": "a secretion that emulsifies fats but contains no digestive enzyme",
+        "B": "an enzyme that digests starch to maltose in the mouth",
+        "C": "an enzyme that splits fats into glycerol and fatty acids",
+        "D": "a protease secreted by the pancreas that acts in the alkaline small intestine"
+      },
+      "answer": "D",
+      "explanation": "trypsin refers to a protease secreted by the pancreas that acts in the alkaline small intestine.",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion and Absorption"
+    },
+    {
+      "number": 180,
+      "subject": "Zoology",
+      "question": "The 'master gland' of the human body is the",
+      "options": {
+        "A": "Pancreas",
+        "B": "Thyroid",
+        "C": "Pituitary",
+        "D": "Adrenal"
+      },
+      "answer": "C",
+      "explanation": "The pituitary is called the master gland because it controls the secretion of many other endocrine glands.",
+      "difficulty": "MEDIUM",
+      "topic": "Chemical Coordination and Integration"
+    }
+  ]
+}

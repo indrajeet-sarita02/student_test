@@ -7,1465 +7,1675 @@
     {
       "number": 1,
       "subject": "Physics",
-      "question": "A system absorbs 150 J of heat and does 50 J of work. The change in its internal energy is",
+      "question": "An object is placed 15 cm from a concave mirror of focal length 10 cm. The image distance is",
       "options": {
-        "A": "150 J",
-        "B": "100 J",
-        "C": "-100 J",
-        "D": "200 J"
+        "A": "12 cm",
+        "B": "11 cm",
+        "C": "3 cm",
+        "D": "6 cm"
       },
-      "answer": "B",
-      "explanation": "dU = Q - W = 150 - 50.",
-      "difficulty": "EASY",
-      "topic": "Thermodynamics"
+      "answer": "D",
+      "explanation": "Use 1/v + 1/u = 1/f with the sign convention for mirror distances.",
+      "difficulty": "HARD",
+      "topic": "Ray Optics"
     },
     {
       "number": 2,
       "subject": "Physics",
-      "question": "The heat required to raise the temperature of 0.5 kg of a substance (specific heat 4200 J/kg/K) by 20 K is",
+      "question": "The dimensional formula of pressure is",
       "options": {
-        "A": "84000 J",
-        "B": "21000 J",
-        "C": "42000 J",
-        "D": "2100 J"
+        "A": "[M L T^-1]",
+        "B": "[M L^2 T^-2]",
+        "C": "[M L^-1 T^-1]",
+        "D": "[M L^-1 T^-2]"
       },
-      "answer": "C",
-      "explanation": "Q = m c dT = 0.5 x 4200 x 20.",
+      "answer": "D",
+      "explanation": "Pressure = force/area = [M L T^-2]/[L^2] = [M L^-1 T^-2].",
       "difficulty": "MEDIUM",
-      "topic": "Thermal Properties of Matter"
+      "topic": "Units and Measurements"
     },
     {
       "number": 3,
       "subject": "Physics",
-      "question": "The heat required to raise the temperature of 1 kg of a substance (specific heat 900 J/kg/K) by 20 K is",
+      "question": "A block just begins to slide down a rough incline when the angle of inclination is 30 degrees. The coefficient of static friction is",
       "options": {
-        "A": "36000 J",
-        "B": "18000 J",
-        "C": "9000 J",
-        "D": "900 J"
+        "A": "sqrt(3)",
+        "B": "1/2",
+        "C": "1/sqrt(3)",
+        "D": "sqrt(3)/2"
       },
-      "answer": "B",
-      "explanation": "Q = m c dT = 1 x 900 x 20.",
+      "answer": "C",
+      "explanation": "At the angle of repose, mu = tan(theta) = tan 30 = 1/sqrt(3).",
       "difficulty": "MEDIUM",
-      "topic": "Thermal Properties of Matter"
+      "topic": "Laws of Motion"
     },
     {
       "number": 4,
       "subject": "Physics",
-      "question": "The time period of a simple pendulum of length 1.0 m (g = 10 m/s^2) is",
+      "question": "A wire of resistivity 1e-07 ohm m, length 1 m and cross-section 1e-06 m^2 has a resistance of",
       "options": {
-        "A": "2.98 s",
-        "B": "1.99 s",
-        "C": "0.99 s",
-        "D": "3.97 s"
+        "A": "1e-07 ohm",
+        "B": "1e-13 ohm",
+        "C": "0.1 ohm",
+        "D": "0.2 ohm"
       },
-      "answer": "B",
-      "explanation": "T = 2 pi sqrt(l/g) = 2 pi sqrt(1.0/10).",
-      "difficulty": "EASY",
-      "topic": "Oscillations"
+      "answer": "C",
+      "explanation": "R = rho L / A = 1e-07 x 1 / 1e-06.",
+      "difficulty": "HARD",
+      "topic": "Current Electricity"
     },
     {
       "number": 5,
       "subject": "Physics",
-      "question": "A Carnot engine operates between 1000 K and 500 K. Its efficiency is",
+      "question": "The critical angle for total internal reflection in a medium of refractive index 1.33 (w.r.t. air) is",
       "options": {
-        "A": "25.0%",
-        "B": "16.7%",
-        "C": "50.0%",
-        "D": "100.0%"
+        "A": "24.4 degrees",
+        "B": "41.2 degrees",
+        "C": "48.8 degrees",
+        "D": "30.1 degrees"
       },
       "answer": "C",
-      "explanation": "eta = 1 - T2/T1 = 1 - 500/1000.",
-      "difficulty": "MEDIUM",
-      "topic": "Thermodynamics"
+      "explanation": "sin C = 1/n = 1/1.33.",
+      "difficulty": "HARD",
+      "topic": "Ray Optics"
     },
     {
       "number": 6,
       "subject": "Physics",
-      "question": "The time period of a simple pendulum of length 1.5 m (g = 10 m/s^2) is",
+      "question": "A rod of length 5 m moves with speed 4 m/s perpendicular to a magnetic field of 0.2 T. The motional emf induced is",
       "options": {
-        "A": "1.22 s",
-        "B": "3.65 s",
-        "C": "4.87 s",
-        "D": "2.43 s"
+        "A": "1 V",
+        "B": "8 V",
+        "C": "2 V",
+        "D": "4 V"
       },
       "answer": "D",
-      "explanation": "T = 2 pi sqrt(l/g) = 2 pi sqrt(1.5/10).",
-      "difficulty": "EASY",
-      "topic": "Oscillations"
+      "explanation": "E = B l v = 0.2 x 5 x 4.",
+      "difficulty": "MEDIUM",
+      "topic": "Electromagnetic Induction"
     },
     {
       "number": 7,
       "subject": "Physics",
-      "question": "A system absorbs 200 J of heat and does 80 J of work. The change in its internal energy is",
+      "question": "A rod of length 2 m moves with speed 10 m/s perpendicular to a magnetic field of 0.5 T. The motional emf induced is",
       "options": {
-        "A": "-120 J",
-        "B": "120 J",
-        "C": "200 J",
-        "D": "280 J"
+        "A": "20 V",
+        "B": "10 V",
+        "C": "1 V",
+        "D": "5 V"
       },
       "answer": "B",
-      "explanation": "dU = Q - W = 200 - 80.",
-      "difficulty": "EASY",
-      "topic": "Thermodynamics"
+      "explanation": "E = B l v = 0.5 x 2 x 10.",
+      "difficulty": "MEDIUM",
+      "topic": "Electromagnetic Induction"
     },
     {
       "number": 8,
       "subject": "Physics",
-      "question": "If the radius of the earth shrinks by 2% with its mass unchanged, g at the surface changes by about",
+      "question": "A wire of resistivity 2e-08 ohm m, length 5 m and cross-section 2e-06 m^2 has a resistance of",
       "options": {
-        "A": "0%",
-        "B": "+2.0%",
-        "C": "-4.0%",
-        "D": "+4.0%"
+        "A": "0.1 ohm",
+        "B": "8e-15 ohm",
+        "C": "1e-07 ohm",
+        "D": "0.05 ohm"
       },
       "answer": "D",
-      "explanation": "g = GM/R^2, so dg/g = -2 (dR/R). A decrease in R raises g.",
+      "explanation": "R = rho L / A = 2e-08 x 5 / 2e-06.",
       "difficulty": "HARD",
-      "topic": "Gravitation"
+      "topic": "Current Electricity"
     },
     {
       "number": 9,
       "subject": "Physics",
-      "question": "A block of mass 2 kg is attached to a spring of force constant 200 N/m. Its period of oscillation is",
+      "question": "An alternating current has a peak value of 5 A. Its rms value is",
       "options": {
-        "A": "0.942 s",
-        "B": "0.628 s",
-        "C": "1.257 s",
-        "D": "0.314 s"
+        "A": "2.5 A",
+        "B": "3.54 A",
+        "C": "5 A",
+        "D": "7.07 A"
       },
       "answer": "B",
-      "explanation": "T = 2 pi sqrt(m/k) = 2 pi sqrt(2/200).",
+      "explanation": "I_rms = I0/sqrt(2) = 5/1.414.",
       "difficulty": "MEDIUM",
-      "topic": "Oscillations"
+      "topic": "Alternating Current"
     },
     {
       "number": 10,
       "subject": "Physics",
-      "question": "The moment of inertia of a uniform ring of mass M and radius R about its central axis is",
+      "question": "The energy of the electron in the n = 2 orbit of a hydrogen atom is",
       "options": {
-        "A": "MR^2",
-        "B": "2/5 MR^2",
-        "C": "1/2 MR^2",
-        "D": "2/3 MR^2"
+        "A": "-6.80 eV",
+        "B": "-1.70 eV",
+        "C": "-10.20 eV",
+        "D": "-3.40 eV"
       },
-      "answer": "A",
-      "explanation": "The standard result for a ring about a central axis is I = MR^2.",
-      "difficulty": "EASY",
-      "topic": "Rotational Motion"
+      "answer": "D",
+      "explanation": "E_n = -13.6/n^2 = -13.6/2^2 eV.",
+      "difficulty": "MEDIUM",
+      "topic": "Atoms"
     },
     {
       "number": 11,
       "subject": "Physics",
-      "question": "The heat required to raise the temperature of 2 kg of a substance (specific heat 4200 J/kg/K) by 10 K is",
+      "question": "A rod of length 1 m moves with speed 5 m/s perpendicular to a magnetic field of 1 T. The motional emf induced is",
       "options": {
-        "A": "168000 J",
-        "B": "84000 J",
-        "C": "42000 J",
-        "D": "8400 J"
+        "A": "5 V",
+        "B": "10 V",
+        "C": "1 V",
+        "D": "2.5 V"
       },
-      "answer": "B",
-      "explanation": "Q = m c dT = 2 x 4200 x 10.",
+      "answer": "A",
+      "explanation": "E = B l v = 1 x 1 x 5.",
       "difficulty": "MEDIUM",
-      "topic": "Thermal Properties of Matter"
+      "topic": "Electromagnetic Induction"
     },
     {
       "number": 12,
       "subject": "Physics",
-      "question": "If the radius of the earth shrinks by 1% with its mass unchanged, g at the surface changes by about",
+      "question": "The de Broglie wavelength of a particle of mass 9.1e-31 kg moving with kinetic energy 3.2e-18 J is (h = 6.63 x 10^-34 J s), approximately",
       "options": {
-        "A": "+1.0%",
-        "B": "+2.0%",
-        "C": "-2.0%",
-        "D": "0%"
+        "A": "5.49e-10 m",
+        "B": "0.5 m",
+        "C": "2.75e-10 m",
+        "D": "1.37e-10 m"
       },
-      "answer": "B",
-      "explanation": "g = GM/R^2, so dg/g = -2 (dR/R). A decrease in R raises g.",
+      "answer": "C",
+      "explanation": "lambda = h/sqrt(2mK).",
       "difficulty": "HARD",
-      "topic": "Gravitation"
+      "topic": "Dual Nature of Radiation and Matter"
     },
     {
       "number": 13,
       "subject": "Physics",
-      "question": "A Carnot engine operates between 500 K and 300 K. Its efficiency is",
+      "question": "Action and reaction forces described by Newton's third law",
       "options": {
-        "A": "13.3%",
-        "B": "40.0%",
-        "C": "80.0%",
-        "D": "20.0%"
+        "A": "have different magnitudes but the same direction",
+        "B": "act on different bodies and never cancel each other",
+        "C": "act in the same direction on the same body",
+        "D": "act on the same body and cancel each other"
       },
       "answer": "B",
-      "explanation": "eta = 1 - T2/T1 = 1 - 300/500.",
-      "difficulty": "MEDIUM",
-      "topic": "Thermodynamics"
+      "explanation": "The two forces act on two different bodies, so they do not cancel. Only forces acting on the same body can be added to zero.",
+      "difficulty": "EASY",
+      "topic": "Laws of Motion"
     },
     {
       "number": 14,
       "subject": "Physics",
-      "question": "A Carnot engine operates between 400 K and 300 K. Its efficiency is",
+      "question": "In Young's double-slit experiment the slit separation is 0.001 m and the screen is 1.0 m away. For light of wavelength 6e-07 m the fringe width is",
       "options": {
-        "A": "8.3%",
-        "B": "50.0%",
-        "C": "12.5%",
-        "D": "25.0%"
+        "A": "0.0003 m",
+        "B": "0.0012 m",
+        "C": "0.0016 m",
+        "D": "0.0006 m"
       },
       "answer": "D",
-      "explanation": "eta = 1 - T2/T1 = 1 - 300/400.",
-      "difficulty": "MEDIUM",
-      "topic": "Thermodynamics"
+      "explanation": "beta = lambda D / d = 6e-07 x 1.0 / 0.001.",
+      "difficulty": "HARD",
+      "topic": "Wave Optics"
     },
     {
       "number": 15,
       "subject": "Physics",
-      "question": "The heat required to melt 0.5 kg of ice at 0 degrees C is (latent heat of fusion = 334000 J/kg)",
+      "question": "The dimensional formula of Planck's constant is",
       "options": {
-        "A": "1.25e+05 J",
-        "B": "8.35e+04 J",
-        "C": "1.67e+05 J",
-        "D": "3.34e+05 J"
+        "A": "[M L T^-1]",
+        "B": "[M L^2 T^-2]",
+        "C": "[M L^2 T^-1]",
+        "D": "[M L^2 T^-3]"
       },
       "answer": "C",
-      "explanation": "Q = m L = 0.5 x 334000 J.",
-      "difficulty": "MEDIUM",
-      "topic": "Thermal Properties of Matter"
+      "explanation": "Energy E = h*nu, so h = E/nu = [M L^2 T^-2]/[T^-1] = [M L^2 T^-1].",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
     },
     {
       "number": 16,
       "subject": "Physics",
-      "question": "If the radius of the earth shrinks by 0.5% with its mass unchanged, g at the surface changes by about",
+      "question": "A boat can move at 5 m/s in still water. It is steered perpendicular to a river 100 m wide flowing at 3 m/s. The time taken to cross and the drift downstream are",
       "options": {
-        "A": "+1.0%",
-        "B": "-1.0%",
-        "C": "0%",
-        "D": "+0.5%"
+        "A": "20 s and 60 m",
+        "B": "15 s and 45 m",
+        "C": "25 s and 60 m",
+        "D": "20 s and 100 m"
       },
       "answer": "A",
-      "explanation": "g = GM/R^2, so dg/g = -2 (dR/R). A decrease in R raises g.",
+      "explanation": "Crossing time = width/perpendicular speed = 100/5 = 20 s; the drift = current x time = 3 x 20 = 60 m.",
       "difficulty": "HARD",
-      "topic": "Gravitation"
+      "topic": "Kinematics"
     },
     {
       "number": 17,
       "subject": "Physics",
-      "question": "The heat required to raise the temperature of 5 kg of a substance (specific heat 500 J/kg/K) by 4 K is",
+      "question": "An object is placed 20 cm from a concave mirror of focal length 20 cm. The image distance is",
       "options": {
-        "A": "5000 J",
-        "B": "20000 J",
-        "C": "2500 J",
-        "D": "10000 J"
+        "A": "15 cm",
+        "B": "20 cm",
+        "C": "5 cm",
+        "D": "10 cm"
       },
       "answer": "D",
-      "explanation": "Q = m c dT = 5 x 500 x 4.",
-      "difficulty": "MEDIUM",
-      "topic": "Thermal Properties of Matter"
+      "explanation": "Use 1/v + 1/u = 1/f with the sign convention for mirror distances.",
+      "difficulty": "HARD",
+      "topic": "Ray Optics"
     },
     {
       "number": 18,
       "subject": "Physics",
-      "question": "The excess pressure inside a soap bubble of radius 0.01 m is (surface tension = 0.07 N/m)",
+      "question": "The critical angle for total internal reflection in a medium of refractive index 2.0 (w.r.t. air) is",
       "options": {
-        "A": "56 Pa",
-        "B": "14 Pa",
-        "C": "7 Pa",
-        "D": "28 Pa"
+        "A": "60 degrees",
+        "B": "15 degrees",
+        "C": "19.5 degrees",
+        "D": "30 degrees"
       },
       "answer": "D",
-      "explanation": "A soap bubble has two surfaces, so excess pressure = 4T/r.",
+      "explanation": "sin C = 1/n = 1/2.0.",
       "difficulty": "HARD",
-      "topic": "Mechanical Properties of Fluids"
+      "topic": "Ray Optics"
     },
     {
       "number": 19,
       "subject": "Physics",
-      "question": "A ring rolls without slipping down an incline of 30 degrees (g = 10 m/s^2). Its linear acceleration is",
+      "question": "An alternating current has a peak value of 10 A. Its rms value is",
       "options": {
-        "A": "2.5 m/s^2",
-        "B": "3.5 m/s^2",
-        "C": "5 m/s^2",
-        "D": "1.25 m/s^2"
+        "A": "7.07 A",
+        "B": "14.14 A",
+        "C": "5 A",
+        "D": "10 A"
       },
       "answer": "A",
-      "explanation": "a = g sin(theta)/(1 + I/MR^2) = 5/(1 + 1.0).",
-      "difficulty": "HARD",
-      "topic": "Rotational Motion"
+      "explanation": "I_rms = I0/sqrt(2) = 10/1.414.",
+      "difficulty": "MEDIUM",
+      "topic": "Alternating Current"
     },
     {
       "number": 20,
       "subject": "Physics",
-      "question": "The moment of inertia of a uniform disc of mass M and radius R about its central axis is",
+      "question": "The energy of a photon of wavelength 4e-07 m is (h = 6.63 x 10^-34 J s, c = 3 x 10^8 m/s), approximately",
       "options": {
-        "A": "1/2 MR^2",
-        "B": "MR^2",
-        "C": "2/3 MR^2",
-        "D": "2/5 MR^2"
+        "A": "1.99e-25 J",
+        "B": "2.49e-19 J",
+        "C": "9.94e-19 J",
+        "D": "4.97e-19 J"
       },
-      "answer": "A",
-      "explanation": "The standard result for a disc about a central axis is I = 1/2 MR^2.",
-      "difficulty": "EASY",
-      "topic": "Rotational Motion"
+      "answer": "D",
+      "explanation": "E = hc/lambda = 6.63e-34 x 3e8 / 4e-07.",
+      "difficulty": "HARD",
+      "topic": "Dual Nature of Radiation and Matter"
     },
     {
       "number": 21,
       "subject": "Physics",
-      "question": "A system absorbs 100 J of heat and does 40 J of work. The change in its internal energy is",
+      "question": "A wire of resistivity 1.7e-08 ohm m, length 2 m and cross-section 1e-06 m^2 has a resistance of",
       "options": {
-        "A": "100 J",
-        "B": "140 J",
-        "C": "-60 J",
-        "D": "60 J"
+        "A": "0.068 ohm",
+        "B": "0.034 ohm",
+        "C": "8.5e-15 ohm",
+        "D": "3.4e-08 ohm"
       },
-      "answer": "D",
-      "explanation": "dU = Q - W = 100 - 40.",
-      "difficulty": "EASY",
-      "topic": "Thermodynamics"
+      "answer": "B",
+      "explanation": "R = rho L / A = 1.7e-08 x 2 / 1e-06.",
+      "difficulty": "HARD",
+      "topic": "Current Electricity"
     },
     {
       "number": 22,
       "subject": "Physics",
-      "question": "The excess pressure inside a soap bubble of radius 0.005 m is (surface tension = 0.07 N/m)",
+      "question": "An object is placed 45 cm from a concave mirror of focal length 15 cm. The image distance is",
       "options": {
-        "A": "14 Pa",
-        "B": "28 Pa",
-        "C": "56 Pa",
-        "D": "112 Pa"
+        "A": "5.6 cm",
+        "B": "16.2 cm",
+        "C": "22.5 cm",
+        "D": "11.2 cm"
       },
-      "answer": "C",
-      "explanation": "A soap bubble has two surfaces, so excess pressure = 4T/r.",
+      "answer": "D",
+      "explanation": "Use 1/v + 1/u = 1/f with the sign convention for mirror distances.",
       "difficulty": "HARD",
-      "topic": "Mechanical Properties of Fluids"
+      "topic": "Ray Optics"
     },
     {
       "number": 23,
       "subject": "Physics",
-      "question": "A block of mass 1 kg is attached to a spring of force constant 100 N/m. Its period of oscillation is",
+      "question": "A radioactive sample has a half-life of 2 h. The fraction of nuclei remaining undecayed after 4 h is",
       "options": {
-        "A": "1.257 s",
-        "B": "0.314 s",
-        "C": "0.942 s",
-        "D": "0.628 s"
+        "A": "0.75",
+        "B": "0.5",
+        "C": "0.25",
+        "D": "0.125"
       },
-      "answer": "D",
-      "explanation": "T = 2 pi sqrt(m/k) = 2 pi sqrt(1/100).",
-      "difficulty": "MEDIUM",
-      "topic": "Oscillations"
+      "answer": "C",
+      "explanation": "N/N0 = (1/2)^(t/T) = (1/2)^(4/2).",
+      "difficulty": "HARD",
+      "topic": "Nuclei"
     },
     {
       "number": 24,
       "subject": "Physics",
-      "question": "The heat required to melt 1 kg of ice at 0 degrees C is (latent heat of fusion = 2.26e+06 J/kg)",
+      "question": "A radioactive sample has a half-life of 3 h. The fraction of nuclei remaining undecayed after 9 h is",
       "options": {
-        "A": "4.52e+06 J",
-        "B": "2.26e+06 J",
-        "C": "1.13e+06 J",
-        "D": "1.7e+06 J"
+        "A": "0.125",
+        "B": "0.875",
+        "C": "0.25",
+        "D": "0.0625"
       },
-      "answer": "B",
-      "explanation": "Q = m L = 1 x 2.26e+06 J.",
-      "difficulty": "MEDIUM",
-      "topic": "Thermal Properties of Matter"
+      "answer": "A",
+      "explanation": "N/N0 = (1/2)^(t/T) = (1/2)^(9/3).",
+      "difficulty": "HARD",
+      "topic": "Nuclei"
     },
     {
       "number": 25,
       "subject": "Physics",
-      "question": "The heat required to melt 2 kg of ice at 0 degrees C is (latent heat of fusion = 334000 J/kg)",
+      "question": "A car starts from rest and accelerates uniformly to 20 m/s in 10 s. The distance covered is",
       "options": {
-        "A": "5.01e+05 J",
-        "B": "3.34e+05 J",
-        "C": "1.34e+06 J",
-        "D": "6.68e+05 J"
+        "A": "200 m",
+        "B": "150 m",
+        "C": "50 m",
+        "D": "100 m"
       },
       "answer": "D",
-      "explanation": "Q = m L = 2 x 334000 J.",
+      "explanation": "v = at gives a = 2 m/s^2; s = (1/2) a t^2 = 0.5 x 2 x 100 = 100 m.",
       "difficulty": "MEDIUM",
-      "topic": "Thermal Properties of Matter"
+      "topic": "Kinematics"
     },
     {
       "number": 26,
       "subject": "Physics",
-      "question": "A solid cylinder rolls without slipping down an incline of 30 degrees (g = 10 m/s^2). Its linear acceleration is",
+      "question": "A charge of 2 C moves with speed 4 m/s perpendicular to a magnetic field of 1 T. The force on it is",
       "options": {
-        "A": "3.33 m/s^2",
-        "B": "4.33 m/s^2",
-        "C": "5 m/s^2",
-        "D": "1.67 m/s^2"
+        "A": "8 N",
+        "B": "16 N",
+        "C": "2 N",
+        "D": "4 N"
       },
       "answer": "A",
-      "explanation": "a = g sin(theta)/(1 + I/MR^2) = 5/(1 + 0.5).",
-      "difficulty": "HARD",
-      "topic": "Rotational Motion"
+      "explanation": "F = qvB sin(90) = qvB.",
+      "difficulty": "MEDIUM",
+      "topic": "Moving Charges and Magnetism"
     },
     {
       "number": 27,
       "subject": "Physics",
-      "question": "The rms speed of 32 g/mol gas molecules at 300 K is (R = 8.314 J/mol/K), approximately",
+      "question": "The energy of the electron in the n = 1 orbit of a hydrogen atom is",
       "options": {
-        "A": "484 m/s",
-        "B": "242 m/s",
-        "C": "967 m/s",
-        "D": "592 m/s"
+        "A": "-40.80 eV",
+        "B": "-13.60 eV",
+        "C": "-6.80 eV",
+        "D": "-27.20 eV"
       },
-      "answer": "A",
-      "explanation": "v_rms = sqrt(3RT/M); M must be in kg/mol.",
-      "difficulty": "HARD",
-      "topic": "Kinetic Theory of Gases"
+      "answer": "B",
+      "explanation": "E_n = -13.6/n^2 = -13.6/1^2 eV.",
+      "difficulty": "MEDIUM",
+      "topic": "Atoms"
     },
     {
       "number": 28,
       "subject": "Physics",
-      "question": "The time period of a simple pendulum of length 0.5 m (g = 10 m/s^2) is",
+      "question": "The percentage errors in the measurement of the mass and the side of a cube are 1% and 2% respectively. The percentage error in the measured density of the cube is",
       "options": {
-        "A": "2.81 s",
-        "B": "0.7 s",
-        "C": "1.4 s",
-        "D": "2.11 s"
+        "A": "3%",
+        "B": "9%",
+        "C": "5%",
+        "D": "7%"
       },
-      "answer": "C",
-      "explanation": "T = 2 pi sqrt(l/g) = 2 pi sqrt(0.5/10).",
-      "difficulty": "EASY",
-      "topic": "Oscillations"
+      "answer": "D",
+      "explanation": "Density = m/a^3, so the percentage error = 1% + 3(2%) = 7%.",
+      "difficulty": "HARD",
+      "topic": "Units and Measurements"
     },
     {
       "number": 29,
       "subject": "Physics",
-      "question": "The gauge pressure at a depth of 0.76 m in a liquid of density 13600 kg/m^3 (g = 10 m/s^2) is",
+      "question": "An alternating current has a peak value of 2 A. Its rms value is",
       "options": {
-        "A": "51680 Pa",
-        "B": "10336 Pa",
-        "C": "206720 Pa",
-        "D": "103360 Pa"
+        "A": "2.83 A",
+        "B": "1 A",
+        "C": "1.41 A",
+        "D": "2 A"
       },
-      "answer": "D",
-      "explanation": "P = rho g h = 13600 x 10 x 0.76.",
+      "answer": "C",
+      "explanation": "I_rms = I0/sqrt(2) = 2/1.414.",
       "difficulty": "MEDIUM",
-      "topic": "Mechanical Properties of Fluids"
+      "topic": "Alternating Current"
     },
     {
       "number": 30,
       "subject": "Physics",
-      "question": "The time period of a simple pendulum of length 2.0 m (g = 10 m/s^2) is",
+      "question": "In Young's double-slit experiment the slit separation is 0.0005 m and the screen is 1.5 m away. For light of wavelength 5e-07 m the fringe width is",
       "options": {
-        "A": "2.81 s",
-        "B": "5.62 s",
-        "C": "4.21 s",
-        "D": "1.4 s"
+        "A": "0.0015 m",
+        "B": "0.002 m",
+        "C": "0.003 m",
+        "D": "0.00075 m"
       },
       "answer": "A",
-      "explanation": "T = 2 pi sqrt(l/g) = 2 pi sqrt(2.0/10).",
-      "difficulty": "EASY",
-      "topic": "Oscillations"
+      "explanation": "beta = lambda D / d = 5e-07 x 1.5 / 0.0005.",
+      "difficulty": "HARD",
+      "topic": "Wave Optics"
     },
     {
       "number": 31,
       "subject": "Physics",
-      "question": "A solid sphere rolls without slipping down an incline of 30 degrees (g = 10 m/s^2). Its linear acceleration is",
+      "question": "The energy of a photon of wavelength 2e-07 m is (h = 6.63 x 10^-34 J s, c = 3 x 10^8 m/s), approximately",
       "options": {
-        "A": "5 m/s^2",
-        "B": "4.57 m/s^2",
-        "C": "3.57 m/s^2",
-        "D": "1.79 m/s^2"
+        "A": "1.99e-18 J",
+        "B": "1.99e-25 J",
+        "C": "9.94e-19 J",
+        "D": "4.97e-19 J"
       },
       "answer": "C",
-      "explanation": "a = g sin(theta)/(1 + I/MR^2) = 5/(1 + 0.4).",
+      "explanation": "E = hc/lambda = 6.63e-34 x 3e8 / 2e-07.",
       "difficulty": "HARD",
-      "topic": "Rotational Motion"
+      "topic": "Dual Nature of Radiation and Matter"
     },
     {
       "number": 32,
       "subject": "Physics",
-      "question": "A system absorbs 300 J of heat and does 120 J of work. The change in its internal energy is",
+      "question": "The de Broglie wavelength of a particle of mass 1.67e-27 kg moving with kinetic energy 1e-13 J is (h = 6.63 x 10^-34 J s), approximately",
       "options": {
-        "A": "300 J",
-        "B": "180 J",
-        "C": "420 J",
-        "D": "-180 J"
+        "A": "0.5 m",
+        "B": "7.26e-14 m",
+        "C": "1.81e-14 m",
+        "D": "3.63e-14 m"
       },
-      "answer": "B",
-      "explanation": "dU = Q - W = 300 - 120.",
-      "difficulty": "EASY",
-      "topic": "Thermodynamics"
+      "answer": "D",
+      "explanation": "lambda = h/sqrt(2mK).",
+      "difficulty": "HARD",
+      "topic": "Dual Nature of Radiation and Matter"
     },
     {
       "number": 33,
       "subject": "Physics",
-      "question": "A hollow sphere rolls without slipping down an incline of 30 degrees (g = 10 m/s^2). Its linear acceleration is",
+      "question": "A charge of 0.5 C moves with speed 3 m/s perpendicular to a magnetic field of 2 T. The force on it is",
       "options": {
-        "A": "3 m/s^2",
-        "B": "5 m/s^2",
-        "C": "4 m/s^2",
-        "D": "1.5 m/s^2"
+        "A": "6 N",
+        "B": "3 N",
+        "C": "1 N",
+        "D": "1.5 N"
       },
-      "answer": "A",
-      "explanation": "a = g sin(theta)/(1 + I/MR^2) = 5/(1 + 0.667).",
-      "difficulty": "HARD",
-      "topic": "Rotational Motion"
+      "answer": "B",
+      "explanation": "F = qvB sin(90) = qvB.",
+      "difficulty": "MEDIUM",
+      "topic": "Moving Charges and Magnetism"
     },
     {
       "number": 34,
       "subject": "Physics",
-      "question": "The rms speed of 2 g/mol gas molecules at 400 K is (R = 8.314 J/mol/K), approximately",
+      "question": "The number of significant figures in the measured value 0.00250 m is",
       "options": {
-        "A": "2233 m/s",
-        "B": "2735 m/s",
-        "C": "1117 m/s",
-        "D": "4467 m/s"
+        "A": "2",
+        "B": "4",
+        "C": "3",
+        "D": "5"
       },
-      "answer": "A",
-      "explanation": "v_rms = sqrt(3RT/M); M must be in kg/mol.",
-      "difficulty": "HARD",
-      "topic": "Kinetic Theory of Gases"
+      "answer": "C",
+      "explanation": "Leading zeros are not significant; the trailing zero after 5 is. Hence 2, 5 and the trailing 0 give three significant figures.",
+      "difficulty": "EASY",
+      "topic": "Units and Measurements"
     },
     {
       "number": 35,
       "subject": "Physics",
-      "question": "A Carnot engine operates between 600 K and 400 K. Its efficiency is",
+      "question": "A radioactive sample has a half-life of 1 h. The fraction of nuclei remaining undecayed after 2 h is",
       "options": {
-        "A": "11.1%",
-        "B": "33.3%",
-        "C": "66.6%",
-        "D": "16.6%"
+        "A": "0.25",
+        "B": "0.75",
+        "C": "0.125",
+        "D": "0.5"
       },
-      "answer": "B",
-      "explanation": "eta = 1 - T2/T1 = 1 - 400/600.",
-      "difficulty": "MEDIUM",
-      "topic": "Thermodynamics"
+      "answer": "A",
+      "explanation": "N/N0 = (1/2)^(t/T) = (1/2)^(2/1).",
+      "difficulty": "HARD",
+      "topic": "Nuclei"
     },
     {
       "number": 36,
       "subject": "Physics",
-      "question": "The rms speed of 28 g/mol gas molecules at 273 K is (R = 8.314 J/mol/K), approximately",
+      "question": "A radioactive sample has a half-life of 1 h. The fraction of nuclei remaining undecayed after 5 h is",
       "options": {
-        "A": "493 m/s",
-        "B": "986 m/s",
-        "C": "247 m/s",
-        "D": "604 m/s"
+        "A": "0.0625",
+        "B": "0.03125",
+        "C": "0.9688",
+        "D": "0.01562"
       },
-      "answer": "A",
-      "explanation": "v_rms = sqrt(3RT/M); M must be in kg/mol.",
+      "answer": "B",
+      "explanation": "N/N0 = (1/2)^(t/T) = (1/2)^(5/1).",
       "difficulty": "HARD",
-      "topic": "Kinetic Theory of Gases"
+      "topic": "Nuclei"
     },
     {
       "number": 37,
       "subject": "Physics",
-      "question": "The rms speed of 44 g/mol gas molecules at 300 K is (R = 8.314 J/mol/K), approximately",
+      "question": "The energy of the electron in the n = 3 orbit of a hydrogen atom is",
       "options": {
-        "A": "505 m/s",
-        "B": "825 m/s",
-        "C": "412 m/s",
-        "D": "206 m/s"
+        "A": "-0.76 eV",
+        "B": "-3.02 eV",
+        "C": "-1.51 eV",
+        "D": "-4.53 eV"
       },
       "answer": "C",
-      "explanation": "v_rms = sqrt(3RT/M); M must be in kg/mol.",
-      "difficulty": "HARD",
-      "topic": "Kinetic Theory of Gases"
+      "explanation": "E_n = -13.6/n^2 = -13.6/3^2 eV.",
+      "difficulty": "MEDIUM",
+      "topic": "Atoms"
     },
     {
       "number": 38,
       "subject": "Physics",
-      "question": "The gauge pressure at a depth of 10 m in a liquid of density 1000 kg/m^3 (g = 10 m/s^2) is",
+      "question": "An object is placed 30 cm from a concave mirror of focal length 10 cm. The image distance is",
       "options": {
-        "A": "10000 Pa",
-        "B": "50000 Pa",
-        "C": "200000 Pa",
-        "D": "100000 Pa"
+        "A": "15 cm",
+        "B": "7.5 cm",
+        "C": "3.8 cm",
+        "D": "12.5 cm"
       },
-      "answer": "D",
-      "explanation": "P = rho g h = 1000 x 10 x 10.",
-      "difficulty": "MEDIUM",
-      "topic": "Mechanical Properties of Fluids"
+      "answer": "B",
+      "explanation": "Use 1/v + 1/u = 1/f with the sign convention for mirror distances.",
+      "difficulty": "HARD",
+      "topic": "Ray Optics"
     },
     {
       "number": 39,
       "subject": "Physics",
-      "question": "The gauge pressure at a depth of 5 m in a liquid of density 1000 kg/m^3 (g = 10 m/s^2) is",
+      "question": "For a projectile launched from level ground with a fixed speed, the horizontal range is maximum when the angle of projection is",
       "options": {
-        "A": "50000 Pa",
-        "B": "5000 Pa",
-        "C": "100000 Pa",
-        "D": "25000 Pa"
+        "A": "60 degrees",
+        "B": "30 degrees",
+        "C": "45 degrees",
+        "D": "90 degrees"
       },
-      "answer": "A",
-      "explanation": "P = rho g h = 1000 x 10 x 5.",
+      "answer": "C",
+      "explanation": "Range R = u^2 sin 2(theta)/g is maximum when sin 2(theta) = 1, i.e. theta = 45 degrees.",
       "difficulty": "MEDIUM",
-      "topic": "Mechanical Properties of Fluids"
+      "topic": "Kinematics"
     },
     {
       "number": 40,
       "subject": "Physics",
-      "question": "The excess pressure inside a soap bubble of radius 0.02 m is (surface tension = 0.07 N/m)",
+      "question": "A charge of 1 C moves with speed 10 m/s perpendicular to a magnetic field of 0.5 T. The force on it is",
       "options": {
-        "A": "3.5 Pa",
-        "B": "14 Pa",
-        "C": "7 Pa",
-        "D": "28 Pa"
+        "A": "5 N",
+        "B": "0.5 N",
+        "C": "2.5 N",
+        "D": "10 N"
       },
-      "answer": "B",
-      "explanation": "A soap bubble has two surfaces, so excess pressure = 4T/r.",
-      "difficulty": "HARD",
-      "topic": "Mechanical Properties of Fluids"
+      "answer": "A",
+      "explanation": "F = qvB sin(90) = qvB.",
+      "difficulty": "MEDIUM",
+      "topic": "Moving Charges and Magnetism"
     },
     {
       "number": 41,
       "subject": "Physics",
-      "question": "A block of mass 4 kg is attached to a spring of force constant 400 N/m. Its period of oscillation is",
+      "question": "In Young's double-slit experiment the slit separation is 0.0004 m and the screen is 2.0 m away. For light of wavelength 7e-07 m the fringe width is",
       "options": {
-        "A": "1.257 s",
-        "B": "0.314 s",
-        "C": "0.942 s",
-        "D": "0.628 s"
+        "A": "0.0035 m",
+        "B": "0.0039 m",
+        "C": "0.00175 m",
+        "D": "0.007 m"
       },
-      "answer": "D",
-      "explanation": "T = 2 pi sqrt(m/k) = 2 pi sqrt(4/400).",
-      "difficulty": "MEDIUM",
-      "topic": "Oscillations"
+      "answer": "A",
+      "explanation": "beta = lambda D / d = 7e-07 x 2.0 / 0.0004.",
+      "difficulty": "HARD",
+      "topic": "Wave Optics"
     },
     {
       "number": 42,
       "subject": "Physics",
-      "question": "A block of mass 0.5 kg is attached to a spring of force constant 50 N/m. Its period of oscillation is",
+      "question": "A body is released from rest and falls freely. The distance covered in the first 2 s (g = 10 m/s^2) is",
       "options": {
-        "A": "0.628 s",
-        "B": "1.257 s",
-        "C": "0.314 s",
-        "D": "0.942 s"
+        "A": "40 m",
+        "B": "10 m",
+        "C": "5 m",
+        "D": "20 m"
       },
-      "answer": "A",
-      "explanation": "T = 2 pi sqrt(m/k) = 2 pi sqrt(0.5/50).",
-      "difficulty": "MEDIUM",
-      "topic": "Oscillations"
+      "answer": "D",
+      "explanation": "h = (1/2) g t^2 = 0.5 x 10 x 4 = 20 m.",
+      "difficulty": "EASY",
+      "topic": "Kinematics"
     },
     {
       "number": 43,
       "subject": "Physics",
-      "question": "The gauge pressure at a depth of 10 m in a liquid of density 800 kg/m^3 (g = 10 m/s^2) is",
+      "question": "The energy of a photon of wavelength 5e-07 m is (h = 6.63 x 10^-34 J s, c = 3 x 10^8 m/s), approximately",
       "options": {
-        "A": "40000 Pa",
-        "B": "8000 Pa",
-        "C": "160000 Pa",
-        "D": "80000 Pa"
+        "A": "1.99e-25 J",
+        "B": "1.99e-19 J",
+        "C": "7.96e-19 J",
+        "D": "3.98e-19 J"
       },
       "answer": "D",
-      "explanation": "P = rho g h = 800 x 10 x 10.",
-      "difficulty": "MEDIUM",
-      "topic": "Mechanical Properties of Fluids"
+      "explanation": "E = hc/lambda = 6.63e-34 x 3e8 / 5e-07.",
+      "difficulty": "HARD",
+      "topic": "Dual Nature of Radiation and Matter"
     },
     {
       "number": 44,
       "subject": "Physics",
-      "question": "The moment of inertia of a uniform solid cylinder of mass M and radius R about its central axis is",
+      "question": "The energy of the electron in the n = 4 orbit of a hydrogen atom is",
       "options": {
-        "A": "MR^2",
-        "B": "2/5 MR^2",
-        "C": "1/2 MR^2",
-        "D": "2/3 MR^2"
+        "A": "-1.70 eV",
+        "B": "-2.55 eV",
+        "C": "-0.85 eV",
+        "D": "-0.42 eV"
       },
       "answer": "C",
-      "explanation": "The standard result for a solid cylinder about a central axis is I = 1/2 MR^2.",
-      "difficulty": "EASY",
-      "topic": "Rotational Motion"
+      "explanation": "E_n = -13.6/n^2 = -13.6/4^2 eV.",
+      "difficulty": "MEDIUM",
+      "topic": "Atoms"
     },
     {
       "number": 45,
       "subject": "Physics",
-      "question": "The moment of inertia of a uniform hollow sphere of mass M and radius R about its central axis is",
+      "question": "The critical angle for total internal reflection in a medium of refractive index 1.5 (w.r.t. air) is",
       "options": {
-        "A": "2/5 MR^2",
-        "B": "1/2 MR^2",
-        "C": "2/3 MR^2",
-        "D": "MR^2"
+        "A": "20.9 degrees",
+        "B": "48.2 degrees",
+        "C": "41.8 degrees",
+        "D": "26.4 degrees"
       },
       "answer": "C",
-      "explanation": "The standard result for a hollow sphere about a central axis is I = 2/3 MR^2.",
-      "difficulty": "EASY",
-      "topic": "Rotational Motion"
+      "explanation": "sin C = 1/n = 1/1.5.",
+      "difficulty": "HARD",
+      "topic": "Ray Optics"
     },
     {
       "number": 46,
       "subject": "Chemistry",
-      "question": "The maximum number of electrons that can be accommodated in the shell with principal quantum number n = 1 is",
+      "question": "On moving from left to right across a period, the atomic radius generally",
       "options": {
-        "A": "1",
-        "B": "4",
-        "C": "0",
-        "D": "2"
+        "A": "increases",
+        "B": "remains the same",
+        "C": "decreases",
+        "D": "first increases then decreases"
       },
-      "answer": "D",
-      "explanation": "Maximum electrons = 2n^2 = 2 x 1^2.",
-      "difficulty": "MEDIUM",
-      "topic": "Structure of Atom"
+      "answer": "C",
+      "explanation": "The increasing nuclear charge pulls the electrons closer, so the atomic radius decreases across a period.",
+      "difficulty": "EASY",
+      "topic": "Classification of Elements and Periodicity"
     },
     {
       "number": 47,
       "subject": "Chemistry",
-      "question": "According to molecular orbital theory, the bond order of N2 is",
+      "question": "The first ionization enthalpy of Al (in kJ/mol) is closest to",
       "options": {
-        "A": "3",
-        "B": "3.5",
-        "C": "4",
-        "D": "2.5"
+        "A": "1077",
+        "B": "777",
+        "C": "577",
+        "D": "277"
       },
-      "answer": "A",
-      "explanation": "Bond order = (Nb - Na)/2; for N2 this gives 3.",
-      "difficulty": "HARD",
-      "topic": "Chemical Bonding"
+      "answer": "C",
+      "explanation": "Across a period the first ionization enthalpy generally rises, placing Al near 577 kJ/mol.",
+      "difficulty": "MEDIUM",
+      "topic": "Classification of Elements and Periodicity"
     },
     {
       "number": 48,
       "subject": "Chemistry",
-      "question": "For a cell with standard emf 0.34 V, n = 2 and reaction quotient Q = 0.01, the cell emf at 298 K is (Nernst equation, 2.303RT/F = 0.059 V)",
+      "question": "The correct order of the first ionisation enthalpy of carbon, nitrogen and oxygen is",
       "options": {
-        "A": "0.17",
-        "B": "0.34",
-        "C": "0.281",
-        "D": "0.399"
+        "A": "C > N > O",
+        "B": "C > O > N",
+        "C": "O > N > C",
+        "D": "N > O > C"
       },
       "answer": "D",
-      "explanation": "E = E0 - (0.059/n) log Q at 298 K.",
+      "explanation": "Nitrogen has a half-filled 2p^3 configuration, giving it the highest first ionisation enthalpy: N > O > C.",
       "difficulty": "HARD",
-      "topic": "Electrochemistry"
+      "topic": "Classification of Elements and Periodicity"
     },
     {
       "number": 49,
       "subject": "Chemistry",
-      "question": "The number of equivalents of a substance deposited when a current of 0.5 A flows for 3860 s is (F = 96500 C/mol)",
+      "question": "The functional group present in ethanal is",
       "options": {
-        "A": "1930",
-        "B": "0.02",
-        "C": "0.01",
-        "D": "0.04"
+        "A": "-COOH",
+        "B": "-CHO",
+        "C": "-OH",
+        "D": "-CO-"
       },
       "answer": "B",
-      "explanation": "Equivalents = I t / F = 0.5 x 3860 / 96500.",
-      "difficulty": "HARD",
-      "topic": "Electrochemistry"
+      "explanation": "ethanal contains the -CHO functional group.",
+      "difficulty": "EASY",
+      "topic": "Organic Chemistry"
     },
     {
       "number": 50,
       "subject": "Chemistry",
-      "question": "The hybridization of the central atom in C2H4 is",
+      "question": "Oxidation, in terms of electrons, means",
       "options": {
-        "A": "sp3d",
-        "B": "sp2",
-        "C": "sp",
-        "D": "sp3"
+        "A": "gain of electrons",
+        "B": "loss of protons",
+        "C": "loss of electrons",
+        "D": "gain of neutrons"
       },
-      "answer": "B",
-      "explanation": "The steric number (bond pairs + lone pairs) around the central atom in C2H4 gives sp2 hybridization.",
-      "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "answer": "C",
+      "explanation": "Oxidation is the loss of electrons; reduction is the gain of electrons (OIL RIG).",
+      "difficulty": "EASY",
+      "topic": "Redox Reactions"
     },
     {
       "number": 51,
       "subject": "Chemistry",
-      "question": "The hybridization of the central atom in PCl5 is",
+      "question": "Nylon-6,6 is a",
       "options": {
-        "A": "sp2",
-        "B": "sp3d",
-        "C": "sp",
-        "D": "sp3"
+        "A": "polyester",
+        "B": "polyamide",
+        "C": "polyolefin",
+        "D": "polycarbonate"
       },
       "answer": "B",
-      "explanation": "The steric number (bond pairs + lone pairs) around the central atom in PCl5 gives sp3d hybridization.",
-      "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "explanation": "Nylon-6,6 is formed by the condensation of hexamethylenediamine and adipic acid, giving amide (-CO-NH-) linkages.",
+      "difficulty": "EASY",
+      "topic": "Polymers"
     },
     {
       "number": 52,
       "subject": "Chemistry",
-      "question": "The hybridization of the central atom in CH4 is",
+      "question": "The functional group present in methylamine is",
       "options": {
-        "A": "sp3",
-        "B": "sp",
-        "C": "sp2",
-        "D": "sp3d"
+        "A": "-CHO",
+        "B": "-OH",
+        "C": "-NH2",
+        "D": "-CO-"
       },
-      "answer": "A",
-      "explanation": "The steric number (bond pairs + lone pairs) around the central atom in CH4 gives sp3 hybridization.",
-      "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "answer": "C",
+      "explanation": "methylamine contains the -NH2 functional group.",
+      "difficulty": "EASY",
+      "topic": "Organic Chemistry"
     },
     {
       "number": 53,
       "subject": "Chemistry",
-      "question": "The number of equivalents of a substance deposited when a current of 2 A flows for 965 s is (F = 96500 C/mol)",
+      "question": "The number of unpaired electrons in an Fe^3+ ion (Z = 26) is",
       "options": {
-        "A": "0.04",
-        "B": "1930",
-        "C": "0.01",
-        "D": "0.02"
+        "A": "6",
+        "B": "3",
+        "C": "4",
+        "D": "5"
       },
       "answer": "D",
-      "explanation": "Equivalents = I t / F = 2 x 965 / 96500.",
+      "explanation": "Fe is [Ar]3d6 4s2; Fe^3+ is [Ar]3d5, and a half-filled d^5 set has 5 unpaired electrons.",
       "difficulty": "HARD",
-      "topic": "Electrochemistry"
+      "topic": "Structure of Atom"
     },
     {
       "number": 54,
       "subject": "Chemistry",
-      "question": "The depression in freezing point of a solution of molality 1 mol/kg in water (Kf = 1.86 K kg/mol) is",
+      "question": "The coordination number of the central metal ion in [Co(NH3)6]3+ is",
       "options": {
-        "A": "0.93 K",
-        "B": "-1.86 K",
-        "C": "3.72 K",
-        "D": "1.86 K"
+        "A": "6",
+        "B": "2",
+        "C": "4",
+        "D": "8"
       },
-      "answer": "D",
-      "explanation": "dTf = Kf x m = 1.86 x 1.",
-      "difficulty": "HARD",
-      "topic": "Solutions"
+      "answer": "A",
+      "explanation": "Counting the ligands directly bonded to the central ion in [Co(NH3)6]3+ gives a coordination number of 6.",
+      "difficulty": "MEDIUM",
+      "topic": "Coordination Compounds"
     },
     {
       "number": 55,
       "subject": "Chemistry",
-      "question": "The hybridization of the central atom in NH3 is",
+      "question": "The first ionization enthalpy of Mg (in kJ/mol) is closest to",
       "options": {
-        "A": "sp3",
-        "B": "sp2",
-        "C": "sp",
-        "D": "sp3d"
+        "A": "738",
+        "B": "1238",
+        "C": "938",
+        "D": "438"
       },
       "answer": "A",
-      "explanation": "The steric number (bond pairs + lone pairs) around the central atom in NH3 gives sp3 hybridization.",
+      "explanation": "Across a period the first ionization enthalpy generally rises, placing Mg near 738 kJ/mol.",
       "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "topic": "Classification of Elements and Periodicity"
     },
     {
       "number": 56,
       "subject": "Chemistry",
-      "question": "The number of equivalents of a substance deposited when a current of 1 A flows for 1930 s is (F = 96500 C/mol)",
+      "question": "A compound contains 40% carbon, 6.7% hydrogen and 53.3% oxygen by mass. Its empirical formula is",
       "options": {
-        "A": "0.04",
-        "B": "0.01",
-        "C": "1930",
-        "D": "0.02"
+        "A": "CH4O",
+        "B": "CHO",
+        "C": "CH2O",
+        "D": "C2H4O2"
       },
-      "answer": "D",
-      "explanation": "Equivalents = I t / F = 1 x 1930 / 96500.",
+      "answer": "C",
+      "explanation": "Mole ratio C:H:O = 40/12 : 6.7/1 : 53.3/16 = 3.33 : 6.7 : 3.33, i.e. 1 : 2 : 1, giving the empirical formula CH2O.",
       "difficulty": "HARD",
-      "topic": "Electrochemistry"
+      "topic": "Some Basic Concepts of Chemistry"
     },
     {
       "number": 57,
       "subject": "Chemistry",
-      "question": "According to molecular orbital theory, the bond order of O2 is",
+      "question": "The oxidation number of Cl in KClO4 is",
       "options": {
-        "A": "1.5",
-        "B": "2",
-        "C": "2.5",
-        "D": "3"
+        "A": "8",
+        "B": "9",
+        "C": "5",
+        "D": "7"
       },
-      "answer": "B",
-      "explanation": "Bond order = (Nb - Na)/2; for O2 this gives 2.",
-      "difficulty": "HARD",
-      "topic": "Chemical Bonding"
+      "answer": "D",
+      "explanation": "Applying the electronegativity/charge rules to KClO4 gives the oxidation number of Cl as 7.",
+      "difficulty": "MEDIUM",
+      "topic": "Redox Reactions"
     },
     {
       "number": 58,
       "subject": "Chemistry",
-      "question": "For a cell with standard emf 1.1 V, n = 2 and reaction quotient Q = 0.1, the cell emf at 298 K is (Nernst equation, 2.303RT/F = 0.059 V)",
+      "question": "The shape of the methane (CH4) molecule is",
       "options": {
-        "A": "1.1",
-        "B": "1.129",
-        "C": "0.55",
-        "D": "1.071"
+        "A": "tetrahedral",
+        "B": "square planar",
+        "C": "linear",
+        "D": "trigonal planar"
       },
-      "answer": "B",
-      "explanation": "E = E0 - (0.059/n) log Q at 298 K.",
-      "difficulty": "HARD",
-      "topic": "Electrochemistry"
+      "answer": "A",
+      "explanation": "Four bonding pairs around carbon with no lone pairs give a tetrahedral shape with bond angles of 109.5 degrees.",
+      "difficulty": "MEDIUM",
+      "topic": "Chemical Bonding"
     },
     {
       "number": 59,
       "subject": "Chemistry",
-      "question": "According to molecular orbital theory, the bond order of NO is",
+      "question": "The oxidation number of S in Na2S2O3 is",
       "options": {
-        "A": "2.5",
-        "B": "3",
-        "C": "3.5",
-        "D": "2"
+        "A": "4",
+        "B": "2",
+        "C": "3",
+        "D": "0"
       },
-      "answer": "A",
-      "explanation": "Bond order = (Nb - Na)/2; for NO this gives 2.5.",
-      "difficulty": "HARD",
-      "topic": "Chemical Bonding"
+      "answer": "B",
+      "explanation": "Applying the electronegativity/charge rules to Na2S2O3 gives the oxidation number of S as 2.",
+      "difficulty": "MEDIUM",
+      "topic": "Redox Reactions"
     },
     {
       "number": 60,
       "subject": "Chemistry",
-      "question": "According to VSEPR theory, the shape of C2H4 is",
+      "question": "The oxidation number of S in H2S is",
       "options": {
-        "A": "bent",
-        "B": "tetrahedral",
-        "C": "trigonal pyramidal",
-        "D": "trigonal planar"
+        "A": "-2",
+        "B": "0",
+        "C": "-1",
+        "D": "-3"
       },
-      "answer": "D",
-      "explanation": "The arrangement of electron pairs about the central atom in C2H4 gives a trigonal planar geometry.",
+      "answer": "A",
+      "explanation": "Applying the electronegativity/charge rules to H2S gives the oxidation number of S as -2.",
       "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "topic": "Redox Reactions"
     },
     {
       "number": 61,
       "subject": "Chemistry",
-      "question": "According to VSEPR theory, the shape of PCl5 is",
+      "question": "According to Le Chatelier's principle, an increase in pressure shifts a gaseous equilibrium towards",
       "options": {
-        "A": "tetrahedral",
-        "B": "trigonal bipyramidal",
-        "C": "trigonal pyramidal",
-        "D": "bent"
+        "A": "no change at all",
+        "B": "the side with more moles of gas",
+        "C": "the side with fewer moles of gas",
+        "D": "the reactant side always"
       },
-      "answer": "B",
-      "explanation": "The arrangement of electron pairs about the central atom in PCl5 gives a trigonal bipyramidal geometry.",
-      "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "answer": "C",
+      "explanation": "Raising the pressure favours the direction that reduces the number of gas molecules, i.e. the side with fewer moles of gas.",
+      "difficulty": "EASY",
+      "topic": "Equilibrium"
     },
     {
       "number": 62,
       "subject": "Chemistry",
-      "question": "The hybridization of the central atom in C2H2 is",
+      "question": "The functional group present in ethanol is",
       "options": {
-        "A": "sp2",
-        "B": "sp3",
-        "C": "sp3d",
-        "D": "sp"
+        "A": "-CHO",
+        "B": "-CO-",
+        "C": "-COOH",
+        "D": "-OH"
       },
       "answer": "D",
-      "explanation": "The steric number (bond pairs + lone pairs) around the central atom in C2H2 gives sp hybridization.",
-      "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "explanation": "ethanol contains the -OH functional group.",
+      "difficulty": "EASY",
+      "topic": "Organic Chemistry"
     },
     {
       "number": 63,
       "subject": "Chemistry",
-      "question": "According to molecular orbital theory, the bond order of O2^+ is",
+      "question": "The number of protons in an atom is equal to its",
       "options": {
-        "A": "2.5",
-        "B": "3",
-        "C": "2",
-        "D": "3.5"
+        "A": "number of nucleons",
+        "B": "mass number",
+        "C": "atomic number",
+        "D": "number of neutrons"
       },
-      "answer": "A",
-      "explanation": "Bond order = (Nb - Na)/2; for O2^+ this gives 2.5.",
-      "difficulty": "HARD",
-      "topic": "Chemical Bonding"
+      "answer": "C",
+      "explanation": "The atomic number Z equals the number of protons in the nucleus.",
+      "difficulty": "EASY",
+      "topic": "Structure of Atom"
     },
     {
       "number": 64,
       "subject": "Chemistry",
-      "question": "The maximum number of electrons that can be accommodated in the shell with principal quantum number n = 3 is",
+      "question": "The SI unit of enthalpy is",
       "options": {
-        "A": "16",
-        "B": "9",
-        "C": "18",
-        "D": "20"
+        "A": "pascal",
+        "B": "calorie",
+        "C": "joule",
+        "D": "kelvin"
       },
       "answer": "C",
-      "explanation": "Maximum electrons = 2n^2 = 2 x 3^2.",
-      "difficulty": "MEDIUM",
-      "topic": "Structure of Atom"
+      "explanation": "Enthalpy is a form of energy, so its SI unit is the joule (J).",
+      "difficulty": "EASY",
+      "topic": "Thermodynamics"
     },
     {
       "number": 65,
       "subject": "Chemistry",
-      "question": "According to molecular orbital theory, the bond order of B2 is",
+      "question": "Which of the following is the correct order of basic strength in aqueous solution?",
       "options": {
-        "A": "2",
-        "B": "0.5",
-        "C": "1",
-        "D": "1.5"
+        "A": "NH3 > CH3NH2 > (CH3)2NH",
+        "B": "CH3NH2 > (CH3)2NH > NH3",
+        "C": "NH3 > (CH3)2NH > CH3NH2",
+        "D": "(CH3)2NH > CH3NH2 > NH3"
       },
-      "answer": "C",
-      "explanation": "Bond order = (Nb - Na)/2; for B2 this gives 1.",
+      "answer": "D",
+      "explanation": "In aqueous solution the +I effect of methyl groups makes (CH3)2NH the strongest base in this series, followed by CH3NH2 and then NH3.",
       "difficulty": "HARD",
-      "topic": "Chemical Bonding"
+      "topic": "Organic Chemistry"
     },
     {
       "number": 66,
       "subject": "Chemistry",
-      "question": "According to VSEPR theory, the shape of H2O is",
+      "question": "Which of the following compounds gives a positive Tollens' test?",
       "options": {
-        "A": "tetrahedral",
-        "B": "trigonal planar",
-        "C": "bent",
-        "D": "trigonal pyramidal"
+        "A": "Acetaldehyde",
+        "B": "Diethyl ether",
+        "C": "Benzene",
+        "D": "Acetone"
       },
-      "answer": "C",
-      "explanation": "The arrangement of electron pairs about the central atom in H2O gives a bent geometry.",
+      "answer": "A",
+      "explanation": "Tollens' reagent oxidises aldehydes such as acetaldehyde, giving a silver mirror.",
       "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "topic": "Organic Chemistry"
     },
     {
       "number": 67,
       "subject": "Chemistry",
-      "question": "The hybridization of the central atom in SF6 is",
+      "question": "The coordination number of the central metal ion in [Fe(CN)6]4- is",
       "options": {
-        "A": "sp2",
-        "B": "sp3d2",
-        "C": "sp3",
-        "D": "sp"
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "2"
       },
       "answer": "B",
-      "explanation": "The steric number (bond pairs + lone pairs) around the central atom in SF6 gives sp3d2 hybridization.",
+      "explanation": "Counting the ligands directly bonded to the central ion in [Fe(CN)6]4- gives a coordination number of 6.",
       "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "topic": "Coordination Compounds"
     },
     {
       "number": 68,
       "subject": "Chemistry",
-      "question": "For a cell with standard emf 0.76 V, n = 2 and reaction quotient Q = 0.05, the cell emf at 298 K is (Nernst equation, 2.303RT/F = 0.059 V)",
+      "question": "Which of the following is the correct IUPAC name of CH3-CH2-CH2-CHO?",
       "options": {
-        "A": "0.38",
-        "B": "0.76",
-        "C": "0.7216",
-        "D": "0.7984"
+        "A": "Butanoic acid",
+        "B": "Butanal",
+        "C": "Butanone",
+        "D": "Butan-1-ol"
       },
-      "answer": "D",
-      "explanation": "E = E0 - (0.059/n) log Q at 298 K.",
-      "difficulty": "HARD",
-      "topic": "Electrochemistry"
+      "answer": "B",
+      "explanation": "A four-carbon chain ending in an aldehyde (-CHO) is butanal.",
+      "difficulty": "MEDIUM",
+      "topic": "Organic Chemistry"
     },
     {
       "number": 69,
       "subject": "Chemistry",
-      "question": "The maximum number of electrons that can be accommodated in the shell with principal quantum number n = 2 is",
+      "question": "The maximum number of electrons that can be accommodated in a subshell for which the azimuthal quantum number l = 2 is",
       "options": {
-        "A": "4",
-        "B": "8",
-        "C": "10",
-        "D": "6"
+        "A": "8",
+        "B": "14",
+        "C": "6",
+        "D": "10"
       },
-      "answer": "B",
-      "explanation": "Maximum electrons = 2n^2 = 2 x 2^2.",
+      "answer": "D",
+      "explanation": "For l = 2 (d subshell) there are (2l + 1) = 5 orbitals, each holding 2 electrons, so the maximum is 10.",
       "difficulty": "MEDIUM",
       "topic": "Structure of Atom"
     },
     {
       "number": 70,
       "subject": "Chemistry",
-      "question": "The depression in freezing point of a solution of molality 2 mol/kg in water (Kf = 1.86 K kg/mol) is",
+      "question": "The coordination number of the central metal ion in [Cr(H2O)6]3+ is",
       "options": {
-        "A": "-3.72 K",
-        "B": "3.72 K",
-        "C": "7.44 K",
-        "D": "1.86 K"
+        "A": "6",
+        "B": "4",
+        "C": "2",
+        "D": "8"
       },
-      "answer": "B",
-      "explanation": "dTf = Kf x m = 1.86 x 2.",
-      "difficulty": "HARD",
-      "topic": "Solutions"
+      "answer": "A",
+      "explanation": "Counting the ligands directly bonded to the central ion in [Cr(H2O)6]3+ gives a coordination number of 6.",
+      "difficulty": "MEDIUM",
+      "topic": "Coordination Compounds"
     },
     {
       "number": 71,
       "subject": "Chemistry",
-      "question": "The number of orbitals in the subshell with azimuthal quantum number l = 0 (s-subshell) is",
+      "question": "The element with the highest electronegativity is",
       "options": {
-        "A": "4",
-        "B": "2",
-        "C": "1",
-        "D": "3"
+        "A": "chlorine",
+        "B": "nitrogen",
+        "C": "oxygen",
+        "D": "fluorine"
       },
-      "answer": "C",
-      "explanation": "Number of orbitals = 2l + 1 = 2(0) + 1.",
-      "difficulty": "EASY",
-      "topic": "Structure of Atom"
+      "answer": "D",
+      "explanation": "Fluorine has the highest electronegativity (3.98 on the Pauling scale).",
+      "difficulty": "MEDIUM",
+      "topic": "Classification of Elements and Periodicity"
     },
     {
       "number": 72,
       "subject": "Chemistry",
-      "question": "For a reaction, dH = -92 kJ/mol, dS = -0.198 kJ/mol/K and T = 298 K. The standard Gibbs energy change is",
+      "question": "The functional group present in nitroethane is",
       "options": {
-        "A": "33 kJ/mol",
-        "B": "-33 kJ/mol",
-        "C": "5428 kJ/mol",
-        "D": "-151 kJ/mol"
+        "A": "-OH",
+        "B": "-CO-",
+        "C": "-NO2",
+        "D": "-CHO"
       },
-      "answer": "B",
-      "explanation": "dG = dH - T dS = -92 - (298)(-0.198).",
-      "difficulty": "HARD",
-      "topic": "Thermodynamics"
+      "answer": "C",
+      "explanation": "nitroethane contains the -NO2 functional group.",
+      "difficulty": "EASY",
+      "topic": "Organic Chemistry"
     },
     {
       "number": 73,
       "subject": "Chemistry",
-      "question": "According to VSEPR theory, the shape of CH4 is",
+      "question": "The functional group present in propanone is",
       "options": {
-        "A": "tetrahedral",
-        "B": "trigonal planar",
-        "C": "bent",
-        "D": "trigonal pyramidal"
+        "A": "-COOH",
+        "B": "-CHO",
+        "C": "-CO-",
+        "D": "-OH"
       },
-      "answer": "A",
-      "explanation": "The arrangement of electron pairs about the central atom in CH4 gives a tetrahedral geometry.",
-      "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "answer": "C",
+      "explanation": "propanone contains the -CO- functional group.",
+      "difficulty": "EASY",
+      "topic": "Organic Chemistry"
     },
     {
       "number": 74,
       "subject": "Chemistry",
-      "question": "The number of equivalents of a substance deposited when a current of 5 A flows for 193 s is (F = 96500 C/mol)",
+      "question": "The functional group present in ethanoic acid is",
       "options": {
-        "A": "0.005",
-        "B": "0.01",
-        "C": "0.02",
-        "D": "965"
+        "A": "-CO-",
+        "B": "-CHO",
+        "C": "-OH",
+        "D": "-COOH"
       },
-      "answer": "B",
-      "explanation": "Equivalents = I t / F = 5 x 193 / 96500.",
-      "difficulty": "HARD",
-      "topic": "Electrochemistry"
+      "answer": "D",
+      "explanation": "ethanoic acid contains the -COOH functional group.",
+      "difficulty": "EASY",
+      "topic": "Organic Chemistry"
     },
     {
       "number": 75,
       "subject": "Chemistry",
-      "question": "The hybridization of the central atom in XeF4 is",
+      "question": "Which of the following compounds will undergo an SN1 reaction most readily?",
       "options": {
-        "A": "sp3d2",
-        "B": "sp2",
-        "C": "sp3",
-        "D": "sp"
+        "A": "1-Chlorobutane",
+        "B": "tert-Butyl chloride",
+        "C": "n-Butyl chloride",
+        "D": "Chloromethane"
       },
-      "answer": "A",
-      "explanation": "The steric number (bond pairs + lone pairs) around the central atom in XeF4 gives sp3d2 hybridization.",
-      "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "answer": "B",
+      "explanation": "SN1 reactions are favoured by tertiary alkyl halides because the intermediate tertiary carbocation is the most stable.",
+      "difficulty": "HARD",
+      "topic": "Organic Chemistry"
     },
     {
       "number": 76,
       "subject": "Chemistry",
-      "question": "According to VSEPR theory, the shape of BF3 is",
+      "question": "The bond formed by the sharing of electrons between two atoms is called a",
       "options": {
-        "A": "bent",
-        "B": "trigonal pyramidal",
-        "C": "tetrahedral",
-        "D": "trigonal planar"
+        "A": "covalent bond",
+        "B": "metallic bond",
+        "C": "hydrogen bond",
+        "D": "ionic bond"
       },
-      "answer": "D",
-      "explanation": "The arrangement of electron pairs about the central atom in BF3 gives a trigonal planar geometry.",
-      "difficulty": "MEDIUM",
+      "answer": "A",
+      "explanation": "A covalent bond is formed by the mutual sharing of electron pairs between atoms.",
+      "difficulty": "EASY",
       "topic": "Chemical Bonding"
     },
     {
       "number": 77,
       "subject": "Chemistry",
-      "question": "According to molecular orbital theory, the bond order of C2 is",
+      "question": "The functional group present in chloroethane is",
       "options": {
-        "A": "2.5",
-        "B": "1.5",
-        "C": "2",
-        "D": "3"
+        "A": "-CO-",
+        "B": "-CHO",
+        "C": "-OH",
+        "D": "-Cl"
       },
-      "answer": "C",
-      "explanation": "Bond order = (Nb - Na)/2; for C2 this gives 2.",
-      "difficulty": "HARD",
-      "topic": "Chemical Bonding"
+      "answer": "D",
+      "explanation": "chloroethane contains the -Cl functional group.",
+      "difficulty": "EASY",
+      "topic": "Organic Chemistry"
     },
     {
       "number": 78,
       "subject": "Chemistry",
-      "question": "According to VSEPR theory, the shape of BeCl2 is",
+      "question": "The mass of one molecule of water is approximately (N_A = 6.022 x 10^23 mol^-1)",
       "options": {
-        "A": "bent",
-        "B": "linear",
-        "C": "tetrahedral",
-        "D": "trigonal pyramidal"
+        "A": "9.0 x 10^-23 g",
+        "B": "3.0 x 10^-23 g",
+        "C": "6.0 x 10^-23 g",
+        "D": "1.8 x 10^-23 g"
       },
       "answer": "B",
-      "explanation": "The arrangement of electron pairs about the central atom in BeCl2 gives a linear geometry.",
+      "explanation": "Mass of one molecule = 18 / (6.022 x 10^23) = 2.99 x 10^-23 g, about 3.0 x 10^-23 g.",
       "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "topic": "Some Basic Concepts of Chemistry"
     },
     {
       "number": 79,
       "subject": "Chemistry",
-      "question": "The number of orbitals in the subshell with azimuthal quantum number l = 1 (p-subshell) is",
+      "question": "The standard enthalpy of formation of an element in its most stable standard state is",
       "options": {
-        "A": "3",
-        "B": "6",
-        "C": "5",
-        "D": "4"
+        "A": "always negative",
+        "B": "equal to its atomic mass",
+        "C": "zero",
+        "D": "always positive"
       },
-      "answer": "A",
-      "explanation": "Number of orbitals = 2l + 1 = 2(1) + 1.",
-      "difficulty": "EASY",
-      "topic": "Structure of Atom"
+      "answer": "C",
+      "explanation": "By convention the standard enthalpy of formation of an element in its standard state is taken as zero.",
+      "difficulty": "HARD",
+      "topic": "Thermodynamics"
     },
     {
       "number": 80,
       "subject": "Chemistry",
-      "question": "For a reaction, dH = 50 kJ/mol, dS = 0.2 kJ/mol/K and T = 300 K. The standard Gibbs energy change is",
+      "question": "The pH of a 0.01 M aqueous HCl solution is",
       "options": {
-        "A": "110 kJ/mol",
-        "B": "-10 kJ/mol",
-        "C": "10 kJ/mol",
-        "D": "3000 kJ/mol"
+        "A": "12",
+        "B": "3",
+        "C": "2",
+        "D": "1"
       },
-      "answer": "B",
-      "explanation": "dG = dH - T dS = 50 - (300)(0.2).",
-      "difficulty": "HARD",
-      "topic": "Thermodynamics"
+      "answer": "C",
+      "explanation": "HCl is a strong acid, so [H+] = 0.01 M = 10^-2 M and pH = 2.",
+      "difficulty": "MEDIUM",
+      "topic": "Equilibrium"
     },
     {
       "number": 81,
       "subject": "Chemistry",
-      "question": "The number of orbitals in the subshell with azimuthal quantum number l = 2 (d-subshell) is",
+      "question": "The first ionization enthalpy of Na (in kJ/mol) is closest to",
       "options": {
-        "A": "8",
-        "B": "7",
-        "C": "5",
-        "D": "6"
+        "A": "996",
+        "B": "496",
+        "C": "196",
+        "D": "696"
       },
-      "answer": "C",
-      "explanation": "Number of orbitals = 2l + 1 = 2(2) + 1.",
-      "difficulty": "EASY",
-      "topic": "Structure of Atom"
+      "answer": "B",
+      "explanation": "Across a period the first ionization enthalpy generally rises, placing Na near 496 kJ/mol.",
+      "difficulty": "MEDIUM",
+      "topic": "Classification of Elements and Periodicity"
     },
     {
       "number": 82,
       "subject": "Chemistry",
-      "question": "The depression in freezing point of a solution of molality 0.5 mol/kg in water (Kf = 1.86 K kg/mol) is",
+      "question": "The coordination number of the central metal ion in [Cu(NH3)4]2+ is",
       "options": {
-        "A": "0.93 K",
-        "B": "1.86 K",
-        "C": "-0.93 K",
-        "D": "0.465 K"
+        "A": "8",
+        "B": "2",
+        "C": "6",
+        "D": "4"
       },
-      "answer": "A",
-      "explanation": "dTf = Kf x m = 1.86 x 0.5.",
-      "difficulty": "HARD",
-      "topic": "Solutions"
+      "answer": "D",
+      "explanation": "Counting the ligands directly bonded to the central ion in [Cu(NH3)4]2+ gives a coordination number of 4.",
+      "difficulty": "MEDIUM",
+      "topic": "Coordination Compounds"
     },
     {
       "number": 83,
       "subject": "Chemistry",
-      "question": "According to VSEPR theory, the shape of NH3 is",
+      "question": "The coordination number of the central metal ion in [PtCl4]2- is",
       "options": {
-        "A": "trigonal pyramidal",
-        "B": "trigonal planar",
-        "C": "bent",
-        "D": "tetrahedral"
+        "A": "8",
+        "B": "2",
+        "C": "6",
+        "D": "4"
       },
-      "answer": "A",
-      "explanation": "The arrangement of electron pairs about the central atom in NH3 gives a trigonal pyramidal geometry.",
+      "answer": "D",
+      "explanation": "Counting the ligands directly bonded to the central ion in [PtCl4]2- gives a coordination number of 4.",
       "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "topic": "Coordination Compounds"
     },
     {
       "number": 84,
       "subject": "Chemistry",
-      "question": "The hybridization of the central atom in BeCl2 is",
+      "question": "For the sparingly soluble salt Ag2CrO4, the solubility product expression is",
       "options": {
-        "A": "sp3",
-        "B": "sp",
-        "C": "sp3d",
-        "D": "sp2"
+        "A": "[Ag+] [CrO4^2-]",
+        "B": "[Ag+]^2 [CrO4^2-]^2",
+        "C": "[Ag+]^2 [CrO4^2-]",
+        "D": "[Ag+] [CrO4^2-]^2"
       },
-      "answer": "B",
-      "explanation": "The steric number (bond pairs + lone pairs) around the central atom in BeCl2 gives sp hybridization.",
-      "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "answer": "C",
+      "explanation": "Ag2CrO4 dissolves to give 2 Ag+ and 1 CrO4^2-, so Ksp = [Ag+]^2 [CrO4^2-].",
+      "difficulty": "HARD",
+      "topic": "Equilibrium"
     },
     {
       "number": 85,
       "subject": "Chemistry",
-      "question": "The depression in freezing point of a solution of molality 0.1 mol/kg in water (Kf = 5.12 K kg/mol) is",
+      "question": "The number of sigma and pi bonds in a benzene molecule (C6H6) is",
       "options": {
-        "A": "0.512 K",
-        "B": "-0.512 K",
-        "C": "0.256 K",
-        "D": "1.024 K"
+        "A": "12 sigma and 3 pi",
+        "B": "6 sigma and 3 pi",
+        "C": "12 sigma and 6 pi",
+        "D": "6 sigma and 6 pi"
       },
       "answer": "A",
-      "explanation": "dTf = Kf x m = 5.12 x 0.1.",
+      "explanation": "There are 6 C-H sigma bonds, 6 C-C sigma bonds in the ring and 3 pi bonds, i.e. 12 sigma and 3 pi bonds.",
       "difficulty": "HARD",
-      "topic": "Solutions"
+      "topic": "Chemical Bonding"
     },
     {
       "number": 86,
       "subject": "Chemistry",
-      "question": "For a reaction, dH = -200 kJ/mol, dS = -0.2 kJ/mol/K and T = 400 K. The standard Gibbs energy change is",
+      "question": "The first ionization enthalpy of Si (in kJ/mol) is closest to",
       "options": {
-        "A": "-120 kJ/mol",
-        "B": "16000 kJ/mol",
-        "C": "-280 kJ/mol",
-        "D": "120 kJ/mol"
+        "A": "1286",
+        "B": "986",
+        "C": "786",
+        "D": "486"
       },
-      "answer": "A",
-      "explanation": "dG = dH - T dS = -200 - (400)(-0.2).",
-      "difficulty": "HARD",
-      "topic": "Thermodynamics"
+      "answer": "C",
+      "explanation": "Across a period the first ionization enthalpy generally rises, placing Si near 786 kJ/mol.",
+      "difficulty": "MEDIUM",
+      "topic": "Classification of Elements and Periodicity"
     },
     {
       "number": 87,
       "subject": "Chemistry",
-      "question": "The hybridization of the central atom in BF3 is",
+      "question": "The number of moles present in 44 g of carbon dioxide (molar mass 44 g mol^-1) is",
       "options": {
-        "A": "sp2",
-        "B": "sp3d",
-        "C": "sp",
-        "D": "sp3"
+        "A": "2",
+        "B": "0.5",
+        "C": "1",
+        "D": "4"
       },
-      "answer": "A",
-      "explanation": "The steric number (bond pairs + lone pairs) around the central atom in BF3 gives sp2 hybridization.",
-      "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "answer": "C",
+      "explanation": "Moles = mass/molar mass = 44/44 = 1 mol.",
+      "difficulty": "EASY",
+      "topic": "Some Basic Concepts of Chemistry"
     },
     {
       "number": 88,
       "subject": "Chemistry",
-      "question": "According to VSEPR theory, the shape of SF6 is",
+      "question": "Which of the following is a reducing sugar?",
       "options": {
-        "A": "bent",
-        "B": "trigonal pyramidal",
-        "C": "tetrahedral",
-        "D": "octahedral"
+        "A": "Cellulose",
+        "B": "Glucose",
+        "C": "Sucrose",
+        "D": "Starch"
       },
-      "answer": "D",
-      "explanation": "The arrangement of electron pairs about the central atom in SF6 gives a octahedral geometry.",
+      "answer": "B",
+      "explanation": "Glucose has a free aldehyde (hemiacetal) group and therefore reduces Tollens'/Fehling's reagent; sucrose is non-reducing.",
       "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "topic": "Biomolecules"
     },
     {
       "number": 89,
       "subject": "Chemistry",
-      "question": "The hybridization of the central atom in H2O is",
+      "question": "For an exothermic reaction at constant pressure, the change in enthalpy (ΔH) is",
       "options": {
-        "A": "sp2",
-        "B": "sp3",
-        "C": "sp",
-        "D": "sp3d"
+        "A": "zero",
+        "B": "unpredictable",
+        "C": "positive",
+        "D": "negative"
       },
-      "answer": "B",
-      "explanation": "The steric number (bond pairs + lone pairs) around the central atom in H2O gives sp3 hybridization.",
+      "answer": "D",
+      "explanation": "In an exothermic reaction heat is released, so ΔH is negative.",
       "difficulty": "MEDIUM",
-      "topic": "Chemical Bonding"
+      "topic": "Thermodynamics"
     },
     {
       "number": 90,
       "subject": "Chemistry",
-      "question": "According to molecular orbital theory, the bond order of O2^- is",
+      "question": "The coordination number of the central metal ion in [Ni(CN)4]2- is",
       "options": {
-        "A": "2.5",
-        "B": "1.5",
-        "C": "1",
+        "A": "8",
+        "B": "6",
+        "C": "4",
         "D": "2"
       },
-      "answer": "B",
-      "explanation": "Bond order = (Nb - Na)/2; for O2^- this gives 1.5.",
-      "difficulty": "HARD",
-      "topic": "Chemical Bonding"
+      "answer": "C",
+      "explanation": "Counting the ligands directly bonded to the central ion in [Ni(CN)4]2- gives a coordination number of 4.",
+      "difficulty": "MEDIUM",
+      "topic": "Coordination Compounds"
     },
     {
       "number": 91,
       "subject": "Botany",
-      "question": "Which of the following correctly describes the pressure-flow hypothesis?",
+      "question": "The fluid mosaic model of the plasma membrane was proposed by",
       "options": {
-        "A": "the movement of water across a semipermeable membrane",
-        "B": "the shrinkage of protoplasm when a cell loses water in a hypertonic solution",
-        "C": "the loss of water as liquid droplets from leaf margins",
-        "D": "the explanation of translocation in the phloem"
+        "A": "Watson and Crick",
+        "B": "Singer and Nicolson",
+        "C": "Schleiden and Schwann",
+        "D": "Robert Hooke"
       },
-      "answer": "D",
-      "explanation": "the pressure-flow hypothesis refers to the explanation of translocation in the phloem.",
+      "answer": "B",
+      "explanation": "Singer and Nicolson (1972) proposed the fluid mosaic model of the plasma membrane.",
       "difficulty": "MEDIUM",
-      "topic": "Transport in Plants"
+      "topic": "Cell: Structure and Function"
     },
     {
       "number": 92,
       "subject": "Botany",
-      "question": "Which of the following correctly describes the S phase?",
+      "question": "Which group of plants is called the 'amphibians of the plant kingdom'?",
       "options": {
-        "A": "the meiotic stage in which homologous chromosomes pair up (synapsis)",
-        "B": "the meiotic stage in which chiasmata become visible",
-        "C": "the meiotic stage in which crossing over occurs",
-        "D": "the phase in which DNA is replicated"
+        "A": "Angiosperms",
+        "B": "Gymnosperms",
+        "C": "Bryophytes",
+        "D": "Pteridophytes"
       },
-      "answer": "D",
-      "explanation": "the S phase refers to the phase in which DNA is replicated.",
-      "difficulty": "MEDIUM",
-      "topic": "Cell Cycle and Cell Division"
+      "answer": "C",
+      "explanation": "Bryophytes need water for the movement of male gametes to the egg, so they are called amphibians of the plant kingdom.",
+      "difficulty": "EASY",
+      "topic": "Plant Kingdom"
     },
     {
       "number": 93,
       "subject": "Botany",
-      "question": "Which of the following correctly describes nitrogen?",
+      "question": "Which of the following correctly describes the law of segregation?",
       "options": {
-        "A": "the element required for the synthesis of proteins and nucleic acids",
-        "B": "the conversion of atmospheric nitrogen into ammonia",
-        "C": "the bacterium that fixes nitrogen in the root nodules of legumes",
-        "D": "the central metal of the chlorophyll molecule"
+        "A": "a cross involving two pairs of contrasting characters",
+        "B": "the principle that genes assort independently when unlinked",
+        "C": "the principle that alleles separate during gamete formation",
+        "D": "a cross of an individual with a recessive parent"
       },
-      "answer": "A",
-      "explanation": "nitrogen refers to the element required for the synthesis of proteins and nucleic acids.",
-      "difficulty": "MEDIUM",
-      "topic": "Mineral Nutrition"
+      "answer": "C",
+      "explanation": "the law of segregation refers to the principle that alleles separate during gamete formation.",
+      "difficulty": "EASY",
+      "topic": "Principles of Inheritance and Variation"
     },
     {
       "number": 94,
       "subject": "Botany",
-      "question": "Which of the following correctly describes the cohesion-tension theory?",
+      "question": "DNA replication occurs during which phase of the cell cycle?",
       "options": {
-        "A": "the explanation of translocation in the phloem",
-        "B": "the movement of water across a semipermeable membrane",
-        "C": "the shrinkage of protoplasm when a cell loses water in a hypertonic solution",
-        "D": "the explanation of the ascent of sap in xylem"
+        "A": "M phase",
+        "B": "G1 phase",
+        "C": "S phase",
+        "D": "G2 phase"
       },
-      "answer": "D",
-      "explanation": "the cohesion-tension theory refers to the explanation of the ascent of sap in xylem.",
-      "difficulty": "MEDIUM",
-      "topic": "Transport in Plants"
+      "answer": "C",
+      "explanation": "DNA is synthesised (replicated) during the S (synthesis) phase of interphase.",
+      "difficulty": "EASY",
+      "topic": "Cell Cycle and Cell Division"
     },
     {
       "number": 95,
       "subject": "Botany",
-      "question": "Which of the following correctly describes the bundle sheath?",
+      "question": "The light reaction of photosynthesis takes place in the",
       "options": {
-        "A": "living tissue specialised for storage and photosynthesis",
-        "B": "dead tissue with thick lignified walls providing hardness",
-        "C": "the layer of cells surrounding a vascular bundle",
-        "D": "living tissue providing mechanical support to young stems"
+        "A": "Stroma",
+        "B": "Cytoplasm",
+        "C": "Thylakoid membrane",
+        "D": "Outer chloroplast membrane"
       },
       "answer": "C",
-      "explanation": "the bundle sheath refers to the layer of cells surrounding a vascular bundle.",
-      "difficulty": "MEDIUM",
-      "topic": "Anatomy of Flowering Plants"
+      "explanation": "The photosystems and electron carriers of the light reaction are embedded in the thylakoid membrane.",
+      "difficulty": "EASY",
+      "topic": "Photosynthesis"
     },
     {
       "number": 96,
       "subject": "Botany",
-      "question": "Which of the following correctly describes zygotene?",
+      "question": "The minimum number of nucleotides in the coding region of an mRNA required to specify a polypeptide of 50 amino acids is",
       "options": {
-        "A": "the meiotic stage in which chiasmata become visible",
-        "B": "the meiotic stage in which crossing over occurs",
-        "C": "the meiotic stage in which homologous chromosomes pair up (synapsis)",
-        "D": "the meiotic stage in which homologous chromosomes separate"
+        "A": "50",
+        "B": "200",
+        "C": "150",
+        "D": "100"
       },
       "answer": "C",
-      "explanation": "zygotene refers to the meiotic stage in which homologous chromosomes pair up (synapsis).",
+      "explanation": "Each amino acid is specified by a codon of three nucleotides, so 50 amino acids need 150 nucleotides.",
       "difficulty": "MEDIUM",
-      "topic": "Cell Cycle and Cell Division"
+      "topic": "Molecular Basis of Inheritance"
     },
     {
       "number": 97,
       "subject": "Botany",
-      "question": "Which of the following correctly describes a test cross?",
+      "question": "Water and dissolved minerals are transported through the",
       "options": {
-        "A": "the principle that alleles separate during gamete formation",
-        "B": "a cross involving two pairs of contrasting characters",
-        "C": "a cross of an individual with a recessive parent",
-        "D": "the scientist who formulated the laws of inheritance using pea plants"
+        "A": "Cortex",
+        "B": "Xylem",
+        "C": "Cambium",
+        "D": "Phloem"
+      },
+      "answer": "B",
+      "explanation": "Xylem conducts water and minerals upward from the roots in plants.",
+      "difficulty": "EASY",
+      "topic": "Transport in Plants"
+    },
+    {
+      "number": 98,
+      "subject": "Botany",
+      "question": "The rate of transpiration in a small leafy shoot is measured using a",
+      "options": {
+        "A": "Clinostat",
+        "B": "Potometer",
+        "C": "Porometer",
+        "D": "Auxanometer"
+      },
+      "answer": "B",
+      "explanation": "A potometer measures the rate of water uptake, which closely reflects the rate of transpiration.",
+      "difficulty": "HARD",
+      "topic": "Transport in Plants"
+    },
+    {
+      "number": 99,
+      "subject": "Botany",
+      "question": "Which of the following is a single-membrane-bound organelle?",
+      "options": {
+        "A": "Mitochondrion",
+        "B": "Lysosome",
+        "C": "Chloroplast",
+        "D": "Nucleus"
+      },
+      "answer": "B",
+      "explanation": "Lysosomes are bounded by a single membrane, whereas mitochondria and chloroplasts are double-membrane bound and the nucleus has a double nuclear envelope.",
+      "difficulty": "HARD",
+      "topic": "Cell: Structure and Function"
+    },
+    {
+      "number": 100,
+      "subject": "Botany",
+      "question": "The deficiency of magnesium in plants typically causes",
+      "options": {
+        "A": "Stunted root growth",
+        "B": "Marginal necrosis of leaves",
+        "C": "Interveinal chlorosis",
+        "D": "Premature leaf fall"
       },
       "answer": "C",
+      "explanation": "Magnesium is a central atom of chlorophyll; its deficiency causes chlorosis between the veins (interveinal chlorosis).",
+      "difficulty": "HARD",
+      "topic": "Mineral Nutrition"
+    },
+    {
+      "number": 101,
+      "subject": "Botany",
+      "question": "Palisade parenchyma is a part of the",
+      "options": {
+        "A": "Epidermis",
+        "B": "Mesophyll",
+        "C": "Endodermis",
+        "D": "Pith"
+      },
+      "answer": "B",
+      "explanation": "Palisade and spongy parenchyma together form the mesophyll of a leaf.",
+      "difficulty": "MEDIUM",
+      "topic": "Anatomy of Flowering Plants"
+    },
+    {
+      "number": 102,
+      "subject": "Botany",
+      "question": "The minimum number of nucleotides in the coding region of an mRNA required to specify a polypeptide of 200 amino acids is",
+      "options": {
+        "A": "200",
+        "B": "800",
+        "C": "400",
+        "D": "600"
+      },
+      "answer": "D",
+      "explanation": "Each amino acid is specified by a codon of three nucleotides, so 200 amino acids need 600 nucleotides.",
+      "difficulty": "MEDIUM",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 103,
+      "subject": "Botany",
+      "question": "Which organelle is called the 'powerhouse' of the cell?",
+      "options": {
+        "A": "Golgi body",
+        "B": "Mitochondrion",
+        "C": "Lysosome",
+        "D": "Ribosome"
+      },
+      "answer": "B",
+      "explanation": "Mitochondria carry out oxidative phosphorylation and release most of the cell's energy as ATP, so they are called the powerhouse of the cell.",
+      "difficulty": "EASY",
+      "topic": "Cell: Structure and Function"
+    },
+    {
+      "number": 104,
+      "subject": "Botany",
+      "question": "The length of a B-DNA molecule containing 1000 base pairs (0.34 nm per base pair) is",
+      "options": {
+        "A": "340 nm",
+        "B": "3400 nm",
+        "C": "34 nm",
+        "D": "170 nm"
+      },
+      "answer": "A",
+      "explanation": "Length = number of base pairs x 0.34 nm = 1000 x 0.34 = 340 nm.",
+      "difficulty": "HARD",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
+      "number": 105,
+      "subject": "Botany",
+      "question": "The fruit of the pea plant is a",
+      "options": {
+        "A": "Legume",
+        "B": "Drupe",
+        "C": "Berry",
+        "D": "Capsule"
+      },
+      "answer": "A",
+      "explanation": "The pea fruit develops from a superior monocarpellary ovary and splits along two sutures, so it is a legume (pod).",
+      "difficulty": "MEDIUM",
+      "topic": "Morphology of Flowering Plants"
+    },
+    {
+      "number": 106,
+      "subject": "Botany",
+      "question": "In a cross involving 2 independently assorting gene pair(s), the number of genotypes expected in the F2 generation is",
+      "options": {
+        "A": "4",
+        "B": "16",
+        "C": "12",
+        "D": "9"
+      },
+      "answer": "D",
+      "explanation": "The number of F2 genotypes = 3^n = 3^2 = 9.",
+      "difficulty": "HARD",
+      "topic": "Principles of Inheritance and Variation"
+    },
+    {
+      "number": 107,
+      "subject": "Botany",
+      "question": "The type of placentation in which ovules are borne on a single placenta along the ventral suture, as in pea, is",
+      "options": {
+        "A": "Marginal",
+        "B": "Axile",
+        "C": "Parietal",
+        "D": "Free central"
+      },
+      "answer": "A",
+      "explanation": "In marginal placentation the ovules are arranged in two rows on the ventral suture, as in pea.",
+      "difficulty": "HARD",
+      "topic": "Morphology of Flowering Plants"
+    },
+    {
+      "number": 108,
+      "subject": "Botany",
+      "question": "The dominant phase in the life cycle of a fern is the",
+      "options": {
+        "A": "Sporophyte (diploid)",
+        "B": "Sporophyte (haploid)",
+        "C": "Gametophyte (haploid)",
+        "D": "Gametophyte (diploid)"
+      },
+      "answer": "A",
+      "explanation": "In pteridophytes such as ferns, the conspicuous and long-lived phase is the diploid sporophyte; the gametophyte is small and short-lived.",
+      "difficulty": "HARD",
+      "topic": "Plant Kingdom"
+    },
+    {
+      "number": 109,
+      "subject": "Botany",
+      "question": "Which of the following correctly describes a test cross?",
+      "options": {
+        "A": "a cross involving two pairs of contrasting characters",
+        "B": "a cross of an individual with a recessive parent",
+        "C": "the principle that alleles separate during gamete formation",
+        "D": "the scientist who formulated the laws of inheritance using pea plants"
+      },
+      "answer": "B",
       "explanation": "a test cross refers to a cross of an individual with a recessive parent.",
       "difficulty": "EASY",
       "topic": "Principles of Inheritance and Variation"
     },
     {
-      "number": 98,
+      "number": 110,
+      "subject": "Botany",
+      "question": "In the Calvin cycle, the first stable product is",
+      "options": {
+        "A": "Oxaloacetic acid",
+        "B": "Glucose",
+        "C": "Pyruvic acid",
+        "D": "3-phosphoglyceric acid"
+      },
+      "answer": "D",
+      "explanation": "Ribulose bisphosphate carboxylase fixes CO2 onto RuBP, and the first stable product is 3-phosphoglyceric acid (3-PGA).",
+      "difficulty": "HARD",
+      "topic": "Photosynthesis"
+    },
+    {
+      "number": 111,
+      "subject": "Botany",
+      "question": "Crossing over between homologous chromosomes occurs during which stage of meiosis?",
+      "options": {
+        "A": "Pachytene",
+        "B": "Zygotene",
+        "C": "Leptotene",
+        "D": "Diplotene"
+      },
+      "answer": "A",
+      "explanation": "Crossing over takes place during the pachytene stage of prophase I of meiosis.",
+      "difficulty": "MEDIUM",
+      "topic": "Cell Cycle and Cell Division"
+    },
+    {
+      "number": 112,
       "subject": "Botany",
       "question": "Which of the following correctly describes the law of independent assortment?",
       "options": {
-        "A": "a cross of an individual with a recessive parent",
-        "B": "a cross involving two pairs of contrasting characters",
+        "A": "a cross involving two pairs of contrasting characters",
+        "B": "a cross of an individual with a recessive parent",
         "C": "the principle that genes assort independently when unlinked",
         "D": "the scientist who formulated the laws of inheritance using pea plants"
       },
@@ -1475,659 +1685,524 @@
       "topic": "Principles of Inheritance and Variation"
     },
     {
-      "number": 99,
-      "subject": "Botany",
-      "question": "Which of the following correctly describes the Krebs cycle?",
-      "options": {
-        "A": "the oxidation of acetyl-CoA in the mitochondrial matrix",
-        "B": "ATP synthesis driven by the proton gradient",
-        "C": "anaerobic breakdown of pyruvate giving ethanol or lactic acid",
-        "D": "the transfer of electrons to oxygen on the inner mitochondrial membrane"
-      },
-      "answer": "A",
-      "explanation": "the Krebs cycle refers to the oxidation of acetyl-CoA in the mitochondrial matrix.",
-      "difficulty": "MEDIUM",
-      "topic": "Respiration in Plants"
-    },
-    {
-      "number": 100,
-      "subject": "Botany",
-      "question": "Which of the following correctly describes a capitulum?",
-      "options": {
-        "A": "a respiratory root of mangrove plants",
-        "B": "the swollen floral axis on which the flower parts are borne",
-        "C": "the head-like inflorescence of sunflower",
-        "D": "a fruit such as coconut with a fleshy pericarp and hard endocarp"
-      },
-      "answer": "C",
-      "explanation": "a capitulum refers to the head-like inflorescence of sunflower.",
-      "difficulty": "MEDIUM",
-      "topic": "Morphology of Flowering Plants"
-    },
-    {
-      "number": 101,
-      "subject": "Botany",
-      "question": "Which of the following correctly describes pachytene?",
-      "options": {
-        "A": "the mitotic stage in which sister chromatids separate",
-        "B": "the meiotic stage in which chiasmata become visible",
-        "C": "the meiotic stage in which homologous chromosomes separate",
-        "D": "the meiotic stage in which crossing over occurs"
-      },
-      "answer": "D",
-      "explanation": "pachytene refers to the meiotic stage in which crossing over occurs.",
-      "difficulty": "MEDIUM",
-      "topic": "Cell Cycle and Cell Division"
-    },
-    {
-      "number": 102,
-      "subject": "Botany",
-      "question": "Which of the following correctly describes leghaemoglobin?",
-      "options": {
-        "A": "the central metal of the chlorophyll molecule",
-        "B": "the pink pigment that protects nitrogenase in root nodules",
-        "C": "the element required for the synthesis of proteins and nucleic acids",
-        "D": "the conversion of atmospheric nitrogen into ammonia"
-      },
-      "answer": "B",
-      "explanation": "leghaemoglobin refers to the pink pigment that protects nitrogenase in root nodules.",
-      "difficulty": "MEDIUM",
-      "topic": "Mineral Nutrition"
-    },
-    {
-      "number": 103,
-      "subject": "Botany",
-      "question": "Which of the following correctly describes oxidative phosphorylation?",
-      "options": {
-        "A": "the oxidation of acetyl-CoA in the mitochondrial matrix",
-        "B": "anaerobic breakdown of pyruvate giving ethanol or lactic acid",
-        "C": "the breakdown of glucose to pyruvate in the cytoplasm",
-        "D": "ATP synthesis driven by the proton gradient"
-      },
-      "answer": "D",
-      "explanation": "oxidative phosphorylation refers to ATP synthesis driven by the proton gradient.",
-      "difficulty": "MEDIUM",
-      "topic": "Respiration in Plants"
-    },
-    {
-      "number": 104,
-      "subject": "Botany",
-      "question": "Which of the following correctly describes the electron transport system?",
-      "options": {
-        "A": "anaerobic breakdown of pyruvate giving ethanol or lactic acid",
-        "B": "the transfer of electrons to oxygen on the inner mitochondrial membrane",
-        "C": "the breakdown of glucose to pyruvate in the cytoplasm",
-        "D": "ATP synthesis driven by the proton gradient"
-      },
-      "answer": "B",
-      "explanation": "the electron transport system refers to the transfer of electrons to oxygen on the inner mitochondrial membrane.",
-      "difficulty": "MEDIUM",
-      "topic": "Respiration in Plants"
-    },
-    {
-      "number": 105,
-      "subject": "Botany",
-      "question": "Which of the following correctly describes anaphase of mitosis?",
-      "options": {
-        "A": "the phase in which DNA is replicated",
-        "B": "the meiotic stage in which homologous chromosomes pair up (synapsis)",
-        "C": "the mitotic stage in which chromosomes align at the cell equator",
-        "D": "the mitotic stage in which sister chromatids separate"
-      },
-      "answer": "D",
-      "explanation": "anaphase of mitosis refers to the mitotic stage in which sister chromatids separate.",
-      "difficulty": "MEDIUM",
-      "topic": "Cell Cycle and Cell Division"
-    },
-    {
-      "number": 106,
-      "subject": "Botany",
-      "question": "Which of the following correctly describes xylem?",
-      "options": {
-        "A": "the layer of cells surrounding a vascular bundle",
-        "B": "the tissue that conducts food in both directions",
-        "C": "the innermost layer of the cortex bearing Casparian strips",
-        "D": "the tissue that conducts water and minerals upwards"
-      },
-      "answer": "D",
-      "explanation": "xylem refers to the tissue that conducts water and minerals upwards.",
-      "difficulty": "MEDIUM",
-      "topic": "Anatomy of Flowering Plants"
-    },
-    {
-      "number": 107,
-      "subject": "Botany",
-      "question": "Which of the following correctly describes plasmolysis?",
-      "options": {
-        "A": "the loss of water as liquid droplets from leaf margins",
-        "B": "the loss of water as vapour mainly through stomata",
-        "C": "the explanation of the ascent of sap in xylem",
-        "D": "the shrinkage of protoplasm when a cell loses water in a hypertonic solution"
-      },
-      "answer": "D",
-      "explanation": "plasmolysis refers to the shrinkage of protoplasm when a cell loses water in a hypertonic solution.",
-      "difficulty": "MEDIUM",
-      "topic": "Transport in Plants"
-    },
-    {
-      "number": 108,
-      "subject": "Botany",
-      "question": "Which of the following correctly describes Gregor Mendel?",
-      "options": {
-        "A": "the principle that genes assort independently when unlinked",
-        "B": "the principle that alleles separate during gamete formation",
-        "C": "the scientist who formulated the laws of inheritance using pea plants",
-        "D": "a cross of an individual with a recessive parent"
-      },
-      "answer": "C",
-      "explanation": "Gregor Mendel refers to the scientist who formulated the laws of inheritance using pea plants.",
-      "difficulty": "EASY",
-      "topic": "Principles of Inheritance and Variation"
-    },
-    {
-      "number": 109,
-      "subject": "Botany",
-      "question": "Which of the following correctly describes a pneumatophore?",
-      "options": {
-        "A": "the primary root modified for storage in carrot and turnip",
-        "B": "a respiratory root of mangrove plants",
-        "C": "a supporting root that arises from the branches of a banyan tree",
-        "D": "a supporting root that arises from the lower nodes of maize"
-      },
-      "answer": "B",
-      "explanation": "a pneumatophore refers to a respiratory root of mangrove plants.",
-      "difficulty": "MEDIUM",
-      "topic": "Morphology of Flowering Plants"
-    },
-    {
-      "number": 110,
-      "subject": "Botany",
-      "question": "Which of the following correctly describes the law of segregation?",
-      "options": {
-        "A": "a cross involving two pairs of contrasting characters",
-        "B": "a cross of an individual with a recessive parent",
-        "C": "the principle that alleles separate during gamete formation",
-        "D": "the principle that genes assort independently when unlinked"
-      },
-      "answer": "C",
-      "explanation": "the law of segregation refers to the principle that alleles separate during gamete formation.",
-      "difficulty": "EASY",
-      "topic": "Principles of Inheritance and Variation"
-    },
-    {
-      "number": 111,
-      "subject": "Botany",
-      "question": "Which of the following correctly describes collenchyma?",
-      "options": {
-        "A": "dead tissue with thick lignified walls providing hardness",
-        "B": "living tissue specialised for storage and photosynthesis",
-        "C": "living tissue providing mechanical support to young stems",
-        "D": "the tissue that conducts water and minerals upwards"
-      },
-      "answer": "C",
-      "explanation": "collenchyma refers to living tissue providing mechanical support to young stems.",
-      "difficulty": "MEDIUM",
-      "topic": "Anatomy of Flowering Plants"
-    },
-    {
-      "number": 112,
-      "subject": "Botany",
-      "question": "Which of the following correctly describes a tap root?",
-      "options": {
-        "A": "a fruit such as coconut with a fleshy pericarp and hard endocarp",
-        "B": "the swollen floral axis on which the flower parts are borne",
-        "C": "the primary root modified for storage in carrot and turnip",
-        "D": "the head-like inflorescence of sunflower"
-      },
-      "answer": "C",
-      "explanation": "a tap root refers to the primary root modified for storage in carrot and turnip.",
-      "difficulty": "MEDIUM",
-      "topic": "Morphology of Flowering Plants"
-    },
-    {
       "number": 113,
       "subject": "Botany",
-      "question": "Which of the following correctly describes phloem?",
+      "question": "Which of the following is a micronutrient?",
       "options": {
-        "A": "the innermost layer of the cortex bearing Casparian strips",
-        "B": "the layer of cells surrounding a vascular bundle",
-        "C": "the tissue that conducts food in both directions",
-        "D": "living tissue providing mechanical support to young stems"
+        "A": "Nitrogen",
+        "B": "Zinc",
+        "C": "Potassium",
+        "D": "Phosphorus"
       },
-      "answer": "C",
-      "explanation": "phloem refers to the tissue that conducts food in both directions.",
-      "difficulty": "MEDIUM",
-      "topic": "Anatomy of Flowering Plants"
+      "answer": "B",
+      "explanation": "Zinc is required in very small amounts and is therefore a micronutrient, unlike N, P and K.",
+      "difficulty": "EASY",
+      "topic": "Mineral Nutrition"
     },
     {
       "number": 114,
       "subject": "Botany",
-      "question": "Which of the following correctly describes diplotene?",
-      "options": {
-        "A": "the mitotic stage in which sister chromatids separate",
-        "B": "the meiotic stage in which chiasmata become visible",
-        "C": "the meiotic stage in which homologous chromosomes separate",
-        "D": "the mitotic stage in which chromosomes align at the cell equator"
-      },
-      "answer": "B",
-      "explanation": "diplotene refers to the meiotic stage in which chiasmata become visible.",
-      "difficulty": "MEDIUM",
-      "topic": "Cell Cycle and Cell Division"
-    },
-    {
-      "number": 115,
-      "subject": "Botany",
       "question": "Which of the following correctly describes a dihybrid cross?",
       "options": {
-        "A": "a cross involving two pairs of contrasting characters",
-        "B": "the principle that alleles separate during gamete formation",
-        "C": "the scientist who formulated the laws of inheritance using pea plants",
+        "A": "the principle that alleles separate during gamete formation",
+        "B": "the scientist who formulated the laws of inheritance using pea plants",
+        "C": "a cross involving two pairs of contrasting characters",
         "D": "the principle that genes assort independently when unlinked"
       },
-      "answer": "A",
+      "answer": "C",
       "explanation": "a dihybrid cross refers to a cross involving two pairs of contrasting characters.",
       "difficulty": "EASY",
       "topic": "Principles of Inheritance and Variation"
     },
     {
+      "number": 115,
+      "subject": "Botany",
+      "question": "The length of a B-DNA molecule containing 5000 base pairs (0.34 nm per base pair) is",
+      "options": {
+        "A": "170 nm",
+        "B": "850 nm",
+        "C": "17000 nm",
+        "D": "1700 nm"
+      },
+      "answer": "D",
+      "explanation": "Length = number of base pairs x 0.34 nm = 5000 x 0.34 = 1700 nm.",
+      "difficulty": "HARD",
+      "topic": "Molecular Basis of Inheritance"
+    },
+    {
       "number": 116,
       "subject": "Botany",
-      "question": "Which of the following correctly describes nitrogen fixation?",
+      "question": "Double fertilisation is a characteristic feature of",
       "options": {
-        "A": "a symbiotic association between a fungus and plant roots",
-        "B": "the conversion of atmospheric nitrogen into ammonia",
-        "C": "the pink pigment that protects nitrogenase in root nodules",
-        "D": "the bacterium that fixes nitrogen in the root nodules of legumes"
+        "A": "Angiosperms",
+        "B": "Bryophytes",
+        "C": "Pteridophytes",
+        "D": "Gymnosperms"
       },
-      "answer": "B",
-      "explanation": "nitrogen fixation refers to the conversion of atmospheric nitrogen into ammonia.",
+      "answer": "A",
+      "explanation": "Double fertilisation (syngamy and triple fusion) is found only in angiosperms.",
       "difficulty": "MEDIUM",
-      "topic": "Mineral Nutrition"
+      "topic": "Plant Kingdom"
     },
     {
       "number": 117,
       "subject": "Botany",
-      "question": "Which of the following correctly describes photorespiration?",
+      "question": "The minimum number of nucleotides in the coding region of an mRNA required to specify a polypeptide of 100 amino acids is",
       "options": {
-        "A": "the pigment system that absorbs light at 700 nm",
-        "B": "the pigment system that splits water and absorbs light at 680 nm",
-        "C": "the wasteful oxygenation of RuBP that produces no sugar or ATP",
-        "D": "the enzyme that fixes carbon dioxide in the Calvin cycle"
+        "A": "300",
+        "B": "100",
+        "C": "200",
+        "D": "400"
       },
-      "answer": "C",
-      "explanation": "photorespiration refers to the wasteful oxygenation of RuBP that produces no sugar or ATP.",
-      "difficulty": "HARD",
-      "topic": "Photosynthesis"
+      "answer": "A",
+      "explanation": "Each amino acid is specified by a codon of three nucleotides, so 100 amino acids need 300 nucleotides.",
+      "difficulty": "MEDIUM",
+      "topic": "Molecular Basis of Inheritance"
     },
     {
       "number": 118,
       "subject": "Botany",
-      "question": "Which of the following correctly describes mycorrhiza?",
+      "question": "How many types of gametes can be produced by an individual that is heterozygous at 5 gene loci ?",
       "options": {
-        "A": "a symbiotic association between a fungus and plant roots",
-        "B": "the central metal of the chlorophyll molecule",
-        "C": "the pink pigment that protects nitrogenase in root nodules",
-        "D": "the element required for the synthesis of proteins and nucleic acids"
+        "A": "32",
+        "B": "128",
+        "C": "64",
+        "D": "33"
       },
       "answer": "A",
-      "explanation": "mycorrhiza refers to a symbiotic association between a fungus and plant roots.",
+      "explanation": "An individual heterozygous at n loci produces 2^n = 2^5 = 32 types of gametes.",
       "difficulty": "MEDIUM",
-      "topic": "Mineral Nutrition"
+      "topic": "Principles of Inheritance and Variation"
     },
     {
       "number": 119,
       "subject": "Botany",
-      "question": "Which of the following correctly describes magnesium?",
+      "question": "How many types of gametes can be produced by an individual that is heterozygous at 2 gene loci ?",
       "options": {
-        "A": "the bacterium that fixes nitrogen in the root nodules of legumes",
-        "B": "a symbiotic association between a fungus and plant roots",
-        "C": "the conversion of atmospheric nitrogen into ammonia",
-        "D": "the central metal of the chlorophyll molecule"
+        "A": "16",
+        "B": "5",
+        "C": "4",
+        "D": "8"
       },
-      "answer": "D",
-      "explanation": "magnesium refers to the central metal of the chlorophyll molecule.",
+      "answer": "C",
+      "explanation": "An individual heterozygous at n loci produces 2^n = 2^2 = 4 types of gametes.",
       "difficulty": "MEDIUM",
-      "topic": "Mineral Nutrition"
+      "topic": "Principles of Inheritance and Variation"
     },
     {
       "number": 120,
       "subject": "Botany",
-      "question": "Which of the following correctly describes the thalamus?",
+      "question": "If the producers in a food chain trap 20000 kJ of energy, the energy available to organisms at trophic level 2 (following the 10% law) is",
       "options": {
-        "A": "the swollen floral axis on which the flower parts are borne",
-        "B": "a respiratory root of mangrove plants",
-        "C": "a supporting root that arises from the lower nodes of maize",
-        "D": "a supporting root that arises from the branches of a banyan tree"
+        "A": "6000 kJ",
+        "B": "2000 kJ",
+        "C": "200 kJ",
+        "D": "4000 kJ"
       },
-      "answer": "A",
-      "explanation": "the thalamus refers to the swollen floral axis on which the flower parts are borne.",
+      "answer": "B",
+      "explanation": "Only 10% of energy is transferred at each step, so energy at level 2 = 20000 x (0.1)^1 = 2000 kJ.",
       "difficulty": "MEDIUM",
-      "topic": "Morphology of Flowering Plants"
+      "topic": "Ecosystem"
     },
     {
       "number": 121,
       "subject": "Botany",
-      "question": "Which of the following correctly describes a drupe?",
+      "question": "The first stable product of the C4 (Hatch-Slack) pathway is",
       "options": {
-        "A": "a supporting root that arises from the branches of a banyan tree",
-        "B": "the swollen floral axis on which the flower parts are borne",
-        "C": "a fruit such as coconut with a fleshy pericarp and hard endocarp",
-        "D": "a respiratory root of mangrove plants"
+        "A": "Malic acid",
+        "B": "Oxaloacetic acid (OAA)",
+        "C": "Ribulose bisphosphate",
+        "D": "3-phosphoglyceric acid"
       },
-      "answer": "C",
-      "explanation": "a drupe refers to a fruit such as coconut with a fleshy pericarp and hard endocarp.",
+      "answer": "B",
+      "explanation": "In C4 plants CO2 is first fixed onto phosphoenolpyruvate to give the 4-carbon oxaloacetic acid (OAA).",
       "difficulty": "MEDIUM",
-      "topic": "Morphology of Flowering Plants"
+      "topic": "Photosynthesis"
     },
     {
       "number": 122,
       "subject": "Botany",
-      "question": "Which of the following correctly describes anaphase I?",
+      "question": "If the producers in a food chain trap 10000 kJ of energy, the energy available to organisms at trophic level 3 (following the 10% law) is",
       "options": {
-        "A": "the meiotic stage in which homologous chromosomes separate",
-        "B": "the mitotic stage in which sister chromatids separate",
-        "C": "the phase in which DNA is replicated",
-        "D": "the mitotic stage in which chromosomes align at the cell equator"
+        "A": "10 kJ",
+        "B": "300 kJ",
+        "C": "100 kJ",
+        "D": "200 kJ"
       },
-      "answer": "A",
-      "explanation": "anaphase I refers to the meiotic stage in which homologous chromosomes separate.",
+      "answer": "C",
+      "explanation": "Only 10% of energy is transferred at each step, so energy at level 3 = 10000 x (0.1)^2 = 100 kJ.",
       "difficulty": "MEDIUM",
-      "topic": "Cell Cycle and Cell Division"
+      "topic": "Ecosystem"
     },
     {
       "number": 123,
       "subject": "Botany",
-      "question": "Which of the following correctly describes fermentation?",
-      "options": {
-        "A": "the transfer of electrons to oxygen on the inner mitochondrial membrane",
-        "B": "the breakdown of glucose to pyruvate in the cytoplasm",
-        "C": "anaerobic breakdown of pyruvate giving ethanol or lactic acid",
-        "D": "the oxidation of acetyl-CoA in the mitochondrial matrix"
-      },
-      "answer": "C",
-      "explanation": "fermentation refers to anaerobic breakdown of pyruvate giving ethanol or lactic acid.",
-      "difficulty": "MEDIUM",
-      "topic": "Respiration in Plants"
-    },
-    {
-      "number": 124,
-      "subject": "Botany",
-      "question": "Which of the following correctly describes glycolysis?",
-      "options": {
-        "A": "the breakdown of glucose to pyruvate in the cytoplasm",
-        "B": "ATP synthesis driven by the proton gradient",
-        "C": "the oxidation of acetyl-CoA in the mitochondrial matrix",
-        "D": "the transfer of electrons to oxygen on the inner mitochondrial membrane"
-      },
-      "answer": "A",
-      "explanation": "glycolysis refers to the breakdown of glucose to pyruvate in the cytoplasm.",
-      "difficulty": "MEDIUM",
-      "topic": "Respiration in Plants"
-    },
-    {
-      "number": 125,
-      "subject": "Botany",
       "question": "How many types of gametes can be produced by an individual that is heterozygous at 1 gene loci ?",
       "options": {
         "A": "8",
-        "B": "3",
-        "C": "4",
-        "D": "2"
+        "B": "2",
+        "C": "3",
+        "D": "4"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": "An individual heterozygous at n loci produces 2^n = 2^1 = 2 types of gametes.",
       "difficulty": "MEDIUM",
       "topic": "Principles of Inheritance and Variation"
     },
     {
+      "number": 124,
+      "subject": "Botany",
+      "question": "The fleshy edible part of a mango fruit is the",
+      "options": {
+        "A": "Endocarp",
+        "B": "Seed",
+        "C": "Epicarp",
+        "D": "Mesocarp"
+      },
+      "answer": "D",
+      "explanation": "The mango is a drupe whose fleshy edible portion is the mesocarp.",
+      "difficulty": "EASY",
+      "topic": "Morphology of Flowering Plants"
+    },
+    {
+      "number": 125,
+      "subject": "Botany",
+      "question": "In a cross involving 3 independently assorting gene pair(s), the number of genotypes expected in the F2 generation is",
+      "options": {
+        "A": "8",
+        "B": "27",
+        "C": "30",
+        "D": "64"
+      },
+      "answer": "B",
+      "explanation": "The number of F2 genotypes = 3^n = 3^3 = 27.",
+      "difficulty": "HARD",
+      "topic": "Principles of Inheritance and Variation"
+    },
+    {
       "number": 126,
       "subject": "Botany",
-      "question": "Which of the following correctly describes parenchyma?",
+      "question": "In a cross involving 1 independently assorting gene pair(s), the number of genotypes expected in the F2 generation is",
       "options": {
-        "A": "the tissue that conducts food in both directions",
-        "B": "the tissue that conducts water and minerals upwards",
-        "C": "living tissue specialised for storage and photosynthesis",
-        "D": "the innermost layer of the cortex bearing Casparian strips"
+        "A": "3",
+        "B": "4",
+        "C": "2",
+        "D": "6"
       },
-      "answer": "C",
-      "explanation": "parenchyma refers to living tissue specialised for storage and photosynthesis.",
-      "difficulty": "MEDIUM",
-      "topic": "Anatomy of Flowering Plants"
+      "answer": "A",
+      "explanation": "The number of F2 genotypes = 3^n = 3^1 = 3.",
+      "difficulty": "HARD",
+      "topic": "Principles of Inheritance and Variation"
     },
     {
       "number": 127,
       "subject": "Botany",
-      "question": "Which of the following correctly describes the endodermis?",
+      "question": "If the producers in a food chain trap 50000 kJ of energy, the energy available to organisms at trophic level 4 (following the 10% law) is",
       "options": {
-        "A": "the innermost layer of the cortex bearing Casparian strips",
-        "B": "living tissue providing mechanical support to young stems",
-        "C": "the layer of cells surrounding a vascular bundle",
-        "D": "dead tissue with thick lignified walls providing hardness"
+        "A": "5 kJ",
+        "B": "50 kJ",
+        "C": "100 kJ",
+        "D": "150 kJ"
       },
-      "answer": "A",
-      "explanation": "the endodermis refers to the innermost layer of the cortex bearing Casparian strips.",
+      "answer": "B",
+      "explanation": "Only 10% of energy is transferred at each step, so energy at level 4 = 50000 x (0.1)^3 = 50 kJ.",
       "difficulty": "MEDIUM",
-      "topic": "Anatomy of Flowering Plants"
+      "topic": "Ecosystem"
     },
     {
       "number": 128,
       "subject": "Botany",
-      "question": "Which of the following correctly describes osmosis?",
+      "question": "Leghemoglobin, which protects the nitrogenase enzyme, is present in",
       "options": {
-        "A": "the shrinkage of protoplasm when a cell loses water in a hypertonic solution",
-        "B": "the loss of water as liquid droplets from leaf margins",
-        "C": "the movement of water across a semipermeable membrane",
-        "D": "the loss of water as vapour mainly through stomata"
+        "A": "Fruits of tomato",
+        "B": "Leaves of grasses",
+        "C": "Stem of sugarcane",
+        "D": "Root nodules of legumes"
       },
-      "answer": "C",
-      "explanation": "osmosis refers to the movement of water across a semipermeable membrane.",
+      "answer": "D",
+      "explanation": "Leghemoglobin occurs in the root nodules of legumes and keeps the nodule interior anaerobic, protecting nitrogenase.",
       "difficulty": "MEDIUM",
-      "topic": "Transport in Plants"
+      "topic": "Mineral Nutrition"
     },
     {
       "number": 129,
       "subject": "Botany",
-      "question": "Which of the following correctly describes transpiration?",
+      "question": "The cohesion-tension theory explains the ascent of sap in the",
       "options": {
-        "A": "the loss of water as vapour mainly through stomata",
-        "B": "the explanation of the ascent of sap in xylem",
-        "C": "the movement of water across a semipermeable membrane",
-        "D": "the explanation of translocation in the phloem"
+        "A": "Phloem",
+        "B": "Neither",
+        "C": "Both phloem and xylem",
+        "D": "Xylem"
       },
-      "answer": "A",
-      "explanation": "transpiration refers to the loss of water as vapour mainly through stomata.",
+      "answer": "D",
+      "explanation": "According to the cohesion-tension theory, water rises through the xylem due to transpiration pull, cohesion and adhesion.",
       "difficulty": "MEDIUM",
       "topic": "Transport in Plants"
     },
     {
       "number": 130,
       "subject": "Botany",
-      "question": "Which of the following correctly describes sclerenchyma?",
+      "question": "Casparian strips are found in the",
       "options": {
-        "A": "the tissue that conducts food in both directions",
-        "B": "the tissue that conducts water and minerals upwards",
-        "C": "dead tissue with thick lignified walls providing hardness",
-        "D": "living tissue specialised for storage and photosynthesis"
+        "A": "Pericycle",
+        "B": "Epidermis",
+        "C": "Cortex",
+        "D": "Endodermis"
       },
-      "answer": "C",
-      "explanation": "sclerenchyma refers to dead tissue with thick lignified walls providing hardness.",
-      "difficulty": "MEDIUM",
+      "answer": "D",
+      "explanation": "The endodermal cell walls bear casparian strips (suberised bands) that block the apoplastic pathway in roots.",
+      "difficulty": "HARD",
       "topic": "Anatomy of Flowering Plants"
     },
     {
       "number": 131,
       "subject": "Botany",
-      "question": "Which of the following correctly describes a prop root?",
+      "question": "The length of a B-DNA molecule containing 2000 base pairs (0.34 nm per base pair) is",
       "options": {
-        "A": "the head-like inflorescence of sunflower",
-        "B": "the primary root modified for storage in carrot and turnip",
-        "C": "a supporting root that arises from the branches of a banyan tree",
-        "D": "a supporting root that arises from the lower nodes of maize"
+        "A": "340 nm",
+        "B": "68 nm",
+        "C": "680 nm",
+        "D": "6800 nm"
       },
       "answer": "C",
-      "explanation": "a prop root refers to a supporting root that arises from the branches of a banyan tree.",
-      "difficulty": "MEDIUM",
-      "topic": "Morphology of Flowering Plants"
+      "explanation": "Length = number of base pairs x 0.34 nm = 2000 x 0.34 = 680 nm.",
+      "difficulty": "HARD",
+      "topic": "Molecular Basis of Inheritance"
     },
     {
       "number": 132,
       "subject": "Botany",
-      "question": "Which of the following correctly describes metaphase?",
+      "question": "A vascular bundle in which the cambium is present is called",
       "options": {
-        "A": "the meiotic stage in which crossing over occurs",
-        "B": "the meiotic stage in which homologous chromosomes pair up (synapsis)",
-        "C": "the phase in which DNA is replicated",
-        "D": "the mitotic stage in which chromosomes align at the cell equator"
+        "A": "Closed",
+        "B": "Conjoint",
+        "C": "Open",
+        "D": "Radial"
       },
-      "answer": "D",
-      "explanation": "metaphase refers to the mitotic stage in which chromosomes align at the cell equator.",
-      "difficulty": "MEDIUM",
-      "topic": "Cell Cycle and Cell Division"
+      "answer": "C",
+      "explanation": "The presence of cambium between xylem and phloem makes a bundle open, allowing secondary growth.",
+      "difficulty": "EASY",
+      "topic": "Anatomy of Flowering Plants"
     },
     {
       "number": 133,
       "subject": "Botany",
-      "question": "Which of the following correctly describes guttation?",
+      "question": "How many types of gametes can be produced by an individual that is heterozygous at 4 gene loci ?",
       "options": {
-        "A": "the loss of water as vapour mainly through stomata",
-        "B": "the explanation of translocation in the phloem",
-        "C": "the loss of water as liquid droplets from leaf margins",
-        "D": "the explanation of the ascent of sap in xylem"
+        "A": "32",
+        "B": "17",
+        "C": "64",
+        "D": "16"
       },
-      "answer": "C",
-      "explanation": "guttation refers to the loss of water as liquid droplets from leaf margins.",
+      "answer": "D",
+      "explanation": "An individual heterozygous at n loci produces 2^n = 2^4 = 16 types of gametes.",
       "difficulty": "MEDIUM",
-      "topic": "Transport in Plants"
+      "topic": "Principles of Inheritance and Variation"
     },
     {
       "number": 134,
       "subject": "Botany",
-      "question": "Which of the following correctly describes a stilt root?",
+      "question": "The number of chromatids present in a human cell at metaphase of mitosis is",
       "options": {
-        "A": "a supporting root that arises from the lower nodes of maize",
-        "B": "the primary root modified for storage in carrot and turnip",
-        "C": "a fruit such as coconut with a fleshy pericarp and hard endocarp",
-        "D": "the head-like inflorescence of sunflower"
+        "A": "69",
+        "B": "92",
+        "C": "46",
+        "D": "23"
       },
-      "answer": "A",
-      "explanation": "a stilt root refers to a supporting root that arises from the lower nodes of maize.",
-      "difficulty": "MEDIUM",
-      "topic": "Morphology of Flowering Plants"
+      "answer": "B",
+      "explanation": "A human cell has 46 chromosomes; at metaphase each has two sister chromatids, so there are 46 x 2 = 92 chromatids.",
+      "difficulty": "HARD",
+      "topic": "Cell Cycle and Cell Division"
     },
     {
       "number": 135,
       "subject": "Botany",
-      "question": "Which of the following correctly describes Rhizobium?",
+      "question": "How many types of gametes can be produced by an individual that is heterozygous at 3 gene loci ?",
       "options": {
-        "A": "the pink pigment that protects nitrogenase in root nodules",
-        "B": "the element required for the synthesis of proteins and nucleic acids",
-        "C": "the bacterium that fixes nitrogen in the root nodules of legumes",
-        "D": "a symbiotic association between a fungus and plant roots"
+        "A": "8",
+        "B": "9",
+        "C": "32",
+        "D": "16"
       },
-      "answer": "C",
-      "explanation": "Rhizobium refers to the bacterium that fixes nitrogen in the root nodules of legumes.",
+      "answer": "A",
+      "explanation": "An individual heterozygous at n loci produces 2^n = 2^3 = 8 types of gametes.",
       "difficulty": "MEDIUM",
-      "topic": "Mineral Nutrition"
+      "topic": "Principles of Inheritance and Variation"
     },
     {
       "number": 136,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes PCR?",
+      "question": "If the glomerular filtration rate is 125 mL/min, the volume of filtrate formed in 30 minutes is",
       "options": {
-        "A": "a technique that amplifies a specific DNA segment in vitro",
-        "B": "an organism that carries and expresses a foreign gene",
-        "C": "a genetically modified crop carrying a bacterial insecticidal gene",
-        "D": "a technique that silences a specific gene using dsRNA"
+        "A": "3.75 L",
+        "B": "125 L",
+        "C": "7.5 L",
+        "D": "1.875 L"
       },
       "answer": "A",
-      "explanation": "PCR refers to a technique that amplifies a specific DNA segment in vitro.",
-      "difficulty": "MEDIUM",
-      "topic": "Biotechnology and its Applications"
+      "explanation": "Filtrate volume = GFR x time = 125 x 30 mL = 3.75 L.",
+      "difficulty": "HARD",
+      "topic": "Excretory Products and their Elimination"
     },
     {
       "number": 137,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes the sliding filament theory?",
+      "question": "For a person with tidal volume 500 mL, inspiratory reserve volume 2500 mL and expiratory reserve volume 1000 mL, the vital capacity is",
       "options": {
-        "A": "the explanation of muscle contraction by filament sliding",
-        "B": "the ions whose release triggers muscle contraction",
-        "C": "slow, aerobic fibres rich in myoglobin and mitochondria",
-        "D": "the functional unit of contraction between two successive Z-lines"
+        "A": "3000 mL",
+        "B": "5000 mL",
+        "C": "4000 mL",
+        "D": "3500 mL"
       },
-      "answer": "A",
-      "explanation": "the sliding filament theory refers to the explanation of muscle contraction by filament sliding.",
-      "difficulty": "MEDIUM",
-      "topic": "Locomotion and Movement"
+      "answer": "C",
+      "explanation": "Vital capacity = TV + IRV + ERV = 500 + 2500 + 1000 = 4000 mL.",
+      "difficulty": "HARD",
+      "topic": "Breathing and Exchange of Gases"
     },
     {
       "number": 138,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes carbonic anhydrase?",
+      "question": "The phylum characterised by a water vascular system and tube feet is",
       "options": {
-        "A": "the maximum volume of air a person can exhale after a maximum inspiration",
-        "B": "the volume of air inhaled or exhaled during normal breathing, about 500 mL",
-        "C": "the enzyme that speeds up the conversion of CO2 to bicarbonate in red blood cells",
-        "D": "an active process caused by contraction of the diaphragm and external intercostals"
+        "A": "Arthropoda",
+        "B": "Annelida",
+        "C": "Echinodermata",
+        "D": "Mollusca"
       },
       "answer": "C",
-      "explanation": "carbonic anhydrase refers to the enzyme that speeds up the conversion of CO2 to bicarbonate in red blood cells.",
-      "difficulty": "MEDIUM",
-      "topic": "Breathing and Exchange of Gases"
+      "explanation": "Echinoderms such as starfish possess a water vascular system with tube feet used in locomotion and feeding.",
+      "difficulty": "EASY",
+      "topic": "Animal Kingdom"
     },
     {
       "number": 139,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes typhoid?",
+      "question": "Flame cells (protonephridia), which help in excretion and osmoregulation, are found in",
       "options": {
-        "A": "a disease caused by Salmonella typhi and confirmed by the Widal test",
-        "B": "a disease characterised by uncontrolled division of body cells",
-        "C": "the process of inducing protective immunity using a vaccine",
-        "D": "an immunodeficiency disease caused by the human immunodeficiency virus"
+        "A": "Annelida",
+        "B": "Arthropoda",
+        "C": "Platyhelminthes",
+        "D": "Nematoda"
       },
-      "answer": "A",
-      "explanation": "typhoid refers to a disease caused by Salmonella typhi and confirmed by the Widal test.",
-      "difficulty": "MEDIUM",
-      "topic": "Human Health and Disease"
+      "answer": "C",
+      "explanation": "Flame cells are the excretory and osmoregulatory structures of flatworms (Platyhelminthes).",
+      "difficulty": "HARD",
+      "topic": "Animal Kingdom"
     },
     {
       "number": 140,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes the ureter?",
+      "question": "Which of the following correctly describes a plasmid?",
       "options": {
-        "A": "the process in which blood is filtered in the renal corpuscle",
-        "B": "the tube that carries urine from the kidney to the urinary bladder",
-        "C": "the nephron region that establishes the medullary concentration gradient",
-        "D": "the hormone that promotes water reabsorption in the collecting duct"
+        "A": "a genetically modified crop carrying a bacterial insecticidal gene",
+        "B": "a technique that silences a specific gene using dsRNA",
+        "C": "a technique that amplifies a specific DNA segment in vitro",
+        "D": "a circular extrachromosomal DNA used as a cloning vector"
       },
-      "answer": "B",
-      "explanation": "the ureter refers to the tube that carries urine from the kidney to the urinary bladder.",
+      "answer": "D",
+      "explanation": "a plasmid refers to a circular extrachromosomal DNA used as a cloning vector.",
       "difficulty": "MEDIUM",
-      "topic": "Excretory Products and their Elimination"
+      "topic": "Biotechnology and its Applications"
     },
     {
       "number": 141,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes a synapse?",
+      "question": "Which of the following correctly describes analogous organs?",
       "options": {
-        "A": "the brain region that maintains balance and coordinates movement",
-        "B": "the brain region concerned with intelligence, memory and voluntary action",
-        "C": "the brain region that controls respiration and cardiovascular reflexes",
-        "D": "the junction across which a nerve impulse passes from one neuron to another"
+        "A": "organs with different structure but similar function",
+        "B": "the constancy of allele frequencies in a large, randomly mating population",
+        "C": "the differential survival and reproduction of the fittest variants",
+        "D": "organs with the same fundamental structure but different functions"
       },
-      "answer": "D",
-      "explanation": "a synapse refers to the junction across which a nerve impulse passes from one neuron to another.",
+      "answer": "A",
+      "explanation": "analogous organs refers to organs with different structure but similar function.",
       "difficulty": "MEDIUM",
-      "topic": "Neural Control and Coordination"
+      "topic": "Evolution"
     },
     {
       "number": 142,
       "subject": "Zoology",
+      "question": "For a person with tidal volume 500 mL, inspiratory reserve volume 3000 mL and expiratory reserve volume 1100 mL, the vital capacity is",
+      "options": {
+        "A": "4100 mL",
+        "B": "4600 mL",
+        "C": "3500 mL",
+        "D": "5600 mL"
+      },
+      "answer": "B",
+      "explanation": "Vital capacity = TV + IRV + ERV = 500 + 3000 + 1100 = 4600 mL.",
+      "difficulty": "HARD",
+      "topic": "Breathing and Exchange of Gases"
+    },
+    {
+      "number": 143,
+      "subject": "Zoology",
+      "question": "The simplest metazoans that show a tissue level of organisation belong to",
+      "options": {
+        "A": "Porifera",
+        "B": "Cnidaria",
+        "C": "Platyhelminthes",
+        "D": "Aschelminthes"
+      },
+      "answer": "B",
+      "explanation": "Cnidarians (Coelenterata) show a tissue level of organisation, whereas sponges have only a cellular level of organisation.",
+      "difficulty": "MEDIUM",
+      "topic": "Animal Kingdom"
+    },
+    {
+      "number": 144,
+      "subject": "Zoology",
+      "question": "For a person with tidal volume 600 mL, inspiratory reserve volume 2400 mL and expiratory reserve volume 1000 mL, the vital capacity is",
+      "options": {
+        "A": "3000 mL",
+        "B": "4000 mL",
+        "C": "5000 mL",
+        "D": "3400 mL"
+      },
+      "answer": "B",
+      "explanation": "Vital capacity = TV + IRV + ERV = 600 + 2400 + 1000 = 4000 mL.",
+      "difficulty": "HARD",
+      "topic": "Breathing and Exchange of Gases"
+    },
+    {
+      "number": 145,
+      "subject": "Zoology",
+      "question": "Which of the following correctly describes a transgenic organism?",
+      "options": {
+        "A": "a circular extrachromosomal DNA used as a cloning vector",
+        "B": "a technique that amplifies a specific DNA segment in vitro",
+        "C": "an enzyme that cuts DNA at specific recognition sites",
+        "D": "an organism that carries and expresses a foreign gene"
+      },
+      "answer": "D",
+      "explanation": "a transgenic organism refers to an organism that carries and expresses a foreign gene.",
+      "difficulty": "MEDIUM",
+      "topic": "Biotechnology and its Applications"
+    },
+    {
+      "number": 146,
+      "subject": "Zoology",
+      "question": "The number of bones in the adult human body is",
+      "options": {
+        "A": "156",
+        "B": "306",
+        "C": "206",
+        "D": "106"
+      },
+      "answer": "C",
+      "explanation": "An adult human skeleton has 206 bones.",
+      "difficulty": "MEDIUM",
+      "topic": "Locomotion and Movement"
+    },
+    {
+      "number": 147,
+      "subject": "Zoology",
       "question": "Which of the following correctly describes natural selection?",
       "options": {
         "A": "the differential survival and reproduction of the fittest variants",
-        "B": "the diversification of a species into many forms in different habitats",
+        "B": "the constancy of allele frequencies in a large, randomly mating population",
         "C": "organs with the same fundamental structure but different functions",
-        "D": "the constancy of allele frequencies in a large, randomly mating population"
+        "D": "the diversification of a species into many forms in different habitats"
       },
       "answer": "A",
       "explanation": "natural selection refers to the differential survival and reproduction of the fittest variants.",
@@ -2135,409 +2210,334 @@
       "topic": "Evolution"
     },
     {
-      "number": 143,
-      "subject": "Zoology",
-      "question": "Which of the following correctly describes the cerebellum?",
-      "options": {
-        "A": "the brain region that maintains balance and coordinates movement",
-        "B": "an insulating cover that enables saltatory conduction",
-        "C": "a chemical released at a synapse to transmit a nerve impulse",
-        "D": "the brain region that controls respiration and cardiovascular reflexes"
-      },
-      "answer": "A",
-      "explanation": "the cerebellum refers to the brain region that maintains balance and coordinates movement.",
-      "difficulty": "MEDIUM",
-      "topic": "Neural Control and Coordination"
-    },
-    {
-      "number": 144,
-      "subject": "Zoology",
-      "question": "Which of the following correctly describes the medulla oblongata?",
-      "options": {
-        "A": "the junction across which a nerve impulse passes from one neuron to another",
-        "B": "the brain region that controls respiration and cardiovascular reflexes",
-        "C": "an insulating cover that enables saltatory conduction",
-        "D": "a chemical released at a synapse to transmit a nerve impulse"
-      },
-      "answer": "B",
-      "explanation": "the medulla oblongata refers to the brain region that controls respiration and cardiovascular reflexes.",
-      "difficulty": "MEDIUM",
-      "topic": "Neural Control and Coordination"
-    },
-    {
-      "number": 145,
-      "subject": "Zoology",
-      "question": "Which of the following correctly describes implantation?",
-      "options": {
-        "A": "the embedding of the blastocyst in the endometrium",
-        "B": "the release of a secondary oocyte from the ovary, usually mid-cycle",
-        "C": "the structure at the sperm head containing hydrolytic enzymes",
-        "D": "the formation of sperm in the seminiferous tubules of the testis"
-      },
-      "answer": "A",
-      "explanation": "implantation refers to the embedding of the blastocyst in the endometrium.",
-      "difficulty": "MEDIUM",
-      "topic": "Human Reproduction"
-    },
-    {
-      "number": 146,
-      "subject": "Zoology",
-      "question": "Which of the following correctly describes filariasis?",
-      "options": {
-        "A": "a disease caused by Wuchereria species and spread by mosquitoes",
-        "B": "a disease caused by Plasmodium and transmitted by female Anopheles",
-        "C": "an immunodeficiency disease caused by the human immunodeficiency virus",
-        "D": "a disease caused by Salmonella typhi and confirmed by the Widal test"
-      },
-      "answer": "A",
-      "explanation": "filariasis refers to a disease caused by Wuchereria species and spread by mosquitoes.",
-      "difficulty": "MEDIUM",
-      "topic": "Human Health and Disease"
-    },
-    {
-      "number": 147,
-      "subject": "Zoology",
-      "question": "Which of the following correctly describes oxytocin?",
-      "options": {
-        "A": "the hormone that stimulates contraction of the uterus during childbirth",
-        "B": "the hormone that promotes milk ejection during nursing",
-        "C": "a hormone that lowers blood glucose by promoting cellular uptake",
-        "D": "a hormone that raises blood glucose by promoting glycogen breakdown"
-      },
-      "answer": "A",
-      "explanation": "oxytocin refers to the hormone that stimulates contraction of the uterus during childbirth.",
-      "difficulty": "MEDIUM",
-      "topic": "Chemical Coordination and Integration"
-    },
-    {
       "number": 148,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes vital capacity?",
+      "question": "The volume of air inspired or expired during normal breathing (tidal volume) is about",
       "options": {
-        "A": "the maximum volume of air a person can exhale after a maximum inspiration",
-        "B": "an active process caused by contraction of the diaphragm and external intercostals",
-        "C": "the shift of the oxygen-haemoglobin curve caused by a rise in CO2",
-        "D": "the enzyme that speeds up the conversion of CO2 to bicarbonate in red blood cells"
+        "A": "1500 mL",
+        "B": "2500 mL",
+        "C": "3000 mL",
+        "D": "500 mL"
       },
-      "answer": "A",
-      "explanation": "vital capacity refers to the maximum volume of air a person can exhale after a maximum inspiration.",
+      "answer": "D",
+      "explanation": "Tidal volume is about 500 mL in a healthy adult; larger volumes are used during forced breathing.",
       "difficulty": "MEDIUM",
       "topic": "Breathing and Exchange of Gases"
     },
     {
       "number": 149,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes ovulation?",
+      "question": "Most of the carbon dioxide is transported in the blood as",
       "options": {
-        "A": "the structure that secretes progesterone after ovulation",
-        "B": "the embedding of the blastocyst in the endometrium",
-        "C": "the fusion of sperm and ovum usually at the ampullary-isthmic junction",
-        "D": "the release of a secondary oocyte from the ovary, usually mid-cycle"
+        "A": "dissolved CO2 in plasma",
+        "B": "bicarbonate ions",
+        "C": "carbonic acid",
+        "D": "carbaminohemoglobin"
       },
-      "answer": "D",
-      "explanation": "ovulation refers to the release of a secondary oocyte from the ovary, usually mid-cycle.",
-      "difficulty": "MEDIUM",
-      "topic": "Human Reproduction"
+      "answer": "B",
+      "explanation": "About 70% of CO2 is carried as bicarbonate ions, about 20-25% as carbaminohemoglobin and the rest dissolved in plasma.",
+      "difficulty": "HARD",
+      "topic": "Breathing and Exchange of Gases"
     },
     {
       "number": 150,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes a transgenic organism?",
+      "question": "The structural and functional unit of the kidney is the",
       "options": {
-        "A": "a technique that amplifies a specific DNA segment in vitro",
-        "B": "an organism that carries and expresses a foreign gene",
-        "C": "an enzyme that cuts DNA at specific recognition sites",
-        "D": "a circular extrachromosomal DNA used as a cloning vector"
+        "A": "Alveolus",
+        "B": "Nephridium",
+        "C": "Nephron",
+        "D": "Neuron"
       },
-      "answer": "B",
-      "explanation": "a transgenic organism refers to an organism that carries and expresses a foreign gene.",
-      "difficulty": "MEDIUM",
-      "topic": "Biotechnology and its Applications"
+      "answer": "C",
+      "explanation": "Each kidney contains about a million nephrons, the units that filter blood and form urine.",
+      "difficulty": "EASY",
+      "topic": "Excretory Products and their Elimination"
     },
     {
       "number": 151,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes glucagon?",
+      "question": "The hormone that lowers blood glucose is",
       "options": {
-        "A": "the thyroid hormone that regulates the basal metabolic rate",
-        "B": "the hormone that prepares the body for a fight-or-flight response",
-        "C": "a hormone that raises blood glucose by promoting glycogen breakdown",
-        "D": "a hormone that raises the blood calcium level"
+        "A": "Adrenaline",
+        "B": "Cortisol",
+        "C": "Insulin",
+        "D": "Glucagon"
       },
       "answer": "C",
-      "explanation": "glucagon refers to a hormone that raises blood glucose by promoting glycogen breakdown.",
-      "difficulty": "MEDIUM",
+      "explanation": "Insulin, secreted by the beta cells of the islets of Langerhans, lowers blood glucose by promoting its uptake and storage.",
+      "difficulty": "EASY",
       "topic": "Chemical Coordination and Integration"
     },
     {
       "number": 152,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes red muscle fibres?",
+      "question": "If the glomerular filtration rate is 125 mL/min, the volume of filtrate formed in 60 minutes is",
       "options": {
-        "A": "the thin filament protein of the muscle sarcomere",
-        "B": "the functional unit of contraction between two successive Z-lines",
-        "C": "the thick filament protein that forms cross-bridges",
-        "D": "slow, aerobic fibres rich in myoglobin and mitochondria"
+        "A": "7.5 L",
+        "B": "15 L",
+        "C": "3.75 L",
+        "D": "125 L"
       },
-      "answer": "D",
-      "explanation": "red muscle fibres refers to slow, aerobic fibres rich in myoglobin and mitochondria.",
-      "difficulty": "MEDIUM",
-      "topic": "Locomotion and Movement"
+      "answer": "A",
+      "explanation": "Filtrate volume = GFR x time = 125 x 60 mL = 7.5 L.",
+      "difficulty": "HARD",
+      "topic": "Excretory Products and their Elimination"
     },
     {
       "number": 153,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes insulin?",
+      "question": "The hormone that increases water reabsorption in the collecting duct is",
       "options": {
-        "A": "the hormone that prepares the body for a fight-or-flight response",
-        "B": "a hormone that raises blood glucose by promoting glycogen breakdown",
-        "C": "the thyroid hormone that regulates the basal metabolic rate",
-        "D": "a hormone that lowers blood glucose by promoting cellular uptake"
-      },
-      "answer": "D",
-      "explanation": "insulin refers to a hormone that lowers blood glucose by promoting cellular uptake.",
-      "difficulty": "MEDIUM",
-      "topic": "Chemical Coordination and Integration"
-    },
-    {
-      "number": 154,
-      "subject": "Zoology",
-      "question": "Which of the following correctly describes the juxtaglomerular apparatus?",
-      "options": {
-        "A": "the tube that carries urine from the kidney to the urinary bladder",
-        "B": "the process in which blood is filtered in the renal corpuscle",
-        "C": "the structure that releases renin in response to low blood pressure",
-        "D": "the nephron region that establishes the medullary concentration gradient"
+        "A": "ANF",
+        "B": "Aldosterone",
+        "C": "ADH (vasopressin)",
+        "D": "Renin"
       },
       "answer": "C",
-      "explanation": "the juxtaglomerular apparatus refers to the structure that releases renin in response to low blood pressure.",
+      "explanation": "Antidiuretic hormone increases the permeability of the collecting duct to water, concentrating the urine.",
       "difficulty": "MEDIUM",
       "topic": "Excretory Products and their Elimination"
     },
     {
+      "number": 154,
+      "subject": "Zoology",
+      "question": "The enzyme pepsin acts in the",
+      "options": {
+        "A": "Duodenum",
+        "B": "Mouth",
+        "C": "Stomach",
+        "D": "Ileum"
+      },
+      "answer": "C",
+      "explanation": "Pepsin is a protease that acts in the acidic medium of the stomach, converting proteins into peptones.",
+      "difficulty": "MEDIUM",
+      "topic": "Digestion and Absorption"
+    },
+    {
       "number": 155,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes Bt cotton?",
+      "question": "The joint between the humerus and the pectoral girdle is a",
       "options": {
-        "A": "an enzyme that cuts DNA at specific recognition sites",
-        "B": "an organism that carries and expresses a foreign gene",
-        "C": "a technique that silences a specific gene using dsRNA",
-        "D": "a genetically modified crop carrying a bacterial insecticidal gene"
+        "A": "Hinge joint",
+        "B": "Ball and socket joint",
+        "C": "Pivot joint",
+        "D": "Gliding joint"
       },
-      "answer": "D",
-      "explanation": "Bt cotton refers to a genetically modified crop carrying a bacterial insecticidal gene.",
-      "difficulty": "MEDIUM",
-      "topic": "Biotechnology and its Applications"
+      "answer": "B",
+      "explanation": "The shoulder joint is a ball-and-socket joint, allowing movement in all planes.",
+      "difficulty": "HARD",
+      "topic": "Locomotion and Movement"
     },
     {
       "number": 156,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes actin?",
+      "question": "The functional unit of contraction in a muscle fibre is the",
       "options": {
-        "A": "the ions whose release triggers muscle contraction",
-        "B": "the thin filament protein of the muscle sarcomere",
-        "C": "the explanation of muscle contraction by filament sliding",
-        "D": "the thick filament protein that forms cross-bridges"
+        "A": "Actin",
+        "B": "Myosin",
+        "C": "Sarcomere",
+        "D": "Myofibril"
       },
-      "answer": "B",
-      "explanation": "actin refers to the thin filament protein of the muscle sarcomere.",
-      "difficulty": "MEDIUM",
+      "answer": "C",
+      "explanation": "The sarcomere, the region between two successive Z-lines, is the functional unit of muscle contraction.",
+      "difficulty": "EASY",
       "topic": "Locomotion and Movement"
     },
     {
       "number": 157,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes a neurotransmitter?",
+      "question": "The tissue that connects a muscle to a bone is",
       "options": {
-        "A": "the junction across which a nerve impulse passes from one neuron to another",
-        "B": "a chemical released at a synapse to transmit a nerve impulse",
-        "C": "the brain region concerned with intelligence, memory and voluntary action",
-        "D": "an insulating cover that enables saltatory conduction"
+        "A": "Tendon",
+        "B": "Areolar tissue",
+        "C": "Ligament",
+        "D": "Cartilage"
       },
-      "answer": "B",
-      "explanation": "a neurotransmitter refers to a chemical released at a synapse to transmit a nerve impulse.",
-      "difficulty": "MEDIUM",
-      "topic": "Neural Control and Coordination"
+      "answer": "A",
+      "explanation": "A tendon is a dense connective tissue that joins skeletal muscle to bone, whereas a ligament joins bone to bone.",
+      "difficulty": "EASY",
+      "topic": "Structural Organisation in Animals"
     },
     {
       "number": 158,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes AIDS?",
+      "question": "Bile juice helps mainly in the",
       "options": {
-        "A": "a disease caused by Wuchereria species and spread by mosquitoes",
-        "B": "the process of inducing protective immunity using a vaccine",
-        "C": "a disease characterised by uncontrolled division of body cells",
-        "D": "an immunodeficiency disease caused by the human immunodeficiency virus"
+        "A": "absorption of glucose",
+        "B": "emulsification of fats",
+        "C": "absorption of water",
+        "D": "digestion of proteins"
       },
-      "answer": "D",
-      "explanation": "AIDS refers to an immunodeficiency disease caused by the human immunodeficiency virus.",
-      "difficulty": "MEDIUM",
-      "topic": "Human Health and Disease"
+      "answer": "B",
+      "explanation": "Bile salts emulsify fats, breaking large fat globules into smaller droplets so that lipases can act on them.",
+      "difficulty": "HARD",
+      "topic": "Digestion and Absorption"
     },
     {
       "number": 159,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes immunisation?",
+      "question": "The resting membrane potential of a neuron is maintained chiefly by the",
       "options": {
-        "A": "a disease caused by Wuchereria species and spread by mosquitoes",
-        "B": "a disease caused by Plasmodium and transmitted by female Anopheles",
-        "C": "a disease caused by Salmonella typhi and confirmed by the Widal test",
-        "D": "the process of inducing protective immunity using a vaccine"
+        "A": "Ca2+ pump",
+        "B": "K+ channels only",
+        "C": "Na+/K+ ATPase pump",
+        "D": "Na+ channels only"
       },
-      "answer": "D",
-      "explanation": "immunisation refers to the process of inducing protective immunity using a vaccine.",
-      "difficulty": "MEDIUM",
-      "topic": "Human Health and Disease"
+      "answer": "C",
+      "explanation": "The Na+/K+ ATPase pump transports 3 Na+ out and 2 K+ in, maintaining the resting potential across the membrane.",
+      "difficulty": "HARD",
+      "topic": "Neural Control and Coordination"
     },
     {
       "number": 160,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes adrenaline?",
+      "question": "The juxtaglomerular cells of the kidney secrete",
       "options": {
-        "A": "the hormone that prepares the body for a fight-or-flight response",
-        "B": "a hormone that raises the blood calcium level",
-        "C": "the hormone that promotes milk ejection during nursing",
-        "D": "the hormone that stimulates contraction of the uterus during childbirth"
+        "A": "Aldosterone",
+        "B": "Renin",
+        "C": "ADH",
+        "D": "Erythropoietin"
       },
-      "answer": "A",
-      "explanation": "adrenaline refers to the hormone that prepares the body for a fight-or-flight response.",
-      "difficulty": "MEDIUM",
-      "topic": "Chemical Coordination and Integration"
+      "answer": "B",
+      "explanation": "Juxtaglomerular cells release renin, which starts the renin-angiotensin-aldosterone system that raises blood pressure.",
+      "difficulty": "HARD",
+      "topic": "Excretory Products and their Elimination"
     },
     {
       "number": 161,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes RNA interference?",
+      "question": "The hardest substance in the human body is",
       "options": {
-        "A": "a technique that silences a specific gene using dsRNA",
-        "B": "an organism that carries and expresses a foreign gene",
-        "C": "a circular extrachromosomal DNA used as a cloning vector",
-        "D": "an enzyme that cuts DNA at specific recognition sites"
+        "A": "Pulp",
+        "B": "Enamel",
+        "C": "Dentine",
+        "D": "Cementum"
       },
-      "answer": "A",
-      "explanation": "RNA interference refers to a technique that silences a specific gene using dsRNA.",
-      "difficulty": "MEDIUM",
-      "topic": "Biotechnology and its Applications"
+      "answer": "B",
+      "explanation": "Enamel, the outermost covering of a tooth, is the hardest substance in the human body.",
+      "difficulty": "EASY",
+      "topic": "Digestion and Absorption"
     },
     {
       "number": 162,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes the corpus luteum?",
+      "question": "The structural and functional unit of the nervous system is the",
       "options": {
-        "A": "the structure at the sperm head containing hydrolytic enzymes",
-        "B": "the embedding of the blastocyst in the endometrium",
-        "C": "the fusion of sperm and ovum usually at the ampullary-isthmic junction",
-        "D": "the structure that secretes progesterone after ovulation"
+        "A": "Axon",
+        "B": "Neuron",
+        "C": "Nephron",
+        "D": "Neuroglia"
       },
-      "answer": "D",
-      "explanation": "the corpus luteum refers to the structure that secretes progesterone after ovulation.",
-      "difficulty": "MEDIUM",
-      "topic": "Human Reproduction"
+      "answer": "B",
+      "explanation": "The neuron is the structural and functional unit of the nervous system.",
+      "difficulty": "EASY",
+      "topic": "Neural Control and Coordination"
     },
     {
       "number": 163,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes fertilisation?",
+      "question": "The blood group regarded as the universal donor is",
       "options": {
-        "A": "the structure at the sperm head containing hydrolytic enzymes",
-        "B": "the formation of sperm in the seminiferous tubules of the testis",
-        "C": "the embedding of the blastocyst in the endometrium",
-        "D": "the fusion of sperm and ovum usually at the ampullary-isthmic junction"
+        "A": "AB positive",
+        "B": "A positive",
+        "C": "B negative",
+        "D": "O negative"
       },
       "answer": "D",
-      "explanation": "fertilisation refers to the fusion of sperm and ovum usually at the ampullary-isthmic junction.",
+      "explanation": "O negative red cells carry neither A, B nor Rh D antigens, so they can be given to almost all recipients (universal donor).",
       "difficulty": "MEDIUM",
-      "topic": "Human Reproduction"
+      "topic": "Body Fluids and Circulation"
     },
     {
       "number": 164,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes ADH?",
+      "question": "Which of the following correctly describes PCR?",
       "options": {
-        "A": "the structure that releases renin in response to low blood pressure",
-        "B": "the tube that carries urine from the kidney to the urinary bladder",
-        "C": "the hormone that promotes water reabsorption in the collecting duct",
-        "D": "the process in which blood is filtered in the renal corpuscle"
+        "A": "a technique that silences a specific gene using dsRNA",
+        "B": "a technique that amplifies a specific DNA segment in vitro",
+        "C": "a genetically modified crop carrying a bacterial insecticidal gene",
+        "D": "an organism that carries and expresses a foreign gene"
       },
-      "answer": "C",
-      "explanation": "ADH refers to the hormone that promotes water reabsorption in the collecting duct.",
+      "answer": "B",
+      "explanation": "PCR refers to a technique that amplifies a specific DNA segment in vitro.",
       "difficulty": "MEDIUM",
-      "topic": "Excretory Products and their Elimination"
+      "topic": "Biotechnology and its Applications"
     },
     {
       "number": 165,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes thyroxine?",
+      "question": "Which of the following correctly describes adaptive radiation?",
       "options": {
-        "A": "the hormone that prepares the body for a fight-or-flight response",
-        "B": "the thyroid hormone that regulates the basal metabolic rate",
-        "C": "a hormone that raises the blood calcium level",
-        "D": "the hormone that stimulates contraction of the uterus during childbirth"
+        "A": "the constancy of allele frequencies in a large, randomly mating population",
+        "B": "organs with different structure but similar function",
+        "C": "the differential survival and reproduction of the fittest variants",
+        "D": "the diversification of a species into many forms in different habitats"
       },
-      "answer": "B",
-      "explanation": "thyroxine refers to the thyroid hormone that regulates the basal metabolic rate.",
+      "answer": "D",
+      "explanation": "adaptive radiation refers to the diversification of a species into many forms in different habitats.",
       "difficulty": "MEDIUM",
-      "topic": "Chemical Coordination and Integration"
+      "topic": "Evolution"
     },
     {
       "number": 166,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes a sarcomere?",
+      "question": "The natural pacemaker of the human heart is the",
       "options": {
-        "A": "the functional unit of contraction between two successive Z-lines",
-        "B": "the thick filament protein that forms cross-bridges",
-        "C": "the explanation of muscle contraction by filament sliding",
-        "D": "the thin filament protein of the muscle sarcomere"
+        "A": "Purkinje fibres",
+        "B": "AV node",
+        "C": "SA node",
+        "D": "Bundle of His"
       },
-      "answer": "A",
-      "explanation": "a sarcomere refers to the functional unit of contraction between two successive Z-lines.",
-      "difficulty": "MEDIUM",
-      "topic": "Locomotion and Movement"
+      "answer": "C",
+      "explanation": "The sino-atrial (SA) node generates the impulses that set the rhythm of the heartbeat, so it acts as the pacemaker.",
+      "difficulty": "EASY",
+      "topic": "Body Fluids and Circulation"
     },
     {
       "number": 167,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes calcium ions?",
+      "question": "The 'master gland' of the human body is the",
       "options": {
-        "A": "slow, aerobic fibres rich in myoglobin and mitochondria",
-        "B": "the ions whose release triggers muscle contraction",
-        "C": "the thin filament protein of the muscle sarcomere",
-        "D": "the functional unit of contraction between two successive Z-lines"
+        "A": "Pituitary",
+        "B": "Pancreas",
+        "C": "Adrenal",
+        "D": "Thyroid"
       },
-      "answer": "B",
-      "explanation": "calcium ions refers to the ions whose release triggers muscle contraction.",
+      "answer": "A",
+      "explanation": "The pituitary is called the master gland because it controls the secretion of many other endocrine glands.",
       "difficulty": "MEDIUM",
-      "topic": "Locomotion and Movement"
+      "topic": "Chemical Coordination and Integration"
     },
     {
       "number": 168,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes spermatogenesis?",
+      "question": "Exchange of respiratory gases in the lungs occurs across the",
       "options": {
-        "A": "the fusion of sperm and ovum usually at the ampullary-isthmic junction",
-        "B": "the formation of sperm in the seminiferous tubules of the testis",
-        "C": "the structure that secretes progesterone after ovulation",
-        "D": "the release of a secondary oocyte from the ovary, usually mid-cycle"
+        "A": "Bronchi",
+        "B": "Larynx",
+        "C": "Alveoli",
+        "D": "Trachea"
       },
-      "answer": "B",
-      "explanation": "spermatogenesis refers to the formation of sperm in the seminiferous tubules of the testis.",
-      "difficulty": "MEDIUM",
-      "topic": "Human Reproduction"
+      "answer": "C",
+      "explanation": "The thin, highly vascular walls of the alveoli are the actual site of gaseous exchange between air and blood.",
+      "difficulty": "EASY",
+      "topic": "Breathing and Exchange of Gases"
     },
     {
       "number": 169,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes parathormone?",
+      "question": "If the glomerular filtration rate is 110 mL/min, the volume of filtrate formed in 60 minutes is",
       "options": {
-        "A": "a hormone that lowers blood glucose by promoting cellular uptake",
-        "B": "the hormone that promotes milk ejection during nursing",
-        "C": "a hormone that raises the blood calcium level",
-        "D": "the hormone that stimulates contraction of the uterus during childbirth"
+        "A": "110 L",
+        "B": "3.3 L",
+        "C": "6.6 L",
+        "D": "13.2 L"
       },
       "answer": "C",
-      "explanation": "parathormone refers to a hormone that raises the blood calcium level.",
-      "difficulty": "MEDIUM",
-      "topic": "Chemical Coordination and Integration"
+      "explanation": "Filtrate volume = GFR x time = 110 x 60 mL = 6.6 L.",
+      "difficulty": "HARD",
+      "topic": "Excretory Products and their Elimination"
     },
     {
       "number": 170,
@@ -2545,11 +2545,11 @@
       "question": "Which of the following correctly describes a restriction endonuclease?",
       "options": {
         "A": "a circular extrachromosomal DNA used as a cloning vector",
-        "B": "a genetically modified crop carrying a bacterial insecticidal gene",
-        "C": "a technique that amplifies a specific DNA segment in vitro",
-        "D": "an enzyme that cuts DNA at specific recognition sites"
+        "B": "an enzyme that cuts DNA at specific recognition sites",
+        "C": "a genetically modified crop carrying a bacterial insecticidal gene",
+        "D": "a technique that amplifies a specific DNA segment in vitro"
       },
-      "answer": "D",
+      "answer": "B",
       "explanation": "a restriction endonuclease refers to an enzyme that cuts DNA at specific recognition sites.",
       "difficulty": "MEDIUM",
       "topic": "Biotechnology and its Applications"
@@ -2557,152 +2557,152 @@
     {
       "number": 171,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes the loop of Henle?",
+      "question": "The epithelium that lines the inner surface of the mouth is",
       "options": {
-        "A": "the structure that releases renin in response to low blood pressure",
-        "B": "the tube that carries urine from the kidney to the urinary bladder",
-        "C": "the hormone that promotes water reabsorption in the collecting duct",
-        "D": "the nephron region that establishes the medullary concentration gradient"
+        "A": "Ciliated columnar",
+        "B": "Stratified squamous",
+        "C": "Simple squamous",
+        "D": "Cuboidal"
       },
-      "answer": "D",
-      "explanation": "the loop of Henle refers to the nephron region that establishes the medullary concentration gradient.",
+      "answer": "B",
+      "explanation": "The mouth is lined by stratified squamous epithelium, which protects against mechanical abrasion.",
       "difficulty": "MEDIUM",
-      "topic": "Excretory Products and their Elimination"
+      "topic": "Structural Organisation in Animals"
     },
     {
       "number": 172,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes glomerular filtration?",
+      "question": "Which of the following correctly describes RNA interference?",
       "options": {
-        "A": "the process in which blood is filtered in the renal corpuscle",
-        "B": "the nephron region that establishes the medullary concentration gradient",
-        "C": "the hormone that promotes water reabsorption in the collecting duct",
-        "D": "the structure that releases renin in response to low blood pressure"
+        "A": "an organism that carries and expresses a foreign gene",
+        "B": "a circular extrachromosomal DNA used as a cloning vector",
+        "C": "a technique that silences a specific gene using dsRNA",
+        "D": "an enzyme that cuts DNA at specific recognition sites"
       },
-      "answer": "A",
-      "explanation": "glomerular filtration refers to the process in which blood is filtered in the renal corpuscle.",
+      "answer": "C",
+      "explanation": "RNA interference refers to a technique that silences a specific gene using dsRNA.",
       "difficulty": "MEDIUM",
-      "topic": "Excretory Products and their Elimination"
+      "topic": "Biotechnology and its Applications"
     },
     {
       "number": 173,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes the cerebrum?",
+      "question": "Which of the following correctly describes homologous organs?",
       "options": {
-        "A": "the brain region that maintains balance and coordinates movement",
-        "B": "the brain region that controls respiration and cardiovascular reflexes",
-        "C": "a chemical released at a synapse to transmit a nerve impulse",
-        "D": "the brain region concerned with intelligence, memory and voluntary action"
+        "A": "the differential survival and reproduction of the fittest variants",
+        "B": "organs with the same fundamental structure but different functions",
+        "C": "organs with different structure but similar function",
+        "D": "the diversification of a species into many forms in different habitats"
       },
-      "answer": "D",
-      "explanation": "the cerebrum refers to the brain region concerned with intelligence, memory and voluntary action.",
+      "answer": "B",
+      "explanation": "homologous organs refers to organs with the same fundamental structure but different functions.",
       "difficulty": "MEDIUM",
-      "topic": "Neural Control and Coordination"
+      "topic": "Evolution"
     },
     {
       "number": 174,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes myosin?",
+      "question": "Erythroblastosis foetalis is likely to occur when",
       "options": {
-        "A": "the ions whose release triggers muscle contraction",
-        "B": "slow, aerobic fibres rich in myoglobin and mitochondria",
-        "C": "the explanation of muscle contraction by filament sliding",
-        "D": "the thick filament protein that forms cross-bridges"
+        "A": "only ABO incompatibility exists",
+        "B": "the mother is Rh-negative and the foetus is Rh-positive",
+        "C": "both the mother and the foetus are Rh-negative",
+        "D": "the mother is Rh-positive and the foetus is Rh-negative"
       },
-      "answer": "D",
-      "explanation": "myosin refers to the thick filament protein that forms cross-bridges.",
-      "difficulty": "MEDIUM",
-      "topic": "Locomotion and Movement"
+      "answer": "B",
+      "explanation": "An Rh-negative mother sensitised to Rh-positive foetal cells produces antibodies that destroy the red cells of a subsequent Rh-positive foetus.",
+      "difficulty": "HARD",
+      "topic": "Body Fluids and Circulation"
     },
     {
       "number": 175,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes the acrosome?",
+      "question": "If the heart rate is 72 beats per minute and the stroke volume is 70 mL, the cardiac output per minute is",
       "options": {
-        "A": "the structure that secretes progesterone after ovulation",
-        "B": "the structure at the sperm head containing hydrolytic enzymes",
-        "C": "the formation of sperm in the seminiferous tubules of the testis",
-        "D": "the release of a secondary oocyte from the ovary, usually mid-cycle"
+        "A": "7.56 L/min",
+        "B": "5.04 L/min",
+        "C": "2.52 L/min",
+        "D": "10.08 L/min"
       },
       "answer": "B",
-      "explanation": "the acrosome refers to the structure at the sperm head containing hydrolytic enzymes.",
-      "difficulty": "MEDIUM",
-      "topic": "Human Reproduction"
+      "explanation": "Cardiac output = heart rate x stroke volume = 72 x 70 mL = 5.04 L/min.",
+      "difficulty": "HARD",
+      "topic": "Body Fluids and Circulation"
     },
     {
       "number": 176,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes a plasmid?",
+      "question": "Which of the following correctly describes Bt cotton?",
       "options": {
-        "A": "a technique that silences a specific gene using dsRNA",
-        "B": "a circular extrachromosomal DNA used as a cloning vector",
-        "C": "a technique that amplifies a specific DNA segment in vitro",
-        "D": "a genetically modified crop carrying a bacterial insecticidal gene"
+        "A": "an enzyme that cuts DNA at specific recognition sites",
+        "B": "a genetically modified crop carrying a bacterial insecticidal gene",
+        "C": "a technique that silences a specific gene using dsRNA",
+        "D": "an organism that carries and expresses a foreign gene"
       },
       "answer": "B",
-      "explanation": "a plasmid refers to a circular extrachromosomal DNA used as a cloning vector.",
+      "explanation": "Bt cotton refers to a genetically modified crop carrying a bacterial insecticidal gene.",
       "difficulty": "MEDIUM",
       "topic": "Biotechnology and its Applications"
     },
     {
       "number": 177,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes the myelin sheath?",
+      "question": "If the heart rate is 60 beats per minute and the stroke volume is 100 mL, the cardiac output per minute is",
       "options": {
-        "A": "the brain region that maintains balance and coordinates movement",
-        "B": "the junction across which a nerve impulse passes from one neuron to another",
-        "C": "the brain region concerned with intelligence, memory and voluntary action",
-        "D": "an insulating cover that enables saltatory conduction"
+        "A": "6 L/min",
+        "B": "12 L/min",
+        "C": "3 L/min",
+        "D": "9 L/min"
       },
-      "answer": "D",
-      "explanation": "the myelin sheath refers to an insulating cover that enables saltatory conduction.",
-      "difficulty": "MEDIUM",
-      "topic": "Neural Control and Coordination"
+      "answer": "A",
+      "explanation": "Cardiac output = heart rate x stroke volume = 60 x 100 mL = 6 L/min.",
+      "difficulty": "HARD",
+      "topic": "Body Fluids and Circulation"
     },
     {
       "number": 178,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes the Bohr effect?",
+      "question": "If the heart rate is 80 beats per minute and the stroke volume is 80 mL, the cardiac output per minute is",
       "options": {
-        "A": "the shift of the oxygen-haemoglobin curve caused by a rise in CO2",
-        "B": "the enzyme that speeds up the conversion of CO2 to bicarbonate in red blood cells",
-        "C": "the volume of air inhaled or exhaled during normal breathing, about 500 mL",
-        "D": "an active process caused by contraction of the diaphragm and external intercostals"
+        "A": "6.4 L/min",
+        "B": "12.8 L/min",
+        "C": "3.2 L/min",
+        "D": "9.6 L/min"
       },
       "answer": "A",
-      "explanation": "the Bohr effect refers to the shift of the oxygen-haemoglobin curve caused by a rise in CO2.",
-      "difficulty": "MEDIUM",
-      "topic": "Breathing and Exchange of Gases"
+      "explanation": "Cardiac output = heart rate x stroke volume = 80 x 80 mL = 6.4 L/min.",
+      "difficulty": "HARD",
+      "topic": "Body Fluids and Circulation"
     },
     {
       "number": 179,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes malaria?",
+      "question": "The gap between two successive myelin sheaths along an axon is called a",
       "options": {
-        "A": "an immunodeficiency disease caused by the human immunodeficiency virus",
-        "B": "a disease characterised by uncontrolled division of body cells",
-        "C": "a disease caused by Plasmodium and transmitted by female Anopheles",
-        "D": "a disease caused by Salmonella typhi and confirmed by the Widal test"
+        "A": "Synapse",
+        "B": "Dendrite",
+        "C": "Node of Ranvier",
+        "D": "Neurotransmitter"
       },
       "answer": "C",
-      "explanation": "malaria refers to a disease caused by Plasmodium and transmitted by female Anopheles.",
+      "explanation": "The unmyelinated gaps in a myelinated axon are called nodes of Ranvier, where saltatory conduction occurs.",
       "difficulty": "MEDIUM",
-      "topic": "Human Health and Disease"
+      "topic": "Neural Control and Coordination"
     },
     {
       "number": 180,
       "subject": "Zoology",
-      "question": "Which of the following correctly describes cancer?",
+      "question": "Which of the following correctly describes the Hardy-Weinberg principle?",
       "options": {
-        "A": "the process of inducing protective immunity using a vaccine",
-        "B": "a disease caused by Plasmodium and transmitted by female Anopheles",
-        "C": "a disease caused by Wuchereria species and spread by mosquitoes",
-        "D": "a disease characterised by uncontrolled division of body cells"
+        "A": "organs with different structure but similar function",
+        "B": "the diversification of a species into many forms in different habitats",
+        "C": "organs with the same fundamental structure but different functions",
+        "D": "the constancy of allele frequencies in a large, randomly mating population"
       },
       "answer": "D",
-      "explanation": "cancer refers to a disease characterised by uncontrolled division of body cells.",
+      "explanation": "the Hardy-Weinberg principle refers to the constancy of allele frequencies in a large, randomly mating population.",
       "difficulty": "MEDIUM",
-      "topic": "Human Health and Disease"
+      "topic": "Evolution"
     }
   ]
 }
