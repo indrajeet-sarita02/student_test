@@ -111,6 +111,17 @@ export interface UserPermissionsResponse {
   roles: RoleBrief[];
 }
 
+export interface UserPasswordResetRequest {
+  new_password?: string;
+}
+
+export interface UserPasswordResetResponse {
+  user_id: ID;
+  message: string;
+  /** Present only when the server generated a temporary password. */
+  temporary_password: string | null;
+}
+
 // ---------------------------------------------------------------- roles
 export interface PermissionResponse {
   id: ID;
@@ -211,6 +222,7 @@ export interface QuestionResponse {
   negative_marks: number;
   status: string;
   source: string | null;
+  tags: string[] | null;
   created_at: string | null;
   updated_at: string | null;
   options: OptionResponse[];
@@ -234,6 +246,7 @@ export interface QuestionCreate {
   negative_marks?: number;
   status?: string;
   source?: string | null;
+  tags?: string[];
   options?: OptionInput[];
 }
 
@@ -248,6 +261,16 @@ export interface QuestionImportResponse {
 }
 
 // ---------------------------------------------------------------- tests
+export type TestStatus =
+  | "DRAFT"
+  | "READY"
+  | "PUBLISHED"
+  | "SCHEDULED"
+  | "ACTIVE"
+  | "COMPLETED"
+  | "CLOSED"
+  | "ARCHIVED";
+
 export interface TestResponse {
   id: ID;
   exam_id: ID;

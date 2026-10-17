@@ -24,28 +24,62 @@ export function RequireAuth({
   const pathname = usePathname();
   const router = useRouter();
 
+  // Signed-out users go to /login (remembering the target); authenticated
+  // non-staff users hitting a staff-only area go to /403.
   useEffect(() => {
     if (loading) return;
     if (!user) {
       router.replace(`/login?next=${encodeURIComponent(pathname)}`);
+      return;
     }
-  }, [loading, user, pathname, router]);
+    if (staffOnly && !isStaff) router.replace("/403");
+  }, [loading, user, isStaff, staffOnly, pathname, router]);
 
   if (loading || !user) return <FullPageSpinner />;
+  if (staffOnly && !isStaff) return null;
 
-  if (staffOnly && !isStaff) {
-    return (
-      <div className="mx-auto max-w-md px-4 py-16 text-center">
-        <div className="text-4xl">⛔</div>
-        <h2 className="mt-3 text-lg font-semibold text-slate-900">
-          You do not have permission
-        </h2>
-        <p className="mt-1 text-sm text-slate-500">
-          This area is restricted to administrators.
-        </p>
-      </div>
-    );
-  }
+  return <>{children}</>;
+}
+
+/**
+ * Gate a subtree behind a permission (or any of a list of permissions).
+ *
+ * - No requirement configured → renders children.
+ * - Signed out → redirects to /login.
+ * - Signed in without the permission → redirects to /403.
+ *
+ * The backend enforces the same rule; this only shapes the UI.
+ */
+export function RequirePermission({
+  permission,
+  anyOf,
+  children,
+}: {
+  permission?: string;
+  anyOf?: string[];
+  children: React.ReactNode;
+}) {
+  const { user, loading, hasPermission } = useAuth();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const required = [
+    ...(permission ? [permission] : []),
+    ...(anyOf ?? []),
+  ];
+  const allowed = required.length === 0 || required.some((code) => hasPermission(code));
+
+  useEffect(() => {
+    if (loading) return;
+    if (!user) {
+      router.replace(`/login?next=${encodeURIComponent(pathname)}`);
+      return;
+    }
+    if (!allowed) router.replace("/403");
+  }, [loading, user, allowed, pathname, router]);
+
+  if (loading || !user) return <FullPageSpinner />;
+  if (!allowed) return null;
 
   return <>{children}</>;
 }

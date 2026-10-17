@@ -213,13 +213,16 @@ def build_student_test_stmt(
     student_id: int,
     now: datetime,
     search: Optional[str] = None,
+    statuses: Optional[Sequence[str]] = None,
 ) -> Select:
     """Visible published tests for a student, with the student's assignment row.
 
     Visibility rule: the test is assigned to the student **or** the test has no
     non-cancelled assignments at all (an "open" test). The test must be
     currently inside its scheduled window; assigned tests must additionally be
-    inside their per-student availability window.
+    inside their per-student availability window. When ``statuses`` is given,
+    only tests in those statuses are returned (``DRAFT``/``READY`` tests are
+    never exposed to students).
     """
     stmt = select(Test, TestAssignment)
     stmt = stmt.outerjoin(
@@ -230,6 +233,8 @@ def build_student_test_stmt(
             TestAssignment.status != AssignmentStatus.CANCELLED.value,
         ),
     )
+    if statuses:
+        stmt = stmt.where(Test.status.in_(list(statuses)))
     # The outer query already joins ``TestAssignment`` (the current student's
     # assignment).  The EXISTS probe must therefore reference an *alias*: using
     # the same entity twice makes SQLAlchemy auto-correlate the subquery against

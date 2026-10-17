@@ -118,6 +118,9 @@ function sleep(ms: number): Promise<void> {
 const RETRYABLE_METHODS = new Set(["GET", "HEAD", "PUT", "DELETE", "OPTIONS"]);
 const NETWORK_MAX_ATTEMPTS = 3;
 
+//: Hard cap on a single API round-trip (including its network retries).
+const REQUEST_TIMEOUT_MS = 30000;
+
 /** fetch() with a couple of retries for transient network-level failures. */
 async function fetchWithRetry(
   url: string,
@@ -254,6 +257,15 @@ async function request<T>(
   }
 
   let res: Response;
+  let timedOut = false;
+  const controller = options.signal ? null : new AbortController();
+  const signal = options.signal ?? controller?.signal;
+  const timer = controller
+    ? setTimeout(() => {
+        timedOut = true;
+        controller.abort();
+      }, REQUEST_TIMEOUT_MS)
+    : null;
   try {
     res = await fetchWithRetry(
       `${BASE}${path}`,
@@ -266,17 +278,25 @@ async function request<T>(
             : isForm
             ? (body as FormData)
             : JSON.stringify(body),
-        signal: options.signal,
+        signal,
       },
       method
     );
   } catch (err) {
-    if ((err as Error)?.name === "AbortError") throw err;
+    if ((err as Error)?.name === "AbortError") {
+      // A timeout surfaces as a friendly error; a caller-supplied abort does not.
+      if (timedOut) {
+        throw new ApiError("The request timed out. Please try again.", "TIMEOUT", 0);
+      }
+      throw err;
+    }
     throw new ApiError(
       "Unable to reach the server. Check your connection and try again.",
       "NETWORK_ERROR",
       0
     );
+  } finally {
+    if (timer) clearTimeout(timer);
   }
 
   if (res.status === 401 && !options.skipAuth && !options.skipRefresh) {
@@ -325,11 +345,34 @@ export const api = {
   /** Fetch a binary export (CSV) with auth + refresh handling. */
   async download(path: string): Promise<Blob> {
     const token = tokenStore.getAccess();
-    const res = await fetchWithRetry(
-      `${BASE}${path}`,
-      { headers: token ? { Authorization: `Bearer ${token}` } : {} },
-      "GET"
-    );
+    const controller = new AbortController();
+    let timedOut = false;
+    const timer = setTimeout(() => {
+      timedOut = true;
+      controller.abort();
+    }, REQUEST_TIMEOUT_MS);
+    let res: Response;
+    try {
+      res = await fetchWithRetry(
+        `${BASE}${path}`,
+        { headers: token ? { Authorization: `Bearer ${token}` } : {}, signal: controller.signal },
+        "GET"
+      );
+    } catch (err) {
+      if ((err as Error)?.name === "AbortError") {
+        if (timedOut) {
+          throw new ApiError("The request timed out. Please try again.", "TIMEOUT", 0);
+        }
+        throw err;
+      }
+      throw new ApiError(
+        "Unable to reach the server. Check your connection and try again.",
+        "NETWORK_ERROR",
+        0
+      );
+    } finally {
+      clearTimeout(timer);
+    }
     if (res.status === 401) {
       const refreshed = await ensureRefresh();
       if (refreshed) {

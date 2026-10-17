@@ -380,6 +380,12 @@ Features:
 - View permissions.
 - Reset password where authorized.
 
+Reset password calls `POST /users/{id}/reset-password` (requires the
+`user.update` permission). With `{ "new_password": "…" }` the server validates
+and applies it; with an empty body the server generates a temporary password
+and returns it once in `temporary_password` for the admin to communicate
+securely.
+
 ---
 
 # 14. Role Management UI
@@ -605,6 +611,21 @@ ARCHIVED
 Frontend should prevent invalid state transitions.
 
 Backend remains authoritative.
+
+Each transition maps to a backend action:
+
+```text
+DRAFT    -> READY      POST /tests/{id}/ready
+READY    -> PUBLISHED  POST /tests/{id}/publish
+PUBLISHED-> SCHEDULED  POST /tests/{id}/schedule   (scheduled_start_at required)
+PUBLISHED/SCHEDULED -> ACTIVE  POST /tests/{id}/activate
+PUBLISHED/SCHEDULED/ACTIVE -> COMPLETED  POST /tests/{id}/complete
+COMPLETED/CLOSED -> ARCHIVED    POST /tests/{id}/archive
+PUBLISHED -> CLOSED    POST /tests/{id}/close
+```
+
+Students may start an attempt while the test is `PUBLISHED`, `SCHEDULED`
+(inside its window) or `ACTIVE`.
 
 ---
 
@@ -847,6 +868,17 @@ Where backend provides export endpoints:
 CSV
 Excel
 PDF
+```
+
+Concrete backend CSV exports:
+
+```text
+GET /results/export                    (result.export)
+GET /reports/exams/export              (report.export)
+GET /reports/tests/export              (report.export)
+GET /reports/students/{id}/export      (report.export)
+GET /reports/questions/export          (report.export)
+GET /reports/subjects/export           (report.export)
 ```
 
 Frontend should trigger downloads through authenticated API calls.
@@ -1472,3 +1504,67 @@ Enable admin/examiner users to create a new `DRAFT` test and its questions in on
 - All-or-nothing validation returns per-row errors with clear messages; frontend displays them.
 - UI handles upload, download, success/error; backend/frontend types/endpoints in sync.
 - Tests cover happy path, conflicts, validation, permissions, template.
+
+---
+
+# 52. Question Tags, Test Lifecycle, Admin Password Reset & Report Exports
+
+## Objective
+Record the backend capabilities that were added on top of the original
+specification and the frontend integration points they require. These extend
+the Question Bank, Test Builder, User Management and Reports modules.
+
+## Backend Summary (for integration)
+- **Question tags.** `questions.tags` is a JSONB array of free-form labels.
+  `QuestionCreate` / `QuestionUpdate` / `QuestionImportItem` accept `tags` and
+  `QuestionResponse` returns them. `GET /questions?tag=<label>` filters by exact
+  membership (combined with the existing subject/topic/type/difficulty/status
+  filters). Requires `question.view` / `question.create` / `question.update`.
+- **Test lifecycle.** `TestStatus` is `DRAFT`, `READY`, `PUBLISHED`,
+  `SCHEDULED`, `ACTIVE`, `COMPLETED`, `CLOSED`, `ARCHIVED`. Action endpoints:
+  `POST /tests/{id}/ready|publish|schedule|activate|complete|archive|close`
+  (all require `test.publish`). `schedule` requires `scheduled_start_at`
+  (400 `TEST_SCHEDULE_REQUIRED`). Students may start `PUBLISHED`, `SCHEDULED`
+  (inside its window) and `ACTIVE` tests.
+- **Admin password reset.** `POST /users/{id}/reset-password` requires
+  `user.update`. Body `{ "new_password"?: string }`: when supplied it is
+  strength-validated (400 `WEAK_PASSWORD`); when omitted the server generates a
+  temporary password returned once in `temporary_password`.
+- **Report CSV exports.** `GET /reports/exams/export`, `/reports/tests/export`,
+  `/reports/questions/export`, `/reports/subjects/export` and
+  `/reports/students/{id}/export` return `text/csv` attachments and require the
+  `report.export` permission (`report.view` still guards the JSON variants).
+
+## Frontend Implementation
+- `frontend/src/lib/types.ts`: add `tags?: string[]` to the question types;
+  widen the `TestStatus` union; add `UserPasswordResetResponse`, `TestStatus`
+  transition helpers and the report/export row types.
+- `frontend/src/lib/api/endpoints.ts`: add the `testsApi` lifecycle action
+  methods, `usersApi.resetPassword(...)`, the `questionsApi` `tag` filter, and
+  the `reportsApi` CSV download methods (return blobs via the authenticated
+  client).
+- Tests module: show only the lifecycle actions legal for the current status
+  and trigger them through the new endpoints; students see the test as
+  startable for `PUBLISHED` / `SCHEDULED` / `ACTIVE`.
+- Users module: "Reset password" action opening a dialog that either sets a
+  password or generates a temporary one, displaying it once.
+- Question Bank: add the Tag filter and a Tags input in the editor.
+- Reports: add CSV export buttons and charts/tables as described in §28.
+
+## Integration Contract Additions
+- `POST /tests/{id}/ready|publish|schedule|activate|complete|archive|close`:
+  `200 TestResponse`; `409` state conflicts; `400 TEST_HAS_NO_QUESTIONS` /
+  `TEST_SCHEDULE_REQUIRED`. Requires `test.publish`.
+- `POST /users/{id}/reset-password`: `200 UserPasswordResetResponse`; `400`
+  `WEAK_PASSWORD`; `404 USER_NOT_FOUND`. Requires `user.update`.
+- `GET /questions?tag=`: `200 Page<QuestionResponse>`. Requires `question.view`.
+- `GET /reports/*/export`: `text/csv` attachment. Requires `report.export`.
+
+## Definition of Done (updates)
+- Question tags round-trip through create/update/import and filter the listing.
+- Every lifecycle transition is enforced by the backend and surfaced correctly
+  by the UI; invalid actions are hidden.
+- Admins can reset a password (explicit or generated) and see the temporary
+  password once.
+- Report exports download as CSV through authenticated calls and require
+  `report.export`.

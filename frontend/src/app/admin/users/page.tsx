@@ -8,9 +8,19 @@ import { isApiError } from "@/lib/api/client";
 import { useToast } from "@/components/Toast";
 import { CrudManager, type CrudField } from "@/components/admin/CrudManager";
 import { Modal } from "@/components/Modal";
-import { Badge, Button, Checkbox, Select, StatusBadge } from "@/components/ui";
+import {
+  Alert,
+  Badge,
+  Button,
+  Checkbox,
+  Input,
+  Label,
+  Select,
+  StatusBadge,
+} from "@/components/ui";
 import { loadRoleOptions } from "@/lib/options";
 import { formatDateTime } from "@/lib/utils";
+import { useAuth } from "@/lib/auth/auth-context";
 
 const STATUSES = ["ACTIVE", "INACTIVE", "SUSPENDED", "PENDING"];
 
@@ -46,8 +56,12 @@ const fields: CrudField[] = [
 
 export default function AdminUsersPage() {
   const toast = useToast();
+  const { hasPermission } = useAuth();
   const [roleTarget, setRoleTarget] = useState<UserResponse | null>(null);
   const [statusTarget, setStatusTarget] = useState<UserResponse | null>(null);
+  const [resetTarget, setResetTarget] = useState<UserResponse | null>(null);
+  const [resetNewPassword, setResetNewPassword] = useState("");
+  const [resetTemp, setResetTemp] = useState<string | null>(null);
   const [roleOptions, setRoleOptions] = useState<Array<{ label: string; value: number }>>([]);
   const [selectedRoles, setSelectedRoles] = useState<number[]>([]);
   const [newStatus, setNewStatus] = useState("ACTIVE");
@@ -62,6 +76,12 @@ export default function AdminUsersPage() {
   const openRoles = (u: UserResponse) => {
     setRoleTarget(u);
     setSelectedRoles(u.roles.map((r) => r.id));
+  };
+
+  const openReset = (u: UserResponse) => {
+    setResetTarget(u);
+    setResetNewPassword("");
+    setResetTemp(null);
   };
 
   const saveRoles = async () => {
@@ -87,6 +107,24 @@ export default function AdminUsersPage() {
       setStatusTarget(null);
     } catch (err) {
       toast.error(isApiError(err) ? err.message : "Unable to update status.");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const submitReset = async () => {
+    if (!resetTarget) return;
+    setSaving(true);
+    setResetTemp(null);
+    try {
+      const body: { new_password?: string } = {};
+      if (resetNewPassword.trim()) body.new_password = resetNewPassword.trim();
+      const res = await usersApi.resetPassword(resetTarget.id, body.new_password);
+      setResetTemp(res.temporary_password);
+      if (!res.temporary_password) toast.success("Password reset.");
+      else toast.success("Temporary password generated.");
+    } catch (err) {
+      toast.error(isApiError(err) ? err.message : "Unable to reset password.");
     } finally {
       setSaving(false);
     }
@@ -175,6 +213,15 @@ export default function AdminUsersPage() {
             >
               Status
             </button>
+            {hasPermission("user.update") && (
+              <button
+                type="button"
+                onClick={() => openReset(row)}
+                className="text-xs font-medium text-violet-600 hover:underline"
+              >
+                Reset password
+              </button>
+            )}
           </>
         )}
       />
@@ -233,6 +280,58 @@ export default function AdminUsersPage() {
           value={newStatus}
           onChange={(e) => setNewStatus(e.target.value)}
         />
+      </Modal>
+
+      <Modal
+        open={Boolean(resetTarget)}
+        onClose={() => {
+          setResetTarget(null);
+          setResetTemp(null);
+        }}
+        title={`Reset password — ${resetTarget?.username ?? ""}`}
+        footer={
+          <>
+            <Button
+              variant="outline"
+              onClick={() => {
+                setResetTarget(null);
+                setResetTemp(null);
+              }}
+              disabled={saving}
+            >
+              Close
+            </Button>
+            <Button onClick={submitReset} loading={saving} disabled={!!resetTemp}>
+              {resetNewPassword.trim() ? "Set password" : "Generate temporary password"}
+            </Button>
+          </>
+        }
+      >
+        {resetTemp ? (
+          <div className="space-y-3">
+            <Alert tone="success">
+              Temporary password generated. Share it with the user securely — it will not be shown again.
+            </Alert>
+            <div>
+              <Label>Temporary password</Label>
+              <div className="mt-1 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 font-mono text-sm tracking-widest text-emerald-700">
+                {resetTemp}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="space-y-3">
+            <Alert tone="info">
+              Leave the field empty to generate a one-time temporary password. Otherwise provide a new password for the user.
+            </Alert>
+            <Input
+              label="New password (optional)"
+              type="password"
+              value={resetNewPassword}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setResetNewPassword(e.target.value)}
+            />
+          </div>
+        )}
       </Modal>
     </>
   );

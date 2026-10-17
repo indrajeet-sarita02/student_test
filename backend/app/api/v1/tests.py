@@ -63,16 +63,17 @@ _NOT_FOUND: Dict[int, Dict[str, Any]] = {
 }
 _BAD_REQUEST: Dict[int, Dict[str, Any]] = {
     400: {
-        "description": "A test cannot be published without questions "
-        "(TEST_HAS_NO_QUESTIONS).",
+        "description": "A test cannot be published/readied without questions "
+        "(TEST_HAS_NO_QUESTIONS) or scheduled without a start time "
+        "(TEST_SCHEDULE_REQUIRED).",
         "model": ErrorResponse,
     }
 }
 _CONFLICT: Dict[int, Dict[str, Any]] = {
     409: {
         "description": "State conflict (TEST_CODE_EXISTS / TEST_NOT_DRAFT / "
-        "TEST_NOT_PUBLISHED / TEST_HAS_ATTEMPTS / QUESTION_NOT_PUBLISHED / "
-        "QUESTION_ALREADY_ADDED).",
+        "TEST_NOT_PUBLISHED / TEST_NOT_ACTIVE / TEST_NOT_COMPLETED / "
+        "TEST_HAS_ATTEMPTS / QUESTION_NOT_PUBLISHED / QUESTION_ALREADY_ADDED).",
         "model": ErrorResponse,
     }
 }
@@ -400,15 +401,40 @@ def remove_question(
 
 
 @router.post(
+    "/{test_id}/ready",
+    response_model=TestResponse,
+    summary="Mark test ready",
+    description=(
+        "Move a `DRAFT` test that owns at least one question to `READY`. "
+        "Non-draft tests are refused with 409 `TEST_NOT_DRAFT`; an empty test "
+        "with 400 `TEST_HAS_NO_QUESTIONS`. Writes an audit entry. Requires the "
+        "`test.publish` permission."
+    ),
+    responses={**_UNAUTHORIZED, **_FORBIDDEN, **_NOT_FOUND, **_CONFLICT, **_BAD_REQUEST},
+    dependencies=[Depends(require_permission("test.publish"))],
+)
+def mark_test_ready(
+    request: Request,
+    test_id: int = Path(..., ge=1, description="Unique test ID."),
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+) -> Test:
+    """Mark a draft test as ready for publishing."""
+    return test_service.mark_test_ready(
+        db, test_id, user_id=current_user.id, request=request
+    )
+
+
+@router.post(
     "/{test_id}/publish",
     response_model=TestResponse,
     summary="Publish test",
     description=(
-        "Publish a `DRAFT` test that owns at least one question. Non-draft "
-        "tests are refused with 409 `TEST_NOT_DRAFT`; an empty test with 400 "
-        "`TEST_HAS_NO_QUESTIONS`. `total_marks` is recomputed from the attached "
-        "questions. Writes an audit entry. Requires the `test.publish` "
-        "permission."
+        "Publish a `DRAFT` or `READY` test that owns at least one question. "
+        "Tests in any other state are refused with 409 `TEST_NOT_DRAFT`; an "
+        "empty test with 400 `TEST_HAS_NO_QUESTIONS`. `total_marks` is "
+        "recomputed from the attached questions. Writes an audit entry. "
+        "Requires the `test.publish` permission."
     ),
     responses={**_UNAUTHORIZED, **_FORBIDDEN, **_NOT_FOUND, **_CONFLICT, **_BAD_REQUEST},
     dependencies=[Depends(require_permission("test.publish"))],
@@ -419,8 +445,107 @@ def publish_test(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ) -> Test:
-    """Publish a draft test and recompute its total marks."""
+    """Publish a draft/ready test and recompute its total marks."""
     return test_service.publish_test(
+        db, test_id, user_id=current_user.id, request=request
+    )
+
+
+@router.post(
+    "/{test_id}/schedule",
+    response_model=TestResponse,
+    summary="Schedule test",
+    description=(
+        "Move a `PUBLISHED` test to `SCHEDULED`. A `scheduled_start_at` must be "
+        "set (400 `TEST_SCHEDULE_REQUIRED`); tests in any other state are "
+        "refused with 409 `TEST_NOT_PUBLISHED`. Writes an audit entry. Requires "
+        "the `test.publish` permission."
+    ),
+    responses={**_UNAUTHORIZED, **_FORBIDDEN, **_NOT_FOUND, **_CONFLICT, **_BAD_REQUEST},
+    dependencies=[Depends(require_permission("test.publish"))],
+)
+def schedule_test(
+    request: Request,
+    test_id: int = Path(..., ge=1, description="Unique test ID."),
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+) -> Test:
+    """Schedule a published test inside its window."""
+    return test_service.schedule_test(
+        db, test_id, user_id=current_user.id, request=request
+    )
+
+
+@router.post(
+    "/{test_id}/activate",
+    response_model=TestResponse,
+    summary="Activate test",
+    description=(
+        "Move a `PUBLISHED` or `SCHEDULED` test to `ACTIVE`, opening it to "
+        "students immediately. Tests in any other state are refused with 409 "
+        "`TEST_NOT_PUBLISHED`. Writes an audit entry. Requires the "
+        "`test.publish` permission."
+    ),
+    responses={**_UNAUTHORIZED, **_FORBIDDEN, **_NOT_FOUND, **_CONFLICT},
+    dependencies=[Depends(require_permission("test.publish"))],
+)
+def activate_test(
+    request: Request,
+    test_id: int = Path(..., ge=1, description="Unique test ID."),
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+) -> Test:
+    """Activate a published/scheduled test."""
+    return test_service.activate_test(
+        db, test_id, user_id=current_user.id, request=request
+    )
+
+
+@router.post(
+    "/{test_id}/complete",
+    response_model=TestResponse,
+    summary="Complete test",
+    description=(
+        "Move a `PUBLISHED`, `SCHEDULED` or `ACTIVE` test to `COMPLETED` so no "
+        "new attempts can start. Tests in any other state are refused with 409 "
+        "`TEST_NOT_ACTIVE`. Writes an audit entry. Requires the `test.publish` "
+        "permission."
+    ),
+    responses={**_UNAUTHORIZED, **_FORBIDDEN, **_NOT_FOUND, **_CONFLICT},
+    dependencies=[Depends(require_permission("test.publish"))],
+)
+def complete_test(
+    request: Request,
+    test_id: int = Path(..., ge=1, description="Unique test ID."),
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+) -> Test:
+    """Complete an active test."""
+    return test_service.complete_test(
+        db, test_id, user_id=current_user.id, request=request
+    )
+
+
+@router.post(
+    "/{test_id}/archive",
+    response_model=TestResponse,
+    summary="Archive test",
+    description=(
+        "Move a `COMPLETED` or `CLOSED` test to `ARCHIVED`. Tests in any other "
+        "state are refused with 409 `TEST_NOT_COMPLETED`. Writes an audit "
+        "entry. Requires the `test.publish` permission."
+    ),
+    responses={**_UNAUTHORIZED, **_FORBIDDEN, **_NOT_FOUND, **_CONFLICT},
+    dependencies=[Depends(require_permission("test.publish"))],
+)
+def archive_test(
+    request: Request,
+    test_id: int = Path(..., ge=1, description="Unique test ID."),
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+) -> Test:
+    """Archive a completed/closed test."""
+    return test_service.archive_test(
         db, test_id, user_id=current_user.id, request=request
     )
 

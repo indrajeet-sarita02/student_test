@@ -57,6 +57,7 @@ class QuestionCreate(BaseModel):
     negative_marks: float = Field(0.0, ge=0, le=1000)
     status: QuestionStatus = QuestionStatus.DRAFT
     source: Optional[str] = Field(None, max_length=100)
+    tags: List[str] = Field(default_factory=list)
     options: List[OptionCreate] = Field(default_factory=list)
 
 
@@ -70,6 +71,7 @@ class QuestionUpdate(BaseModel):
     negative_marks: Optional[float] = Field(None, ge=0, le=1000)
     status: Optional[QuestionStatus] = None
     source: Optional[str] = Field(None, max_length=100)
+    tags: Optional[List[str]] = None
     options: Optional[List[OptionUpdate]] = None
 
 
@@ -87,6 +89,7 @@ class QuestionResponse(BaseModel):
     negative_marks: float
     status: str
     source: Optional[str] = None
+    tags: Optional[List[str]] = None
     created_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
     options: List[OptionResponse] = Field(default_factory=list)
@@ -115,6 +118,7 @@ class QuestionImportItem(BaseModel):
     difficulty: Difficulty = Difficulty.MEDIUM
     marks: float = Field(4.0, ge=0)
     negative_marks: float = Field(0.0, ge=0)
+    tags: List[str] = Field(default_factory=list)
     options: List[OptionCreate] = Field(default_factory=list)
 
 

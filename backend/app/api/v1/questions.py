@@ -70,8 +70,9 @@ _CONFLICT: Dict[int, Dict[str, Any]] = {
     summary="List questions",
     description=(
         "Return a paginated, sortable question bank. Supports the "
-        "`subject_id`, `topic_id`, `status`, `question_type`, `difficulty` and "
-        "`is_active` filters plus free-text `search` over the question text. "
+        "`subject_id`, `topic_id`, `status`, `question_type`, `difficulty`, "
+        "`tag` and `is_active` filters plus free-text `search` over the "
+        "question text. "
         "Sortable by id, created_at, updated_at, marks, difficulty and status "
         "(unknown columns fall back to created_at desc). Requires the "
         "`question.view` permission."
@@ -92,11 +93,14 @@ def list_questions(
     difficulty: Optional[Difficulty] = Query(
         None, description="Filter by difficulty (EASY, MEDIUM, HARD)."
     ),
+    tag: Optional[str] = Query(
+        None, max_length=50, description="Filter by a single tag (exact match)."
+    ),
     is_active: Optional[bool] = Query(
         None, description="Filter by the active flag."
     ),
 ) -> Any:
-    """List questions with pagination and subject/topic/type filters."""
+    """List questions with pagination and subject/topic/type/tag filters."""
     return question_service.list_questions(
         db,
         params,
@@ -104,6 +108,7 @@ def list_questions(
         topic_id=topic_id,
         question_type=question_type.value if question_type else None,
         difficulty=difficulty.value if difficulty else None,
+        tag=tag,
         is_active=is_active,
     )
 

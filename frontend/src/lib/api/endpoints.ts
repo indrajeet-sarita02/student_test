@@ -44,6 +44,7 @@ import type {
   TokenResponse,
   TopicResponse,
   UnreadCountResponse,
+  UserPasswordResetResponse,
   UserPermissionsResponse,
   UserResponse,
   ForgotPasswordResponseShape,
@@ -81,6 +82,10 @@ export const usersApi = {
     api.post<UserResponse>(`/users/${id}/roles`, { role_ids }),
   permissions: (id: number) =>
     api.get<UserPermissionsResponse>(`/users/${id}/permissions`),
+  resetPassword: (id: number, new_password?: string) =>
+    api.post<UserPasswordResetResponse>(`/users/${id}/reset-password`, {
+      new_password,
+    }),
 };
 
 // ------------------------------------------------------------------ roles
@@ -149,7 +154,12 @@ export const testsApi = {
   get: (id: number) => api.get<TestResponse>(`/tests/${id}`),
   update: (id: number, body: Dict) => api.put<TestResponse>(`/tests/${id}`, body),
   remove: (id: number) => api.delete<void>(`/tests/${id}`),
+  ready: (id: number) => api.post<TestResponse>(`/tests/${id}/ready`),
   publish: (id: number) => api.post<TestResponse>(`/tests/${id}/publish`),
+  schedule: (id: number) => api.post<TestResponse>(`/tests/${id}/schedule`),
+  activate: (id: number) => api.post<TestResponse>(`/tests/${id}/activate`),
+  complete: (id: number) => api.post<TestResponse>(`/tests/${id}/complete`),
+  archive: (id: number) => api.post<TestResponse>(`/tests/${id}/archive`),
   close: (id: number) => api.post<TestResponse>(`/tests/${id}/close`),
   questions: (id: number) =>
     api.get<TestQuestionResponse[]>(`/tests/${id}/questions`),
@@ -211,6 +221,15 @@ export const reportsApi = {
     api.get<SubjectReportRow[]>(`/reports/subjects${qs({ exam_id })}`),
   student: (student_id: number) =>
     api.get<StudentReportRow>(`/reports/students/${student_id}`),
+  exportExams: () => api.download("/reports/exams/export"),
+  exportTests: (exam_id?: number) =>
+    api.download(`/reports/tests/export${qs({ exam_id })}`),
+  exportQuestions: (subject_id?: number) =>
+    api.download(`/reports/questions/export${qs({ subject_id })}`),
+  exportSubjects: (exam_id?: number) =>
+    api.download(`/reports/subjects/export${qs({ exam_id })}`),
+  exportStudent: (student_id: number) =>
+    api.download(`/reports/students/${student_id}/export`),
 };
 
 // ------------------------------------------------------------------ notifications

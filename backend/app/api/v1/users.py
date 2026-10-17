@@ -8,7 +8,7 @@ newly created account are hashed in the service layer and never returned.
 
 from typing import Any, Dict, Optional
 
-from fastapi import APIRouter, Depends, Path, Query, Request, status
+from fastapi import APIRouter, Body, Depends, Path, Query, Request, status
 from sqlalchemy.orm import Session
 
 from app.api.deps import get_current_user
@@ -19,6 +19,8 @@ from app.schemas.common import ErrorResponse
 from app.schemas.user import (
     AssignRolesRequest,
     UserCreate,
+    UserPasswordReset,
+    UserPasswordResetResponse,
     UserPermissionsResponse,
     UserResponse,
     UserStatusUpdate,
@@ -208,6 +210,38 @@ def delete_user(
 ) -> None:
     """Hard-delete a user, or deactivate when deletion would lose history."""
     user_service.delete_user(db, user_id, actor_id=current_user.id, request=request)
+
+
+@router.post(
+    "/{user_id}/reset-password",
+    response_model=UserPasswordResetResponse,
+    summary="Reset user password",
+    description=(
+        "Set a new password for the user. When `new_password` is supplied it "
+        "must satisfy the password policy (400 `WEAK_PASSWORD`); when it is "
+        "omitted the server generates a random temporary password and returns "
+        "it once in `temporary_password`. The cleartext is never stored or "
+        "audited. Unknown ids return 404 `USER_NOT_FOUND`. Requires the "
+        "`user.update` permission."
+    ),
+    responses={**_UNAUTHORIZED, **_FORBIDDEN, **_NOT_FOUND, **_BAD_REQUEST},
+    dependencies=[Depends(require_permission("user.update"))],
+)
+def reset_user_password(
+    request: Request,
+    user_id: int = Path(..., ge=1, description="Unique user ID."),
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+    payload: Optional[UserPasswordReset] = Body(default=None),
+) -> UserPasswordResetResponse:
+    """Reset a user's password (admin-initiated)."""
+    return user_service.reset_password(
+        db,
+        user_id,
+        payload or UserPasswordReset(),
+        actor_id=current_user.id,
+        request=request,
+    )
 
 
 @router.post(

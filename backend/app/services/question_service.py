@@ -94,6 +94,7 @@ def _snapshot(question: Question) -> Dict[str, Any]:
         "negative_marks": question.negative_marks,
         "status": question.status,
         "source": question.source,
+        "tags": question.tags,
         "is_active": question.is_active,
         "options": [
             {
@@ -221,6 +222,7 @@ def _instantiate(payload: Any, *, user_id: int, status: str) -> Question:
         negative_marks=payload.negative_marks,
         status=status,
         source=getattr(payload, "source", None),
+        tags=list(getattr(payload, "tags", None) or []),
         created_by=user_id,
         updated_by=user_id,
         options=_build_options(payload.options),
@@ -240,6 +242,7 @@ def list_questions(
     topic_id: Optional[int] = None,
     question_type: Optional[str] = None,
     difficulty: Optional[str] = None,
+    tag: Optional[str] = None,
     is_active: Optional[bool] = None,
 ) -> Any:
     """Return the paginated, filtered question bank listing."""
@@ -249,6 +252,7 @@ def list_questions(
         topic_id=topic_id,
         question_type=question_type,
         difficulty=difficulty,
+        tag=tag,
         is_active=is_active,
     )
     return paginate(db, stmt, params)

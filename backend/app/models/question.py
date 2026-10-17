@@ -39,6 +39,8 @@ class Question(IDMixin, TimestampMixin, AuditMixin, ActiveMixin, Base):
         String(20), nullable=False, default="DRAFT", server_default="DRAFT"
     )
     source: Mapped[Optional[str]] = mapped_column(String(100))
+    # Free-form labels used for filtering/searching the question bank.
+    tags = mapped_column(Jsonb, nullable=True)
     # Optional image / media payload.
     media: Mapped[Optional[str]] = mapped_column(Text)
     metadata_json = mapped_column(Jsonb, nullable=True)

@@ -391,6 +391,8 @@ test.publish
 attempt.view
 result.view
 result.export
+report.view
+report.export
 ```
 
 ## 8.5 user_roles
@@ -466,11 +468,14 @@ marks
 negative_marks
 status
 source
+tags (JSONB array of free-form labels)
 created_by
 updated_by
 created_at
 updated_at
 ```
+
+`tags` is used to label and filter the question bank (`?tag=` on the listing).
 
 ## 8.11 question_options
 
@@ -776,10 +781,16 @@ DELETE /resources/{id}
 For actions:
 
 ```text
+POST /tests/{id}/ready
 POST /tests/{id}/publish
+POST /tests/{id}/schedule
+POST /tests/{id}/activate
+POST /tests/{id}/complete
+POST /tests/{id}/archive
 POST /tests/{id}/close
 POST /attempts/{id}/submit
 POST /results/{id}/publish
+POST /users/{id}/reset-password
 ```
 
 ---
@@ -807,6 +818,7 @@ GET    /users/{id}
 PUT    /users/{id}
 PATCH  /users/{id}/status
 DELETE /users/{id}
+POST   /users/{id}/reset-password
 POST   /users/{id}/roles
 GET    /users/{id}/permissions
 ```
@@ -873,6 +885,10 @@ POST   /questions/{id}/publish
 POST   /questions/import
 ```
 
+The question listing (`GET /questions`) supports the filters `subject_id`,
+`topic_id`, `status`, `question_type`, `difficulty`, `tag` and `is_active`,
+plus the shared free-text `search` and pagination/sorting parameters.
+
 ## Tests
 
 ```text
@@ -881,13 +897,25 @@ POST   /tests
 GET    /tests/{id}
 PUT    /tests/{id}
 DELETE /tests/{id}
+POST   /tests/{id}/ready
 POST   /tests/{id}/publish
+POST   /tests/{id}/schedule
+POST   /tests/{id}/activate
+POST   /tests/{id}/complete
+POST   /tests/{id}/archive
 POST   /tests/{id}/close
+GET    /tests/{id}/questions
 POST   /tests/{id}/questions
+POST   /tests/{id}/questions/bulk
 DELETE /tests/{id}/questions/{question_id}
 GET    /tests/import/template  (download XLSX import template)
 POST   /tests/import            (import test + questions from XLSX)
 ```
+
+Test lifecycle actions move the test through
+`DRAFT -> READY -> PUBLISHED -> SCHEDULED/ACTIVE -> COMPLETED -> ARCHIVED`
+(see §17). Each action is guarded by the `test.publish` permission and writes
+an audit entry.
 
 ## Assignments
 
@@ -937,7 +965,16 @@ GET /reports/tests
 GET /reports/students/{student_id}
 GET /reports/questions
 GET /reports/subjects
+GET /reports/exams/export
+GET /reports/tests/export
+GET /reports/students/{student_id}/export
+GET /reports/questions/export
+GET /reports/subjects/export
 ```
+
+The JSON endpoints require the `report.view` permission. The `/export`
+variants return a UTF-8 CSV attachment with the same columns as the JSON rows
+and require the `report.export` permission.
 
 ## Notifications
 
@@ -1074,6 +1111,41 @@ Recommended HTTP statuses:
 ---
 
 # 17. Test Engine Design
+
+## Test Lifecycle
+
+Tests move through the following statuses. The backend is authoritative for
+every transition and rejects invalid ones with `409`; the frontend should hide
+actions that are not currently legal.
+
+```text
+DRAFT
+  |
+  v
+READY        (POST /tests/{id}/ready)
+  |
+  v
+PUBLISHED    (POST /tests/{id}/publish)
+  |
+  +--> SCHEDULED  (POST /tests/{id}/schedule)   [scheduled_start_at required]
+  |       |
+  |       v
+  +--> ACTIVE      (POST /tests/{id}/activate)
+          |
+          v
+      COMPLETED   (POST /tests/{id}/complete)
+          |
+          v
+      ARCHIVED    (POST /tests/{id}/archive)
+```
+
+`publish` accepts `DRAFT` or `READY`; `close` (`POST /tests/{id}/close`) moves
+a `PUBLISHED` test straight to `CLOSED`. A student may start an attempt when the
+test status is `PUBLISHED`, `SCHEDULED` (within its window) or `ACTIVE`.
+
+The student test listing only ever exposes `PUBLISHED`, `SCHEDULED`, `ACTIVE`,
+`COMPLETED` and `CLOSED` tests; `DRAFT`/`READY` tests are never visible to
+students.
 
 ## Start Test
 

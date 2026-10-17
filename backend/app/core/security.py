@@ -55,6 +55,16 @@ def generate_reset_token() -> str:
     return secrets.token_urlsafe(32)
 
 
+def generate_temporary_password(length: int = 12) -> str:
+    """Random password that satisfies :func:`validate_password_strength`."""
+    alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789"
+    while True:
+        candidate = "".join(secrets.choice(alphabet) for _ in range(max(length, 10)))
+        # Guarantee the composition rules without relying on chance.
+        if re.search(r"[A-Za-z]", candidate) and re.search(r"[0-9]", candidate):
+            return candidate
+
+
 def hash_token(token: str) -> str:
     """One-way hash used when a token is persisted (never store raw tokens)."""
     from hashlib import sha256

@@ -1,11 +1,16 @@
 """Aggregate report endpoints mounted at ``/api/v1/reports``.
 
-All routes are read-only and guarded by the ``report.view`` permission.
+All routes are read-only. The JSON endpoints require the ``report.view``
+permission; the CSV export variants require ``report.export``.
 """
 
-from typing import Any, Dict, List, Optional
+import csv
+import io
+from typing import Any, Dict, List, Optional, Sequence
 
 from fastapi import APIRouter, Depends, Path, Query
+from fastapi.responses import Response
+from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
 from app.core.permissions import require_permission
@@ -32,6 +37,25 @@ _FORBIDDEN: Dict[int, Dict[str, Any]] = {
 _NOT_FOUND: Dict[int, Dict[str, Any]] = {
     404: {"description": "Student not found.", "model": ErrorResponse}
 }
+
+_CSV_MEDIA_TYPE = "text/csv"
+
+
+def _csv_response(
+    model: type[BaseModel], rows: Sequence[Any], filename: str
+) -> Response:
+    """Serialise report rows to a CSV download using the schema's field order."""
+    columns = list(model.model_fields.keys())
+    buffer = io.StringIO()
+    writer = csv.DictWriter(buffer, fieldnames=columns, extrasaction="ignore")
+    writer.writeheader()
+    for row in rows:
+        writer.writerow(model.model_validate(row).model_dump())
+    return Response(
+        content=buffer.getvalue(),
+        media_type=_CSV_MEDIA_TYPE,
+        headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+    )
 
 
 @router.get(
@@ -142,3 +166,120 @@ def subject_report(
 ) -> List[SubjectReportRow]:
     """Return the per-subject aggregate report."""
     return report_service.subjects_report(db, exam_id=exam_id)
+
+
+_CSV_RESPONSES = {
+    200: {
+        "content": {_CSV_MEDIA_TYPE: {}},
+        "description": "CSV attachment with one row per record.",
+    },
+    **_UNAUTHORIZED,
+    **_FORBIDDEN,
+}
+
+
+@router.get(
+    "/exams/export",
+    summary="Export per-exam report (CSV)",
+    description=(
+        "Download the per-exam aggregate report as a CSV attachment. Requires "
+        "the `report.export` permission."
+    ),
+    responses=_CSV_RESPONSES,
+    dependencies=[Depends(require_permission("report.export"))],
+)
+def export_exam_report(db: Session = Depends(get_db)) -> Response:
+    """Return the per-exam report as CSV."""
+    return _csv_response(ExamReportRow, report_service.exams_report(db), "exams_report.csv")
+
+
+@router.get(
+    "/tests/export",
+    summary="Export per-test report (CSV)",
+    description=(
+        "Download the per-test aggregate report as a CSV attachment. "
+        "Optionally filtered by `exam_id`. Requires the `report.export` "
+        "permission."
+    ),
+    responses=_CSV_RESPONSES,
+    dependencies=[Depends(require_permission("report.export"))],
+)
+def export_test_report(
+    db: Session = Depends(get_db),
+    exam_id: Optional[int] = Query(None, ge=1, description="Filter by exam."),
+) -> Response:
+    """Return the per-test report as CSV."""
+    return _csv_response(
+        TestReportRow,
+        report_service.tests_report(db, exam_id=exam_id),
+        "tests_report.csv",
+    )
+
+
+@router.get(
+    "/students/{student_id}/export",
+    summary="Export per-student report (CSV)",
+    description=(
+        "Download one student's aggregate report as a CSV attachment. Unknown "
+        "ids return 404 `USER_NOT_FOUND`. Requires the `report.export` "
+        "permission."
+    ),
+    responses={**_CSV_RESPONSES, **_NOT_FOUND},
+    dependencies=[Depends(require_permission("report.export"))],
+)
+def export_student_report(
+    student_id: int = Path(..., ge=1, description="Student user ID."),
+    db: Session = Depends(get_db),
+) -> Response:
+    """Return the per-student report as CSV."""
+    return _csv_response(
+        StudentReportRow,
+        [report_service.student_report(db, student_id=student_id)],
+        f"student_{student_id}_report.csv",
+    )
+
+
+@router.get(
+    "/questions/export",
+    summary="Export per-question report (CSV)",
+    description=(
+        "Download the per-question aggregate report as a CSV attachment. "
+        "Optionally filtered by `subject_id`. Requires the `report.export` "
+        "permission."
+    ),
+    responses=_CSV_RESPONSES,
+    dependencies=[Depends(require_permission("report.export"))],
+)
+def export_question_report(
+    db: Session = Depends(get_db),
+    subject_id: Optional[int] = Query(None, ge=1, description="Filter by subject."),
+) -> Response:
+    """Return the per-question report as CSV."""
+    return _csv_response(
+        QuestionReportRow,
+        report_service.questions_report(db, subject_id=subject_id),
+        "questions_report.csv",
+    )
+
+
+@router.get(
+    "/subjects/export",
+    summary="Export per-subject report (CSV)",
+    description=(
+        "Download the per-subject aggregate report as a CSV attachment. "
+        "Optionally filtered by `exam_id`. Requires the `report.export` "
+        "permission."
+    ),
+    responses=_CSV_RESPONSES,
+    dependencies=[Depends(require_permission("report.export"))],
+)
+def export_subject_report(
+    db: Session = Depends(get_db),
+    exam_id: Optional[int] = Query(None, ge=1, description="Filter by exam."),
+) -> Response:
+    """Return the per-subject report as CSV."""
+    return _csv_response(
+        SubjectReportRow,
+        report_service.subjects_report(db, exam_id=exam_id),
+        "subjects_report.csv",
+    )

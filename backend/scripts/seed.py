@@ -183,6 +183,7 @@ PERMISSION_SPECS: Sequence[Tuple[str, str]] = (
     ("result.publish", "Publish results"),
     ("result.export", "Export results"),
     ("report.view", "View reports"),
+    ("report.export", "Export reports"),
     ("notification.view", "View notifications"),
     ("notification.create", "Create notifications"),
     ("audit.view", "View audit logs"),
@@ -231,6 +232,7 @@ ROLE_PERMISSIONS: Dict[str, List[str]] = {
         "attempt.view",
         "result.view",
         "report.view",
+        "report.export",
         "notification.view",
         "notification.create",
         "audit.view",
@@ -249,6 +251,7 @@ ROLE_PERMISSIONS: Dict[str, List[str]] = {
         "result.publish",
         "result.export",
         "report.view",
+        "report.export",
         "notification.view",
     ],
     "REPORT_VIEWER": [
@@ -262,6 +265,7 @@ ROLE_PERMISSIONS: Dict[str, List[str]] = {
         "result.view",
         "result.export",
         "report.view",
+        "report.export",
         "audit.view",
     ],
     "STUDENT": [],  # student APIs are ownership-based; no RBAC codes required

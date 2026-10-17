@@ -20,11 +20,16 @@ import {
   Pagination,
   SearchInput,
   Select,
-  StatusBadge,
   Textarea,
 } from "@/components/ui";
 import { loadExamOptions } from "@/lib/options";
 import { extractImportErrors, type ImportRowError } from "@/lib/test-import";
+import {
+  lifecycleActions,
+  testStatusLabel,
+  testStatusTone,
+  type TestLifecycleAction as LifecycleAction,
+} from "@/lib/test-lifecycle";
 
 interface TestForm {
   exam_id: string;
@@ -216,23 +221,22 @@ export default function AdminTestsPage() {
     }
   };
 
-  const publish = async (t: TestResponse) => {
+  const runLifecycle = async (t: TestResponse, action: LifecycleAction) => {
     try {
-      await testsApi.publish(t.id);
-      toast.success("Test published.");
+      const map: Record<LifecycleAction, (id: number) => Promise<TestResponse>> = {
+        ready: testsApi.ready,
+        publish: testsApi.publish,
+        schedule: testsApi.schedule,
+        activate: testsApi.activate,
+        complete: testsApi.complete,
+        archive: testsApi.archive,
+        close: testsApi.close,
+      };
+      await map[action](t.id);
+      toast.success(`${testStatusLabel(action)} applied.`);
       reload();
     } catch (err) {
-      toast.error(isApiError(err) ? err.message : "Unable to publish.");
-    }
-  };
-
-  const close = async (t: TestResponse) => {
-    try {
-      await testsApi.close(t.id);
-      toast.success("Test closed.");
-      reload();
-    } catch (err) {
-      toast.error(isApiError(err) ? err.message : "Unable to close.");
+      toast.error(isApiError(err) ? err.message : "Unable to apply the requested action.");
     }
   };
 
@@ -367,7 +371,15 @@ export default function AdminTestsPage() {
         </div>
       ),
     },
-    { key: "status", header: "Status", render: (t) => <StatusBadge status={t.status} /> },
+    {
+      key: "status",
+      header: "Status",
+      render: (t) => (
+        <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-semibold ${testStatusTone(t.status)}`}>
+          {testStatusLabel(t.status)}
+        </span>
+      ),
+    },
     {
       key: "question_count",
       header: "Questions",
@@ -399,41 +411,46 @@ export default function AdminTestsPage() {
       key: "actions",
       header: "",
       align: "right",
-      render: (t) => (
-        <div className="flex flex-wrap items-center justify-end gap-2">
-          <button
-            type="button"
-            onClick={() => openQuestions(t)}
-            className="text-xs font-medium text-indigo-600 hover:underline"
-          >
-            Questions
-          </button>
-          {t.status === "DRAFT" && (
+      render: (t) => {
+        const actions = lifecycleActions(t.status);
+        return (
+          <div className="flex flex-wrap items-center justify-end gap-2">
             <button
               type="button"
-              onClick={() => publish(t)}
-              className="text-xs font-medium text-emerald-600 hover:underline"
+              onClick={() => openQuestions(t)}
+              className="text-xs font-medium text-indigo-600 hover:underline"
             >
-              Publish
+              Questions
             </button>
-          )}
-          {t.status === "PUBLISHED" && (
-            <button type="button" onClick={() => close(t)} className="text-xs font-medium text-amber-600 hover:underline">
-              Close
+            {actions.map((a) => (
+              <button
+                key={a.action}
+                type="button"
+                onClick={() => runLifecycle(t, a.action)}
+                className={`text-xs font-medium hover:underline ${
+                  a.variant === "danger"
+                    ? "text-rose-600"
+                    : a.variant === "primary"
+                    ? "text-emerald-600"
+                    : "text-sky-600"
+                }`}
+              >
+                {a.label}
+              </button>
+            ))}
+            <button type="button" onClick={() => openEdit(t)} className="text-xs font-medium text-brand-600 hover:underline">
+              Edit
             </button>
-          )}
-          <button type="button" onClick={() => openEdit(t)} className="text-xs font-medium text-brand-600 hover:underline">
-            Edit
-          </button>
-          <button
-            type="button"
-            onClick={() => setDeleteTarget(t)}
-            className="text-xs font-medium text-rose-600 hover:underline"
-          >
-            Delete
-          </button>
-        </div>
-      ),
+            <button
+              type="button"
+              onClick={() => setDeleteTarget(t)}
+              className="text-xs font-medium text-rose-600 hover:underline"
+            >
+              Delete
+            </button>
+          </div>
+        );
+      },
     },
   ];
 
@@ -469,8 +486,13 @@ export default function AdminTestsPage() {
             placeholder="All statuses"
             options={[
               { label: "Draft", value: "DRAFT" },
+              { label: "Ready", value: "READY" },
               { label: "Published", value: "PUBLISHED" },
+              { label: "Scheduled", value: "SCHEDULED" },
+              { label: "Active", value: "ACTIVE" },
+              { label: "Completed", value: "COMPLETED" },
               { label: "Closed", value: "CLOSED" },
+              { label: "Archived", value: "ARCHIVED" },
             ]}
             value={statusFilter}
             onChange={(e) => { setPage(1); setStatusFilter(e.target.value); }}

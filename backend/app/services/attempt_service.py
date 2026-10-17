@@ -62,8 +62,24 @@ TERMINAL_STATUSES = {
     AttemptStatus.CANCELLED.value,
 }
 
-#: Tests a student is allowed to start.
-STARTABLE_STATUSES = {TestStatus.PUBLISHED.value}
+#: Tests a student is allowed to start. SCHEDULED tests are also startable but
+#: the availability window check in ``_assert_availability`` still applies.
+STARTABLE_STATUSES = {
+    TestStatus.PUBLISHED.value,
+    TestStatus.SCHEDULED.value,
+    TestStatus.ACTIVE.value,
+}
+
+#: Statuses a student may see in their test listing. ``DRAFT``/``READY`` tests
+#: are never exposed; ``COMPLETED``/``CLOSED`` remain visible (with an
+#: unavailable reason) so the student can see what they missed.
+STUDENT_VISIBLE_STATUSES = {
+    TestStatus.PUBLISHED.value,
+    TestStatus.SCHEDULED.value,
+    TestStatus.ACTIVE.value,
+    TestStatus.COMPLETED.value,
+    TestStatus.CLOSED.value,
+}
 
 
 # ---------------------------------------------------------------------------
@@ -832,7 +848,10 @@ def list_student_tests(
     """Visible tests for a student, decorated with assignment/attempt state."""
     now = utcnow()
     stmt = attempt_repository.build_student_test_stmt(
-        student_id=student_id, now=now, search=search
+        student_id=student_id,
+        now=now,
+        search=search,
+        statuses=STUDENT_VISIBLE_STATUSES,
     )
     rows = db.execute(stmt).all()
     if not rows:
@@ -874,7 +893,7 @@ def list_student_tests(
         active = active_attempts.get(test.id)
         last = last_attempt.get(test.id)
         reason: Optional[str] = None
-        if test.status != TestStatus.PUBLISHED.value:
+        if test.status not in STARTABLE_STATUSES:
             reason = "Test is not open for attempts."
         elif remaining <= 0:
             reason = "No attempts remaining."

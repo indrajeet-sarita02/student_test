@@ -17,7 +17,11 @@ from app.core.exceptions import (
     NotFoundError,
 )
 from app.core.permissions import SUPER_ADMIN_ROLE, get_permission_codes
-from app.core.security import hash_password
+from app.core.security import (
+    generate_temporary_password,
+    hash_password,
+    validate_password_strength,
+)
 from app.models.profile import StudentProfile
 from app.models.role import Role
 from app.models.user import User
@@ -26,6 +30,8 @@ from app.schemas.user import (
     AssignRolesRequest,
     StudentProfileCreate,
     UserCreate,
+    UserPasswordReset,
+    UserPasswordResetResponse,
     UserPermissionsResponse,
     UserStatusUpdate,
     UserUpdate,
@@ -349,4 +355,53 @@ def get_user_permissions(db: Session, user_id: int) -> UserPermissionsResponse:
         user_id=user.id,
         permissions=sorted(get_permission_codes(db, user)),
         roles=sorted(role.code for role in user.roles),
+    )
+
+
+def reset_password(
+    db: Session,
+    user_id: int,
+    payload: UserPasswordReset,
+    *,
+    actor_id: int,
+    request: Optional[Request] = None,
+) -> UserPasswordResetResponse:
+    """Reset a user's password, generating a temporary one when none is given.
+
+    An explicit ``new_password`` is strength-validated (400 ``WEAK_PASSWORD``);
+    otherwise a random temporary password is generated and returned to the
+    caller exactly once. Either way the new password is hashed before storage
+    and the action is audited as ``user.password_reset`` (the cleartext is
+    never written to the audit log).
+    """
+    user = get_user(db, user_id)
+
+    generated = payload.new_password is None
+    if generated:
+        new_password = generate_temporary_password()
+    else:
+        new_password = payload.new_password
+        validate_password_strength(new_password)
+
+    user.password_hash = hash_password(new_password)
+    record_audit(
+        db,
+        user_id=actor_id,
+        module="user",
+        action="password_reset",
+        entity_type="user",
+        entity_id=user.id,
+        old_data={"password_reset": False},
+        new_data={"password_reset": True, "temporary": generated},
+        request=request,
+    )
+    db.commit()
+    return UserPasswordResetResponse(
+        user_id=user.id,
+        message=(
+            "Temporary password generated. Communicate it to the user securely."
+            if generated
+            else "Password has been reset."
+        ),
+        temporary_password=new_password if generated else None,
     )

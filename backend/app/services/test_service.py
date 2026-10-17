@@ -1,10 +1,12 @@
-"""Test-assembly service: CRUD, publish/close and question management.
+"""Test-assembly service: CRUD, lifecycle, publish/close and question management.
 
 Business rules enforced here:
 
-* publish requires a ``DRAFT`` test with at least one question and recomputes
+* lifecycle follows ``DRAFT -> READY -> PUBLISHED -> SCHEDULED/ACTIVE ->
+  COMPLETED -> ARCHIVED`` (``publish`` accepts ``DRAFT`` or ``READY``;
+  ``close`` moves a ``PUBLISHED`` test to ``CLOSED``);
+* publish/ready require a test that owns at least one question and recompute
   ``total_marks`` from the effective marks of each attached question;
-* close is only allowed from ``PUBLISHED``;
 * once a test has attempts, questions can no longer be added or removed and the
   test itself cannot be deleted.
 
@@ -129,6 +131,43 @@ def _decorate_question_link(link: TestQuestion, question: Question) -> TestQuest
     link.subject_id = question.subject_id
     link.difficulty = question.difficulty
     return link
+
+
+def _transition(
+    db: Session,
+    test: Test,
+    *,
+    action: str,
+    target: TestStatus,
+    user_id: int,
+    request: Optional[Request],
+) -> Test:
+    """Apply a lifecycle status change, recompute marks, audit and commit.
+
+    The caller is responsible for validating that the transition is allowed
+    from the test's current status; this helper only performs the mechanical
+    work (snapshot -> status change -> mark recompute -> audit -> commit).
+    """
+    old_data = _snapshot(test)
+    _set_total_marks(db, test)
+    test.status = target.value
+    test.updated_by = user_id
+    try:
+        db.flush()
+        _audit(
+            db,
+            user_id=user_id,
+            action=action,
+            entity_id=test.id,
+            old_data=old_data,
+            new_data=_snapshot(test),
+            request=request,
+        )
+        _commit(db)
+    except Exception:
+        db.rollback()
+        raise
+    return with_counts(db, test)
 
 
 # ---------------------------------------------------------------------------
@@ -307,36 +346,157 @@ def publish_test(
     user_id: int,
     request: Optional[Request] = None,
 ) -> Test:
-    """Publish a ``DRAFT`` test that owns at least one question."""
+    """Publish a ``DRAFT``/``READY`` test that owns at least one question."""
     test = get_test(db, test_id)
-    if test.status != TestStatus.DRAFT.value:
+    if test.status not in {TestStatus.DRAFT.value, TestStatus.READY.value}:
         raise ConflictError(
-            "Only a DRAFT test can be published.", code="TEST_NOT_DRAFT"
+            "Only a DRAFT or READY test can be published.", code="TEST_NOT_DRAFT"
         )
     if repository.count_test_questions(db, test_id) == 0:
         raise BadRequestError(
             "Test has no questions to publish.", code="TEST_HAS_NO_QUESTIONS"
         )
-    old_data = _snapshot(test)
-    _set_total_marks(db, test)
-    test.status = TestStatus.PUBLISHED.value
-    test.updated_by = user_id
-    try:
-        db.flush()
-        _audit(
-            db,
-            user_id=user_id,
-            action="publish",
-            entity_id=test.id,
-            old_data=old_data,
-            new_data=_snapshot(test),
-            request=request,
+    return _transition(
+        db,
+        test,
+        action="publish",
+        target=TestStatus.PUBLISHED,
+        user_id=user_id,
+        request=request,
+    )
+
+
+def mark_test_ready(
+    db: Session,
+    test_id: int,
+    *,
+    user_id: int,
+    request: Optional[Request] = None,
+) -> Test:
+    """Move a ``DRAFT`` test that owns at least one question to ``READY``."""
+    test = get_test(db, test_id)
+    if test.status != TestStatus.DRAFT.value:
+        raise ConflictError(
+            "Only a DRAFT test can be marked ready.", code="TEST_NOT_DRAFT"
         )
-        _commit(db)
-    except Exception:
-        db.rollback()
-        raise
-    return with_counts(db, test)
+    if repository.count_test_questions(db, test_id) == 0:
+        raise BadRequestError(
+            "Test has no questions and cannot be marked ready.",
+            code="TEST_HAS_NO_QUESTIONS",
+        )
+    return _transition(
+        db,
+        test,
+        action="ready",
+        target=TestStatus.READY,
+        user_id=user_id,
+        request=request,
+    )
+
+
+def schedule_test(
+    db: Session,
+    test_id: int,
+    *,
+    user_id: int,
+    request: Optional[Request] = None,
+) -> Test:
+    """Move a ``PUBLISHED`` test with a schedule to ``SCHEDULED``."""
+    test = get_test(db, test_id)
+    if test.status != TestStatus.PUBLISHED.value:
+        raise ConflictError(
+            "Only a PUBLISHED test can be scheduled.", code="TEST_NOT_PUBLISHED"
+        )
+    if test.scheduled_start_at is None:
+        raise BadRequestError(
+            "Set a scheduled start time before scheduling the test.",
+            code="TEST_SCHEDULE_REQUIRED",
+            details={"field": "scheduled_start_at"},
+        )
+    return _transition(
+        db,
+        test,
+        action="schedule",
+        target=TestStatus.SCHEDULED,
+        user_id=user_id,
+        request=request,
+    )
+
+
+def activate_test(
+    db: Session,
+    test_id: int,
+    *,
+    user_id: int,
+    request: Optional[Request] = None,
+) -> Test:
+    """Move a ``PUBLISHED``/``SCHEDULED`` test to ``ACTIVE``."""
+    test = get_test(db, test_id)
+    if test.status not in {TestStatus.PUBLISHED.value, TestStatus.SCHEDULED.value}:
+        raise ConflictError(
+            "Only a PUBLISHED or SCHEDULED test can be activated.",
+            code="TEST_NOT_PUBLISHED",
+        )
+    return _transition(
+        db,
+        test,
+        action="activate",
+        target=TestStatus.ACTIVE,
+        user_id=user_id,
+        request=request,
+    )
+
+
+def complete_test(
+    db: Session,
+    test_id: int,
+    *,
+    user_id: int,
+    request: Optional[Request] = None,
+) -> Test:
+    """Move an ``ACTIVE``/``SCHEDULED``/``PUBLISHED`` test to ``COMPLETED``."""
+    test = get_test(db, test_id)
+    if test.status not in {
+        TestStatus.PUBLISHED.value,
+        TestStatus.SCHEDULED.value,
+        TestStatus.ACTIVE.value,
+    }:
+        raise ConflictError(
+            "Only a PUBLISHED, SCHEDULED or ACTIVE test can be completed.",
+            code="TEST_NOT_ACTIVE",
+        )
+    return _transition(
+        db,
+        test,
+        action="complete",
+        target=TestStatus.COMPLETED,
+        user_id=user_id,
+        request=request,
+    )
+
+
+def archive_test(
+    db: Session,
+    test_id: int,
+    *,
+    user_id: int,
+    request: Optional[Request] = None,
+) -> Test:
+    """Move a ``COMPLETED``/``CLOSED`` test to ``ARCHIVED``."""
+    test = get_test(db, test_id)
+    if test.status not in {TestStatus.COMPLETED.value, TestStatus.CLOSED.value}:
+        raise ConflictError(
+            "Only a COMPLETED or CLOSED test can be archived.",
+            code="TEST_NOT_COMPLETED",
+        )
+    return _transition(
+        db,
+        test,
+        action="archive",
+        target=TestStatus.ARCHIVED,
+        user_id=user_id,
+        request=request,
+    )
 
 
 def close_test(

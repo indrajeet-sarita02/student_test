@@ -51,6 +51,7 @@ def build_question_list_stmt(
     topic_id: Optional[int] = None,
     question_type: Optional[str] = None,
     difficulty: Optional[str] = None,
+    tag: Optional[str] = None,
     is_active: Optional[bool] = None,
 ) -> Select[Tuple[Question]]:
     """Build the paginated question listing.
@@ -58,7 +59,7 @@ def build_question_list_stmt(
     ``params.search`` matches ``question_text`` (case-insensitive);
     ``params.status`` matches the uppercase status. Extra keyword arguments
     cover the ``subject_id`` / ``topic_id`` / ``question_type`` / ``difficulty``
-    / ``is_active`` filters.
+    / ``tag`` / ``is_active`` filters.
     """
     stmt = select(Question)
     if subject_id is not None:
@@ -71,6 +72,9 @@ def build_question_list_stmt(
         stmt = stmt.where(Question.question_type == question_type)
     if difficulty:
         stmt = stmt.where(Question.difficulty == difficulty)
+    if tag:
+        # ``tags`` is a JSONB array; containment checks membership exactly.
+        stmt = stmt.where(Question.tags.contains([tag]))
     if is_active is not None:
         stmt = stmt.where(Question.is_active == is_active)
     if params.search:

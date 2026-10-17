@@ -59,7 +59,11 @@ class Difficulty(StrEnum):
 
 class TestStatus(StrEnum):
     DRAFT = "DRAFT"
+    READY = "READY"
     PUBLISHED = "PUBLISHED"
+    SCHEDULED = "SCHEDULED"
+    ACTIVE = "ACTIVE"
+    COMPLETED = "COMPLETED"
     CLOSED = "CLOSED"
     ARCHIVED = "ARCHIVED"
 

@@ -68,6 +68,22 @@ class UserStatusUpdate(BaseModel):
     status: UserStatus
 
 
+class UserPasswordReset(BaseModel):
+    """Admin-initiated password reset.
+
+    When ``new_password`` is omitted the server generates a random temporary
+    password and returns it once in the response.
+    """
+
+    new_password: Optional[str] = Field(None, min_length=8, max_length=128)
+
+
+class UserPasswordResetResponse(BaseModel):
+    user_id: int
+    message: str
+    temporary_password: Optional[str] = None
+
+
 class AssignRolesRequest(BaseModel):
     role_ids: List[int] = Field(default_factory=list)
 
